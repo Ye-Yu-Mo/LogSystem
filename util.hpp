@@ -37,28 +37,28 @@ namespace Xulog
             {
                 size_t pos = pathname.find_last_of("/\\"); // 查找最后一个'/'或者'\'
                 if (pos == std::string::npos)
-                    return "."; // 如果没有找到路径分隔符，返回当前目录
+                    return ".";                     // 如果没有找到路径分隔符，返回当前目录
                 return pathname.substr(0, pos + 1); // 获取文件路径的目录部分
             }
             static void createDirectory(const std::string &pathname)
             {
-                size_t pos = 0, idx = 0;
-                while(idx<pathname.size())
+                size_t pos = 0, idx = 0; // pos表示'/'的位置，idx表示起始位置
+                while (idx < pathname.size())
                 {
-                    pos = pathname.find_first_of("/\\", idx);
-                    if(pos == std::string::npos)
+                    pos = pathname.find_first_of("/\\", idx); // 找第一个'\'
+                    if (pos == std::string::npos)             // 如果没有任何目录，直接创建
                     {
                         mkdir(pathname.c_str(), 0777);
                         return;
                     }
-                    std::string parent_dir = pathname.substr(0, pos+1);
-                    if(exists(parent_dir)==true)
+                    std::string parent_dir = pathname.substr(0, pos + 1); // 找到父级目录
+                    if (exists(parent_dir) == true)                       // 如果存在则直接找下一个
                     {
-                        idx =pos+1;
+                        idx = pos + 1;
                         continue;
                     }
                     mkdir(parent_dir.c_str(), 0777);
-                    idx = pos+1;
+                    idx = pos + 1;
                 }
             }
         };
