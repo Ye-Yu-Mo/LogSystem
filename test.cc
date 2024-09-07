@@ -20,7 +20,7 @@ int main()
     // 测试日志格式化模块
     Xulog::LogMsg msg(Xulog::LogLevel::value::ERROR, 124, "main.cc", "root", "格式化功能测试");
     Xulog::Formatter fmt1;
-    Xulog::Formatter fmt2("%c{");
+    Xulog::Formatter fmt2("%c{}");
     std::string str1 = fmt1.Format(msg);
     std::string str2 = fmt2.Format(msg);
     std::cout << str1 << str2;
