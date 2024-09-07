@@ -20,7 +20,7 @@ namespace Xulog
 {
     struct LogMsg
     {
-        sizei_t _ctime;         // 日志产生的时间戳
+        time_t _ctime;         // 日志产生的时间戳
         size_t _line;           // 行号
         std::thread::id _tid;   // 线程ID
         LogLevel::value _level; // 日志等级
