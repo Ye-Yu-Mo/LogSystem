@@ -1,9 +1,9 @@
-#pragma once
 /*
     日志等级类的实现
         1. 定义枚举类，枚举出日志的等级
         2. 提供转换接口，将枚举转换成对应的字符串
 */
+#pragma once
 
 namespace Xulog
 {

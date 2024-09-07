@@ -1,4 +1,3 @@
-#pragma once
 /*
     实用工具类的实现
         1. 获取系统时间
@@ -6,6 +5,7 @@
         3，获取文件路径
         4. 创建目录
 */
+#pragma once
 
 #include <iostream>
 #include <ctime>
