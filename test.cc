@@ -2,6 +2,7 @@
 #include "level.hpp"
 #include "format.hpp"
 #include "sink.hpp"
+#include "logger.hpp"
 
 // 扩展测试： 滚动文件（时间）
 // 1. 以时间段滚动
@@ -90,35 +91,59 @@ int main()
     // std::cout << Xulog::LogLevel::toString(Xulog::LogLevel::value::UNKNOW) << std::endl;
 
     // 测试日志格式化模块
-    Xulog::LogMsg msg(Xulog::LogLevel::value::ERROR, 124, "main.cc", "root", "格式化功能测试");
-    Xulog::Formatter fmt1;
-    // Xulog::Formatter fmt2("%c{}");
-    std::string str1 = fmt1.Format(msg);
-    // std::string str2 = fmt2.Format(msg);
-    // std::cout << str1 << str2;
+    // Xulog::LogMsg msg(Xulog::LogLevel::value::ERROR, 124, "main.cc", "root", "格式化功能测试");
+    // Xulog::Formatter fmt1;
+    // // Xulog::Formatter fmt2("%c{}");
+    // std::string str1 = fmt1.Format(msg);
+    // // std::string str2 = fmt2.Format(msg);
+    // // std::cout << str1 << str2;
 
-    // 测试原生日志落地模块
-    // Xulog::LogSink::ptr std_lsp = Xulog::SinkFactory::create<Xulog::StdoutSink>();
-    // Xulog::LogSink::ptr file_lsp = Xulog::SinkFactory::create<Xulog::FileSink>("./log/test.log");
-    // Xulog::LogSink::ptr roll_lsp = Xulog::SinkFactory::create<Xulog::RollSinkBySize>("./log/roll-", 1024 * 1024); // 每个文件1MB
-    Xulog::LogSink::ptr time_lsp = Xulog::SinkFactory::create<RollSinkByTime>("./log/roll-", TimeGap::GAP_SECOND); // 每个文件1s
+    // // 测试原生日志落地模块
+    // // Xulog::LogSink::ptr std_lsp = Xulog::SinkFactory::create<Xulog::StdoutSink>();
+    // // Xulog::LogSink::ptr file_lsp = Xulog::SinkFactory::create<Xulog::FileSink>("./log/test.log");
+    // // Xulog::LogSink::ptr roll_lsp = Xulog::SinkFactory::create<Xulog::RollSinkBySize>("./log/roll-", 1024 * 1024); // 每个文件1MB
+    // Xulog::LogSink::ptr time_lsp = Xulog::SinkFactory::create<RollSinkByTime>("./log/roll-", TimeGap::GAP_SECOND); // 每个文件1s
 
-    // std_lsp->log(str1.c_str(), str1.size());
-    // file_lsp->log(str1.c_str(), str1.size());
-    // size_t size = 0;
-    // size_t cnt = 0;
-    // while (size < 1024 * 1024 * 100) // 100 个
+    // // std_lsp->log(str1.c_str(), str1.size());
+    // // file_lsp->log(str1.c_str(), str1.size());
+    // // size_t size = 0;
+    // // size_t cnt = 0;
+    // // while (size < 1024 * 1024 * 100) // 100 个
+    // // {
+    // //     std::string tmp = std::to_string(cnt++);
+    // //     tmp += str1;
+    // //     roll_lsp->log(tmp.c_str(), tmp.size());
+    // //     size += tmp.size();
+    // // }
+    // time_t t = Xulog::Util::Date::getTime();
+    // while (Xulog::Util::Date::getTime() < t + 3)
     // {
-    //     std::string tmp = std::to_string(cnt++);
-    //     tmp += str1;
-    //     roll_lsp->log(tmp.c_str(), tmp.size());
-    //     size += tmp.size();
+    //     time_lsp->log(str1.c_str(), str1.size());
     // }
-    time_t t = Xulog::Util::Date::getTime();
-    while (Xulog::Util::Date::getTime() < t + 3)
-    {
-        time_lsp->log(str1.c_str(), str1.size());
-    }
 
+    // 测试同步日志器
+    std::string logger_name = "synclog";
+    Xulog::LogLevel::value limit = Xulog::LogLevel::value::WARN;
+    Xulog::Formatter::ptr fmt(new Xulog::Formatter());
+    Xulog::LogSink::ptr std_lsp = Xulog::SinkFactory::create<Xulog::StdoutSink>();
+    Xulog::LogSink::ptr file_lsp = Xulog::SinkFactory::create<Xulog::FileSink>("./log/test.log");
+    Xulog::LogSink::ptr roll_lsp = Xulog::SinkFactory::create<Xulog::RollSinkBySize>("./log/roll-", 1024 * 1024);  // 每个文件1MB
+    Xulog::LogSink::ptr time_lsp = Xulog::SinkFactory::create<RollSinkByTime>("./log/roll-", TimeGap::GAP_SECOND); // 每个文件1s
+    std::vector<Xulog::LogSink::ptr> sinks = {std_lsp, file_lsp, roll_lsp, time_lsp};
+    Xulog::Logger::ptr logger(new Xulog::SyncLogger(logger_name, limit, fmt, sinks));
+    std::string str = "测试同步日志器-";
+    logger->debug(__FILE__, __LINE__, "%s", str.c_str());
+    logger->error(__FILE__, __LINE__, "%s", str.c_str());
+    logger->fatal(__FILE__, __LINE__, "%s", str.c_str());
+    logger->info(__FILE__, __LINE__, "%s", str.c_str());
+    logger->warn(__FILE__, __LINE__, "%s", str.c_str());
+
+    size_t size = 0;
+    int cnt = 1;
+    while (size < 1024 * 1024 * 10) // 10 个
+    {
+        logger->fatal(__FILE__, __LINE__, "%s-%d", str.c_str(), cnt++);
+        size += 20;
+    }
     return 0;
 }
