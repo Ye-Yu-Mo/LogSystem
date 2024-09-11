@@ -165,4 +165,70 @@ namespace Xulog
         }
     };
     // TODO 异步日志器
+
+    // 使用建造者模式建造日志器，无需用户构造
+    enum class LoggerType
+    {
+        LOGGER_SYNC,
+        LOGGER_ASYNC
+    };
+    class LoggerBuilder
+    {
+    public:
+        LoggerBuilder()
+            : _logger_type(LoggerType::LOGGER_SYNC), _limit_level(LogLevel::value::DEBUG)
+        {
+        }
+        void buildLoggerType(LoggerType type)
+        {
+            _logger_type = type;
+        }
+        void buildLoggerName(const std::string &name)
+        {
+            _logger_name = name;
+        }
+        void buildLoggerLevel(LogLevel::value level)
+        {
+            _limit_level = level;
+        }
+        void buildFormatter(const std::string &pattern = "[%d{%y-%m-%d|%H:%M:%S}][%t][%c][%f:%l][%p]%T%m%n")
+        {
+            _formatter = std::make_shared<Formatter>(pattern);
+        }
+        template <typename SinkType, typename... Args>
+        void buildSink(Args &&...args)
+        {
+            LogSink::ptr psink = SinkFactory::create<SinkType>(std::forward<Args>(args)...);
+            _sinks.push_back(psink);
+        }
+        virtual Logger::ptr build() = 0;
+
+    protected:
+        LoggerType _logger_type;
+        std::string _logger_name;
+        LogLevel::value _limit_level;
+        Formatter::ptr _formatter;
+        std::vector<LogSink::ptr> _sinks;
+    };
+
+    // 局部日志器建造者
+    class LocalLoggerBuild : public LoggerBuilder
+    {
+    public:
+        Logger::ptr build() override
+        {
+            assert(!_logger_name.empty());
+            if (_sinks.empty())
+            {
+                buildSink<StdoutSink>();
+            }
+            if (_logger_type == LoggerType::LOGGER_ASYNC)
+            {
+            }
+
+            return std::make_shared<SyncLogger>(_logger_name, _limit_level, _formatter, _sinks);
+        }
+    };
+
+    // TODO 全局日志器建造者
 }

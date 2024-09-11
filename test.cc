@@ -122,28 +122,15 @@ int main()
     // }
 
     // 测试同步日志器
-    std::string logger_name = "synclog";
-    Xulog::LogLevel::value limit = Xulog::LogLevel::value::WARN;
-    Xulog::Formatter::ptr fmt(new Xulog::Formatter());
-    Xulog::LogSink::ptr std_lsp = Xulog::SinkFactory::create<Xulog::StdoutSink>();
-    Xulog::LogSink::ptr file_lsp = Xulog::SinkFactory::create<Xulog::FileSink>("./log/test.log");
-    Xulog::LogSink::ptr roll_lsp = Xulog::SinkFactory::create<Xulog::RollSinkBySize>("./log/roll-", 1024 * 1024);  // 每个文件1MB
-    Xulog::LogSink::ptr time_lsp = Xulog::SinkFactory::create<RollSinkByTime>("./log/roll-", TimeGap::GAP_SECOND); // 每个文件1s
-    std::vector<Xulog::LogSink::ptr> sinks = {std_lsp, file_lsp, roll_lsp, time_lsp};
-    Xulog::Logger::ptr logger(new Xulog::SyncLogger(logger_name, limit, fmt, sinks));
-    std::string str = "测试同步日志器-";
-    logger->debug(__FILE__, __LINE__, "%s", str.c_str());
-    logger->error(__FILE__, __LINE__, "%s", str.c_str());
-    logger->fatal(__FILE__, __LINE__, "%s", str.c_str());
-    logger->info(__FILE__, __LINE__, "%s", str.c_str());
-    logger->warn(__FILE__, __LINE__, "%s", str.c_str());
+    // std::string logger_name = "synclog";
+    // Xulog::LogLevel::value limit = Xulog::LogLevel::value::WARN;
+    // Xulog::Formatter::ptr fmt(new Xulog::Formatter());
+    // Xulog::LogSink::ptr std_lsp = Xulog::SinkFactory::create<Xulog::StdoutSink>();
+    // Xulog::LogSink::ptr file_lsp = Xulog::SinkFactory::create<Xulog::FileSink>("./log/test.log");
+    // Xulog::LogSink::ptr roll_lsp = Xulog::SinkFactory::create<Xulog::RollSinkBySize>("./log/roll-", 1024 * 1024);  // 每个文件1MB
+    // Xulog::LogSink::ptr time_lsp = Xulog::SinkFactory::create<RollSinkByTime>("./log/roll-", TimeGap::GAP_SECOND); // 每个文件1s
+    // std::vector<Xulog::LogSink::ptr> sinks = {std_lsp, file_lsp, roll_lsp, time_lsp};
+    // Xulog::Logger::ptr logger(new Xulog::SyncLogger(logger_name, limit, fmt, sinks));
 
-    size_t size = 0;
-    int cnt = 1;
-    while (size < 1024 * 1024 * 10) // 10 个
-    {
-        logger->fatal(__FILE__, __LINE__, "%s-%d", str.c_str(), cnt++);
-        size += 20;
-    }
     return 0;
 }
