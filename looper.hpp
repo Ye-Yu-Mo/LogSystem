@@ -18,7 +18,7 @@ namespace Xulog
         ASYNC_SAFE,  // 缓冲区满则阻塞
         ASYNC_UNSAFE // 不考虑资源，无限扩容，性能测试
     };
-     class AsyncLooper
+    class AsyncLooper
     {
     public:
         using ptr = std::shared_ptr<AsyncLooper>;
@@ -69,7 +69,10 @@ namespace Xulog
                 // 初始化消费缓冲区
                 _con_buf.reset();
                 // 唤醒生产者
-                _cond_pro.notify_all();
+                if (_looper_type == AsyncType::ASYNC_SAFE)
+                {
+                    _cond_pro.notify_all();
+                }
             }
         }
 
