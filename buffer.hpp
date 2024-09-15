@@ -21,11 +21,7 @@ namespace Xulog
         // 向缓冲区写入数据
         void push(const char *data, size_t len)
         {
-            // 缓冲区空间不够扩容或者阻塞
-            // 实际场景：固定大小，则直接返回阻塞
-            // if (len > writeAbleSize())
-            //     return;
-            // 极限测试：动态空间，则扩容写入
+            // 动态空间，则扩容写入
             ensureEnoughSize(len);
             // 数据写入缓冲区
             std::copy(data, data + len, &_buffer[_writer_idx]);
