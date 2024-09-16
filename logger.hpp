@@ -11,6 +11,7 @@
 #include "level.hpp"
 #include "format.hpp"
 #include "sink.hpp"
+#include "looper.hpp"
 #include <atomic>
 #include <mutex>
 #include <cstdarg>
@@ -164,7 +165,38 @@ namespace Xulog
                 }
         }
     };
-    // TODO 异步日志器
+    // DONE 异步日志器
+    class AsyncLogger : public Logger
+    {
+    public:
+        AsyncLogger(const std::string &loggername,
+                    LogLevel::value level,
+                    Formatter::ptr &formatter,
+                    std::vector<LogSink::ptr> sinks,
+                    AsyncType looper_type)
+            : Logger(loggername, level, formatter, sinks),
+              _looper(std::make_shared<AsyncLooper>(std::bind(&AsyncLogger::realLog, this, std::placeholders::_1), looper_type))
+        {
+        }
+
+        void log(const char *data, size_t len) // 将数据写入缓冲区
+        {
+            _looper->push(data, len);
+        }
+        // 实际落地函数，将缓冲区中的函数落地
+        void realLog(Buffer &buf)
+        {
+            if (_sinks.empty())
+                return;
+            for (auto &sink : _sinks)
+            {
+                sink->log(buf.begin(), buf.readAbleSize());
+            }
+        }
+
+    private:
+        AsyncLooper::ptr _looper;
+    };
 
     // 使用建造者模式建造日志器，无需用户构造
     enum class LoggerType
@@ -175,9 +207,14 @@ namespace Xulog
     class LoggerBuilder
     {
     public:
-        LoggerBuilder()
-            : _logger_type(LoggerType::LOGGER_SYNC), _limit_level(LogLevel::value::DEBUG)
+        LoggerBuilder() : _logger_type(LoggerType::LOGGER_SYNC),
+                          _limit_level(LogLevel::value::DEBUG),
+                          _looper_type(AsyncType::ASYNC_SAFE)
         {
+        }
+        void buildEnableUnsafeAsync()
+        {
+            _looper_type = AsyncType::ASYNC_UNSAFE;
         }
         void buildLoggerType(LoggerType type)
         {
@@ -204,6 +241,7 @@ namespace Xulog
         virtual Logger::ptr build() = 0;
 
     protected:
+        AsyncType _looper_type;
         LoggerType _logger_type;
         std::string _logger_name;
         LogLevel::value _limit_level;
@@ -224,6 +262,7 @@ namespace Xulog
             }
             if (_logger_type == LoggerType::LOGGER_ASYNC)
             {
+                return std::make_shared<AsyncLogger>(_logger_name, _limit_level, _formatter, _sinks, _looper_type);
             }
 
             return std::make_shared<SyncLogger>(_logger_name, _limit_level, _formatter, _sinks);
@@ -231,4 +270,5 @@ namespace Xulog
     };
 
     // TODO 全局日志器建造者
+
 }

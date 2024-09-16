@@ -44,7 +44,7 @@ namespace Xulog
             if (_looper_type == AsyncType::ASYNC_SAFE)
             {
                 _cond_pro.wait(lock, [&]()
-                               { return _pro_buf.writeAbleSize() >= len; })
+                               { return _pro_buf.writeAbleSize() >= len; });
             }
             // 满足条件，添加数据
             _pro_buf.push(data, len);
@@ -55,13 +55,16 @@ namespace Xulog
     private:
         void threadEntry() // 线程入口函数
         {
-            while (_stop)
+            while (true)
             {
                 // 判断生产缓冲区是否有数据，有则交换，无则阻塞
                 {
                     std::unique_lock<std::mutex> lock(_mutex);
+                    if (_stop && _pro_buf.empty())
+                        break;
                     _cond_con.wait(lock, [&]()
                                    { return _stop || !_pro_buf.empty(); });
+
                     _con_buf.swap(_pro_buf);
                 }
                 // 处理消费缓冲区

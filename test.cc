@@ -177,36 +177,66 @@ int main()
 
     // 测试异步缓冲区
     // 读取文件数据，逐步写入缓冲区，最终将缓冲区写入文件，判断新文件是否与原文件是否一致
-    std::ifstream ifs("./log/test.log", std::ios::binary);
-    if (ifs.is_open() == false)
-        return -1;
-    ifs.seekg(0, std::ios::end); // 跳转至文件末尾
-    size_t fsize = ifs.tellg();  // 获取文件长度
-    ifs.seekg(0, std::ios::beg); // 跳转至文件开头
-    std::string body;
-    body.resize(fsize);
-    ifs.read(&body[0], fsize);
-    if (ifs.good() == false)
+    // std::ifstream ifs("./log/test.log", std::ios::binary);
+    // if (ifs.is_open() == false)
+    //     return -1;
+    // ifs.seekg(0, std::ios::end); // 跳转至文件末尾
+    // size_t fsize = ifs.tellg();  // 获取文件长度
+    // ifs.seekg(0, std::ios::beg); // 跳转至文件开头
+    // std::string body;
+    // body.resize(fsize);LogSystem/test.cc
+    // ifs.read(&body[0], fsize);
+    // if (ifs.good() == false)
+    // {
+    //     std::cout << "read error\n";
+    //     return -1;
+    // }
+    // ifs.close();
+    // Xulog::Buffer buffer;
+    // for (int i = 0; i < body.size(); i++)
+    // {
+    //     buffer.push(&body[i], 1);
+    // }
+    // std::ofstream ofs("./log/tmp.log", std::ios::binary);
+    // // 一次写入
+    // // ofs.write(buffer.begin(), fsize);
+    // // 逐字节写入
+    // size_t read_size = buffer.readAbleSize();
+    // for (int i = 0; i < read_size; i++)
+    // {
+    //     ofs.write(buffer.begin(), 1);
+    //     buffer.moveReader(1);
+    // }
+    // ofs.close();
+
+    // 异步写日志测试
+    std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::LocalLoggerBuild());
+    builder->buildLoggerLevel(Xulog::LogLevel::value::FATAL);
+    builder->buildLoggerName("Asynclog");
+    builder->buildFormatter();
+    builder->buildLoggerType(Xulog::LoggerType::LOGGER_ASYNC);
+    builder->buildEnableUnsafeAsync();
+    builder->buildSink<Xulog::StdoutSink>();
+    builder->buildSink<Xulog::FileSink>("./log/a_test.log");
+    builder->buildSink<Xulog::RollSinkBySize>("./log/a_roll-", 1024 * 1024);
+    builder->buildSink<RollSinkByTime>("./log/a_roll-", TimeGap::GAP_SECOND);
+    Xulog::Logger::ptr logger = builder->build();
+
+    std::string str = "测试异步日志器-";
+
+    logger->debug(__FILE__, __LINE__, "%s", str.c_str());
+    logger->error(__FILE__, __LINE__, "%s", str.c_str());
+    logger->fatal(__FILE__, __LINE__, "%s", str.c_str());
+    logger->info(__FILE__, __LINE__, "%s", str.c_str());
+    logger->warn(__FILE__, __LINE__, "%s", str.c_str());
+
+    int cnt = 1;
+
+    while (cnt<=500000) 
     {
-        std::cout << "read error\n";
-        return -1;
+        logger->fatal(__FILE__, __LINE__, "%s-%d", str.c_str(), cnt++);
     }
-    ifs.close();
-    Xulog::Buffer buffer;
-    for (int i = 0; i < body.size(); i++)
-    {
-        buffer.push(&body[i], 1);
-    }
-    std::ofstream ofs("./log/tmp.log", std::ios::binary);
-    // 一次写入
-    // ofs.write(buffer.begin(), fsize);
-    // 逐字节写入
-    size_t read_size = buffer.readAbleSize();
-    for (int i = 0; i < read_size; i++)
-    {
-        ofs.write(buffer.begin(), 1);
-        buffer.moveReader(1);
-    }
-    ofs.close();
+
+
     return 0;
 }
