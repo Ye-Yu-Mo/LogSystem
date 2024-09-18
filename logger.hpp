@@ -15,6 +15,7 @@
 #include <atomic>
 #include <mutex>
 #include <cstdarg>
+#include <unordered_map>
 
 namespace Xulog
 {
@@ -25,6 +26,10 @@ namespace Xulog
         Logger(const std::string &loggername, LogLevel::value level, Formatter::ptr &formatter, std::vector<LogSink::ptr> sinks)
             : _logger_name(loggername), _limit_level(level), _formatter(formatter), _sinks(sinks.begin(), sinks.end())
         {
+        }
+        const std::string &name()
+        {
+            return _logger_name;
         }
         // 构造日志消息，格式化，交给输出接口
         void debug(const std::string &file, size_t line, const std::string &fmt, ...)
@@ -121,6 +126,11 @@ namespace Xulog
             va_end(ap);
             serialize(LogLevel::value::FATAL, file, line, res);
             free(res);
+        }
+
+        void Debug()
+        {
+            std::cout << _logger_name << std::endl;
         }
 
     protected:
@@ -268,7 +278,88 @@ namespace Xulog
             return std::make_shared<SyncLogger>(_logger_name, _limit_level, _formatter, _sinks);
         }
     };
+    // 日志器管理器
+    // 懒汉单例模式
+    class LoggerManager
+    {
+    public:
+        static LoggerManager &getInstance()
+        {
+            // C++11 之后，静态局部变量是线程安全的
 
-    // TODO 全局日志器建造者
+            static LoggerManager eton;
+            return eton;
+        }
+        void addLogger(Logger::ptr &logger)
+        {
+            // 不加锁的情况下先检查
+            if (hasLogger(logger->name()))
+                return;
+            // 加锁后直接插入 避免重复加锁
+            std::unique_lock<std::mutex> lock(_mutex);
+            _loggers.insert(std::make_pair(logger->name(), logger));
+        }
+
+        bool hasLogger(const std::string &name)
+        {
+            std::unique_lock<std::mutex> lock(_mutex);
+            auto it = _loggers.find(name);
+            if (it == _loggers.end())
+                return false;
+            return true;
+        }
+        Logger::ptr getLogger(const std::string &name)
+        {
+            std::unique_lock<std::mutex> lock(_mutex);
+            auto it = _loggers.find(name);
+            if (it == _loggers.end())
+                return Logger::ptr();
+            return it->second;
+        }
+        Logger::ptr rootLogger()
+        {
+            return _root_logger;
+        }
+
+    private:
+        LoggerManager()
+        {
+            std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::LocalLoggerBuild());
+            builder->buildLoggerName("root");
+            _root_logger = builder->build();
+            _loggers.insert(std::make_pair("root", _root_logger));
+        }
+        ~LoggerManager() {}
+
+    private:
+        std::mutex _mutex;
+        Logger::ptr _root_logger; // 默认日志器
+        std::unordered_map<std::string, Logger::ptr> _loggers;
+    };
+
+    // DONE 全局日志器建造者
+    class GlobalLocalLoggerBuild : public LoggerBuilder
+    {
+    public:
+        Logger::ptr build() override
+        {
+            assert(!_logger_name.empty());
+            if (_sinks.empty())
+            {
+                buildSink<StdoutSink>();
+            }
+            Logger::ptr logger;
+            if (_logger_type == LoggerType::LOGGER_ASYNC)
+            {
+                logger = std::make_shared<AsyncLogger>(_logger_name, _limit_level, _formatter, _sinks, _looper_type);
+            }
+            else
+            {
+                logger = std::make_shared<SyncLogger>(_logger_name, _limit_level, _formatter, _sinks);
+            }
+            LoggerManager::getInstance().addLogger(logger);
+            return logger;
+        }
+    };
 
 }

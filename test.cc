@@ -4,6 +4,7 @@
 #include "sink.hpp"
 #include "logger.hpp"
 #include "buffer.hpp"
+
 // 扩展测试： 滚动文件（时间）
 // 1. 以时间段滚动
 // 2. time(nullptr)%gap;
@@ -74,14 +75,37 @@ private:
     size_t _gap_size;    // 间隔大小
 };
 
+void test_log()
+{
+    Xulog::Logger::ptr logger = Xulog::LoggerManager::getInstance().getLogger("Asynclogger");
+
+    std::string str = "测试异步日志器-";
+
+    
+    logger->Debug();
+
+    logger->debug(__FILE__, __LINE__, "%s", str.c_str());
+    logger->error(__FILE__, __LINE__, "%s", str.c_str());
+    logger->fatal(__FILE__, __LINE__, "%s", str.c_str());
+    logger->info(__FILE__, __LINE__, "%s", str.c_str());
+    logger->warn(__FILE__, __LINE__, "%s", str.c_str());
+
+    int cnt = 1;
+
+    while (cnt <= 500000)
+    {
+        logger->fatal(__FILE__, __LINE__, "%s-%d", str.c_str(), cnt++);
+    }
+}
+
 int main()
 {
-    // 测试工具类
+    // DONE 测试工具类
     // std::cout << Xulog::Util::Date::getTime() << std::endl;
     // std::string pathname = "./dir1/dir2/";
     // Xulog::Util::File::createDirectory(Xulog::Util::File::path(pathname));
 
-    // 测试等级类
+    // DONE 测试等级类
     // std::cout << Xulog::LogLevel::toString(Xulog::LogLevel::value::DEBUG) << std::endl;
     // std::cout << Xulog::LogLevel::toString(Xulog::LogLevel::value::INFO) << std::endl;
     // std::cout << Xulog::LogLevel::toString(Xulog::LogLevel::value::WARN) << std::endl;
@@ -90,7 +114,7 @@ int main()
     // std::cout << Xulog::LogLevel::toString(Xulog::LogLevel::value::OFF) << std::endl;
     // std::cout << Xulog::LogLevel::toString(Xulog::LogLevel::value::UNKNOW) << std::endl;
 
-    // 测试日志格式化模块
+    // DONE 测试日志格式化模块
     // Xulog::LogMsg msg(Xulog::LogLevel::value::ERROR, 124, "main.cc", "root", "格式化功能测试");
     // Xulog::Formatter fmt1;
     // // Xulog::Formatter fmt2("%c{}");
@@ -98,7 +122,7 @@ int main()
     // // std::string str2 = fmt2.Format(msg);
     // // std::cout << str1 << str2;
 
-    // // 测试原生日志落地模块
+    // // DONE 测试原生日志落地模块
     // // Xulog::LogSink::ptr std_lsp = Xulog::SinkFactory::create<Xulog::StdoutSink>();
     // // Xulog::LogSink::ptr file_lsp = Xulog::SinkFactory::create<Xulog::FileSink>("./log/test.log");
     // // Xulog::LogSink::ptr roll_lsp = Xulog::SinkFactory::create<Xulog::RollSinkBySize>("./log/roll-", 1024 * 1024); // 每个文件1MB
@@ -121,7 +145,7 @@ int main()
     //     time_lsp->log(str1.c_str(), str1.size());
     // }
 
-    // 测试同步日志器
+    // DONE 测试同步日志器
     // std::string logger_name = "synclog";
     // Xulog::LogLevel::value limit = Xulog::LogLevel::value::WARN;
     // Xulog::Formatter::ptr fmt(new Xulog::Formatter());
@@ -146,7 +170,7 @@ int main()
     //     size += 20;
     // }
 
-    // 测试建造者模式
+    // DONE 测试建造者模式
     // std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::LocalLoggerBuild());
     // builder->buildLoggerLevel(Xulog::LogLevel::value::WARN);
     // builder->buildLoggerName("synclog");
@@ -175,7 +199,7 @@ int main()
     //     size += 20;
     // }
 
-    // 测试异步缓冲区
+    // DONE 测试异步缓冲区
     // 读取文件数据，逐步写入缓冲区，最终将缓冲区写入文件，判断新文件是否与原文件是否一致
     // std::ifstream ifs("./log/test.log", std::ios::binary);
     // if (ifs.is_open() == false)
@@ -209,34 +233,46 @@ int main()
     // }
     // ofs.close();
 
-    // 异步写日志测试
-    std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::LocalLoggerBuild());
+    // DONE 异步写日志测试
+    // std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::LocalLoggerBuild());
+    // builder->buildLoggerLevel(Xulog::LogLevel::value::FATAL);
+    // builder->buildLoggerName("Asynclog");
+    // builder->buildFormatter();
+    // builder->buildLoggerType(Xulog::LoggerType::LOGGER_SYNC);
+    // builder->buildEnableUnsafeAsync();
+    // builder->buildSink<Xulog::StdoutSink>();
+    // builder->buildSink<Xulog::FileSink>("./log/a_test.log");
+    // builder->buildSink<Xulog::RollSinkBySize>("./log/a_roll-", 1024 * 1024);
+    // builder->buildSink<RollSinkByTime>("./log/a_roll-", TimeGap::GAP_SECOND);
+    // Xulog::Logger::ptr logger = builder->build();
+
+    // std::string str = "测试异步日志器-";
+
+    // logger->debug(__FILE__, __LINE__, "%s", str.c_str());
+    // logger->error(__FILE__, __LINE__, "%s", str.c_str());
+    // logger->fatal(__FILE__, __LINE__, "%s", str.c_str());
+    // logger->info(__FILE__, __LINE__, "%s", str.c_str());
+    // logger->warn(__FILE__, __LINE__, "%s", str.c_str());
+
+    // int cnt = 1;
+
+    // while (cnt <= 500000)
+    // {
+    //     logger->fatal(__FILE__, __LINE__, "%s-%d", str.c_str(), cnt++);
+    // }
+
+    // DONE 日志器管理器和全局日志器建造者测试
+    std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::GlobalLocalLoggerBuild());
     builder->buildLoggerLevel(Xulog::LogLevel::value::FATAL);
-    builder->buildLoggerName("Asynclog");
+    builder->buildLoggerName("Asynclogger");
     builder->buildFormatter();
     builder->buildLoggerType(Xulog::LoggerType::LOGGER_ASYNC);
-    builder->buildEnableUnsafeAsync();
+    // builder->buildEnableUnsafeAsync();
     builder->buildSink<Xulog::StdoutSink>();
     builder->buildSink<Xulog::FileSink>("./log/a_test.log");
     builder->buildSink<Xulog::RollSinkBySize>("./log/a_roll-", 1024 * 1024);
     builder->buildSink<RollSinkByTime>("./log/a_roll-", TimeGap::GAP_SECOND);
-    Xulog::Logger::ptr logger = builder->build();
-
-    std::string str = "测试异步日志器-";
-
-    logger->debug(__FILE__, __LINE__, "%s", str.c_str());
-    logger->error(__FILE__, __LINE__, "%s", str.c_str());
-    logger->fatal(__FILE__, __LINE__, "%s", str.c_str());
-    logger->info(__FILE__, __LINE__, "%s", str.c_str());
-    logger->warn(__FILE__, __LINE__, "%s", str.c_str());
-
-    int cnt = 1;
-
-    while (cnt<=500000) 
-    {
-        logger->fatal(__FILE__, __LINE__, "%s-%d", str.c_str(), cnt++);
-    }
-
-
+    builder->build();
+    test_log();
     return 0;
 }
