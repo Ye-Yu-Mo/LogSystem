@@ -23,8 +23,14 @@ namespace Xulog
     {
     public:
         using ptr = std::shared_ptr<Logger>;
-        Logger(const std::string &loggername, LogLevel::value level, Formatter::ptr &formatter, std::vector<LogSink::ptr> sinks)
-            : _logger_name(loggername), _limit_level(level), _formatter(formatter), _sinks(sinks.begin(), sinks.end())
+        Logger(const std::string &loggername,
+               LogLevel::value level,
+               Formatter::ptr &formatter,
+               std::vector<LogSink::ptr> sinks)
+            : _logger_name(loggername),
+              _limit_level(level),
+              _formatter(formatter),
+              _sinks(sinks.begin(),sinks.end())
         {
         }
         const std::string &name()
@@ -269,12 +275,11 @@ namespace Xulog
             if (_sinks.empty())
             {
                 buildSink<StdoutSink>();
-            }
+            }                
             if (_logger_type == LoggerType::LOGGER_ASYNC)
             {
                 return std::make_shared<AsyncLogger>(_logger_name, _limit_level, _formatter, _sinks, _looper_type);
             }
-
             return std::make_shared<SyncLogger>(_logger_name, _limit_level, _formatter, _sinks);
         }
     };
@@ -326,6 +331,7 @@ namespace Xulog
         {
             std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::LocalLoggerBuild());
             builder->buildLoggerName("root");
+            builder->buildFormatter();
             _root_logger = builder->build();
             _loggers.insert(std::make_pair("root", _root_logger));
         }
@@ -338,7 +344,7 @@ namespace Xulog
     };
 
     // DONE 全局日志器建造者
-    class GlobalLocalLoggerBuild : public LoggerBuilder
+    class GlobalLoggerBuild : public LoggerBuilder
     {
     public:
         Logger::ptr build() override
@@ -357,6 +363,7 @@ namespace Xulog
             {
                 logger = std::make_shared<SyncLogger>(_logger_name, _limit_level, _formatter, _sinks);
             }
+            
             LoggerManager::getInstance().addLogger(logger);
             return logger;
         }

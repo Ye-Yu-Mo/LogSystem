@@ -1,9 +1,10 @@
-#include "util.hpp"
-#include "level.hpp"
-#include "format.hpp"
-#include "sink.hpp"
-#include "logger.hpp"
-#include "buffer.hpp"
+// #include "util.hpp"
+// #include "level.hpp"
+// #include "format.hpp"
+// #include "sink.hpp"
+// #include "logger.hpp"
+// #include "buffer.hpp"
+#include "Xulog.h"
 
 // 扩展测试： 滚动文件（时间）
 // 1. 以时间段滚动
@@ -77,25 +78,32 @@ private:
 
 void test_log()
 {
-    Xulog::Logger::ptr logger = Xulog::LoggerManager::getInstance().getLogger("Asynclogger");
+    // Xulog::Logger::ptr logger = Xulog::LoggerManager::getInstance().getLogger("Asynclogger");
+    Xulog::Logger::ptr logger = Xulog::getLogger("Asynclogger");
 
-    std::string str = "测试异步日志器-";
+    fatal(logger, "%s", "测试全局接口");
+    debug(logger, "%s", "测试全局接口");
+    error(logger, "%s", "测试全局接口");
+    info(logger, "%s", "测试全局接口");
+    warn(logger, "%s", "测试全局接口");
+    DEBUG("%s", "测试全局接口");
+    ERROR("%s", "测试全局接口");
+    INFO("%s", "测试全局接口");
+    WARN("%s", "测试全局接口");
+    FATAL("%s", "测试全局接口");
 
-    
-    logger->Debug();
+    // logger->debug(__FILE__, __LINE__, "%s", str.c_str());
+    // logger->error(__FILE__, __LINE__, "%s", str.c_str());
+    // logger->fatal(__FILE__, __LINE__, "%s", str.c_str());
+    // logger->info(__FILE__, __LINE__, "%s", str.c_str());
+    // logger->warn(__FILE__, __LINE__, "%s", str.c_str());
 
-    logger->debug(__FILE__, __LINE__, "%s", str.c_str());
-    logger->error(__FILE__, __LINE__, "%s", str.c_str());
-    logger->fatal(__FILE__, __LINE__, "%s", str.c_str());
-    logger->info(__FILE__, __LINE__, "%s", str.c_str());
-    logger->warn(__FILE__, __LINE__, "%s", str.c_str());
+    // int cnt = 1;
 
-    int cnt = 1;
-
-    while (cnt <= 500000)
-    {
-        logger->fatal(__FILE__, __LINE__, "%s-%d", str.c_str(), cnt++);
-    }
+    // while (cnt <= 500000)
+    // {
+    //     logger->fatal(__FILE__, __LINE__, "%s-%d", str.c_str(), cnt++);
+    // }
 }
 
 int main()
@@ -262,12 +270,12 @@ int main()
     // }
 
     // DONE 日志器管理器和全局日志器建造者测试
-    std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::GlobalLocalLoggerBuild());
+    std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::GlobalLoggerBuild());
     builder->buildLoggerLevel(Xulog::LogLevel::value::FATAL);
     builder->buildLoggerName("Asynclogger");
     builder->buildFormatter();
     builder->buildLoggerType(Xulog::LoggerType::LOGGER_ASYNC);
-    // builder->buildEnableUnsafeAsync();
+    builder->buildEnableUnsafeAsync();
     builder->buildSink<Xulog::StdoutSink>();
     builder->buildSink<Xulog::FileSink>("./log/a_test.log");
     builder->buildSink<Xulog::RollSinkBySize>("./log/a_roll-", 1024 * 1024);
