@@ -79,6 +79,8 @@ private:
 void test_log()
 {
     // Xulog::Logger::ptr logger = Xulog::LoggerManager::getInstance().getLogger("Asynclogger");
+
+    // 测试全局接口
     Xulog::Logger::ptr logger = Xulog::getLogger("Asynclogger");
 
     fatal(logger, "%s", "测试全局接口");
