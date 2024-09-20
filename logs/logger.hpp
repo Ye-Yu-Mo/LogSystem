@@ -134,10 +134,6 @@ namespace Xulog
             free(res);
         }
 
-        void Debug()
-        {
-            std::cout << _logger_name << std::endl;
-        }
 
     protected:
         // 抽象接口完成实际的落地输出，同步异步的落地方式不同

@@ -9,6 +9,11 @@
 * 支持多线程并发写入日志
 * 支持扩展不同的日志落地目标地
 
+## 运行环境
+
+* -lpthread
+* -std=c++11
+
 ## 开发环境
 
 * WSL(Ubuntu 22.04)
@@ -114,3 +119,37 @@
 
 双缓冲区的好处是，降低了生产者和消费者之间的冲突，只有在交换的适合需要冲突一次
 
+## 性能测试
+
+### 测试环境
+
+* CPU : AMD Ryzen 7 6800H with Radeon Graphics 3.20 GHz
+* RAM : 16G DDR5 6400 MHz
+* ROM : 512G-SSD PCIe4.0
+* OS : Ubuntu 22.04.4 LTS (WSL虚拟机)  
+   * 16 核（每个核心 2 个线程，8 个物理核心） 总内存 (Mem): 6.6 GiB
+
+### 测试方法
+
+主要测试内容：单线程 | 多线程 & 同步 | 异步
+
+* 100w+条指定长度日志输出所耗时间
+* 每秒输出日志数
+* 每秒输出日志所占存储空间
+
+
+### 测试结果
+
+#### 同步
+
+* 单线程
+![_C97ADC80-004F-4A6E-B8E0-53B79C5CB19B_.png](https://s2.loli.net/2024/09/20/5wYjBKIiJup3akz.png)
+* 多线程
+![image.png](https://s2.loli.net/2024/09/20/TPDJBNcVKR5zXCU.png)
+
+#### 异步
+
+* 单线程
+![image.png](https://s2.loli.net/2024/09/20/aAMf7DoVW1zImwh.png)
+* 多线程
+![image.png](https://s2.loli.net/2024/09/20/AJeUbpSPjDFRofr.png)
