@@ -65,8 +65,8 @@ std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::GlobalLoggerBuild());
 
 | 接口                         | 说明                                                         |
 | ---------------------------- | ------------------------------------------------------------ |
-| ` DEBUG("%s", "测试开始")`   | 大写为默认全局日志器输出，此处的格式与C/C++格式化输出相同，与等级相同`DEBUG|INFO|WARN|ERROR|FATAL` |
-| `debug(logger,"%s", "测试")` | 小写为指定日志器输出，需要传入日志器指针，`debug|info|warn|error|fatal` |
+| ` DEBUG("%s", "测试开始")`   | 大写为默认全局日志器输出，此处的格式与C/C++格式化输出相同，与等级相同`DEBUG\|INFO\|WARN\|ERROR\|FATAL` |
+| `debug(logger,"%s", "测试")` | 小写为指定日志器输出，需要传入日志器指针，`debug\|info\|warn\|error\|fatal` |
 
 ```cpp
 DEBUG("%s", "测试");
@@ -162,8 +162,8 @@ fatal(logger, "%s", "测试");
   * 日志文件名
   * 日志行号
 * 消息格式化模块：设置日志的输出格式，提供对消息格式化的功能
-  * 格式化内容：[%d{%H:%M:%S}]%T[%t]%T[%p]%T[%c]%T%f:%l%T%m%n
-  * [12:01:54]    [(TID)]    [FATAL]    [root]    main.cc:13    套接字创建失败\n
+  * 格式化内容：`[%d{%y-%m%d\|%H:%M:%S}]%T[%t]%T[%p]%T[%c]%T%f:%l%T%m%n`
+  * `[2024-9-20\|12:01:54]    [(TID)]    [FATAL]    [root]    main.cc:13    套接字创建失败\n`
 * 日志落地模块：负责对日志指定方向的写入输出
 * 日志器模块：对上面模块的整合、日志输出等级、日志信息格式化、日志消息落地模块
   * 同步日志器模块
