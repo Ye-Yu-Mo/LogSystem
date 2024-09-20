@@ -3,6 +3,7 @@
 ## 主要功能
 
 本项目主要实现一个日志系统，主要支持以下功能
+
 * 支持多级别的日志消息
 * 支持同步日志和异步日志
 * 支持可靠写入日志到控制台、文件、滚动文件中
@@ -13,6 +14,86 @@
 
 * -lpthread
 * -std=c++11
+
+## 使用方法
+
+包含`./logs/Xulog.h`即可
+
+1. 创建日志建造器
+
+| 接口                         | 功能                 | 选项 | 返回值类型             |
+| ---------------------------- | -------------------- | ---- | ---------------------- |
+| `Xulog::GlobalLoggerBuild()` | 构建全局日志器建造器 | -    | `Xulog::LoggerBuilder` |
+| `Xulog::LocalLoggerBuild()`  | 构建局部日志器建造器 | -    | `Xulog::LoggerBuilder` |
+
+```cpp
+std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::GlobalLoggerBuild());
+```
+
+2. 初始化日志建造器
+
+| 接口                 | 功能           | 选项                                                         | 说明                                                         |
+| -------------------- | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `buildLoggerName()`  | 设定日志器名称 | 传入string即可                                               | **默认日志器为root，名称不能为空**                           |
+| `buildFormatter()`   | 设定日志器格式 | 见日志器格式表                                               | **默认日志器格式为 `%d{%y-%m-%d\|%H:%M:%S}][%t][%c][%f:%l][%p]%T%m%n`** |
+| `buildLoggerLevel()` | 设定日志器等级 | `Xulog::LogLevel::value::DEBUG`<br />`Xulog::LogLevel::value::INFO`<br />`Xulog::LogLevel::value::WARN`<br />`Xulog::LogLevel::value::ERROR`<br />`Xulog::LogLevel::value::FATAL` | 只有大于等于该等级的日志被输出`DEBUG < INFO < WARN < ERROR < FATAL`，另外有`OFF`选项，表示关闭日志输出<br />**默认为DEBUG** |
+| `buildLoggerType()`  | 设定日志器类型 | `Xulog::LoggerType::LOGGER_SYNC`<br />`Xulog::LoggerType::LOGGER_ASYNC` | `LOGGER_SYNC`表示同步日志器<br />`LOGGER_ASYNC`表示异步日志器，关于同步日志器和异步日志器见后面的介绍<br />**默认为同步日志器** |
+| `buildSink<>()`      | 设置落地方法   | `<Xulog::StdoutSink>()`<br />`<Xulog::FileSink>("file_path")`<br />`<Xulog::RollSinkBySize>("file_path-", file_size)` | 标准落地为控制台输出<br />文件落地为输出到指定路径的文件中<br />以文件大小滚动落地，自带文件标号<br />可扩展至远程日志服务器和数据库，在extend中扩展了以时间滚动落地<br />**默认为控制台输出** |
+| build()              | 构建日志器     | -                                                            | 返回值类型为`Logger::ptr`日志器指针                          |
+
+```cpp
+    builder->buildLoggerLevel(Xulog::LogLevel::value::DEBUG);
+    builder->buildLoggerName("Synclogger");
+    builder->buildFormatter("[%d{%y-%m-%d|%H:%M:%S}][%c][%f:%l][%p]%T%m%n");
+    builder->buildLoggerType(Xulog::LoggerType::LOGGER_SYNC);
+    builder->buildSink<Xulog::StdoutSink>();
+    builder->buildSink<Xulog::FileSink>("./log/a_test.log");
+    builder->buildSink<Xulog::RollSinkBySize>("./log/a_roll-", 1024 * 1024);
+    builder->build();
+```
+
+**若不需要更改，可以使用默认设置，不用进行单独调用**
+
+3. 获取全局日志器
+
+| 接口                     | 功能                                                         |
+| ------------------------ | ------------------------------------------------------------ |
+| `Xulog::getLogger(name)` | 获取指定名称的日志器，返回值为日志器指针，返回值类型为`Logger::ptr` |
+| `Xulog::rootLogger()`    | 获取默认日志器，返回值为默认日志器指针，返回值类型为`Logger::ptr` |
+
+4. 日志输出
+
+| 接口                         | 说明                                                         |
+| ---------------------------- | ------------------------------------------------------------ |
+| ` DEBUG("%s", "测试开始")`   | 大写为默认全局日志器输出，此处的格式与C/C++格式化输出相同，与等级相同`DEBUG|INFO|WARN|ERROR|FATAL` |
+| `debug(logger,"%s", "测试")` | 小写为指定日志器输出，需要传入日志器指针，`debug|info|warn|error|fatal` |
+
+```cpp
+DEBUG("%s", "测试");
+INFO("%s", "测试");
+WARN("%s", "测试");
+ERROR("%s", "测试");
+FATAL("%s", "测试");
+debug(logger, "%s", "测试");
+info(logger, "%s", "测试");
+error(logger, "%s", "测试");
+warn(logger, "%s", "测试");
+fatal(logger, "%s", "测试");
+```
+
+**日志器格式表**
+
+| 占位符 | 说明                                                         |
+| ------ | ------------------------------------------------------------ |
+| `%d`   | 日期，子格式`{%y-%m-%d|%H:%M:%S}`年-月-日\|时-分-秒，子格式需要使用大括号 |
+| `%T`   | Tab缩进                                                      |
+| `%t`   | 线程ID                                                       |
+| `%p`   | 日志级别 `DEBUG < INFO < WARN < ERROR < FATAL` 另外有 `OFF`选项 |
+| `%c`   | 日志器名称                                                   |
+| `%f`   | 文件名                                                       |
+| `%l`   | 行号                                                         |
+| `%m`   | 日志消息                                                     |
+| `%n`   | 换行                                                         |
 
 ## 开发环境
 
@@ -127,7 +208,7 @@
 * RAM : 16G DDR5 6400 MHz
 * ROM : 512G-SSD PCIe4.0
 * OS : Ubuntu 22.04.4 LTS (WSL虚拟机)  
-   * 16 核（每个核心 2 个线程，8 个物理核心） 总内存 (Mem): 6.6 GiB
+  * 16 核（每个核心 2 个线程，8 个物理核心） 总内存 (Mem): 6.6 GiB
 
 ### 测试方法
 
@@ -143,13 +224,26 @@
 #### 同步
 
 * 单线程
+
 ![_C97ADC80-004F-4A6E-B8E0-53B79C5CB19B_.png](https://s2.loli.net/2024/09/20/5wYjBKIiJup3akz.png)
+
 * 多线程
+
 ![image.png](https://s2.loli.net/2024/09/20/TPDJBNcVKR5zXCU.png)
 
 #### 异步
 
 * 单线程
+
 ![image.png](https://s2.loli.net/2024/09/20/aAMf7DoVW1zImwh.png)
+
 * 多线程
+
 ![image.png](https://s2.loli.net/2024/09/20/AJeUbpSPjDFRofr.png)
+
+## TODO
+
+* 支持配置服务端地址，网络传输到日志服务器（TCP/UDP）
+* 支持在控制台通过日志等级渲染不同颜色方便定位
+* 支持落地到数据库
+* 实现日志器服务端，提供检索、分析、展示等功能
