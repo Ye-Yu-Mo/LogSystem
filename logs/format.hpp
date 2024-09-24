@@ -201,7 +201,7 @@ namespace Xulog
                     std::cout << "%后没有有效字符" << std::endl;
                     return false;
                 }
-                pos+=1;
+                pos += 1;
                 key = _pattern[pos];
                 if (pos + 1 < _pattern.size() && _pattern[pos + 1] == '{')
                 {
@@ -251,9 +251,9 @@ namespace Xulog
                 return std::make_shared<MsgFormatItem>();
             if (key == "n")
                 return std::make_shared<NLineFormatItem>();
-            if(key.empty())
+            if (key.empty())
                 return std::make_shared<OtherFormatItem>(value);
-            std::cout<<"没有对应的格式化字符:'%"<<key<<"'\n";
+            std::cout << "没有对应的格式化字符:'%" << key << "'\n";
             exit(1);
             return FormatItem::ptr();
         }

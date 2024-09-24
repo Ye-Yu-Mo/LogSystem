@@ -45,7 +45,7 @@ namespace Xulog
                 size_t pos = 0, idx = 0; // pos表示'/'的位置，idx表示起始位置
                 while (idx < pathname.size())
                 {
-                    pos = pathname.find_first_of("/\\", idx); // 找第一个'\'
+                    pos = pathname.find_first_of("/\\", idx); // 找第一个'/'
                     if (pos == std::string::npos)             // 如果没有任何目录，直接创建
                     {
                         mkdir(pathname.c_str(), 0777);

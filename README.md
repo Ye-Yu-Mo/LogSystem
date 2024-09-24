@@ -19,6 +19,24 @@
 
 包含`./logs/Xulog.h`即可
 
+### 默认日志器
+
+```cpp
+DEBUG("%s", "测试");
+INFO("%s", "测试");
+WARN("%s", "测试");
+ERROR("%s", "测试");
+FATAL("%s", "测试");
+```
+
+* 默认日志器名称`root`
+* 默认日志器格式`%d{%y-%m-%d\|%H:%M:%S}][%t][%c][%f:%l][%p]%T%m%n`
+* 默认日志等级`DEBUG`
+* 默认为同步日志器
+* 默认为标准控制台输出,不显示日志等级颜色
+
+### 自定义日志器
+
 1. 创建日志建造器
 
 | 接口                         | 功能                 | 选项 | 返回值类型             |
@@ -34,11 +52,11 @@ std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::GlobalLoggerBuild());
 
 | 接口                 | 功能           | 选项                                                         | 说明                                                         |
 | -------------------- | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `buildLoggerName()`  | 设定日志器名称 | 传入string即可                                               | **默认日志器为root，名称不能为空**                           |
-| `buildFormatter()`   | 设定日志器格式 | 见日志器格式表                                               | **默认日志器格式为 `%d{%y-%m-%d\|%H:%M:%S}][%t][%c][%f:%l][%p]%T%m%n`** |
-| `buildLoggerLevel()` | 设定日志器等级 | `Xulog::LogLevel::value::DEBUG`<br />`Xulog::LogLevel::value::INFO`<br />`Xulog::LogLevel::value::WARN`<br />`Xulog::LogLevel::value::ERROR`<br />`Xulog::LogLevel::value::FATAL` | 只有大于等于该等级的日志被输出`DEBUG < INFO < WARN < ERROR < FATAL`，另外有`OFF`选项，表示关闭日志输出<br />**默认为DEBUG** |
-| `buildLoggerType()`  | 设定日志器类型 | `Xulog::LoggerType::LOGGER_SYNC`<br />`Xulog::LoggerType::LOGGER_ASYNC` | `LOGGER_SYNC`表示同步日志器<br />`LOGGER_ASYNC`表示异步日志器，关于同步日志器和异步日志器见后面的介绍<br />**默认为同步日志器** |
-| `buildSink<>()`      | 设置落地方法   | `<Xulog::StdoutSink>()`<br />`<Xulog::FileSink>("file_path")`<br />`<Xulog::RollSinkBySize>("file_path-", file_size)` | 标准落地为控制台输出<br />文件落地为输出到指定路径的文件中<br />以文件大小滚动落地，自带文件标号<br />可扩展至远程日志服务器和数据库，在extend中扩展了以时间滚动落地<br />**默认为控制台输出** |
+| `buildLoggerName()`  | 设定日志器名称 | 传入string即可                                               | **名称不能为空**,不可缺省                                    |
+| `buildFormatter()`   | 设定日志器格式 | 见日志器格式表                                               | **默认日志器格式为 `%d{%y-%m-%d\|%H:%M:%S}][%t][%c][%f:%l][%p]%T%m%n`**,可缺省 |
+| `buildLoggerLevel()` | 设定日志器等级 | `Xulog::LogLevel::value::DEBUG`<br />`Xulog::LogLevel::value::INFO`<br />`Xulog::LogLevel::value::WARN`<br />`Xulog::LogLevel::value::ERROR`<br />`Xulog::LogLevel::value::FATAL` | 只有大于等于该等级的日志被输出`DEBUG < INFO < WARN < ERROR < FATAL`，另外有`OFF`选项，表示关闭日志输出<br />**默认为DEBUG**,可缺省 |
+| `buildLoggerType()`  | 设定日志器类型 | `Xulog::LoggerType::LOGGER_SYNC`<br />`Xulog::LoggerType::LOGGER_ASYNC` | `LOGGER_SYNC`表示同步日志器<br />`LOGGER_ASYNC`表示异步日志器，关于同步日志器和异步日志器见后面的介绍<br />**默认为同步日志器**,可缺省 |
+| `buildSink<>()`      | 设置落地方法   | `<Xulog::StdoutSink>(Xulog::StdoutSink::Color::Enable)`<br />`<Xulog::FileSink>("file_path")`<br />`<Xulog::RollSinkBySize>("file_path-", file_size)` | 标准落地为控制台输出,传入`Xulog::StdoutSink::Color::Enable`则可以开启日志等级颜色,`Uneable`则为关闭,不建议开启,输出效率降低非常多<br />文件落地为输出到指定路径的文件中<br />以文件大小滚动落地，自带文件标号<br />可扩展至远程日志服务器和数据库，在extend中扩展了以时间滚动落地<br />**默认为控制台输出 关闭颜色显示** |
 | build()              | 构建日志器     | -                                                            | 返回值类型为`Logger::ptr`日志器指针                          |
 
 ```cpp
@@ -46,7 +64,7 @@ std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::GlobalLoggerBuild());
     builder->buildLoggerName("Synclogger");
     builder->buildFormatter("[%d{%y-%m-%d|%H:%M:%S}][%c][%f:%l][%p]%T%m%n");
     builder->buildLoggerType(Xulog::LoggerType::LOGGER_SYNC);
-    builder->buildSink<Xulog::StdoutSink>();
+    builder->buildSink<Xulog::StdoutSink>(true);
     builder->buildSink<Xulog::FileSink>("./log/a_test.log");
     builder->buildSink<Xulog::RollSinkBySize>("./log/a_roll-", 1024 * 1024);
     builder->build();
@@ -69,11 +87,6 @@ std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::GlobalLoggerBuild());
 | `debug(logger,"%s", "测试")` | 小写为指定日志器输出，需要传入日志器指针，`debug\|info\|warn\|error\|fatal` |
 
 ```cpp
-DEBUG("%s", "测试");
-INFO("%s", "测试");
-WARN("%s", "测试");
-ERROR("%s", "测试");
-FATAL("%s", "测试");
 debug(logger, "%s", "测试");
 info(logger, "%s", "测试");
 error(logger, "%s", "测试");
@@ -244,6 +257,7 @@ fatal(logger, "%s", "测试");
 ## TODO
 
 * 支持配置服务端地址，网络传输到日志服务器（TCP/UDP）
-* 支持在控制台通过日志等级渲染不同颜色方便定位
+* ~~支持在控制台通过日志等级渲染不同颜色方便定位~~
+* 支持按照日志等级落地文件
 * 支持落地到数据库
 * 实现日志器服务端，提供检索、分析、展示等功能
