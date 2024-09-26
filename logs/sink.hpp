@@ -25,7 +25,6 @@ namespace Xulog
         virtual void log(const char *data, size_t len) = 0;
     };
     // 标准输出
-
     class StdoutSink : public LogSink
     {
     public:
