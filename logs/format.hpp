@@ -1,3 +1,10 @@
+/**
+ * @file format.hpp
+ * @brief 日志格式化器类的定义
+ *
+ * 本文件定义了日志格式化器类及其相关格式化子项。日志格式化器用于将日志消息格式化为字符串，并输出到指定流。
+ * 支持的格式化子项包括时间、日志级别、文件名、行号、线程ID等。用户可以自定义日志的输出格式。
+ */
 #pragma once
 
 #include "level.hpp"
@@ -9,39 +16,71 @@
 #include <memory>
 namespace Xulog
 {
-    // 抽象格式化子项的基类
+    /**
+     * @brief 抽象格式化子项的基类
+     */
     class FormatItem
     {
     public:
         using ptr = std::shared_ptr<FormatItem>;
+        /**
+         * @brief 格式化日志消息
+         * @param out 输出流
+         * @param msg 日志消息
+         */
         virtual void format(std::ostream &out, LogMsg &msg) = 0;
     };
-    // 派生格式化子项的子类
+    /**
+     * @brief 消息格式化子项
+     */
     class MsgFormatItem : public FormatItem
     {
     public:
+        /**
+         * @brief 格式化消息
+         * @param out 输出流
+         * @param msg 日志消息
+         */
         void format(std::ostream &out, LogMsg &msg) override
         {
             out << msg._payload;
         }
     };
-
+    /**
+     * @brief 日志级别格式化子项
+     */
     class LevelFormatItem : public FormatItem
     {
     public:
+        /**
+         * @brief 格式化日志级别
+         * @param out 输出流
+         * @param msg 日志消息
+         */
         void format(std::ostream &out, LogMsg &msg) override
         {
             out << LogLevel::toString(msg._level);
         }
     };
-
+    /**
+     * @brief 时间格式化子项
+     */
     class TimeFormatItem : public FormatItem
     {
     public:
+        /**
+         * @brief 构造时间格式化子项
+         * @param fmt 时间格式，默认为"%H:%M:%S"
+         */
         TimeFormatItem(const std::string &fmt = "%H:%M:%S")
             : _time_fmt(fmt)
         {
         }
+        /**
+         * @brief 格式化时间
+         * @param out 输出流
+         * @param msg 日志消息
+         */
         void format(std::ostream &out, LogMsg &msg) override
         {
             struct tm st;
@@ -52,77 +91,130 @@ namespace Xulog
         }
 
     private:
-        std::string _time_fmt; // %H:%M:%S
+        std::string _time_fmt; ///< 时间格式
     };
-
+    /**
+     * @brief 文件名格式化子项
+     */
     class FileFormatItem : public FormatItem
     {
     public:
+        /**
+         * @brief 格式化文件名
+         * @param out 输出流
+         * @param msg 日志消息
+         */
         void format(std::ostream &out, LogMsg &msg) override
         {
             out << msg._file;
         }
     };
-
+    /**
+     * @brief 行号格式化子项
+     */
     class LineFormatItem : public FormatItem
     {
     public:
+        /**
+         * @brief 格式化行号
+         * @param out 输出流
+         * @param msg 日志消息
+         */
         void format(std::ostream &out, LogMsg &msg) override
         {
             out << msg._line;
         }
     };
-
+    /**
+     * @brief 线程ID格式化子项
+     */
     class ThreadFormatItem : public FormatItem
     {
     public:
+        /**
+         * @brief 格式化线程ID
+         * @param out 输出流
+         * @param msg 日志消息
+         */
         void format(std::ostream &out, LogMsg &msg) override
         {
             out << msg._tid;
         }
     };
-
+    /**
+     * @brief 日志器名称格式化子项
+     */
     class LoggerFormatItem : public FormatItem
     {
     public:
+        /**
+         * @brief 格式化日志器名称
+         * @param out 输出流
+         * @param msg 日志消息
+         */
         void format(std::ostream &out, LogMsg &msg) override
         {
             out << msg._logger;
         }
     };
-
+    /**
+     * @brief 制表符格式化子项
+     */
     class TabFormatItem : public FormatItem
     {
     public:
+        /**
+         * @brief 格式化制表符
+         * @param out 输出流
+         * @param msg 日志消息
+         */
         void format(std::ostream &out, LogMsg &msg) override
         {
             out << "\t";
         }
     };
-
+    /**
+     * @brief 换行符格式化子项
+     */
     class NLineFormatItem : public FormatItem
     {
     public:
+        /**
+         * @brief 格式化换行符
+         * @param out 输出流
+         * @param msg 日志消息
+         */
         void format(std::ostream &out, LogMsg &msg) override
         {
             out << "\n";
         }
     };
-
+    /**
+     * @brief 其他格式化子项
+     */
     class OtherFormatItem : public FormatItem
     {
     public:
+        /**
+         * @brief 构造其他格式化子项
+         * @param str 格式化字符串
+         */
         OtherFormatItem(const std::string &str)
             : _str(str)
         {
         }
+        /**
+         * @brief 格式化其他字符串
+         * @param out 输出流
+         * @param msg 日志消息
+         */
         void format(std::ostream &out, LogMsg &msg) override
         {
             out << _str;
         }
 
     private:
-        std::string _str;
+        std::string _str; ///< 格式化字符串
     };
 
     /*
@@ -137,23 +229,48 @@ namespace Xulog
         %n 换行
     */
 
+    /**
+     * @brief 格式化器类，负责将日志消息格式化为字符串
+     */
     class Formatter
     {
     public:
         using ptr = std::shared_ptr<Formatter>;
+        /**
+         * @brief 构造格式化器
+         * @param pattern 格式化规则字符串，默认为"[%d{%y-%m-%d|%H:%M:%S}][%t][%c][%f:%l][%p]%T%m%n"
+         * @note 格式说明
+         * %d 日期，子格式{%H:%M:%S}
+         * %T 缩进
+         * %t 线程ID
+         * %p 日志级别
+         * %c 日志器名称
+         * %f 文件名
+         * %l 行号
+         * %m 日志消息
+         * %n 换行
+         */
         Formatter(const std::string &pattern = "[%d{%y-%m-%d|%H:%M:%S}][%t][%c][%f:%l][%p]%T%m%n")
             : _pattern(pattern)
         {
             assert(parsePattern());
         }
-        // 对msg进行格式化
+        /**
+         * @brief 对日志消息进行格式化
+         * @param msg 日志消息
+         * @return 格式化后的字符串
+         */
         std::string Format(LogMsg &msg)
         {
             std::stringstream ss;
             Format(ss, msg);
             return ss.str();
         }
-
+        /**
+         * @brief 对日志消息进行格式化，并输出到指定流
+         * @param out 输出流
+         * @param msg 日志消息
+         */
         void Format(std::ostream &out, LogMsg &msg)
         {
             for (auto &item : _items)
@@ -169,6 +286,10 @@ namespace Xulog
             4. 如果遇到{则说明这是格式化字符的子格式，遇到}结束
         */
     private:
+        /**
+         * @brief 解析格式化规则字符串
+         * @return 是否成功解析
+         */
         bool parsePattern()
         {
             std::vector<std::pair<std::string, std::string>> fmt_order;
@@ -230,7 +351,12 @@ namespace Xulog
             }
             return true;
         }
-        // 根据不同的格式化字符，创建不同的格式化子项的对象
+        /**
+         * @brief 根据格式化字符创建格式化子项对象
+         * @param key 格式化字符
+         * @param value 子格式
+         * @return 格式化子项的指针
+         */
         FormatItem::ptr createItem(const std::string &key, const std::string &value)
         {
             if (key == "d")
@@ -259,7 +385,7 @@ namespace Xulog
         }
 
     private:
-        std::string _pattern; // 格式化规则字符串
-        std::vector<FormatItem::ptr> _items;
+        std::string _pattern;                ///< 格式化规则字符串
+        std::vector<FormatItem::ptr> _items; ///< 格式化子项集合
     };
 }
