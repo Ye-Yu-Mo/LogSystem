@@ -1,0 +1,11 @@
+digraph "LogSystem/bench" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_4cbba92824be15c0cc357751a3ad142b {
+    graph [ bgcolor="#ddddee", pencolor="black", label="LogSystem" fontname="Helvetica", fontsize="10", URL="dir_4cbba92824be15c0cc357751a3ad142b.html"]
+  dir_478f9cefe59a3b5a8bfb557f8a1a89d8 [shape=box label="logs" URL="dir_478f9cefe59a3b5a8bfb557f8a1a89d8.html"];
+  dir_933210810c57def151790e21977574b8 [shape=box, label="bench", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_933210810c57def151790e21977574b8.html"];
+  }
+  dir_933210810c57def151790e21977574b8->dir_478f9cefe59a3b5a8bfb557f8a1a89d8 [headlabel="1", labeldistance=1.5 headhref="dir_000001_000004.html"];
+}
