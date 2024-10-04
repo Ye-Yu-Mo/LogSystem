@@ -1,0 +1,6 @@
+<map id="Xulog::Buffer::writeAbleSize" name="Xulog::Buffer::writeAbleSize">
+<area shape="rect" id="node1" title="获取可写数据的长度" alt="" coords="679,31,881,57"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_buffer.html#a6b04e03240d9dc93393a340a93e753da" title="确保缓冲区有足够的空间" alt="" coords="397,5,631,32"/>
+<area shape="rect" id="node4" href="$class_xulog_1_1_async_looper.html#a48333a47b34bc600f6bff6bb152ff0b8" title="向生产缓冲区推送数据" alt="" coords="5,23,156,65"/>
+<area shape="rect" id="node3" href="$class_xulog_1_1_buffer.html#a148e4bc1220cbef2b4619bae366d70d8" title="向缓冲区写入数据" alt="" coords="204,5,349,32"/>
+</map>

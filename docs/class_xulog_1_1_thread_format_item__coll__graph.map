@@ -1,0 +1,4 @@
+<map id="Xulog::ThreadFormatItem" name="Xulog::ThreadFormatItem">
+<area shape="rect" id="node1" title="线程ID格式化子项" alt="" coords="5,80,193,107"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_format_item.html" title="抽象格式化子项的基类" alt="" coords="28,5,171,32"/>
+</map>

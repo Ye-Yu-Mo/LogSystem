@@ -1,0 +1,4 @@
+<map id="Xulog::TimeFormatItem" name="Xulog::TimeFormatItem">
+<area shape="rect" id="node1" title="时间格式化子项" alt="" coords="5,80,181,107"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_format_item.html" title="抽象格式化子项的基类" alt="" coords="22,5,165,32"/>
+</map>

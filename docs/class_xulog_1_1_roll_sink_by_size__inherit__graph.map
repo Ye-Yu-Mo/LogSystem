@@ -1,0 +1,4 @@
+<map id="Xulog::RollSinkBySize" name="Xulog::RollSinkBySize">
+<area shape="rect" id="node1" title="基于文件大小的滚动文件日志落地实现" alt="" coords="5,80,169,107"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_log_sink.html" title="抽象日志落地基类" alt="" coords="28,5,147,32"/>
+</map>

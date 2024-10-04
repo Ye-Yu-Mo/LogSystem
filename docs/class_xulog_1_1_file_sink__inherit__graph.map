@@ -1,0 +1,4 @@
+<map id="Xulog::FileSink" name="Xulog::FileSink">
+<area shape="rect" id="node1" title="文件日志落地实现" alt="" coords="5,80,124,107"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_log_sink.html" title="抽象日志落地基类" alt="" coords="5,5,124,32"/>
+</map>

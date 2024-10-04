@@ -1,0 +1,15 @@
+<map id="LogSystem/logs/format.hpp" name="LogSystem/logs/format.hpp">
+<area shape="rect" id="node1" title="日志格式化器类的定义" alt="" coords="411,5,613,32"/>
+<area shape="rect" id="node2" href="$level_8hpp.html" title="日志等级类的定义和实现" alt="" coords="5,155,88,181"/>
+<area shape="rect" id="node3" href="$message_8hpp.html" title="日志消息类的实现" alt="" coords="183,80,292,107"/>
+<area shape="rect" id="node8" title=" " alt="" coords="413,229,472,256"/>
+<area shape="rect" id="node10" title=" " alt="" coords="481,80,543,107"/>
+<area shape="rect" id="node11" title=" " alt="" coords="568,80,637,107"/>
+<area shape="rect" id="node12" title=" " alt="" coords="661,80,736,107"/>
+<area shape="rect" id="node13" title=" " alt="" coords="760,80,837,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="143,229,223,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="163,155,227,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="251,155,309,181"/>
+<area shape="rect" id="node7" href="$util_8hpp.html" title="实用工具类的实现" alt="" coords="334,155,405,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="304,229,389,256"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Xulog::SyncLogger" name="Xulog::SyncLogger">
+<area shape="rect" id="node1" title="同步日志器" alt="" coords="5,80,148,107"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_logger.html" title="抽象日志器基类" alt="" coords="21,5,132,32"/>
+</map>

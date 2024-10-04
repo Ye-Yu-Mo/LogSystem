@@ -1,0 +1,6 @@
+<map id="Xulog::GlobalLoggerBuild::build" name="Xulog::GlobalLoggerBuild::build">
+<area shape="rect" id="node1" title="构建日志器" alt="" coords="5,39,192,80"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_logger_manager.html#a8ce0108b10de74e08d5f2e9a3a4b8c6a" title="添加日志器到管理器" alt="" coords="240,5,408,47"/>
+<area shape="rect" id="node4" href="$class_xulog_1_1_logger_manager.html#a0fac48ea6ddcb18177d3cd9def3dc0a0" title="获取日志器管理器的实例" alt="" coords="240,71,408,112"/>
+<area shape="rect" id="node3" href="$class_xulog_1_1_logger_manager.html#a7c64fb93beb8f5079db2449fcaccf71d" title="检查是否存在指定名称的日志器" alt="" coords="456,5,624,47"/>
+</map>

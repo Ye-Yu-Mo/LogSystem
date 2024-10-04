@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_xulog_1_1_log_sink.html" title="抽象日志落地基类" alt="" coords="5,81,124,108"/>
+<area shape="rect" id="node2" href="$class_roll_sink_by_time.html" title=" " alt="" coords="191,5,317,32"/>
+<area shape="rect" id="node3" href="$class_xulog_1_1_file_sink.html" title="文件日志落地实现" alt="" coords="195,56,313,83"/>
+<area shape="rect" id="node4" href="$class_xulog_1_1_roll_sink_by_size.html" title="基于文件大小的滚动文件日志落地实现" alt="" coords="172,107,336,133"/>
+<area shape="rect" id="node5" href="$class_xulog_1_1_stdout_sink.html" title="标准输出日志落地实现" alt="" coords="185,157,323,184"/>
+</map>

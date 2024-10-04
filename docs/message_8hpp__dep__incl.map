@@ -1,0 +1,9 @@
+<map id="LogSystem/logs/message.hpp" name="LogSystem/logs/message.hpp">
+<area shape="rect" id="node1" title="日志消息类的实现" alt="" coords="222,5,438,32"/>
+<area shape="rect" id="node2" href="$format_8hpp.html" title="日志格式化器类的定义" alt="" coords="229,80,431,107"/>
+<area shape="rect" id="node3" href="$logger_8hpp.html" title="日志器模块的实现" alt="" coords="231,155,429,181"/>
+<area shape="rect" id="node4" href="$_xulog_8h.html" title="全局日志接口和宏定义" alt="" coords="241,229,419,256"/>
+<area shape="rect" id="node5" href="$bench_8cc.html" title=" " alt="" coords="5,304,204,331"/>
+<area shape="rect" id="node6" href="$test_8cc.html" title=" " alt="" coords="229,304,431,331"/>
+<area shape="rect" id="node7" href="$_roll_by_time_8cc.html" title=" " alt="" coords="455,304,695,331"/>
+</map>
