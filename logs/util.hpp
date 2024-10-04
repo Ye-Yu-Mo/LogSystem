@@ -1,10 +1,9 @@
-/*
-    实用工具类的实现
-        1. 获取系统时间
-        2. 判断文件是否存在
-        3，获取文件路径
-        4. 创建目录
-*/
+/**
+ * @file util.hpp
+ * @brief 实用工具类的实现
+ *
+ * 本文件提供了一些实用工具类，包括获取系统时间、判断文件是否存在、获取文件路径和创建目录的功能。
+ */
 #pragma once
 
 #include <iostream>
@@ -15,17 +14,41 @@ namespace Xulog
 {
     namespace Util
     {
+        /**
+         * @class Date
+         * @brief 时间相关的实用工具类
+         *
+         * 提供获取当前系统时间的功能。
+         */
         class Date
         {
+            /**
+             * @brief 获取当前时间戳
+             *
+             * @return size_t 当前时间戳（自1970年1月1日以来的秒数）
+             */
         public:
             static size_t getTime()
             {
                 return (size_t)time(nullptr); // 获取当前时间戳
             }
         };
+        /**
+         * @class File
+         * @brief 文件操作相关的实用工具类
+         *
+         * 提供判断文件是否存在、获取文件路径和创建目录的功能。
+         */
         class File
         {
         public:
+            /**
+             * @brief 判断文件是否存在
+             *
+             * @param pathname 文件的路径
+             * @return true 如果文件存在
+             * @return false 如果文件不存在
+             */
             static bool exists(const std::string &pathname)
             {
                 struct stat st;
@@ -33,6 +56,14 @@ namespace Xulog
                     return false;
                 return true;
             }
+            /**
+             * @brief 获取文件路径
+             *
+             * @param pathname 文件的路径
+             * @return std::string 文件所在的目录路径
+             *
+             * 如果没有找到路径分隔符，返回当前目录。
+             */
             static std::string path(const std::string &pathname)
             {
                 size_t pos = pathname.find_last_of("/\\"); // 查找最后一个'/'或者'\'
@@ -40,6 +71,13 @@ namespace Xulog
                     return ".";                     // 如果没有找到路径分隔符，返回当前目录
                 return pathname.substr(0, pos + 1); // 获取文件路径的目录部分
             }
+            /**
+             * @brief 创建目录及其父级目录
+             *
+             * @param pathname 要创建的目录的路径
+             *
+             * 逐层创建目录，直到完整路径创建完成。
+             */
             static void createDirectory(const std::string &pathname)
             {
                 size_t pos = 0, idx = 0; // pos表示'/'的位置，idx表示起始位置

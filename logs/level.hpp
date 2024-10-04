@@ -1,25 +1,46 @@
-/*
-    日志等级类的实现
-        1. 定义枚举类，枚举出日志的等级
-        2. 提供转换接口，将枚举转换成对应的字符串
-*/
+/**
+ * @file level.hpp
+ * @brief 日志等级类的定义和实现
+ *
+ * 该文件包含了日志等级的枚举定义，并提供了将日志等级转换为字符串的接口。
+ */
 #pragma once
 
 namespace Xulog
 {
+    /**
+     * @class LogLevel
+     * @brief 日志等级类
+     *
+     * 该类定义了不同的日志等级，并提供了日志等级与字符串之间的转换方法。
+     */
     class LogLevel
     {
     public:
+        /**
+         * @enum value
+         * @brief 日志等级的枚举值
+         *
+         * 定义日志的不同等级，从UNKNOW到OFF。
+         */
         enum class value
         {
-            UNKNOW = 0,
-            DEBUG,
-            INFO,
-            WARN,
-            ERROR,
-            FATAL,
-            OFF
+            UNKNOW = 0, /**< 未知日志等级 */
+            DEBUG,      /**< 调试信息 */
+            INFO,       /**< 普通信息 */
+            WARN,       /**< 警告信息 */
+            ERROR,      /**< 错误信息 */
+            FATAL,      /**< 严重错误 */
+            OFF         /**< 日志关闭 */
         };
+        /**
+         * @brief 将日志等级转换为对应的字符串
+         *
+         * @param level 日志等级的枚举值
+         * @return 对应的日志等级字符串
+         *
+         * 该函数根据传入的日志等级枚举值，返回对应的字符串表示。
+         */
         static const char *toString(LogLevel::value level)
         {
             switch (level)
