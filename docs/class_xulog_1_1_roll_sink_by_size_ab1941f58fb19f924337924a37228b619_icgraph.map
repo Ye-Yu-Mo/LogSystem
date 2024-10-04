@@ -1,0 +1,5 @@
+<map id="Xulog::RollSinkBySize::creatNewFIle" name="Xulog::RollSinkBySize::creatNewFIle">
+<area shape="rect" id="node1" title="创建新文件" alt="" coords="245,27,409,69"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_roll_sink_by_size.html#a81aacd59f7f012644573313575d0182d" title="日志写入到滚动文件" alt="" coords="5,5,197,32"/>
+<area shape="rect" id="node3" href="$class_xulog_1_1_roll_sink_by_size.html#aa55e0780ab91807ea6b1695f56c71fb3" title="构造函数" alt="" coords="19,57,183,98"/>
+</map>

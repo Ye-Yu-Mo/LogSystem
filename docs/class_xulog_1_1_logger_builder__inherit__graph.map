@@ -1,0 +1,5 @@
+<map id="Xulog::LoggerBuilder" name="Xulog::LoggerBuilder">
+<area shape="rect" id="node1" title="日志器建造者" alt="" coords="123,5,280,32"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_global_logger_build.html" title="全局日志器建造者" alt="" coords="5,80,192,107"/>
+<area shape="rect" id="node3" href="$class_xulog_1_1_local_logger_build.html" title="局部日志器建造者" alt="" coords="216,80,395,107"/>
+</map>

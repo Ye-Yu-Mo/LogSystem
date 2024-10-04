@@ -1,0 +1,7 @@
+<map id="Xulog::AsyncLooper::push" name="Xulog::AsyncLooper::push">
+<area shape="rect" id="node1" title="向生产缓冲区推送数据" alt="" coords="5,74,156,115"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_buffer.html#a148e4bc1220cbef2b4619bae366d70d8" title="向缓冲区写入数据" alt="" coords="204,56,349,83"/>
+<area shape="rect" id="node4" href="$class_xulog_1_1_buffer.html#a7653408465471cc568659dfd5ed91244" title="获取可写数据的长度" alt="" coords="679,56,881,83"/>
+<area shape="rect" id="node3" href="$class_xulog_1_1_buffer.html#a6b04e03240d9dc93393a340a93e753da" title="确保缓冲区有足够的空间" alt="" coords="397,5,631,32"/>
+<area shape="rect" id="node5" href="$class_xulog_1_1_buffer.html#aeca9ee3e99353c7a719af2f57fb2a386" title="移动写指针" alt="" coords="419,56,609,83"/>
+</map>

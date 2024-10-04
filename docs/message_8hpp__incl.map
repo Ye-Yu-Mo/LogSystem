@@ -1,0 +1,10 @@
+<map id="LogSystem/logs/message.hpp" name="LogSystem/logs/message.hpp">
+<area shape="rect" id="node1" title="日志消息类的实现" alt="" coords="32,5,248,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="75,155,155,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="23,80,87,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="111,80,169,107"/>
+<area shape="rect" id="node5" href="$level_8hpp.html" title="日志等级类的定义和实现" alt="" coords="193,80,276,107"/>
+<area shape="rect" id="node6" href="$util_8hpp.html" title="实用工具类的实现" alt="" coords="301,80,371,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="259,155,317,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="341,155,427,181"/>
+</map>

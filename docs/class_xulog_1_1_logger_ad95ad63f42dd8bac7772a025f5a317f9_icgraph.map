@@ -1,0 +1,9 @@
+<map id="Xulog::Logger::log" name="Xulog::Logger::log">
+<area shape="rect" id="node1" title="抽象日志输出接口" alt="" coords="435,107,573,133"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_logger.html#ae77bb0a6c0167f062ffc1f0fde2f9e87" title="序列化日志消息" alt="" coords="212,107,387,133"/>
+<area shape="rect" id="node3" href="$class_xulog_1_1_logger.html#a8be8b1472da9e5a313a13667f4748314" title="记录调试级别日志" alt="" coords="5,5,164,32"/>
+<area shape="rect" id="node4" href="$class_xulog_1_1_logger.html#ab10f70757651935431baf53fc3ceee6b" title="记录错误级别日志" alt="" coords="9,56,160,83"/>
+<area shape="rect" id="node5" href="$class_xulog_1_1_logger.html#a3d9920a1911340c90b7ac55bc52ba5af" title="记录致命级别日志" alt="" coords="10,107,159,133"/>
+<area shape="rect" id="node6" href="$class_xulog_1_1_logger.html#a623ef0c5d8030674000c98561896a3f4" title="记录信息级别日志" alt="" coords="13,157,157,184"/>
+<area shape="rect" id="node7" href="$class_xulog_1_1_logger.html#aa32b52c0de872bf78debea1139af1afc" title="记录警告级别日志" alt="" coords="9,208,160,235"/>
+</map>

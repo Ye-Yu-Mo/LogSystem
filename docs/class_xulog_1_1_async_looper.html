@@ -113,6 +113,10 @@ $(document).ready(function(){initNavTree('class_xulog_1_1_async_looper.html','')
 Collaboration diagram for Xulog::AsyncLooper:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xulog_1_1_async_looper__coll__graph.png" border="0" usemap="#a_xulog_1_1_async_looper_coll__map" alt="Collaboration graph"/></div>
+<map name="a_xulog_1_1_async_looper_coll__map" id="a_xulog_1_1_async_looper_coll__map">
+<area shape="rect" title="异步工作器类" alt="" coords="5,109,156,136"/>
+<area shape="rect" href="class_xulog_1_1_buffer.html" title="异步日志缓冲区类" alt="" coords="27,5,134,32"/>
+</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -261,6 +265,15 @@ Private Attributes</h2></td></tr>
 
 <p>析构函数 </p>
 <p>停止异步工作器，唤醒所有工作线程并等待线程结束。 </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xulog_1_1_async_looper_aa803f65ae60533381e8d6cc669517dd2_cgraph.png" border="0" usemap="#aclass_xulog_1_1_async_looper_aa803f65ae60533381e8d6cc669517dd2_cgraph" alt=""/></div>
+<map name="aclass_xulog_1_1_async_looper_aa803f65ae60533381e8d6cc669517dd2_cgraph" id="aclass_xulog_1_1_async_looper_aa803f65ae60533381e8d6cc669517dd2_cgraph">
+<area shape="rect" title="析构函数" alt="" coords="5,5,156,47"/>
+<area shape="rect" href="class_xulog_1_1_async_looper.html#ab9dbe072052f318858576d6a29bc6f9a" title="停止异步工作器" alt="" coords="204,5,355,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -308,6 +321,18 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 <p>根据异步类型控制缓冲区的写入，唤醒消费者处理数据。 </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xulog_1_1_async_looper_a48333a47b34bc600f6bff6bb152ff0b8_cgraph.png" border="0" usemap="#aclass_xulog_1_1_async_looper_a48333a47b34bc600f6bff6bb152ff0b8_cgraph" alt=""/></div>
+<map name="aclass_xulog_1_1_async_looper_a48333a47b34bc600f6bff6bb152ff0b8_cgraph" id="aclass_xulog_1_1_async_looper_a48333a47b34bc600f6bff6bb152ff0b8_cgraph">
+<area shape="rect" title="向生产缓冲区推送数据" alt="" coords="5,74,156,115"/>
+<area shape="rect" href="class_xulog_1_1_buffer.html#a148e4bc1220cbef2b4619bae366d70d8" title="向缓冲区写入数据" alt="" coords="204,56,349,83"/>
+<area shape="rect" href="class_xulog_1_1_buffer.html#a7653408465471cc568659dfd5ed91244" title="获取可写数据的长度" alt="" coords="679,56,881,83"/>
+<area shape="rect" href="class_xulog_1_1_buffer.html#a6b04e03240d9dc93393a340a93e753da" title="确保缓冲区有足够的空间" alt="" coords="397,5,631,32"/>
+<area shape="rect" href="class_xulog_1_1_buffer.html#aeca9ee3e99353c7a719af2f57fb2a386" title="移动写指针" alt="" coords="419,56,609,83"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -336,6 +361,15 @@ Private Attributes</h2></td></tr>
 
 <p>停止异步工作器 </p>
 <p>设置停止标志，并唤醒所有工作线程。 </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xulog_1_1_async_looper_ab9dbe072052f318858576d6a29bc6f9a_icgraph.png" border="0" usemap="#aclass_xulog_1_1_async_looper_ab9dbe072052f318858576d6a29bc6f9a_icgraph" alt=""/></div>
+<map name="aclass_xulog_1_1_async_looper_ab9dbe072052f318858576d6a29bc6f9a_icgraph" id="aclass_xulog_1_1_async_looper_ab9dbe072052f318858576d6a29bc6f9a_icgraph">
+<area shape="rect" title="停止异步工作器" alt="" coords="204,5,355,47"/>
+<area shape="rect" href="class_xulog_1_1_async_looper.html#aa803f65ae60533381e8d6cc669517dd2" title="析构函数" alt="" coords="5,5,156,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -365,6 +399,17 @@ Private Attributes</h2></td></tr>
 <p>线程入口函数 </p>
 <p>持续监测生产缓冲区的数据，并处理消费缓冲区的数据。</p>
 <p>当停止标志被设置且缓冲区为空时，线程结束。 </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xulog_1_1_async_looper_a808d8edd295b7c1e5afe35d6997e1dd9_cgraph.png" border="0" usemap="#aclass_xulog_1_1_async_looper_a808d8edd295b7c1e5afe35d6997e1dd9_cgraph" alt=""/></div>
+<map name="aclass_xulog_1_1_async_looper_a808d8edd295b7c1e5afe35d6997e1dd9_cgraph" id="aclass_xulog_1_1_async_looper_a808d8edd295b7c1e5afe35d6997e1dd9_cgraph">
+<area shape="rect" title="线程入口函数" alt="" coords="5,49,156,90"/>
+<area shape="rect" href="class_xulog_1_1_buffer.html#a62ce5fda161dc1b672695b42a145210b" title="判空" alt="" coords="204,5,360,32"/>
+<area shape="rect" href="class_xulog_1_1_buffer.html#af7643af16288871e9cfb58dafbbf304c" title="重置缓冲区" alt="" coords="209,56,355,83"/>
+<area shape="rect" href="class_xulog_1_1_buffer.html#add54dc7f4d771e228091f3937a61f354" title="交换当前缓冲区与另一个缓冲区" alt="" coords="208,107,356,133"/>
+</map>
+</div>
 
 </div>
 </div>

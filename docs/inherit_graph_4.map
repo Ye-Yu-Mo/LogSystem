@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_xulog_1_1_logger.html" title="抽象日志器基类" alt="" coords="5,31,116,57"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_async_logger.html" title="异步日志器" alt="" coords="164,5,315,32"/>
+<area shape="rect" id="node3" href="$class_xulog_1_1_sync_logger.html" title="同步日志器" alt="" coords="168,56,311,83"/>
+</map>

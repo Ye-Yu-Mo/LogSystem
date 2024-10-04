@@ -1,0 +1,5 @@
+<map id="Xulog::Logger::fatal" name="Xulog::Logger::fatal">
+<area shape="rect" id="node1" title="记录致命级别日志" alt="" coords="5,5,155,32"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_logger.html#ae77bb0a6c0167f062ffc1f0fde2f9e87" title="序列化日志消息" alt="" coords="203,5,377,32"/>
+<area shape="rect" id="node3" href="$class_xulog_1_1_logger.html#ad95ad63f42dd8bac7772a025f5a317f9" title="抽象日志输出接口" alt="" coords="425,5,564,32"/>
+</map>

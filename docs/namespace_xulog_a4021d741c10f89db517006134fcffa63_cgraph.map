@@ -1,0 +1,5 @@
+<map id="Xulog::rootLogger" name="Xulog::rootLogger">
+<area shape="rect" id="node1" title="获取默认日志器" alt="" coords="5,46,143,73"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_logger_manager.html#a0fac48ea6ddcb18177d3cd9def3dc0a0" title="获取日志器管理器的实例" alt="" coords="191,5,359,47"/>
+<area shape="rect" id="node3" href="$class_xulog_1_1_logger_manager.html#a1a3f85bf3db0d656edc18e08310f9d52" title="获取根日志器" alt="" coords="191,71,359,112"/>
+</map>

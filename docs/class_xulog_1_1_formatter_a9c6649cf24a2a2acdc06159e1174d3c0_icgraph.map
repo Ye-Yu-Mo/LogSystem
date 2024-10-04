@@ -1,0 +1,5 @@
+<map id="Xulog::Formatter::createItem" name="Xulog::Formatter::createItem">
+<area shape="rect" id="node1" title="根据格式化字符创建格式化子项对象" alt="" coords="525,5,736,32"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_formatter.html#a743ac67767ed63a7385330d804513e12" title="解析格式化规则字符串" alt="" coords="256,5,477,32"/>
+<area shape="rect" id="node3" href="$class_xulog_1_1_formatter.html#a26b0e505317a53ce08b02450191a4187" title="构造格式化器" alt="" coords="5,5,208,32"/>
+</map>

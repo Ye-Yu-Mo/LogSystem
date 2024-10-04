@@ -1,0 +1,5 @@
+<map id="Xulog::Buffer::moveWriter" name="Xulog::Buffer::moveWriter">
+<area shape="rect" id="node1" title="移动写指针" alt="" coords="397,13,588,39"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_buffer.html#a148e4bc1220cbef2b4619bae366d70d8" title="向缓冲区写入数据" alt="" coords="204,13,349,39"/>
+<area shape="rect" id="node3" href="$class_xulog_1_1_async_looper.html#a48333a47b34bc600f6bff6bb152ff0b8" title="向生产缓冲区推送数据" alt="" coords="5,5,156,47"/>
+</map>

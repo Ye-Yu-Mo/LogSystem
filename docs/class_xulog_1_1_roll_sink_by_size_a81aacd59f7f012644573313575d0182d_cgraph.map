@@ -1,0 +1,5 @@
+<map id="Xulog::RollSinkBySize::log" name="Xulog::RollSinkBySize::log">
+<area shape="rect" id="node1" title="日志写入到滚动文件" alt="" coords="5,13,197,39"/>
+<area shape="rect" id="node2" href="$class_xulog_1_1_roll_sink_by_size.html#ab1941f58fb19f924337924a37228b619" title="创建新文件" alt="" coords="245,5,409,47"/>
+<area shape="rect" id="node3" href="$class_xulog_1_1_util_1_1_date.html#a32d8c9efdcaf981547fcd8f3381da363" title="获取当前时间戳" alt="" coords="457,5,595,47"/>
+</map>
