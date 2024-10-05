@@ -1,0 +1,5 @@
+<map id="Xulog::LogLevel::toString" name="Xulog::LogLevel::toString">
+<area shape="rect" id="Node000001" title="将日志等级转换为对应的字符串" alt="" coords="232,13,416,38"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_level_format_item.html#a275dbc854439cfbc65b640ccc50341a8" title="格式化日志级别" alt="" coords="5,5,184,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,28,184,28,184,23,218,23"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Xulog::Logger::debug" name="Xulog::Logger::debug">
+<area shape="rect" id="Node000001" title="记录调试级别日志" alt="" coords="5,5,164,31"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_logger.html#ae77bb0a6c0167f062ffc1f0fde2f9e87" title="序列化日志消息" alt="" coords="212,5,387,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,15,198,15,198,21,164,21"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_logger.html#ad95ad63f42dd8bac7772a025f5a317f9" title="抽象日志输出接口" alt="" coords="435,5,573,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="387,15,421,15,421,21,387,21"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="bench" name="bench">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,45,67,70"/>
+<area shape="rect" id="Node000002" href="$namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="115,45,247,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,55,101,55,101,60,67,60"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_logger_manager.html#a2275ef98586ea630426491d51be7bc96" title="获取日志器管理器的实例" alt="" coords="295,5,463,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="247,44,281,38,281,44,247,49"/>
+<area shape="rect" id="Node000004" href="$class_xulog_1_1_logger_manager.html#a9482ba1783c7cd77667abef2ee231e6e" title="获取指定名称的日志器" alt="" coords="295,69,463,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="247,65,281,71,281,76,247,71"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Xulog::AsyncLogger::realLog" name="Xulog::AsyncLogger::realLog">
+<area shape="rect" id="Node000001" title="实际落地函数，将缓冲区中的日志写入接收器" alt="" coords="5,23,156,63"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_buffer.html#a76aa72e542d94840c989006960b7822d" title="获取可读数据的起始地址" alt="" coords="228,5,379,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,32,214,25,215,31,157,37"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_buffer.html#a48ed56514be75045577109d78efcbf3e" title="获取可读数据的长度" alt="" coords="204,55,403,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,49,191,53,190,58,156,54"/>
+</map>

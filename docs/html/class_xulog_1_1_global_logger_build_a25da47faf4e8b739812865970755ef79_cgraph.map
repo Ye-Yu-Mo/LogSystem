@@ -1,0 +1,9 @@
+<map id="Xulog::GlobalLoggerBuild::build" name="Xulog::GlobalLoggerBuild::build">
+<area shape="rect" id="Node000001" title="构建日志器" alt="" coords="5,37,192,77"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_logger_manager.html#a8ce0108b10de74e08d5f2e9a3a4b8c6a" title="添加日志器到管理器" alt="" coords="240,5,408,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,41,226,37,227,42,193,47"/>
+<area shape="rect" id="Node000004" href="$class_xulog_1_1_logger_manager.html#a2275ef98586ea630426491d51be7bc96" title="获取日志器管理器的实例" alt="" coords="240,69,408,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="193,68,227,73,226,78,192,73"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_logger_manager.html#a7c64fb93beb8f5079db2449fcaccf71d" title="检查是否存在指定名称的日志器" alt="" coords="456,5,624,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="408,23,442,23,442,28,408,28"/>
+</map>

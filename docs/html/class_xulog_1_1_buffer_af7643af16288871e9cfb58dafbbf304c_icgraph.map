@@ -1,0 +1,5 @@
+<map id="Xulog::Buffer::reset" name="Xulog::Buffer::reset">
+<area shape="rect" id="Node000001" title="重置缓冲区" alt="" coords="204,13,351,38"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_async_looper.html#a808d8edd295b7c1e5afe35d6997e1dd9" title="线程入口函数" alt="" coords="5,5,156,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,28,156,28,156,23,190,23"/>
+</map>

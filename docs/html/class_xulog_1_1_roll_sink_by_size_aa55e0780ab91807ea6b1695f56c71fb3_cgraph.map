@@ -1,0 +1,13 @@
+<map id="Xulog::RollSinkBySize::RollSinkBySize" name="Xulog::RollSinkBySize::RollSinkBySize">
+<area shape="rect" id="Node000001" title="构造函数" alt="" coords="5,69,169,109"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_util_1_1_file.html#a36140bd7ae35f04c9c390b50347a0d0e" title="创建目录及其父级目录" alt="" coords="235,5,364,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,67,220,46,222,51,155,72"/>
+<area shape="rect" id="Node000004" href="$class_xulog_1_1_roll_sink_by_size.html#ab1941f58fb19f924337924a37228b619" title="创建新文件" alt="" coords="217,69,381,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="170,87,204,87,204,92,170,92"/>
+<area shape="rect" id="Node000006" href="$class_xulog_1_1_util_1_1_file.html#a578792da7768a3c985cbf0acb87f495b" title="获取文件路径" alt="" coords="220,134,379,159"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="163,107,239,128,237,133,161,112"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_util_1_1_file.html#ac7b05dc9c45e4b78cc269bdf526de4ac" title="判断文件是否存在" alt="" coords="433,5,563,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="364,23,419,23,419,28,364,28"/>
+<area shape="rect" id="Node000005" href="$class_xulog_1_1_util_1_1_date.html#a32d8c9efdcaf981547fcd8f3381da363" title="获取当前时间戳" alt="" coords="429,69,567,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="382,87,416,87,416,92,382,92"/>
+</map>

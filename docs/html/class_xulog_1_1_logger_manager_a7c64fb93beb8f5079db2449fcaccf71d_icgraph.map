@@ -1,0 +1,7 @@
+<map id="Xulog::LoggerManager::hasLogger" name="Xulog::LoggerManager::hasLogger">
+<area shape="rect" id="Node000001" title="检查是否存在指定名称的日志器" alt="" coords="456,5,624,45"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_logger_manager.html#a8ce0108b10de74e08d5f2e9a3a4b8c6a" title="添加日志器到管理器" alt="" coords="240,5,408,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="442,28,408,28,408,23,442,23"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_global_logger_build.html#a25da47faf4e8b739812865970755ef79" title="构建日志器" alt="" coords="5,5,192,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="226,28,192,28,192,23,226,23"/>
+</map>

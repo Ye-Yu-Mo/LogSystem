@@ -1,0 +1,9 @@
+<map id="Xulog::Buffer::push" name="Xulog::Buffer::push">
+<area shape="rect" id="Node000001" title="向缓冲区写入数据" alt="" coords="5,31,151,56"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_buffer.html#a6b04e03240d9dc93393a340a93e753da" title="确保缓冲区有足够的空间" alt="" coords="199,5,432,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,33,185,29,186,35,151,38"/>
+<area shape="rect" id="Node000004" href="$class_xulog_1_1_buffer.html#aeca9ee3e99353c7a719af2f57fb2a386" title="移动写指针" alt="" coords="220,55,411,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="151,48,207,54,206,59,151,53"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_buffer.html#a7653408465471cc568659dfd5ed91244" title="获取可写数据的长度" alt="" coords="480,5,683,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="432,15,466,15,466,21,432,21"/>
+</map>

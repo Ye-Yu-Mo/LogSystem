@@ -1,0 +1,14 @@
+<map id="RollSinkByTime::RollSinkByTime" name="RollSinkByTime::RollSinkByTime">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,88,192,128"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_util_1_1_file.html#a36140bd7ae35f04c9c390b50347a0d0e" title="创建目录及其父级目录" alt="" coords="289,5,418,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,85,239,55,275,44,276,49,241,60,154,90"/>
+<area shape="rect" id="Node000004" href="$class_roll_sink_by_time.html#a3101079c827baa41be7fc1e694cdc231" title=" " alt="" coords="240,70,467,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="192,96,226,93,226,98,192,101"/>
+<area shape="rect" id="Node000005" href="$class_xulog_1_1_util_1_1_date.html#a32d8c9efdcaf981547fcd8f3381da363" title="获取当前时间戳" alt="" coords="515,91,652,131"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="192,106,501,108,501,113,192,111"/>
+<area shape="rect" id="Node000006" href="$class_xulog_1_1_util_1_1_file.html#a578792da7768a3c985cbf0acb87f495b" title="获取文件路径" alt="" coords="274,171,433,197"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="163,126,241,149,294,165,292,170,239,155,162,131"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_util_1_1_file.html#ac7b05dc9c45e4b78cc269bdf526de4ac" title="判断文件是否存在" alt="" coords="519,5,648,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="419,23,505,23,505,28,419,28"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="458,93,502,98,501,103,457,98"/>
+</map>

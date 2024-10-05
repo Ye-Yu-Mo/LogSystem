@@ -1,0 +1,5 @@
+<map id="Xulog::Buffer::begin" name="Xulog::Buffer::begin">
+<area shape="rect" id="Node000001" title="获取可读数据的起始地址" alt="" coords="204,13,355,38"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_async_logger.html#a7c2cf6d3bf3f727cb27bb4809f02bbc5" title="实际落地函数，将缓冲区中的日志写入接收器" alt="" coords="5,5,156,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,28,156,28,156,23,191,23"/>
+</map>

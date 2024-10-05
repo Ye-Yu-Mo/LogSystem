@@ -1,0 +1,13 @@
+<map id="Xulog::Logger::serialize" name="Xulog::Logger::serialize">
+<area shape="rect" id="Node000001" title="序列化日志消息" alt="" coords="212,104,387,129"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_logger.html#a8be8b1472da9e5a313a13667f4748314" title="记录调试级别日志" alt="" coords="5,5,164,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="265,99,218,71,163,44,132,33,134,28,165,40,220,67,268,94"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_logger.html#ab10f70757651935431baf53fc3ceee6b" title="记录错误级别日志" alt="" coords="9,55,160,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,103,140,83,141,77,231,98"/>
+<area shape="rect" id="Node000004" href="$class_xulog_1_1_logger.html#a3d9920a1911340c90b7ac55bc52ba5af" title="记录致命级别日志" alt="" coords="10,104,159,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,119,160,119,160,114,198,114"/>
+<area shape="rect" id="Node000005" href="$class_xulog_1_1_logger.html#a623ef0c5d8030674000c98561896a3f4" title="记录信息级别日志" alt="" coords="13,153,157,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="231,135,141,156,140,151,229,130"/>
+<area shape="rect" id="Node000006" href="$class_xulog_1_1_logger.html#aa32b52c0de872bf78debea1139af1afc" title="记录警告级别日志" alt="" coords="9,203,160,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="267,139,220,166,165,192,131,205,129,200,163,188,217,161,265,134"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Xulog::LoggerBuilder::buildSink" name="Xulog::LoggerBuilder::buildSink">
+<area shape="rect" id="Node000001" title="构建接收器" alt="" coords="5,29,163,69"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_sink_factory.html#ad1590da4477db87f0e67cb7be939cb84" title="创建日志落地对象" alt="" coords="211,29,353,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,47,197,47,197,52,163,52"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="245,30,243,20,248,11,262,5,282,3,305,6,318,13,315,18,304,11,282,8,263,10,252,15,248,21,250,28"/>
+</map>

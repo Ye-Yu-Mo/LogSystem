@@ -1,0 +1,9 @@
+<map id="Xulog::AsyncLooper::threadEntry" name="Xulog::AsyncLooper::threadEntry">
+<area shape="rect" id="Node000001" title="线程入口函数" alt="" coords="5,47,156,87"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_buffer.html#a62ce5fda161dc1b672695b42a145210b" title="判空" alt="" coords="204,5,360,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,46,215,32,216,37,157,51"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_buffer.html#af7643af16288871e9cfb58dafbbf304c" title="重置缓冲区" alt="" coords="209,55,355,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,65,195,65,195,70,157,70"/>
+<area shape="rect" id="Node000004" href="$class_xulog_1_1_buffer.html#add54dc7f4d771e228091f3937a61f354" title="交换当前缓冲区与另一个缓冲区" alt="" coords="208,104,356,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="157,83,216,98,215,103,156,88"/>
+</map>

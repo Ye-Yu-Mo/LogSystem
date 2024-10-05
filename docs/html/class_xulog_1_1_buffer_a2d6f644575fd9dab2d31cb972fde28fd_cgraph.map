@@ -1,0 +1,5 @@
+<map id="Xulog::Buffer::moveReader" name="Xulog::Buffer::moveReader">
+<area shape="rect" id="Node000001" title="移动读指针" alt="" coords="5,5,203,31"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_buffer.html#a48ed56514be75045577109d78efcbf3e" title="获取可读数据的长度" alt="" coords="251,5,449,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="203,15,237,15,237,21,203,21"/>
+</map>

@@ -1,0 +1,21 @@
+<map id="Xulog::LoggerManager::getInstance" name="Xulog::LoggerManager::getInstance">
+<area shape="rect" id="Node000001" title="获取日志器管理器的实例" alt="" coords="620,73,788,113"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_global_logger_build.html#a25da47faf4e8b739812865970755ef79" title="构建日志器" alt="" coords="385,15,572,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="611,72,557,58,558,53,612,67"/>
+<area shape="rect" id="Node000003" href="$namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="413,80,545,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="606,95,545,95,545,90,606,90"/>
+<area shape="rect" id="Node000010" href="$namespace_xulog.html#a4021d741c10f89db517006134fcffa63" title="获取默认日志器" alt="" coords="410,129,547,155"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="607,117,538,132,537,127,606,111"/>
+<area shape="rect" id="Node000004" href="$bench_8cc.html#a50e07be47fb2d4bc0ab579d1f67a0d47" title=" " alt="" coords="269,55,331,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="399,84,330,74,331,69,399,79"/>
+<area shape="rect" id="Node000008" href="$test_8cc.html#ac23db1c84059647b8979ebb5504142ef" title=" " alt="" coords="263,104,337,129"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="399,106,338,114,337,109,399,101"/>
+<area shape="rect" id="Node000005" href="$bench_8cc.html#a48449afe027d0b3050a6fa9b4af0bc91" title=" " alt="" coords="108,5,215,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="255,54,197,33,199,28,257,49"/>
+<area shape="rect" id="Node000007" href="$bench_8cc.html#aed911458da7aa931bc325648b27a2ded" title=" " alt="" coords="112,55,211,80"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="256,70,211,70,211,65,256,65"/>
+<area shape="rect" id="Node000006" href="$bench_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+<area shape="rect" id="Node000009" href="$test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="134,104,189,129"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="249,119,189,119,189,114,249,114"/>
+</map>

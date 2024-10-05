@@ -1,0 +1,5 @@
+<map id="Xulog::StdoutSink::log" name="Xulog::StdoutSink::log">
+<area shape="rect" id="Node000001" title="日志写入到标准输出" alt="" coords="5,13,171,38"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_stdout_sink.html#ac4d66e37eba8bd16a52dbd5e10888d08" title="根据日志级别设置颜色" alt="" coords="219,5,411,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,23,205,23,205,28,171,28"/>
+</map>

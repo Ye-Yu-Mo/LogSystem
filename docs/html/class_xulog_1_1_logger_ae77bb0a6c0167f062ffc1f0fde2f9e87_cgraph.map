@@ -1,0 +1,5 @@
+<map id="Xulog::Logger::serialize" name="Xulog::Logger::serialize">
+<area shape="rect" id="Node000001" title="序列化日志消息" alt="" coords="5,5,180,31"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_logger.html#ad95ad63f42dd8bac7772a025f5a317f9" title="抽象日志输出接口" alt="" coords="228,5,367,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,15,214,15,214,21,180,21"/>
+</map>
