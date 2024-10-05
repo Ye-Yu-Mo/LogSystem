@@ -1,7 +1,7 @@
 var class_xulog_1_1_buffer =
 [
     [ "Buffer", "class_xulog_1_1_buffer.html#a9935b9ea5bd12102c0108b02285f1fe7", null ],
-    [ "begin", "class_xulog_1_1_buffer.html#a0ddfb83576dcbdec9501beb4a12bd670", null ],
+    [ "begin", "class_xulog_1_1_buffer.html#a76aa72e542d94840c989006960b7822d", null ],
     [ "empty", "class_xulog_1_1_buffer.html#a62ce5fda161dc1b672695b42a145210b", null ],
     [ "ensureEnoughSize", "class_xulog_1_1_buffer.html#a6b04e03240d9dc93393a340a93e753da", null ],
     [ "moveReader", "class_xulog_1_1_buffer.html#a2d6f644575fd9dab2d31cb972fde28fd", null ],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_270',['name',['../class_xulog_1_1_logger.html#aad63035a5d4676e25d4d29e11ed9f6f1',1,'Xulog::Logger']]]
+  ['name_0',['name',['../class_xulog_1_1_logger.html#ae3be4d873fcd21eb4b193a8ba42f0420',1,'Xulog::Logger']]]
 ];

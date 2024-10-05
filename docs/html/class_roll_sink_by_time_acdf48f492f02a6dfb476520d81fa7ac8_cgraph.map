@@ -1,8 +1,0 @@
-<map id="RollSinkByTime::log" name="RollSinkByTime::log">
-<area shape="rect" id="Node000001" title="日志输出" alt="" coords="5,31,159,56"/>
-<area shape="rect" id="Node000002" href="$class_roll_sink_by_time.html#a3101079c827baa41be7fc1e694cdc231" title=" " alt="" coords="207,5,433,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,33,193,29,193,34,159,38"/>
-<area shape="rect" id="Node000003" href="$class_xulog_1_1_util_1_1_date.html#a32d8c9efdcaf981547fcd8f3381da363" title="获取当前时间戳" alt="" coords="481,23,619,63"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="159,41,468,41,468,46,159,46"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="434,28,468,32,467,37,433,33"/>
-</map>

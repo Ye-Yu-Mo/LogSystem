@@ -1,8 +1,13 @@
-<map id="LogSystem/logs/format.hpp" name="LogSystem/logs/format.hpp">
-<area shape="rect" id="node1" title="日志格式化器类的定义" alt="" coords="229,5,431,32"/>
-<area shape="rect" id="node2" href="$logger_8hpp.html" title="日志器模块的实现" alt="" coords="231,80,429,107"/>
-<area shape="rect" id="node3" href="$_xulog_8h.html" title="全局日志接口和宏定义" alt="" coords="241,155,419,181"/>
-<area shape="rect" id="node4" href="$bench_8cc.html" title=" " alt="" coords="5,229,204,256"/>
-<area shape="rect" id="node5" href="$test_8cc.html" title=" " alt="" coords="229,229,431,256"/>
-<area shape="rect" id="node6" href="$_roll_by_time_8cc.html" title=" " alt="" coords="455,229,695,256"/>
+<map id="logs/format.hpp" name="logs/format.hpp">
+<area shape="rect" id="Node000001" title="日志格式化器类的定义" alt="" coords="153,5,279,31"/>
+<area shape="rect" id="Node000002" href="$logger_8hpp.html" title="日志器模块的实现" alt="" coords="155,79,277,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,44,219,79,213,79,213,44"/>
+<area shape="rect" id="Node000003" href="$_xulog_8h.html" title="全局日志接口和宏定义" alt="" coords="165,152,267,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="219,118,219,152,213,152,213,118"/>
+<area shape="rect" id="Node000004" href="$bench_8cc.html" title=" " alt="" coords="5,225,128,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="181,186,92,228,90,223,179,181"/>
+<area shape="rect" id="Node000005" href="$test_8cc.html" title=" " alt="" coords="153,225,279,251"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="219,191,219,225,213,225,213,191"/>
+<area shape="rect" id="Node000006" href="$_roll_by_time_8cc.html" title=" " alt="" coords="303,225,467,251"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="257,180,359,223,357,228,255,185"/>
 </map>

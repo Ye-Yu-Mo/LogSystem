@@ -1,6 +1,6 @@
 var looper_8hpp =
 [
-    [ "AsyncLooper", "class_xulog_1_1_async_looper.html", "class_xulog_1_1_async_looper" ],
+    [ "Xulog::AsyncLooper", "class_xulog_1_1_async_looper.html", "class_xulog_1_1_async_looper" ],
     [ "Functor", "looper_8hpp.html#a9f0ee2c08fc9f7eb2007b6540495b11d", null ],
     [ "AsyncType", "looper_8hpp.html#a952f6f4deb1257c7443a25a493ab6bc2", [
       [ "ASYNC_SAFE", "looper_8hpp.html#a952f6f4deb1257c7443a25a493ab6bc2abd6adb7f9cddb3e678861165f5081606", null ],

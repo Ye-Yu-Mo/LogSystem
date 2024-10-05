@@ -1,6 +1,6 @@
 var indexSectionsWithContent =
 {
-  0: "_abcdefghilmnoprstuvwx~",
+  0: "_abcdefghilmnoprstuvwxy~主使同基开异弃性技日核框概模测缓自运项默",
   1: "abdfglmnorst",
   2: "x",
   3: "bflmrstux",
@@ -10,7 +10,7 @@ var indexSectionsWithContent =
   7: "acltv",
   8: "adefgilouw",
   9: "defitw",
-  10: "cd"
+  10: "c基弃"
 };
 
 var indexSectionNames =
@@ -30,16 +30,16 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "All",
-  1: "Classes",
-  2: "Namespaces",
-  3: "Files",
-  4: "Functions",
-  5: "Variables",
-  6: "Typedefs",
-  7: "Enumerations",
-  8: "Enumerator",
-  9: "Macros",
-  10: "Pages"
+  0: "全部",
+  1: "类",
+  2: "命名空间",
+  3: "文件",
+  4: "函数",
+  5: "变量",
+  6: "类型定义",
+  7: "枚举",
+  8: "枚举值",
+  9: "宏定义",
+  10: "页"
 };
 

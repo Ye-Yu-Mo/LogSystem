@@ -7,7 +7,7 @@ var class_xulog_1_1_logger =
     [ "fatal", "class_xulog_1_1_logger.html#a3d9920a1911340c90b7ac55bc52ba5af", null ],
     [ "info", "class_xulog_1_1_logger.html#a623ef0c5d8030674000c98561896a3f4", null ],
     [ "log", "class_xulog_1_1_logger.html#ad95ad63f42dd8bac7772a025f5a317f9", null ],
-    [ "name", "class_xulog_1_1_logger.html#aad63035a5d4676e25d4d29e11ed9f6f1", null ],
+    [ "name", "class_xulog_1_1_logger.html#ae3be4d873fcd21eb4b193a8ba42f0420", null ],
     [ "serialize", "class_xulog_1_1_logger.html#ae77bb0a6c0167f062ffc1f0fde2f9e87", null ],
     [ "warn", "class_xulog_1_1_logger.html#aa32b52c0de872bf78debea1139af1afc", null ],
     [ "_formatter", "class_xulog_1_1_logger.html#a408571e58869e1f271029c3e78c882cb", null ],

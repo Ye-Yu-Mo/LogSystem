@@ -1,9 +1,15 @@
-<map id="LogSystem/logs/message.hpp" name="LogSystem/logs/message.hpp">
-<area shape="rect" id="node1" title="日志消息类的实现" alt="" coords="222,5,438,32"/>
-<area shape="rect" id="node2" href="$format_8hpp.html" title="日志格式化器类的定义" alt="" coords="229,80,431,107"/>
-<area shape="rect" id="node3" href="$logger_8hpp.html" title="日志器模块的实现" alt="" coords="231,155,429,181"/>
-<area shape="rect" id="node4" href="$_xulog_8h.html" title="全局日志接口和宏定义" alt="" coords="241,229,419,256"/>
-<area shape="rect" id="node5" href="$bench_8cc.html" title=" " alt="" coords="5,304,204,331"/>
-<area shape="rect" id="node6" href="$test_8cc.html" title=" " alt="" coords="229,304,431,331"/>
-<area shape="rect" id="node7" href="$_roll_by_time_8cc.html" title=" " alt="" coords="455,304,695,331"/>
+<map id="logs/message.hpp" name="logs/message.hpp">
+<area shape="rect" id="Node000001" title="日志消息类的实现" alt="" coords="146,5,286,31"/>
+<area shape="rect" id="Node000002" href="$format_8hpp.html" title="日志格式化器类的定义" alt="" coords="153,79,279,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,44,219,79,213,79,213,44"/>
+<area shape="rect" id="Node000003" href="$logger_8hpp.html" title="日志器模块的实现" alt="" coords="155,152,277,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="219,118,219,152,213,152,213,118"/>
+<area shape="rect" id="Node000004" href="$_xulog_8h.html" title="全局日志接口和宏定义" alt="" coords="165,225,267,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="219,191,219,225,213,225,213,191"/>
+<area shape="rect" id="Node000005" href="$bench_8cc.html" title=" " alt="" coords="5,299,128,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="181,259,92,301,90,296,179,254"/>
+<area shape="rect" id="Node000006" href="$test_8cc.html" title=" " alt="" coords="153,299,279,324"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="219,264,219,299,213,299,213,264"/>
+<area shape="rect" id="Node000007" href="$_roll_by_time_8cc.html" title=" " alt="" coords="303,299,467,324"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="257,254,359,296,357,301,255,258"/>
 </map>

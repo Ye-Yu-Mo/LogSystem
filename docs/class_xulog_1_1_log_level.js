@@ -9,5 +9,5 @@ var class_xulog_1_1_log_level =
       [ "FATAL", "class_xulog_1_1_log_level.html#a6bdea31434e495fc5a19b8e48e3e613ba19da7170bea36556dde582519795f3fc", null ],
       [ "OFF", "class_xulog_1_1_log_level.html#a6bdea31434e495fc5a19b8e48e3e613ba88559a0cfd8250c9d65970cc145c92d4", null ]
     ] ],
-    [ "toString", "class_xulog_1_1_log_level.html#adfd5b97ea86cb7f8162c220ef30ae7bf", null ]
+    [ "toString", "class_xulog_1_1_log_level.html#a6d6fcbb384db801aa1faa908eca98a97", null ]
 ];

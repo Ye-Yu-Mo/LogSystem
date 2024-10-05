@@ -1,7 +1,11 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_xulog_1_1_log_sink.html" title="抽象日志落地基类" alt="" coords="5,81,124,108"/>
-<area shape="rect" id="node2" href="$class_roll_sink_by_time.html" title=" " alt="" coords="191,5,317,32"/>
-<area shape="rect" id="node3" href="$class_xulog_1_1_file_sink.html" title="文件日志落地实现" alt="" coords="195,56,313,83"/>
-<area shape="rect" id="node4" href="$class_xulog_1_1_roll_sink_by_size.html" title="基于文件大小的滚动文件日志落地实现" alt="" coords="172,107,336,133"/>
-<area shape="rect" id="node5" href="$class_xulog_1_1_stdout_sink.html" title="标准输出日志落地实现" alt="" coords="185,157,323,184"/>
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="Node000000" href="$class_xulog_1_1_log_sink.html" title="抽象日志落地基类" alt="" coords="5,80,124,105"/>
+<area shape="rect" id="Node000001" href="$class_roll_sink_by_time.html" title=" " alt="" coords="191,5,317,31"/>
+<area shape="poly" id="edge15_Node000000_Node000001" title=" " alt="" coords="101,71,171,40,204,28,206,33,173,44,103,76"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_file_sink.html" title="文件日志落地实现" alt="" coords="195,55,313,80"/>
+<area shape="poly" id="edge16_Node000000_Node000002" title=" " alt="" coords="137,80,194,73,195,78,138,86"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_roll_sink_by_size.html" title="基于文件大小的滚动文件日志落地实现" alt="" coords="172,104,336,129"/>
+<area shape="poly" id="edge17_Node000000_Node000003" title=" " alt="" coords="138,99,172,104,171,109,137,104"/>
+<area shape="rect" id="Node000004" href="$class_xulog_1_1_stdout_sink.html" title="标准输出日志落地实现" alt="" coords="185,153,323,179"/>
+<area shape="poly" id="edge18_Node000000_Node000004" title=" " alt="" coords="105,109,173,138,210,151,208,156,171,143,103,114"/>
 </map>

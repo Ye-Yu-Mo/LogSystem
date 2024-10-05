@@ -1,7 +1,11 @@
 <map id="sync_bench" name="sync_bench">
-<area shape="rect" id="node1" title=" " alt="" coords="5,46,104,73"/>
-<area shape="rect" id="node2" href="$bench_8cc.html#a50e07be47fb2d4bc0ab579d1f67a0d47" title=" " alt="" coords="152,46,213,73"/>
-<area shape="rect" id="node3" href="$namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="261,46,393,73"/>
-<area shape="rect" id="node4" href="$class_xulog_1_1_logger_manager.html#a0fac48ea6ddcb18177d3cd9def3dc0a0" title="获取日志器管理器的实例" alt="" coords="441,5,609,47"/>
-<area shape="rect" id="node5" href="$class_xulog_1_1_logger_manager.html#a9482ba1783c7cd77667abef2ee231e6e" title="获取指定名称的日志器" alt="" coords="441,71,609,112"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,45,104,70"/>
+<area shape="rect" id="Node000002" href="$bench_8cc.html#a50e07be47fb2d4bc0ab579d1f67a0d47" title=" " alt="" coords="152,45,213,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,55,138,55,138,60,104,60"/>
+<area shape="rect" id="Node000003" href="$namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="261,45,393,70"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,55,247,55,247,60,213,60"/>
+<area shape="rect" id="Node000004" href="$class_xulog_1_1_logger_manager.html#a2275ef98586ea630426491d51be7bc96" title="获取日志器管理器的实例" alt="" coords="441,5,609,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="393,44,427,38,428,44,394,49"/>
+<area shape="rect" id="Node000005" href="$class_xulog_1_1_logger_manager.html#a9482ba1783c7cd77667abef2ee231e6e" title="获取指定名称的日志器" alt="" coords="441,69,609,109"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="394,65,428,71,427,76,393,71"/>
 </map>

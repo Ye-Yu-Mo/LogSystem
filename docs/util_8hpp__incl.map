@@ -1,6 +1,9 @@
-<map id="LogSystem/logs/util.hpp" name="LogSystem/logs/util.hpp">
-<area shape="rect" id="node1" title="实用工具类的实现" alt="" coords="49,5,228,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,85,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="109,80,168,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="192,80,277,107"/>
+<map id="logs/util.hpp" name="logs/util.hpp">
+<area shape="rect" id="Node000001" title="实用工具类的实现" alt="" coords="87,5,190,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,85,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,33,73,72,70,68,122,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="109,79,168,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,31,141,65,136,65,136,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="192,79,277,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="156,29,209,68,206,72,153,33"/>
 </map>

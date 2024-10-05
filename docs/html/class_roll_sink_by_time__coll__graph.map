@@ -1,5 +1,0 @@
-<map id="RollSinkByTime" name="RollSinkByTime">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,131,104"/>
-<area shape="rect" id="Node000002" href="$class_xulog_1_1_log_sink.html" title="抽象日志落地基类" alt="" coords="9,5,127,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,44,71,79,65,79,65,44"/>
-</map>

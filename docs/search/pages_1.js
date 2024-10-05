@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deprecated_20list_381',['Deprecated List',['../deprecated.html',1,'']]]
+  ['基于多设计模式下的同步和异步日志系统_0',['C++基于多设计模式下的同步和异步日志系统',['../md__r_e_a_d_m_e.html',1,'']]]
 ];

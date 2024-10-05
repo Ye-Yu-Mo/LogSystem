@@ -1,7 +1,11 @@
 <map id="Xulog::LogSink" name="Xulog::LogSink">
-<area shape="rect" id="node1" title="抽象日志落地基类" alt="" coords="238,5,357,32"/>
-<area shape="rect" id="node2" href="$class_roll_sink_by_time.html" title=" " alt="" coords="5,80,131,107"/>
-<area shape="rect" id="node3" href="$class_xulog_1_1_file_sink.html" title="文件日志落地实现" alt="" coords="155,80,274,107"/>
-<area shape="rect" id="node4" href="$class_xulog_1_1_roll_sink_by_size.html" title="基于文件大小的滚动文件日志落地实现" alt="" coords="298,80,462,107"/>
-<area shape="rect" id="node5" href="$class_xulog_1_1_stdout_sink.html" title="标准输出日志落地实现" alt="" coords="486,80,623,107"/>
+<area shape="rect" id="Node000001" title="抽象日志落地基类" alt="" coords="238,5,357,31"/>
+<area shape="rect" id="Node000002" href="$class_roll_sink_by_time.html" title=" " alt="" coords="5,79,131,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,37,106,81,104,76,246,32"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_file_sink.html" title="文件日志落地实现" alt="" coords="155,79,274,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="275,42,230,80,226,76,272,38"/>
+<area shape="rect" id="Node000004" href="$class_xulog_1_1_roll_sink_by_size.html" title="基于文件大小的滚动文件日志落地实现" alt="" coords="298,79,462,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="323,38,368,76,365,80,319,42"/>
+<area shape="rect" id="Node000005" href="$class_xulog_1_1_stdout_sink.html" title="标准输出日志落地实现" alt="" coords="486,79,623,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="352,32,514,76,512,81,351,37"/>
 </map>

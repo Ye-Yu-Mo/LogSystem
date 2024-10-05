@@ -1,10 +1,19 @@
 <map id="Xulog::Util::Date::getTime" name="Xulog::Util::Date::getTime">
-<area shape="rect" id="node1" title="获取当前时间戳" alt="" coords="520,94,657,135"/>
-<area shape="rect" id="node2" href="$class_roll_sink_by_time.html#a3101079c827baa41be7fc1e694cdc231" title=" " alt="" coords="245,51,472,77"/>
-<area shape="rect" id="node3" href="$class_roll_sink_by_time.html#acdf48f492f02a6dfb476520d81fa7ac8" title="日志输出" alt="" coords="25,5,178,32"/>
-<area shape="rect" id="node4" href="$class_roll_sink_by_time.html#aac57b67131f346bc4a50c548cba62f5f" title=" " alt="" coords="8,67,195,109"/>
-<area shape="rect" id="node5" href="$class_xulog_1_1_roll_sink_by_size.html#ab1941f58fb19f924337924a37228b619" title="创建新文件" alt="" coords="277,153,441,194"/>
-<area shape="rect" id="node8" href="$_roll_by_time_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="331,219,386,245"/>
-<area shape="rect" id="node6" href="$class_xulog_1_1_roll_sink_by_size.html#a81aacd59f7f012644573313575d0182d" title="日志写入到滚动文件" alt="" coords="5,155,197,181"/>
-<area shape="rect" id="node7" href="$class_xulog_1_1_roll_sink_by_size.html#aa55e0780ab91807ea6b1695f56c71fb3" title="构造函数" alt="" coords="19,206,183,247"/>
+<area shape="rect" id="Node000001" title="获取当前时间戳" alt="" coords="520,94,657,134"/>
+<area shape="rect" id="Node000002" href="$class_roll_sink_by_time.html#a3101079c827baa41be7fc1e694cdc231" title=" " alt="" coords="245,51,472,76"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="506,99,416,79,418,73,507,93"/>
+<area shape="rect" id="Node000003" href="$class_roll_sink_by_time.html#acdf48f492f02a6dfb476520d81fa7ac8" title="日志输出" alt="" coords="25,5,178,31"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="553,88,515,61,471,41,395,22,317,13,242,11,178,13,178,8,242,6,317,8,396,17,473,35,518,57,556,83"/>
+<area shape="rect" id="Node000004" href="$class_roll_sink_by_time.html#aac57b67131f346bc4a50c548cba62f5f" title=" " alt="" coords="8,66,195,106"/>
+<area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="506,112,195,94,195,89,507,107"/>
+<area shape="rect" id="Node000005" href="$class_xulog_1_1_roll_sink_by_size.html#ab1941f58fb19f924337924a37228b619" title="创建新文件" alt="" coords="277,151,441,191"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="507,137,440,154,439,149,506,132"/>
+<area shape="rect" id="Node000008" href="$_roll_by_time_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="331,216,386,241"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="559,145,520,177,473,206,428,221,387,229,386,223,427,216,471,201,517,173,555,141"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="272,51,173,33,174,28,273,46"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="232,77,195,80,195,75,232,72"/>
+<area shape="rect" id="Node000006" href="$class_xulog_1_1_roll_sink_by_size.html#a81aacd59f7f012644573313575d0182d" title="日志写入到滚动文件" alt="" coords="5,152,197,177"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="263,172,198,170,198,164,263,166"/>
+<area shape="rect" id="Node000007" href="$class_xulog_1_1_roll_sink_by_size.html#aa55e0780ab91807ea6b1695f56c71fb3" title="构造函数" alt="" coords="19,202,183,242"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="264,193,184,209,183,203,263,187"/>
 </map>

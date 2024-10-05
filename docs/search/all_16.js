@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7easynclooper_178',['~AsyncLooper',['../class_xulog_1_1_async_looper.html#aa803f65ae60533381e8d6cc669517dd2',1,'Xulog::AsyncLooper']]],
-  ['_7eloggermanager_179',['~LoggerManager',['../class_xulog_1_1_logger_manager.html#afa564a988ba304c0dd66d2152af33c9e',1,'Xulog::LoggerManager']]],
-  ['_7elogsink_180',['~LogSink',['../class_xulog_1_1_log_sink.html#a08999c41dea391f82bd1efd16c1cbf6c',1,'Xulog::LogSink']]]
+  ['ye_20yu_20mo_20github_20io_20logsystem_20项目文档_20a_0',['&lt;a href=&quot;https://ye-yu-mo.github.io/LogSystem/&quot; &gt;项目文档&lt;/a&gt;',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]],
+  ['yu_20mo_20github_20io_20logsystem_20项目文档_20a_1',['&lt;a href=&quot;https://ye-yu-mo.github.io/LogSystem/&quot; &gt;项目文档&lt;/a&gt;',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]]
 ];
