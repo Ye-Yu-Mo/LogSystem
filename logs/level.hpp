@@ -63,8 +63,9 @@ namespace Xulog
             case LogLevel::value::OFF:
                 return "OFF";
                 break;
+            default:
+                return "UNKNOW";
             }
-            return "UNKNOW";
         }
     };
 }

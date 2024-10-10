@@ -54,7 +54,7 @@ namespace Xulog
          * 构造 AsyncLooper 对象，并启动异步工作线程。
          */
         AsyncLooper(const Functor &func, AsyncType asynctype = AsyncType::ASYNC_SAFE)
-            : _stop(false), _thread(std::thread(&AsyncLooper::threadEntry, this)), _callBack(func), _looper_type(asynctype)
+            : _stop(false), _thread(std::thread(&AsyncLooper::threadEntry, this)), _looper_type(asynctype), _callBack(func)
         {
         }
         /**

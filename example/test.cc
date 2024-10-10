@@ -16,6 +16,11 @@ void test_log(const std::string& name)
     // }
     FATAL("%s","测试结束");
 
+    Xulog::FileSink file("./log/test.log");
+    std::string message = "[24-10-10|16:44:21][synclogger][test.cc:8][DEBUG]	debug...";
+    file.log(message.c_str(), message.size());
+
+
 }
 int main()
 {

@@ -1,11 +1,19 @@
 <map id="logs/logger.hpp" name="logs/logger.hpp">
-<area shape="rect" id="Node000001" title="日志器模块的实现" alt="" coords="155,5,277,31"/>
-<area shape="rect" id="Node000002" href="$_xulog_8h.html" title="全局日志接口和宏定义" alt="" coords="165,79,267,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="219,44,219,79,213,79,213,44"/>
+<area shape="rect" id="Node000001" title="日志器模块的实现" alt="" coords="330,5,451,31"/>
+<area shape="rect" id="Node000002" href="$_xulog_8h.html" title="全局日志接口和宏定义" alt="" coords="339,79,442,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="393,44,393,79,388,79,388,44"/>
 <area shape="rect" id="Node000003" href="$bench_8cc.html" title=" " alt="" coords="5,152,128,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="181,112,92,154,90,149,179,107"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="327,109,119,155,118,149,325,104"/>
 <area shape="rect" id="Node000004" href="$test_8cc.html" title=" " alt="" coords="153,152,279,177"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="219,118,219,152,213,152,213,118"/>
-<area shape="rect" id="Node000005" href="$_roll_by_time_8cc.html" title=" " alt="" coords="303,152,467,177"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="257,107,359,149,357,154,255,112"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="351,112,246,154,244,149,349,107"/>
+<area shape="rect" id="Node000005" href="$_roll_by_time_8hpp.html" title=" " alt="" coords="303,152,478,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="393,118,393,152,388,152,388,118"/>
+<area shape="rect" id="Node000006" href="$_server_sink_8hpp.html" title="定义了 ServerSink 类，用于将日志信息发送到远程服务器" alt="" coords="502,152,671,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="436,106,556,149,554,154,434,111"/>
+<area shape="rect" id="Node000008" href="$server_8hpp.html" title="定义了 UdpServer 类，用于实现 UDP 服务器功能" alt="" coords="702,152,837,177"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="456,102,709,149,708,155,455,107"/>
+<area shape="rect" id="Node000007" href="$servertest_8cc.html" title=" " alt="" coords="499,225,666,251"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="588,191,586,225,581,225,583,191"/>
+<area shape="rect" id="Node000009" href="$server__main_8cc.html" title=" " alt="" coords="690,225,857,251"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="773,191,775,225,770,225,768,191"/>
 </map>

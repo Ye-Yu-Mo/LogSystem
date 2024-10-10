@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7easynclooper_0',['~AsyncLooper',['../class_xulog_1_1_async_looper.html#aa803f65ae60533381e8d6cc669517dd2',1,'Xulog::AsyncLooper']]],
-  ['_7eloggermanager_1',['~LoggerManager',['../class_xulog_1_1_logger_manager.html#afa564a988ba304c0dd66d2152af33c9e',1,'Xulog::LoggerManager']]],
-  ['_7elogsink_2',['~LogSink',['../class_xulog_1_1_log_sink.html#a08999c41dea391f82bd1efd16c1cbf6c',1,'Xulog::LogSink']]]
+  ['warn_0',['warn',['../class_xulog_1_1_logger.html#aa32b52c0de872bf78debea1139af1afc',1,'Xulog::Logger']]],
+  ['writeablesize_1',['writeAbleSize',['../class_xulog_1_1_buffer.html#a7653408465471cc568659dfd5ed91244',1,'Xulog::Buffer']]]
 ];

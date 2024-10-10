@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LogSystem: server/server.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.00</span>
+   </div>
+   <div id="projectbrief">This is a logging system project</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('server_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">server.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="server_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;netinet/in.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;arpa/inet.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="nocopy_8hpp.html">nocopy.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="_inet_addr_8hpp.html">InetAddr.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;../logs/Xulog.h&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_xu_server.html">XuServer</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespace_xu_server.html#a1ec0eb83586aebed917abaa2706c949b">   26</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> uint16_t <a class="code hl_variable" href="namespace_xu_server.html#a1ec0eb83586aebed917abaa2706c949b">defaultport</a> = 8888; </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespace_xu_server.html#a2e78034bbe486d31b37f86b8ec10c24a">   27</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> uint16_t <a class="code hl_variable" href="namespace_xu_server.html#a2e78034bbe486d31b37f86b8ec10c24a">defaultfd</a> = -1;     </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespace_xu_server.html#ae49755197fc97b266f5274265d053c66">   28</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> uint16_t <a class="code hl_variable" href="namespace_xu_server.html#ae49755197fc97b266f5274265d053c66">defaultsize</a> = 1024; </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_udp_server.html">   31</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_server_1_1_udp_server.html">UdpServer</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_xu_server_1_1nocopy.html">nocopy</a> <span class="comment">// 服务器不允许被拷贝，简化的单例模式</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_udp_server.html#ae77958da9596dda426b4dff958c5b24b">   36</a></span>        <a class="code hl_function" href="class_xu_server_1_1_udp_server.html#ae77958da9596dda426b4dff958c5b24b">UdpServer</a>(uint16_t port = <a class="code hl_variable" href="namespace_xu_server.html#a1ec0eb83586aebed917abaa2706c949b">defaultport</a>) : <a class="code hl_variable" href="class_xu_server_1_1_udp_server.html#a2f17419d853f2ef228bad811b5ae5075">_port</a>(port) {}</div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_udp_server.html#aabba78d541834ad107230ddb333ccd5b">   38</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_server_1_1_udp_server.html#aabba78d541834ad107230ddb333ccd5b">Init</a>()</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="comment">// 创建socket文件描述符，对其进行初始化</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <a class="code hl_variable" href="class_xu_server_1_1_udp_server.html#af0a54262f267d2c9eabbdf7657603296">_sockfd</a> = socket(AF_INET, SOCK_DGRAM, 0); <span class="comment">// 使用IPv4，UDP协议</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_xu_server_1_1_udp_server.html#af0a54262f267d2c9eabbdf7657603296">_sockfd</a> &lt; 0)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                <a class="code hl_define" href="_xulog_8h.html#a053d6037d543b84ce59308ce71d15cd1">FATAL</a>(<span class="stringliteral">&quot;socket创建失败!&quot;</span>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                exit(errno);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keyword">struct </span>sockaddr_in local;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            bzero(&amp;local, <span class="keyword">sizeof</span>(local));       <span class="comment">// memset</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            local.sin_family = AF_INET;         <span class="comment">// 协议簇</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            local.sin_port = htons(<a class="code hl_variable" href="class_xu_server_1_1_udp_server.html#a2f17419d853f2ef228bad811b5ae5075">_port</a>);      <span class="comment">// 端口号</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            local.sin_addr.s_addr = INADDR_ANY; <span class="comment">// ip地址</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordtype">int</span> n = bind(<a class="code hl_variable" href="class_xu_server_1_1_udp_server.html#af0a54262f267d2c9eabbdf7657603296">_sockfd</a>, (<span class="keyword">struct</span> sockaddr *)&amp;local, <span class="keyword">sizeof</span>(local));</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">if</span> (n != 0)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <a class="code hl_define" href="_xulog_8h.html#a053d6037d543b84ce59308ce71d15cd1">FATAL</a>(<span class="stringliteral">&quot;bind出错&quot;</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                exit(errno);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_udp_server.html#a9549d3661f13a7e55a691f50662ee27f">   60</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_server_1_1_udp_server.html#a9549d3661f13a7e55a691f50662ee27f">Start</a>() <span class="comment">// 服务器不退出</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordtype">char</span> buffer[1024];</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">for</span> (;;)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keyword">struct </span>sockaddr_in peer; <span class="comment">// 远程地址信息，因为需要返回请求</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                socklen_t len = <span class="keyword">sizeof</span>(peer);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                ssize_t n = recvfrom(<a class="code hl_variable" href="class_xu_server_1_1_udp_server.html#af0a54262f267d2c9eabbdf7657603296">_sockfd</a>, buffer, <span class="keyword">sizeof</span>(buffer) - 1, 0, (<span class="keyword">struct</span> sockaddr *)&amp;peer, &amp;len); <span class="comment">// 获取从从外部接收的数据</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="comment">// 第一个参数是套接字文件描述符，标识接收数据的套接字</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="comment">// 第二个参数是接收数据的缓冲区</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                <span class="keywordflow">if</span> (n &gt; 0) <span class="comment">// 正确接收</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    <a class="code hl_class" href="class_xulog_1_1_file_sink.html">Xulog::FileSink</a> file(<span class="stringliteral">&quot;./log/test.log&quot;</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    <a class="code hl_class" href="class_xulog_1_1_stdout_sink.html">Xulog::StdoutSink</a> std(<a class="code hl_enumvalue" href="class_xulog_1_1_stdout_sink.html#a595bb64ebc8de6ca3e9f10c247c2dea2a2faec1f9f8cc7f8f40d521c4dd574f49">Xulog::StdoutSink::Color::Enable</a>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    file.<a class="code hl_function" href="class_xulog_1_1_file_sink.html#abd604c1e9eae562670956254d1cc4dd1">log</a>(buffer, n);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    std.<a class="code hl_function" href="class_xulog_1_1_stdout_sink.html#a4aebff3669be6f45a530980f1c875394">log</a>(buffer, n);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_udp_server.html#a72391b875d6cb1a5dbc83fce1f324398">   80</a></span>        <a class="code hl_function" href="class_xu_server_1_1_udp_server.html#a72391b875d6cb1a5dbc83fce1f324398">~UdpServer</a>() {}</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_udp_server.html#a2f17419d853f2ef228bad811b5ae5075">   83</a></span>        uint16_t <a class="code hl_variable" href="class_xu_server_1_1_udp_server.html#a2f17419d853f2ef228bad811b5ae5075">_port</a>; </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_udp_server.html#af0a54262f267d2c9eabbdf7657603296">   84</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="class_xu_server_1_1_udp_server.html#af0a54262f267d2c9eabbdf7657603296">_sockfd</a>;    </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    };</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+<div class="ttc" id="a_inet_addr_8hpp_html"><div class="ttname"><a href="_inet_addr_8hpp.html">InetAddr.hpp</a></div></div>
+<div class="ttc" id="a_xulog_8h_html_a053d6037d543b84ce59308ce71d15cd1"><div class="ttname"><a href="_xulog_8h.html#a053d6037d543b84ce59308ce71d15cd1">FATAL</a></div><div class="ttdeci">#define FATAL(fmt,...)</div><div class="ttdoc">使用默认日志器打印严重错误信息</div><div class="ttdef"><b>Definition</b> Xulog.h:131</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_udp_server_html"><div class="ttname"><a href="class_xu_server_1_1_udp_server.html">XuServer::UdpServer</a></div><div class="ttdoc">UDP 服务器类</div><div class="ttdef"><b>Definition</b> server.hpp:32</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_udp_server_html_a2f17419d853f2ef228bad811b5ae5075"><div class="ttname"><a href="class_xu_server_1_1_udp_server.html#a2f17419d853f2ef228bad811b5ae5075">XuServer::UdpServer::_port</a></div><div class="ttdeci">uint16_t _port</div><div class="ttdoc">端口号</div><div class="ttdef"><b>Definition</b> server.hpp:83</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_udp_server_html_a72391b875d6cb1a5dbc83fce1f324398"><div class="ttname"><a href="class_xu_server_1_1_udp_server.html#a72391b875d6cb1a5dbc83fce1f324398">XuServer::UdpServer::~UdpServer</a></div><div class="ttdeci">~UdpServer()</div><div class="ttdef"><b>Definition</b> server.hpp:80</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_udp_server_html_a9549d3661f13a7e55a691f50662ee27f"><div class="ttname"><a href="class_xu_server_1_1_udp_server.html#a9549d3661f13a7e55a691f50662ee27f">XuServer::UdpServer::Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">启动服务器</div><div class="ttdef"><b>Definition</b> server.hpp:60</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_udp_server_html_aabba78d541834ad107230ddb333ccd5b"><div class="ttname"><a href="class_xu_server_1_1_udp_server.html#aabba78d541834ad107230ddb333ccd5b">XuServer::UdpServer::Init</a></div><div class="ttdeci">void Init()</div><div class="ttdoc">初始化服务器</div><div class="ttdef"><b>Definition</b> server.hpp:38</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_udp_server_html_ae77958da9596dda426b4dff958c5b24b"><div class="ttname"><a href="class_xu_server_1_1_udp_server.html#ae77958da9596dda426b4dff958c5b24b">XuServer::UdpServer::UdpServer</a></div><div class="ttdeci">UdpServer(uint16_t port=defaultport)</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition</b> server.hpp:36</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_udp_server_html_af0a54262f267d2c9eabbdf7657603296"><div class="ttname"><a href="class_xu_server_1_1_udp_server.html#af0a54262f267d2c9eabbdf7657603296">XuServer::UdpServer::_sockfd</a></div><div class="ttdeci">int _sockfd</div><div class="ttdoc">socket文件描述符</div><div class="ttdef"><b>Definition</b> server.hpp:84</div></div>
+<div class="ttc" id="aclass_xu_server_1_1nocopy_html"><div class="ttname"><a href="class_xu_server_1_1nocopy.html">XuServer::nocopy</a></div><div class="ttdef"><b>Definition</b> nocopy.hpp:7</div></div>
+<div class="ttc" id="aclass_xulog_1_1_file_sink_html"><div class="ttname"><a href="class_xulog_1_1_file_sink.html">Xulog::FileSink</a></div><div class="ttdoc">文件日志落地实现</div><div class="ttdef"><b>Definition</b> sink.hpp:142</div></div>
+<div class="ttc" id="aclass_xulog_1_1_file_sink_html_abd604c1e9eae562670956254d1cc4dd1"><div class="ttname"><a href="class_xulog_1_1_file_sink.html#abd604c1e9eae562670956254d1cc4dd1">Xulog::FileSink::log</a></div><div class="ttdeci">void log(const char *data, size_t len)</div><div class="ttdoc">日志写入到文件</div><div class="ttdef"><b>Definition</b> sink.hpp:166</div></div>
+<div class="ttc" id="aclass_xulog_1_1_stdout_sink_html"><div class="ttname"><a href="class_xulog_1_1_stdout_sink.html">Xulog::StdoutSink</a></div><div class="ttdoc">标准输出日志落地实现</div><div class="ttdef"><b>Definition</b> sink.hpp:49</div></div>
+<div class="ttc" id="aclass_xulog_1_1_stdout_sink_html_a4aebff3669be6f45a530980f1c875394"><div class="ttname"><a href="class_xulog_1_1_stdout_sink.html#a4aebff3669be6f45a530980f1c875394">Xulog::StdoutSink::log</a></div><div class="ttdeci">void log(const char *data, size_t len)</div><div class="ttdoc">日志写入到标准输出</div><div class="ttdef"><b>Definition</b> sink.hpp:77</div></div>
+<div class="ttc" id="aclass_xulog_1_1_stdout_sink_html_a595bb64ebc8de6ca3e9f10c247c2dea2a2faec1f9f8cc7f8f40d521c4dd574f49"><div class="ttname"><a href="class_xulog_1_1_stdout_sink.html#a595bb64ebc8de6ca3e9f10c247c2dea2a2faec1f9f8cc7f8f40d521c4dd574f49">Xulog::StdoutSink::Color::Enable</a></div><div class="ttdeci">@ Enable</div></div>
+<div class="ttc" id="anamespace_xu_server_html"><div class="ttname"><a href="namespace_xu_server.html">XuServer</a></div><div class="ttdef"><b>Definition</b> InetAddr.hpp:19</div></div>
+<div class="ttc" id="anamespace_xu_server_html_a1ec0eb83586aebed917abaa2706c949b"><div class="ttname"><a href="namespace_xu_server.html#a1ec0eb83586aebed917abaa2706c949b">XuServer::defaultport</a></div><div class="ttdeci">static const uint16_t defaultport</div><div class="ttdoc">默认端口号</div><div class="ttdef"><b>Definition</b> server.hpp:26</div></div>
+<div class="ttc" id="anamespace_xu_server_html_a2e78034bbe486d31b37f86b8ec10c24a"><div class="ttname"><a href="namespace_xu_server.html#a2e78034bbe486d31b37f86b8ec10c24a">XuServer::defaultfd</a></div><div class="ttdeci">static const uint16_t defaultfd</div><div class="ttdoc">默认socket</div><div class="ttdef"><b>Definition</b> server.hpp:27</div></div>
+<div class="ttc" id="anamespace_xu_server_html_ae49755197fc97b266f5274265d053c66"><div class="ttname"><a href="namespace_xu_server.html#ae49755197fc97b266f5274265d053c66">XuServer::defaultsize</a></div><div class="ttdeci">static const uint16_t defaultsize</div><div class="ttdoc">默认缓冲区大小</div><div class="ttdef"><b>Definition</b> server.hpp:28</div></div>
+<div class="ttc" id="anocopy_8hpp_html"><div class="ttname"><a href="nocopy_8hpp.html">nocopy.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="server_8hpp.html">server.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

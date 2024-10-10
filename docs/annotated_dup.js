@@ -34,5 +34,11 @@ var annotated_dup =
       [ "ThreadFormatItem", "class_xulog_1_1_thread_format_item.html", "class_xulog_1_1_thread_format_item" ],
       [ "TimeFormatItem", "class_xulog_1_1_time_format_item.html", "class_xulog_1_1_time_format_item" ]
     ] ],
-    [ "RollSinkByTime", "class_roll_sink_by_time.html", "class_roll_sink_by_time" ]
+    [ "XuServer", "namespace_xu_server.html", [
+      [ "InetAddr", "class_xu_server_1_1_inet_addr.html", "class_xu_server_1_1_inet_addr" ],
+      [ "nocopy", "class_xu_server_1_1nocopy.html", "class_xu_server_1_1nocopy" ],
+      [ "UdpServer", "class_xu_server_1_1_udp_server.html", "class_xu_server_1_1_udp_server" ]
+    ] ],
+    [ "RollSinkByTime", "class_roll_sink_by_time.html", "class_roll_sink_by_time" ],
+    [ "ServerSink", "class_server_sink.html", "class_server_sink" ]
 ];

@@ -1,0 +1,9 @@
+<map id="XuServer::UdpServer::Start" name="XuServer::UdpServer::Start">
+<area shape="rect" id="Node000001" title="启动服务器" alt="" coords="5,31,163,71"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_stdout_sink.html#a4aebff3669be6f45a530980f1c875394" title="日志写入到标准输出" alt="" coords="211,13,376,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,39,197,34,198,40,163,44"/>
+<area shape="rect" id="Node000004" href="$class_xulog_1_1_file_sink.html#abd604c1e9eae562670956254d1cc4dd1" title="日志写入到文件" alt="" coords="220,62,367,87"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="163,57,207,62,206,67,163,62"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_stdout_sink.html#ac4d66e37eba8bd16a52dbd5e10888d08" title="根据日志级别设置颜色" alt="" coords="424,5,616,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="376,23,410,23,410,28,376,28"/>
+</map>

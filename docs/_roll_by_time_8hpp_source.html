@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LogSystem: extend/RollByTime.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.00</span>
+   </div>
+   <div id="projectbrief">This is a logging system project</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_roll_by_time_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RollByTime.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_roll_by_time_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// 扩展功能： 滚动文件（时间）</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// 1. 以时间段滚动</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// 2. time(nullptr)%gap;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;../logs/Xulog.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575d">    8</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575d">TimeGap</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_enumvalue" href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575da2001aa5adfb53218a5b9a837f6b018bd">GAP_SECOND</a>,</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_enumvalue" href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575da8e98e0d2590637c6a679e6dfb7e0a829">GAP_MINUTE</a>,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_enumvalue" href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575dab890b70a57d80cdd95fcff6e285d6774">GAP_HOUR</a>,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_enumvalue" href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575da19a5256fbaf15a265ecb14d240682a15">GAP_DAY</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>};</div>
+</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_roll_sink_by_time.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="class_roll_sink_by_time.html">RollSinkByTime</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_xulog_1_1_log_sink.html">Xulog::LogSink</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">// 传入文件名时，构造并打开文件，将操作句柄管理起来</span></div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_roll_sink_by_time.html#aac57b67131f346bc4a50c548cba62f5f">   19</a></span>    <a class="code hl_function" href="class_roll_sink_by_time.html#aac57b67131f346bc4a50c548cba62f5f">RollSinkByTime</a>(<span class="keyword">const</span> std::string &amp;basename, <a class="code hl_enumeration" href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575d">TimeGap</a> gap_type)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        : <a class="code hl_variable" href="class_roll_sink_by_time.html#ac1a2a7c2610b59fab82fccd404eac3b0">_basename</a>(basename)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">switch</span> (gap_type)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575da2001aa5adfb53218a5b9a837f6b018bd">TimeGap::GAP_SECOND</a>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <a class="code hl_variable" href="class_roll_sink_by_time.html#a34b149ffa3f79a50195875bb044aa4f6">_gap_size</a> = 1;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575da8e98e0d2590637c6a679e6dfb7e0a829">TimeGap::GAP_MINUTE</a>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <a class="code hl_variable" href="class_roll_sink_by_time.html#a34b149ffa3f79a50195875bb044aa4f6">_gap_size</a> = 60;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575dab890b70a57d80cdd95fcff6e285d6774">TimeGap::GAP_HOUR</a>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <a class="code hl_variable" href="class_roll_sink_by_time.html#a34b149ffa3f79a50195875bb044aa4f6">_gap_size</a> = 3600;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575da19a5256fbaf15a265ecb14d240682a15">TimeGap::GAP_DAY</a>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <a class="code hl_variable" href="class_roll_sink_by_time.html#a34b149ffa3f79a50195875bb044aa4f6">_gap_size</a> = 3600 * 24;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <a class="code hl_variable" href="class_roll_sink_by_time.html#aca5c1adb089ba3543c42f59d9c161131">_current_gap</a> = <a class="code hl_variable" href="class_roll_sink_by_time.html#a34b149ffa3f79a50195875bb044aa4f6">_gap_size</a> == 1 ? <a class="code hl_function" href="class_xulog_1_1_util_1_1_date.html#a32d8c9efdcaf981547fcd8f3381da363">Xulog::Util::Date::getTime</a>() : (<a class="code hl_function" href="class_xulog_1_1_util_1_1_date.html#a32d8c9efdcaf981547fcd8f3381da363">Xulog::Util::Date::getTime</a>() % <a class="code hl_variable" href="class_roll_sink_by_time.html#a34b149ffa3f79a50195875bb044aa4f6">_gap_size</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        std::string filename = <a class="code hl_function" href="class_roll_sink_by_time.html#a3101079c827baa41be7fc1e694cdc231">createNewFile</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_function" href="class_xulog_1_1_util_1_1_file.html#a36140bd7ae35f04c9c390b50347a0d0e">Xulog::Util::File::createDirectory</a>(<a class="code hl_function" href="class_xulog_1_1_util_1_1_file.html#a578792da7768a3c985cbf0acb87f495b">Xulog::Util::File::path</a>(filename)); <span class="comment">// 创建目录</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_variable" href="class_roll_sink_by_time.html#a5487f2a64965c66cee3f604e01388f8a">_ofs</a>.open(filename, std::ios::binary | std::ios::app);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        assert(<a class="code hl_variable" href="class_roll_sink_by_time.html#a5487f2a64965c66cee3f604e01388f8a">_ofs</a>.is_open());</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_roll_sink_by_time.html#acdf48f492f02a6dfb476520d81fa7ac8">   43</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_roll_sink_by_time.html#acdf48f492f02a6dfb476520d81fa7ac8">log</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *data, <span class="keywordtype">size_t</span> len)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        time_t current = <a class="code hl_function" href="class_xulog_1_1_util_1_1_date.html#a32d8c9efdcaf981547fcd8f3381da363">Xulog::Util::Date::getTime</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">if</span> (current % <a class="code hl_variable" href="class_roll_sink_by_time.html#a34b149ffa3f79a50195875bb044aa4f6">_gap_size</a> != <a class="code hl_variable" href="class_roll_sink_by_time.html#aca5c1adb089ba3543c42f59d9c161131">_current_gap</a>)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            std::string filename = <a class="code hl_function" href="class_roll_sink_by_time.html#a3101079c827baa41be7fc1e694cdc231">createNewFile</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_variable" href="class_roll_sink_by_time.html#a5487f2a64965c66cee3f604e01388f8a">_ofs</a>.close();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_variable" href="class_roll_sink_by_time.html#a5487f2a64965c66cee3f604e01388f8a">_ofs</a>.open(filename, std::ios::binary | std::ios::app);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            assert(<a class="code hl_variable" href="class_roll_sink_by_time.html#a5487f2a64965c66cee3f604e01388f8a">_ofs</a>.is_open());</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_variable" href="class_roll_sink_by_time.html#a5487f2a64965c66cee3f604e01388f8a">_ofs</a>.write(data, len);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        assert(<a class="code hl_variable" href="class_roll_sink_by_time.html#a5487f2a64965c66cee3f604e01388f8a">_ofs</a>.good());</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">private</span>:</div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_roll_sink_by_time.html#a3101079c827baa41be7fc1e694cdc231">   58</a></span>    std::string <a class="code hl_function" href="class_roll_sink_by_time.html#a3101079c827baa41be7fc1e694cdc231">createNewFile</a>()</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        time_t t = <a class="code hl_function" href="class_xulog_1_1_util_1_1_date.html#a32d8c9efdcaf981547fcd8f3381da363">Xulog::Util::Date::getTime</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">struct </span>tm lt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        localtime_r(&amp;t, &amp;lt);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        std::stringstream filename;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        filename &lt;&lt; <a class="code hl_variable" href="class_roll_sink_by_time.html#ac1a2a7c2610b59fab82fccd404eac3b0">_basename</a> &lt;&lt; lt.tm_year + 1900 &lt;&lt; lt.tm_mon + 1 &lt;&lt; lt.tm_mday &lt;&lt; lt.tm_hour &lt;&lt; lt.tm_min &lt;&lt; lt.tm_sec &lt;&lt; <span class="stringliteral">&quot;.log&quot;</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">return</span> filename.str();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_roll_sink_by_time.html#ac1a2a7c2610b59fab82fccd404eac3b0">   69</a></span>    std::string <a class="code hl_variable" href="class_roll_sink_by_time.html#ac1a2a7c2610b59fab82fccd404eac3b0">_basename</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_roll_sink_by_time.html#a5487f2a64965c66cee3f604e01388f8a">   70</a></span>    std::ofstream <a class="code hl_variable" href="class_roll_sink_by_time.html#a5487f2a64965c66cee3f604e01388f8a">_ofs</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_roll_sink_by_time.html#aca5c1adb089ba3543c42f59d9c161131">   71</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="class_roll_sink_by_time.html#aca5c1adb089ba3543c42f59d9c161131">_current_gap</a>; <span class="comment">// 当前时间段的个数</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_roll_sink_by_time.html#a34b149ffa3f79a50195875bb044aa4f6">   72</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="class_roll_sink_by_time.html#a34b149ffa3f79a50195875bb044aa4f6">_gap_size</a>;    <span class="comment">// 间隔大小</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">//int main()</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">//{</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">//    std::unique_ptr&lt;Xulog::LoggerBuilder&gt; builder(new Xulog::GlobalLoggerBuild());</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">//    builder-&gt;buildLoggerLevel(Xulog::LogLevel::value::DEBUG);</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">//    builder-&gt;buildLoggerName(&quot;Synclogger&quot;);</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">//    builder-&gt;buildFormatter();</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">//    builder-&gt;buildLoggerType(Xulog::LoggerType::LOGGER_SYNC);</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">//    builder-&gt;buildSink&lt;Xulog::StdoutSink&gt;();</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">//    builder-&gt;buildSink&lt;RollSinkByTime&gt;(&quot;./log/a_roll-&quot;, TimeGap::GAP_SECOND);</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">//    Xulog::Logger::ptr logger = builder-&gt;build();</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">//    size_t cur = Xulog::Util::Date::getTime();</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">//</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">//    while (Xulog::Util::Date::getTime() &lt; cur + 5)</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">//    {</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">//        debug(logger, &quot;%s&quot;, &quot;时间功能测试&quot;);</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">//        usleep(1000);</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment">//    }</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">//    return 0;</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">//}</span></div>
+<div class="ttc" id="a_roll_by_time_8hpp_html_a1f48fe664ed21e80a696fcd53cb4575d"><div class="ttname"><a href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575d">TimeGap</a></div><div class="ttdeci">TimeGap</div><div class="ttdef"><b>Definition</b> RollByTime.hpp:9</div></div>
+<div class="ttc" id="a_roll_by_time_8hpp_html_a1f48fe664ed21e80a696fcd53cb4575da19a5256fbaf15a265ecb14d240682a15"><div class="ttname"><a href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575da19a5256fbaf15a265ecb14d240682a15">TimeGap::GAP_DAY</a></div><div class="ttdeci">@ GAP_DAY</div></div>
+<div class="ttc" id="a_roll_by_time_8hpp_html_a1f48fe664ed21e80a696fcd53cb4575da2001aa5adfb53218a5b9a837f6b018bd"><div class="ttname"><a href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575da2001aa5adfb53218a5b9a837f6b018bd">TimeGap::GAP_SECOND</a></div><div class="ttdeci">@ GAP_SECOND</div></div>
+<div class="ttc" id="a_roll_by_time_8hpp_html_a1f48fe664ed21e80a696fcd53cb4575da8e98e0d2590637c6a679e6dfb7e0a829"><div class="ttname"><a href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575da8e98e0d2590637c6a679e6dfb7e0a829">TimeGap::GAP_MINUTE</a></div><div class="ttdeci">@ GAP_MINUTE</div></div>
+<div class="ttc" id="a_roll_by_time_8hpp_html_a1f48fe664ed21e80a696fcd53cb4575dab890b70a57d80cdd95fcff6e285d6774"><div class="ttname"><a href="_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575dab890b70a57d80cdd95fcff6e285d6774">TimeGap::GAP_HOUR</a></div><div class="ttdeci">@ GAP_HOUR</div></div>
+<div class="ttc" id="aclass_roll_sink_by_time_html"><div class="ttname"><a href="class_roll_sink_by_time.html">RollSinkByTime</a></div><div class="ttdef"><b>Definition</b> RollByTime.hpp:16</div></div>
+<div class="ttc" id="aclass_roll_sink_by_time_html_a3101079c827baa41be7fc1e694cdc231"><div class="ttname"><a href="class_roll_sink_by_time.html#a3101079c827baa41be7fc1e694cdc231">RollSinkByTime::createNewFile</a></div><div class="ttdeci">std::string createNewFile()</div><div class="ttdef"><b>Definition</b> RollByTime.hpp:58</div></div>
+<div class="ttc" id="aclass_roll_sink_by_time_html_a34b149ffa3f79a50195875bb044aa4f6"><div class="ttname"><a href="class_roll_sink_by_time.html#a34b149ffa3f79a50195875bb044aa4f6">RollSinkByTime::_gap_size</a></div><div class="ttdeci">size_t _gap_size</div><div class="ttdef"><b>Definition</b> RollByTime.hpp:72</div></div>
+<div class="ttc" id="aclass_roll_sink_by_time_html_a5487f2a64965c66cee3f604e01388f8a"><div class="ttname"><a href="class_roll_sink_by_time.html#a5487f2a64965c66cee3f604e01388f8a">RollSinkByTime::_ofs</a></div><div class="ttdeci">std::ofstream _ofs</div><div class="ttdef"><b>Definition</b> RollByTime.hpp:70</div></div>
+<div class="ttc" id="aclass_roll_sink_by_time_html_aac57b67131f346bc4a50c548cba62f5f"><div class="ttname"><a href="class_roll_sink_by_time.html#aac57b67131f346bc4a50c548cba62f5f">RollSinkByTime::RollSinkByTime</a></div><div class="ttdeci">RollSinkByTime(const std::string &amp;basename, TimeGap gap_type)</div><div class="ttdef"><b>Definition</b> RollByTime.hpp:19</div></div>
+<div class="ttc" id="aclass_roll_sink_by_time_html_ac1a2a7c2610b59fab82fccd404eac3b0"><div class="ttname"><a href="class_roll_sink_by_time.html#ac1a2a7c2610b59fab82fccd404eac3b0">RollSinkByTime::_basename</a></div><div class="ttdeci">std::string _basename</div><div class="ttdef"><b>Definition</b> RollByTime.hpp:69</div></div>
+<div class="ttc" id="aclass_roll_sink_by_time_html_aca5c1adb089ba3543c42f59d9c161131"><div class="ttname"><a href="class_roll_sink_by_time.html#aca5c1adb089ba3543c42f59d9c161131">RollSinkByTime::_current_gap</a></div><div class="ttdeci">size_t _current_gap</div><div class="ttdef"><b>Definition</b> RollByTime.hpp:71</div></div>
+<div class="ttc" id="aclass_roll_sink_by_time_html_acdf48f492f02a6dfb476520d81fa7ac8"><div class="ttname"><a href="class_roll_sink_by_time.html#acdf48f492f02a6dfb476520d81fa7ac8">RollSinkByTime::log</a></div><div class="ttdeci">void log(const char *data, size_t len)</div><div class="ttdoc">日志输出</div><div class="ttdef"><b>Definition</b> RollByTime.hpp:43</div></div>
+<div class="ttc" id="aclass_xulog_1_1_log_sink_html"><div class="ttname"><a href="class_xulog_1_1_log_sink.html">Xulog::LogSink</a></div><div class="ttdoc">抽象日志落地基类</div><div class="ttdef"><b>Definition</b> sink.hpp:27</div></div>
+<div class="ttc" id="aclass_xulog_1_1_util_1_1_date_html_a32d8c9efdcaf981547fcd8f3381da363"><div class="ttname"><a href="class_xulog_1_1_util_1_1_date.html#a32d8c9efdcaf981547fcd8f3381da363">Xulog::Util::Date::getTime</a></div><div class="ttdeci">static size_t getTime()</div><div class="ttdoc">获取当前时间戳</div><div class="ttdef"><b>Definition</b> util.hpp:31</div></div>
+<div class="ttc" id="aclass_xulog_1_1_util_1_1_file_html_a36140bd7ae35f04c9c390b50347a0d0e"><div class="ttname"><a href="class_xulog_1_1_util_1_1_file.html#a36140bd7ae35f04c9c390b50347a0d0e">Xulog::Util::File::createDirectory</a></div><div class="ttdeci">static void createDirectory(const std::string &amp;pathname)</div><div class="ttdoc">创建目录及其父级目录</div><div class="ttdef"><b>Definition</b> util.hpp:81</div></div>
+<div class="ttc" id="aclass_xulog_1_1_util_1_1_file_html_a578792da7768a3c985cbf0acb87f495b"><div class="ttname"><a href="class_xulog_1_1_util_1_1_file.html#a578792da7768a3c985cbf0acb87f495b">Xulog::Util::File::path</a></div><div class="ttdeci">static std::string path(const std::string &amp;pathname)</div><div class="ttdoc">获取文件路径</div><div class="ttdef"><b>Definition</b> util.hpp:67</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_2222f31d7a61e527af3624100548cf57.html">extend</a></li><li class="navelem"><a class="el" href="_roll_by_time_8hpp.html">RollByTime.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

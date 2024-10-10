@@ -46,9 +46,9 @@ namespace Xulog
                const std::string file,
                const std::string logger,
                const std::string msg) : _ctime(Util::Date::getTime()),
-                                        _level(level),
                                         _line(line),
                                         _tid(std::this_thread::get_id()),
+                                        _level(level),
                                         _file(file),
                                         _logger(logger),
                                         _payload(msg)

@@ -346,9 +346,10 @@ namespace Xulog
          * @tparam Args 构造参数
          * @param args 构造参数
          */
-        LoggerBuilder() : _logger_type(LoggerType::LOGGER_SYNC),
-                          _limit_level(LogLevel::value::DEBUG),
-                          _looper_type(AsyncType::ASYNC_SAFE)
+        LoggerBuilder() : _looper_type(AsyncType::ASYNC_SAFE),
+                          _logger_type(LoggerType::LOGGER_SYNC),
+                          _limit_level(LogLevel::value::DEBUG)
+
         {
         }
         /**

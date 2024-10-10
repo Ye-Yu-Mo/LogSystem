@@ -7,7 +7,7 @@ var searchData=
   ['threadformatitem_4',['ThreadFormatItem',['../class_xulog_1_1_thread_format_item.html',1,'Xulog']]],
   ['threshold_5fbuffer_5fsize_5',['THRESHOLD_BUFFER_SIZE',['../buffer_8hpp.html#a74a57ad1abcbb2900facea1c7b9d2150',1,'buffer.hpp']]],
   ['timeformatitem_6',['timeformatitem',['../class_xulog_1_1_time_format_item.html',1,'Xulog::TimeFormatItem'],['../class_xulog_1_1_time_format_item.html#af73569adc2b80cdee211715bff224bc8',1,'Xulog::TimeFormatItem::TimeFormatItem()']]],
-  ['timegap_7',['TimeGap',['../_roll_by_time_8cc.html#a1f48fe664ed21e80a696fcd53cb4575d',1,'RollByTime.cc']]],
+  ['timegap_7',['TimeGap',['../_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575d',1,'RollByTime.hpp']]],
   ['todo_8',['TODO',['../md__r_e_a_d_m_e.html#autotoc_md24',1,'']]],
   ['tostring_9',['toString',['../class_xulog_1_1_log_level.html#a6d6fcbb384db801aa1faa908eca98a97',1,'Xulog::LogLevel']]]
 ];

@@ -1,6 +1,6 @@
-#include "../logs/Xulog.h"
 
-// 扩展测试： 滚动文件（时间）
+
+// 扩展功能： 滚动文件（时间）
 // 1. 以时间段滚动
 // 2. time(nullptr)%gap;
 #include "../logs/Xulog.h"
@@ -72,22 +72,22 @@ private:
     size_t _gap_size;    // 间隔大小
 };
 
-int main()
-{
-    std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::GlobalLoggerBuild());
-    builder->buildLoggerLevel(Xulog::LogLevel::value::DEBUG);
-    builder->buildLoggerName("Synclogger");
-    builder->buildFormatter();
-    builder->buildLoggerType(Xulog::LoggerType::LOGGER_SYNC);
-    builder->buildSink<Xulog::StdoutSink>();
-    builder->buildSink<RollSinkByTime>("./log/a_roll-", TimeGap::GAP_SECOND);
-    Xulog::Logger::ptr logger = builder->build();
-    size_t cur = Xulog::Util::Date::getTime();
-
-    while (Xulog::Util::Date::getTime() < cur + 5)
-    {
-        debug(logger, "%s", "时间功能测试");
-        usleep(1000);
-    }
-    return 0;
-}
+//int main()
+//{
+//    std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::GlobalLoggerBuild());
+//    builder->buildLoggerLevel(Xulog::LogLevel::value::DEBUG);
+//    builder->buildLoggerName("Synclogger");
+//    builder->buildFormatter();
+//    builder->buildLoggerType(Xulog::LoggerType::LOGGER_SYNC);
+//    builder->buildSink<Xulog::StdoutSink>();
+//    builder->buildSink<RollSinkByTime>("./log/a_roll-", TimeGap::GAP_SECOND);
+//    Xulog::Logger::ptr logger = builder->build();
+//    size_t cur = Xulog::Util::Date::getTime();
+//
+//    while (Xulog::Util::Date::getTime() < cur + 5)
+//    {
+//        debug(logger, "%s", "时间功能测试");
+//        usleep(1000);
+//    }
+//    return 0;
+//}

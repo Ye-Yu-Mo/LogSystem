@@ -17,6 +17,7 @@ var hierarchy =
       [ "Xulog::TimeFormatItem", "class_xulog_1_1_time_format_item.html", null ]
     ] ],
     [ "Xulog::Formatter", "class_xulog_1_1_formatter.html", null ],
+    [ "XuServer::InetAddr", "class_xu_server_1_1_inet_addr.html", null ],
     [ "Xulog::Logger", "class_xulog_1_1_logger.html", [
       [ "Xulog::AsyncLogger", "class_xulog_1_1_async_logger.html", null ],
       [ "Xulog::SyncLogger", "class_xulog_1_1_sync_logger.html", null ]
@@ -30,9 +31,13 @@ var hierarchy =
     [ "Xulog::LogMsg", "struct_xulog_1_1_log_msg.html", null ],
     [ "Xulog::LogSink", "class_xulog_1_1_log_sink.html", [
       [ "RollSinkByTime", "class_roll_sink_by_time.html", null ],
+      [ "ServerSink", "class_server_sink.html", null ],
       [ "Xulog::FileSink", "class_xulog_1_1_file_sink.html", null ],
       [ "Xulog::RollSinkBySize", "class_xulog_1_1_roll_sink_by_size.html", null ],
       [ "Xulog::StdoutSink", "class_xulog_1_1_stdout_sink.html", null ]
+    ] ],
+    [ "XuServer::nocopy", "class_xu_server_1_1nocopy.html", [
+      [ "XuServer::UdpServer", "class_xu_server_1_1_udp_server.html", null ]
     ] ],
     [ "Xulog::SinkFactory", "class_xulog_1_1_sink_factory.html", null ]
 ];

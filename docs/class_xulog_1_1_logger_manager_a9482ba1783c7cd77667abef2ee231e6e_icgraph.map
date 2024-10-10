@@ -1,17 +1,19 @@
 <map id="Xulog::LoggerManager::getLogger" name="Xulog::LoggerManager::getLogger">
-<area shape="rect" id="Node000001" title="获取指定名称的日志器" alt="" coords="565,73,733,113"/>
-<area shape="rect" id="Node000002" href="$namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="385,80,517,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="552,95,518,95,518,90,552,90"/>
-<area shape="rect" id="Node000003" href="$bench_8cc.html#a50e07be47fb2d4bc0ab579d1f67a0d47" title=" " alt="" coords="269,55,331,80"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="371,82,330,75,331,70,372,77"/>
-<area shape="rect" id="Node000007" href="$test_8cc.html#ac23db1c84059647b8979ebb5504142ef" title=" " alt="" coords="263,104,337,129"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="372,108,338,113,337,108,371,103"/>
+<area shape="rect" id="Node000001" title="获取指定名称的日志器" alt="" coords="565,71,733,111"/>
+<area shape="rect" id="Node000002" href="$namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="385,79,517,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="552,94,518,94,518,89,552,89"/>
+<area shape="rect" id="Node000003" href="$bench_8cc.html#a50e07be47fb2d4bc0ab579d1f67a0d47" title=" " alt="" coords="269,29,331,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="398,77,330,54,332,49,400,72"/>
+<area shape="rect" id="Node000007" href="$servertest_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="273,79,327,104"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="372,94,328,94,328,89,372,89"/>
+<area shape="rect" id="Node000008" href="$test_8cc.html#ac23db1c84059647b8979ebb5504142ef" title=" " alt="" coords="263,128,337,153"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="400,111,338,131,337,126,398,106"/>
 <area shape="rect" id="Node000004" href="$bench_8cc.html#a48449afe027d0b3050a6fa9b4af0bc91" title=" " alt="" coords="108,5,215,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="255,54,197,33,199,28,257,49"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="255,37,215,30,216,25,256,32"/>
 <area shape="rect" id="Node000006" href="$bench_8cc.html#aed911458da7aa931bc325648b27a2ded" title=" " alt="" coords="112,55,211,80"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="256,70,211,70,211,65,256,65"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="257,53,211,61,210,56,256,47"/>
 <area shape="rect" id="Node000005" href="$bench_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
-<area shape="rect" id="Node000008" href="$test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="134,104,189,129"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="249,119,189,119,189,114,249,114"/>
+<area shape="rect" id="Node000009" href="$test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="134,128,189,153"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="249,143,189,143,189,138,249,138"/>
 </map>

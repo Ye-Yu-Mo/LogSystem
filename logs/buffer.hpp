@@ -29,7 +29,7 @@ namespace Xulog
          * 创建一个新的 Buffer 对象，并初始化缓冲区大小和指针。
          */
         Buffer()
-            : _buffer(DEFAULT_BUFFER_SIZE), _writer_idx(0), _reader_idx(0)
+            : _buffer(DEFAULT_BUFFER_SIZE), _reader_idx(0),  _writer_idx(0)
         {
         }
         /**

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['fatal_0',['fatal',['../_xulog_8h.html#a053d6037d543b84ce59308ce71d15cd1',1,'FATAL:&#160;Xulog.h'],['../_xulog_8h.html#ae9fb0f4a1775d3720dfe55497c8586c1',1,'fatal:&#160;Xulog.h'],['../class_xulog_1_1_log_level.html#a6bdea31434e495fc5a19b8e48e3e613ba19da7170bea36556dde582519795f3fc',1,'Xulog::LogLevel::FATAL'],['../class_xulog_1_1_logger.html#a3d9920a1911340c90b7ac55bc52ba5af',1,'Xulog::Logger::fatal()']]],
+  ['fatal_0',['fatal',['../_xulog_8h.html#ae9fb0f4a1775d3720dfe55497c8586c1',1,'fatal:&#160;Xulog.h'],['../_xulog_8h.html#a053d6037d543b84ce59308ce71d15cd1',1,'FATAL:&#160;Xulog.h'],['../class_xulog_1_1_logger.html#a3d9920a1911340c90b7ac55bc52ba5af',1,'Xulog::Logger::fatal()'],['../class_xulog_1_1_log_level.html#a6bdea31434e495fc5a19b8e48e3e613ba19da7170bea36556dde582519795f3fc',1,'Xulog::LogLevel::FATAL']]],
   ['file_1',['File',['../class_xulog_1_1_util_1_1_file.html',1,'Xulog::Util']]],
   ['fileformatitem_2',['FileFormatItem',['../class_xulog_1_1_file_format_item.html',1,'Xulog']]],
   ['filesink_3',['filesink',['../class_xulog_1_1_file_sink.html',1,'Xulog::FileSink'],['../class_xulog_1_1_file_sink.html#a089bc3708abdab8fc5663b5859d7df1b',1,'Xulog::FileSink::FileSink()']]],

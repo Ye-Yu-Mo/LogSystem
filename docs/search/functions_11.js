@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['warn_0',['warn',['../class_xulog_1_1_logger.html#aa32b52c0de872bf78debea1139af1afc',1,'Xulog::Logger']]],
-  ['writeablesize_1',['writeAbleSize',['../class_xulog_1_1_buffer.html#a7653408465471cc568659dfd5ed91244',1,'Xulog::Buffer']]]
+  ['udpserver_0',['UdpServer',['../class_xu_server_1_1_udp_server.html#ae77958da9596dda426b4dff958c5b24b',1,'XuServer::UdpServer']]],
+  ['usage_1',['Usage',['../server__main_8cc.html#a321585e97bd7ae8f48596655c25ed8d5',1,'server_main.cc']]]
 ];

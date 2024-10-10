@@ -70,6 +70,13 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "variant": "cpp",
-        "cassert": "cpp"
+        "cassert": "cpp",
+        "charconv": "cpp",
+        "source_location": "cpp",
+        "format": "cpp",
+        "shared_mutex": "cpp",
+        "span": "cpp",
+        "stdfloat": "cpp",
+        "*.ipp": "cpp"
     }
 }

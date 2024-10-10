@@ -63,6 +63,7 @@ var NAVTREE =
       [ "命名空间成员", "namespacemembers.html", [
         [ "全部", "namespacemembers.html", null ],
         [ "函数", "namespacemembers_func.html", null ],
+        [ "变量", "namespacemembers_vars.html", null ],
         [ "类型定义", "namespacemembers_type.html", null ],
         [ "枚举", "namespacemembers_enum.html", null ]
       ] ]
@@ -93,8 +94,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_roll_by_time_8cc.html",
-"class_xulog_1_1_logger_builder.html#abe229afd6b7151e03d329f8b227520c9"
+"_inet_addr_8hpp.html",
+"class_xulog_1_1_logger.html#a018a40c101e1c3d499e878f8f2d7c27e",
+"namespace_xu_server.html#ae49755197fc97b266f5274265d053c66"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';
