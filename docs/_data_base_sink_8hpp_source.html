@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LogSystem: extend/DataBaseSink.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.00</span>
+   </div>
+   <div id="projectbrief">This is a logging system project</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_data_base_sink_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DataBaseSink.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_data_base_sink_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../logs/util.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;../logs/Xulog.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;arpa/inet.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;netinet/in.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;sqlite3.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_sqlite_helper.html">   30</a></span><span class="keyword">class </span><a class="code hl_class" href="class_sqlite_helper.html">SqliteHelper</a></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_sqlite_helper.html#af03a2cf90f50e87f3a1b95291d91b858">   45</a></span>    <span class="keyword">typedef</span> int (*<a class="code hl_typedef" href="class_sqlite_helper.html#af03a2cf90f50e87f3a1b95291d91b858">SqliteCallback</a>)(<span class="keywordtype">void</span> *, int, <span class="keywordtype">char</span> **, <span class="keywordtype">char</span> **);</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_sqlite_helper.html#a43577e1174f810a86dc4df53987b7d8f">   52</a></span>    <a class="code hl_function" href="class_sqlite_helper.html#a43577e1174f810a86dc4df53987b7d8f">SqliteHelper</a>(<span class="keyword">const</span> std::string &amp;dbfile)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        : <a class="code hl_variable" href="class_sqlite_helper.html#a5d3e643f5a9795a429b90b4ecb6067bc">_dbfile</a>(dbfile), <a class="code hl_variable" href="class_sqlite_helper.html#a6f59cfe1f96a361c1afe6f17990c3c64">_handler</a>(nullptr)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_sqlite_helper.html#aabda6dad21ec94d88bc2c83b3ad15a8e">   63</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sqlite_helper.html#aabda6dad21ec94d88bc2c83b3ad15a8e">open</a>(<span class="keywordtype">int</span> safe_level = SQLITE_OPEN_FULLMUTEX)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">int</span> ret = sqlite3_open_v2(<a class="code hl_variable" href="class_sqlite_helper.html#a5d3e643f5a9795a429b90b4ecb6067bc">_dbfile</a>.c_str(), &amp;<a class="code hl_variable" href="class_sqlite_helper.html#a6f59cfe1f96a361c1afe6f17990c3c64">_handler</a>, SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE | safe_level, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">if</span> (ret != SQLITE_OK)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;打开数据库 &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_sqlite_helper.html#a5d3e643f5a9795a429b90b4ecb6067bc">_dbfile</a>.c_str() &lt;&lt; <span class="stringliteral">&quot; 失败!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_sqlite_helper.html#a0d531486c0741c0afef5c14b394ca9ec">   82</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sqlite_helper.html#a0d531486c0741c0afef5c14b394ca9ec">exec</a>(<span class="keyword">const</span> std::string &amp;sql, <a class="code hl_typedef" href="class_sqlite_helper.html#af03a2cf90f50e87f3a1b95291d91b858">SqliteCallback</a> cb, <span class="keywordtype">void</span> *arg)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordtype">int</span> ret = sqlite3_exec(<a class="code hl_variable" href="class_sqlite_helper.html#a6f59cfe1f96a361c1afe6f17990c3c64">_handler</a>, sql.c_str(), cb, arg, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">if</span> (ret != SQLITE_OK)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            std::cout &lt;&lt; sql.c_str() &lt;&lt; <span class="stringliteral">&quot;--执行语句失败: &quot;</span> &lt;&lt; sqlite3_errmsg(<a class="code hl_variable" href="class_sqlite_helper.html#a6f59cfe1f96a361c1afe6f17990c3c64">_handler</a>) &lt;&lt; <span class="stringliteral">&quot; 失败!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_sqlite_helper.html#a365b6f3900da63c126269d469e8dbfdc">   97</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_sqlite_helper.html#a365b6f3900da63c126269d469e8dbfdc">close</a>()</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        sqlite3_close_v2(<a class="code hl_variable" href="class_sqlite_helper.html#a6f59cfe1f96a361c1afe6f17990c3c64">_handler</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_sqlite_helper.html#a5d3e643f5a9795a429b90b4ecb6067bc">  103</a></span>    std::string <a class="code hl_variable" href="class_sqlite_helper.html#a5d3e643f5a9795a429b90b4ecb6067bc">_dbfile</a>; </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_sqlite_helper.html#a6f59cfe1f96a361c1afe6f17990c3c64">  104</a></span>    sqlite3 *<a class="code hl_variable" href="class_sqlite_helper.html#a6f59cfe1f96a361c1afe6f17990c3c64">_handler</a>;   </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>};</div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="foldopen" id="foldopen00108" data-start="{" data-end="};">
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_data_base_sink.html">  108</a></span><span class="keyword">class </span><a class="code hl_class" href="class_data_base_sink.html">DataBaseSink</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_xulog_1_1_log_sink.html">Xulog::LogSink</a></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>{</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class_data_base_sink.html#a1161c651f49db642085b8775d12ab623">  114</a></span>    <a class="code hl_function" href="class_data_base_sink.html#a1161c651f49db642085b8775d12ab623">DataBaseSink</a>(<span class="keyword">const</span> std::string &amp;dbfile, <span class="keyword">const</span> std::string &amp;name)</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        : <a class="code hl_variable" href="class_data_base_sink.html#a983f5d8596291b4aa6a211b7b1f9d84f">_helper</a>(dbfile), <a class="code hl_variable" href="class_data_base_sink.html#ac9f187f483a83f6d1d8774ed56576008">_logger_name</a>(name)</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_xulog_1_1_util_1_1_file.html#ac7b05dc9c45e4b78cc269bdf526de4ac">Xulog::Util::File::exists</a>(dbfile))</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            std::string path = <a class="code hl_function" href="class_xulog_1_1_util_1_1_file.html#a578792da7768a3c985cbf0acb87f495b">Xulog::Util::File::path</a>(dbfile);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <a class="code hl_function" href="class_xulog_1_1_util_1_1_file.html#a36140bd7ae35f04c9c390b50347a0d0e">Xulog::Util::File::createDirectory</a>(path);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <a class="code hl_function" href="class_xulog_1_1_util_1_1_file.html#a9c62dcc481f220e00afdfc5dd91d0b63">Xulog::Util::File::createFile</a>(dbfile);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        assert(<a class="code hl_variable" href="class_data_base_sink.html#a983f5d8596291b4aa6a211b7b1f9d84f">_helper</a>.<a class="code hl_function" href="class_sqlite_helper.html#aabda6dad21ec94d88bc2c83b3ad15a8e">open</a>());</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <a class="code hl_function" href="class_data_base_sink.html#a9d522f3022d4a05a8e37d394c6df40f6">createTable</a>();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="class_data_base_sink.html#a9d522f3022d4a05a8e37d394c6df40f6">  127</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_data_base_sink.html#a9d522f3022d4a05a8e37d394c6df40f6">createTable</a>()</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keyword">const</span> <span class="keywordtype">char</span> *CREATE_TABLE = <span class="stringliteral">&quot;CREATE TABLE IF NOT EXISTS logs (id INTEGER PRIMARY KEY AUTOINCREMENT, log_time TIMESTAMP NOT NULL,\</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="stringliteral">                                    line_number INT, thread_id VARCHAR(255), log_level VARCHAR(10) NOT NULL,\</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="stringliteral">                                    source_file VARCHAR(255), logger_name VARCHAR(255),message TEXT);&quot;</span>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_data_base_sink.html#a983f5d8596291b4aa6a211b7b1f9d84f">_helper</a>.<a class="code hl_function" href="class_sqlite_helper.html#a0d531486c0741c0afef5c14b394ca9ec">exec</a>(CREATE_TABLE, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <a class="code hl_define" href="_xulog_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;创建日志数据库表失败!&quot;</span>);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            abort();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00142" data-start="{" data-end="}">
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="class_data_base_sink.html#aa225abc961083998a7e7780d827dfa2b">  142</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_data_base_sink.html#aa225abc961083998a7e7780d827dfa2b">log</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *data, <span class="keywordtype">size_t</span> len)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_data_base_sink.html#afb8b2b8eb74a8415b8d6c29111e14649">_logger</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <a class="code hl_variable" href="class_data_base_sink.html#afb8b2b8eb74a8415b8d6c29111e14649">_logger</a> = <a class="code hl_function" href="namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3">Xulog::getLogger</a>(<a class="code hl_variable" href="class_data_base_sink.html#ac9f187f483a83f6d1d8774ed56576008">_logger_name</a>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_data_base_sink.html#afb8b2b8eb74a8415b8d6c29111e14649">_logger</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;未获取到日志器！日志器名称为：&quot;</span> &lt;&lt; <a class="code hl_variable" href="class_data_base_sink.html#ac9f187f483a83f6d1d8774ed56576008">_logger_name</a> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <a class="code hl_struct" href="struct_xulog_1_1_log_msg.html">Xulog::LogMsg</a> msg = <a class="code hl_variable" href="class_data_base_sink.html#afb8b2b8eb74a8415b8d6c29111e14649">_logger</a>-&gt;getMsg();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        std::stringstream ss;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        ss &lt;&lt; <span class="stringliteral">&quot;INSERT into logs (log_time, line_number, thread_id, log_level, source_file, logger_name, message) &quot;</span>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        ss &lt;&lt; <span class="stringliteral">&quot;VALUES (datetime(&quot;</span> &lt;&lt; msg.<a class="code hl_variable" href="struct_xulog_1_1_log_msg.html#a8cd91e2bf908a9328a3e4c7ccb801adc">_ctime</a> &lt;&lt; <span class="stringliteral">&quot;, &#39;unixepoch&#39;, &#39;+8 hours&#39;),&quot;</span>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        ss &lt;&lt; msg.<a class="code hl_variable" href="struct_xulog_1_1_log_msg.html#a3c653f27d4de06e356178ed8414ee2b3">_line</a> &lt;&lt; <span class="stringliteral">&quot;, &quot;</span>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        ss &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span> &lt;&lt; msg.<a class="code hl_variable" href="struct_xulog_1_1_log_msg.html#ac20a9f12d60bb73bcd3195d5397dca66">_tid</a> &lt;&lt; <span class="stringliteral">&quot;&#39;, &quot;</span>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        ss &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span> &lt;&lt; <a class="code hl_function" href="class_xulog_1_1_log_level.html#a6d6fcbb384db801aa1faa908eca98a97">Xulog::LogLevel::toString</a>(msg.<a class="code hl_variable" href="struct_xulog_1_1_log_msg.html#adc933f427550650575f4b443e32e088e">_level</a>) &lt;&lt; <span class="stringliteral">&quot;&#39;, &quot;</span>;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        ss &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span> &lt;&lt; msg.<a class="code hl_variable" href="struct_xulog_1_1_log_msg.html#aa76495121244c350f27eb981bf17d7f8">_file</a> &lt;&lt; <span class="stringliteral">&quot;&#39;, &quot;</span>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        ss &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span> &lt;&lt; msg.<a class="code hl_variable" href="struct_xulog_1_1_log_msg.html#aaf1c5ab9e139c2e5ad61fc05524499f9">_logger</a> &lt;&lt; <span class="stringliteral">&quot;&#39;, &quot;</span>;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        ss &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span> &lt;&lt; msg.<a class="code hl_variable" href="struct_xulog_1_1_log_msg.html#a6a7c9659c7f17ffb9f892f7673a2481b">_payload</a> &lt;&lt; <span class="stringliteral">&quot;&#39;);&quot;</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_data_base_sink.html#a983f5d8596291b4aa6a211b7b1f9d84f">_helper</a>.<a class="code hl_function" href="class_sqlite_helper.html#a0d531486c0741c0afef5c14b394ca9ec">exec</a>(ss.str().c_str(), <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            <a class="code hl_define" href="_xulog_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;插入日志数据失败!&quot;</span>);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            abort();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
+</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="class_data_base_sink.html#afa9f8c697a32288afee92b559a4bb840">  168</a></span>    <a class="code hl_function" href="class_data_base_sink.html#afa9f8c697a32288afee92b559a4bb840">~DataBaseSink</a>() {}</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="class_data_base_sink.html#a983f5d8596291b4aa6a211b7b1f9d84f">  171</a></span>    <a class="code hl_class" href="class_sqlite_helper.html">SqliteHelper</a> <a class="code hl_variable" href="class_data_base_sink.html#a983f5d8596291b4aa6a211b7b1f9d84f">_helper</a>;              </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="class_data_base_sink.html#ac9f187f483a83f6d1d8774ed56576008">  172</a></span>    std::string <a class="code hl_variable" href="class_data_base_sink.html#ac9f187f483a83f6d1d8774ed56576008">_logger_name</a>;          </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="class_data_base_sink.html#acdb00a052a03bb06a71ad3d1486f8ad3">  173</a></span>    <a class="code hl_struct" href="struct_xulog_1_1_log_msg.html">Xulog::LogMsg</a> <a class="code hl_variable" href="class_data_base_sink.html#acdb00a052a03bb06a71ad3d1486f8ad3">_msg</a>;                </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="class_data_base_sink.html#afb8b2b8eb74a8415b8d6c29111e14649">  174</a></span>    <span class="keyword">static</span> <a class="code hl_typedef" href="class_xulog_1_1_logger.html#abedc00e62ee525316cea9bcbcdcefc47">Xulog::Logger::ptr</a> <a class="code hl_variable" href="class_data_base_sink.html#afb8b2b8eb74a8415b8d6c29111e14649">_logger</a>; </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>};</div>
+</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><a class="code hl_typedef" href="class_xulog_1_1_logger.html#abedc00e62ee525316cea9bcbcdcefc47">Xulog::Logger::ptr</a> <a class="code hl_variable" href="class_data_base_sink.html#afb8b2b8eb74a8415b8d6c29111e14649">DataBaseSink::_logger</a> = <span class="keyword">nullptr</span>;</div>
+<div class="ttc" id="a_xulog_8h_html_a15378cd15bafb3a79061424b452497aa"><div class="ttname"><a href="_xulog_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a></div><div class="ttdeci">#define ERROR(fmt,...)</div><div class="ttdoc">使用默认日志器打印错误信息</div><div class="ttdef"><b>Definition</b> Xulog.h:104</div></div>
+<div class="ttc" id="aclass_data_base_sink_html"><div class="ttname"><a href="class_data_base_sink.html">DataBaseSink</a></div><div class="ttdoc">数据库落地类</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:109</div></div>
+<div class="ttc" id="aclass_data_base_sink_html_a1161c651f49db642085b8775d12ab623"><div class="ttname"><a href="class_data_base_sink.html#a1161c651f49db642085b8775d12ab623">DataBaseSink::DataBaseSink</a></div><div class="ttdeci">DataBaseSink(const std::string &amp;dbfile, const std::string &amp;name)</div><div class="ttdoc">数据库落地类构造函数</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:114</div></div>
+<div class="ttc" id="aclass_data_base_sink_html_a983f5d8596291b4aa6a211b7b1f9d84f"><div class="ttname"><a href="class_data_base_sink.html#a983f5d8596291b4aa6a211b7b1f9d84f">DataBaseSink::_helper</a></div><div class="ttdeci">SqliteHelper _helper</div><div class="ttdoc">数据库帮助类句柄</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:171</div></div>
+<div class="ttc" id="aclass_data_base_sink_html_a9d522f3022d4a05a8e37d394c6df40f6"><div class="ttname"><a href="class_data_base_sink.html#a9d522f3022d4a05a8e37d394c6df40f6">DataBaseSink::createTable</a></div><div class="ttdeci">void createTable()</div><div class="ttdoc">用于创建日志表</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:127</div></div>
+<div class="ttc" id="aclass_data_base_sink_html_aa225abc961083998a7e7780d827dfa2b"><div class="ttname"><a href="class_data_base_sink.html#aa225abc961083998a7e7780d827dfa2b">DataBaseSink::log</a></div><div class="ttdeci">void log(const char *data, size_t len)</div><div class="ttdoc">发送数据</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:142</div></div>
+<div class="ttc" id="aclass_data_base_sink_html_ac9f187f483a83f6d1d8774ed56576008"><div class="ttname"><a href="class_data_base_sink.html#ac9f187f483a83f6d1d8774ed56576008">DataBaseSink::_logger_name</a></div><div class="ttdeci">std::string _logger_name</div><div class="ttdoc">日志器名称</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:172</div></div>
+<div class="ttc" id="aclass_data_base_sink_html_acdb00a052a03bb06a71ad3d1486f8ad3"><div class="ttname"><a href="class_data_base_sink.html#acdb00a052a03bb06a71ad3d1486f8ad3">DataBaseSink::_msg</a></div><div class="ttdeci">Xulog::LogMsg _msg</div><div class="ttdoc">结构化数据</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:173</div></div>
+<div class="ttc" id="aclass_data_base_sink_html_afa9f8c697a32288afee92b559a4bb840"><div class="ttname"><a href="class_data_base_sink.html#afa9f8c697a32288afee92b559a4bb840">DataBaseSink::~DataBaseSink</a></div><div class="ttdeci">~DataBaseSink()</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:168</div></div>
+<div class="ttc" id="aclass_data_base_sink_html_afb8b2b8eb74a8415b8d6c29111e14649"><div class="ttname"><a href="class_data_base_sink.html#afb8b2b8eb74a8415b8d6c29111e14649">DataBaseSink::_logger</a></div><div class="ttdeci">static Xulog::Logger::ptr _logger</div><div class="ttdoc">日志器句柄</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:174</div></div>
+<div class="ttc" id="aclass_sqlite_helper_html"><div class="ttname"><a href="class_sqlite_helper.html">SqliteHelper</a></div><div class="ttdoc">SQLite 数据库操作助手类</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:31</div></div>
+<div class="ttc" id="aclass_sqlite_helper_html_a0d531486c0741c0afef5c14b394ca9ec"><div class="ttname"><a href="class_sqlite_helper.html#a0d531486c0741c0afef5c14b394ca9ec">SqliteHelper::exec</a></div><div class="ttdeci">bool exec(const std::string &amp;sql, SqliteCallback cb, void *arg)</div><div class="ttdoc">执行 SQL 语句</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:82</div></div>
+<div class="ttc" id="aclass_sqlite_helper_html_a365b6f3900da63c126269d469e8dbfdc"><div class="ttname"><a href="class_sqlite_helper.html#a365b6f3900da63c126269d469e8dbfdc">SqliteHelper::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">关闭数据库</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:97</div></div>
+<div class="ttc" id="aclass_sqlite_helper_html_a43577e1174f810a86dc4df53987b7d8f"><div class="ttname"><a href="class_sqlite_helper.html#a43577e1174f810a86dc4df53987b7d8f">SqliteHelper::SqliteHelper</a></div><div class="ttdeci">SqliteHelper(const std::string &amp;dbfile)</div><div class="ttdoc">SqliteHelper 构造函数</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:52</div></div>
+<div class="ttc" id="aclass_sqlite_helper_html_a5d3e643f5a9795a429b90b4ecb6067bc"><div class="ttname"><a href="class_sqlite_helper.html#a5d3e643f5a9795a429b90b4ecb6067bc">SqliteHelper::_dbfile</a></div><div class="ttdeci">std::string _dbfile</div><div class="ttdoc">数据库文件路径</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:103</div></div>
+<div class="ttc" id="aclass_sqlite_helper_html_a6f59cfe1f96a361c1afe6f17990c3c64"><div class="ttname"><a href="class_sqlite_helper.html#a6f59cfe1f96a361c1afe6f17990c3c64">SqliteHelper::_handler</a></div><div class="ttdeci">sqlite3 * _handler</div><div class="ttdoc">SQLite 数据库句柄</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:104</div></div>
+<div class="ttc" id="aclass_sqlite_helper_html_aabda6dad21ec94d88bc2c83b3ad15a8e"><div class="ttname"><a href="class_sqlite_helper.html#aabda6dad21ec94d88bc2c83b3ad15a8e">SqliteHelper::open</a></div><div class="ttdeci">bool open(int safe_level=SQLITE_OPEN_FULLMUTEX)</div><div class="ttdoc">打开数据库</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:63</div></div>
+<div class="ttc" id="aclass_sqlite_helper_html_af03a2cf90f50e87f3a1b95291d91b858"><div class="ttname"><a href="class_sqlite_helper.html#af03a2cf90f50e87f3a1b95291d91b858">SqliteHelper::SqliteCallback</a></div><div class="ttdeci">int(* SqliteCallback)(void *, int, char **, char **)</div><div class="ttdoc">SQLite 回调函数类型</div><div class="ttdef"><b>Definition</b> DataBaseSink.hpp:45</div></div>
+<div class="ttc" id="aclass_xulog_1_1_log_level_html_a6d6fcbb384db801aa1faa908eca98a97"><div class="ttname"><a href="class_xulog_1_1_log_level.html#a6d6fcbb384db801aa1faa908eca98a97">Xulog::LogLevel::toString</a></div><div class="ttdeci">static const char * toString(LogLevel::value level)</div><div class="ttdoc">将日志等级转换为对应的字符串</div><div class="ttdef"><b>Definition</b> level.hpp:44</div></div>
+<div class="ttc" id="aclass_xulog_1_1_log_sink_html"><div class="ttname"><a href="class_xulog_1_1_log_sink.html">Xulog::LogSink</a></div><div class="ttdoc">抽象日志落地基类</div><div class="ttdef"><b>Definition</b> sink.hpp:27</div></div>
+<div class="ttc" id="aclass_xulog_1_1_logger_html_abedc00e62ee525316cea9bcbcdcefc47"><div class="ttname"><a href="class_xulog_1_1_logger.html#abedc00e62ee525316cea9bcbcdcefc47">Xulog::Logger::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Logger &gt; ptr</div><div class="ttdef"><b>Definition</b> logger.hpp:33</div></div>
+<div class="ttc" id="aclass_xulog_1_1_util_1_1_file_html_a36140bd7ae35f04c9c390b50347a0d0e"><div class="ttname"><a href="class_xulog_1_1_util_1_1_file.html#a36140bd7ae35f04c9c390b50347a0d0e">Xulog::Util::File::createDirectory</a></div><div class="ttdeci">static void createDirectory(const std::string &amp;pathname)</div><div class="ttdoc">创建目录及其父级目录</div><div class="ttdef"><b>Definition</b> util.hpp:82</div></div>
+<div class="ttc" id="aclass_xulog_1_1_util_1_1_file_html_a578792da7768a3c985cbf0acb87f495b"><div class="ttname"><a href="class_xulog_1_1_util_1_1_file.html#a578792da7768a3c985cbf0acb87f495b">Xulog::Util::File::path</a></div><div class="ttdeci">static std::string path(const std::string &amp;pathname)</div><div class="ttdoc">获取文件路径</div><div class="ttdef"><b>Definition</b> util.hpp:68</div></div>
+<div class="ttc" id="aclass_xulog_1_1_util_1_1_file_html_a9c62dcc481f220e00afdfc5dd91d0b63"><div class="ttname"><a href="class_xulog_1_1_util_1_1_file.html#a9c62dcc481f220e00afdfc5dd91d0b63">Xulog::Util::File::createFile</a></div><div class="ttdeci">static bool createFile(const std::string filename)</div><div class="ttdoc">创建新文件</div><div class="ttdef"><b>Definition</b> util.hpp:110</div></div>
+<div class="ttc" id="aclass_xulog_1_1_util_1_1_file_html_ac7b05dc9c45e4b78cc269bdf526de4ac"><div class="ttname"><a href="class_xulog_1_1_util_1_1_file.html#ac7b05dc9c45e4b78cc269bdf526de4ac">Xulog::Util::File::exists</a></div><div class="ttdeci">static bool exists(const std::string &amp;pathname)</div><div class="ttdoc">判断文件是否存在</div><div class="ttdef"><b>Definition</b> util.hpp:53</div></div>
+<div class="ttc" id="anamespace_xulog_html_a41e363ba050c15f3b4e1d157354d59c3"><div class="ttname"><a href="namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3">Xulog::getLogger</a></div><div class="ttdeci">Logger::ptr getLogger(const std::string &amp;name)</div><div class="ttdoc">获取指定名称的日志器</div><div class="ttdef"><b>Definition</b> Xulog.h:21</div></div>
+<div class="ttc" id="astruct_xulog_1_1_log_msg_html"><div class="ttname"><a href="struct_xulog_1_1_log_msg.html">Xulog::LogMsg</a></div><div class="ttdoc">日志消息结构体</div><div class="ttdef"><b>Definition</b> message.hpp:24</div></div>
+<div class="ttc" id="astruct_xulog_1_1_log_msg_html_a3c653f27d4de06e356178ed8414ee2b3"><div class="ttname"><a href="struct_xulog_1_1_log_msg.html#a3c653f27d4de06e356178ed8414ee2b3">Xulog::LogMsg::_line</a></div><div class="ttdeci">size_t _line</div><div class="ttdoc">行号</div><div class="ttdef"><b>Definition</b> message.hpp:26</div></div>
+<div class="ttc" id="astruct_xulog_1_1_log_msg_html_a6a7c9659c7f17ffb9f892f7673a2481b"><div class="ttname"><a href="struct_xulog_1_1_log_msg.html#a6a7c9659c7f17ffb9f892f7673a2481b">Xulog::LogMsg::_payload</a></div><div class="ttdeci">std::string _payload</div><div class="ttdoc">有效载荷数据</div><div class="ttdef"><b>Definition</b> message.hpp:31</div></div>
+<div class="ttc" id="astruct_xulog_1_1_log_msg_html_a8cd91e2bf908a9328a3e4c7ccb801adc"><div class="ttname"><a href="struct_xulog_1_1_log_msg.html#a8cd91e2bf908a9328a3e4c7ccb801adc">Xulog::LogMsg::_ctime</a></div><div class="ttdeci">time_t _ctime</div><div class="ttdoc">日志产生的时间戳</div><div class="ttdef"><b>Definition</b> message.hpp:25</div></div>
+<div class="ttc" id="astruct_xulog_1_1_log_msg_html_aa76495121244c350f27eb981bf17d7f8"><div class="ttname"><a href="struct_xulog_1_1_log_msg.html#aa76495121244c350f27eb981bf17d7f8">Xulog::LogMsg::_file</a></div><div class="ttdeci">std::string _file</div><div class="ttdoc">源文件名称</div><div class="ttdef"><b>Definition</b> message.hpp:29</div></div>
+<div class="ttc" id="astruct_xulog_1_1_log_msg_html_aaf1c5ab9e139c2e5ad61fc05524499f9"><div class="ttname"><a href="struct_xulog_1_1_log_msg.html#aaf1c5ab9e139c2e5ad61fc05524499f9">Xulog::LogMsg::_logger</a></div><div class="ttdeci">std::string _logger</div><div class="ttdoc">日志器</div><div class="ttdef"><b>Definition</b> message.hpp:30</div></div>
+<div class="ttc" id="astruct_xulog_1_1_log_msg_html_ac20a9f12d60bb73bcd3195d5397dca66"><div class="ttname"><a href="struct_xulog_1_1_log_msg.html#ac20a9f12d60bb73bcd3195d5397dca66">Xulog::LogMsg::_tid</a></div><div class="ttdeci">std::thread::id _tid</div><div class="ttdoc">线程ID</div><div class="ttdef"><b>Definition</b> message.hpp:27</div></div>
+<div class="ttc" id="astruct_xulog_1_1_log_msg_html_adc933f427550650575f4b443e32e088e"><div class="ttname"><a href="struct_xulog_1_1_log_msg.html#adc933f427550650575f4b443e32e088e">Xulog::LogMsg::_level</a></div><div class="ttdeci">LogLevel::value _level</div><div class="ttdoc">日志等级</div><div class="ttdef"><b>Definition</b> message.hpp:28</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_2222f31d7a61e527af3624100548cf57.html">extend</a></li><li class="navelem"><a class="el" href="_data_base_sink_8hpp.html">DataBaseSink.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

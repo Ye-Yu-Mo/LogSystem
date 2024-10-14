@@ -67,5 +67,25 @@ namespace Xulog
                 return "UNKNOW";
             }
         }
+        /// @brief 从字符串转换成日志等级
+        /// @param level 日志等级字符串
+        /// @return 日志等级
+        static LogLevel::value fromString(const std::string& level)
+        {
+            if(level=="DEBUG")
+                return LogLevel::value::DEBUG;
+            else if(level=="INFO")
+                return LogLevel::value::INFO;
+            else if(level=="WARN")
+                return LogLevel::value::WARN;
+            else if(level=="ERROR")
+                return LogLevel::value::ERROR;
+            else if(level=="FATAL")
+                return LogLevel::value::FATAL;
+            else if(level=="OFF")
+                return LogLevel::value::OFF;
+            else
+                return LogLevel::value::UNKNOW;
+        }
     };
 }

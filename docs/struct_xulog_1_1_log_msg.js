@@ -1,5 +1,6 @@
 var struct_xulog_1_1_log_msg =
 [
+    [ "LogMsg", "struct_xulog_1_1_log_msg.html#aeee4e4fa9215ce2883d81a03d9e787a1", null ],
     [ "LogMsg", "struct_xulog_1_1_log_msg.html#af8081837f5fa6730e9f750baba8bb659", null ],
     [ "_ctime", "struct_xulog_1_1_log_msg.html#a8cd91e2bf908a9328a3e4c7ccb801adc", null ],
     [ "_file", "struct_xulog_1_1_log_msg.html#aa76495121244c350f27eb981bf17d7f8", null ],

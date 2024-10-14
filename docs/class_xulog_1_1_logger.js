@@ -5,6 +5,7 @@ var class_xulog_1_1_logger =
     [ "debug", "class_xulog_1_1_logger.html#a8be8b1472da9e5a313a13667f4748314", null ],
     [ "error", "class_xulog_1_1_logger.html#ab10f70757651935431baf53fc3ceee6b", null ],
     [ "fatal", "class_xulog_1_1_logger.html#a3d9920a1911340c90b7ac55bc52ba5af", null ],
+    [ "getMsg", "class_xulog_1_1_logger.html#a874b751392ef54e8b003488a06756e36", null ],
     [ "info", "class_xulog_1_1_logger.html#a623ef0c5d8030674000c98561896a3f4", null ],
     [ "log", "class_xulog_1_1_logger.html#ad95ad63f42dd8bac7772a025f5a317f9", null ],
     [ "name", "class_xulog_1_1_logger.html#ae3be4d873fcd21eb4b193a8ba42f0420", null ],
@@ -13,6 +14,7 @@ var class_xulog_1_1_logger =
     [ "_formatter", "class_xulog_1_1_logger.html#a408571e58869e1f271029c3e78c882cb", null ],
     [ "_limit_level", "class_xulog_1_1_logger.html#aaee749c4a19e0ac7e38e62cce3130e95", null ],
     [ "_logger_name", "class_xulog_1_1_logger.html#a02627ff8f351fe0aabbea1b439b3986b", null ],
+    [ "_msg", "class_xulog_1_1_logger.html#ab0868a9bf8c48ed779ed63cebc6ce5c7", null ],
     [ "_mutex", "class_xulog_1_1_logger.html#a42cb9f86ff0e4db914fc1d0a5d003062", null ],
     [ "_sinks", "class_xulog_1_1_logger.html#a6bea521df273e432a96aec211926db05", null ]
 ];

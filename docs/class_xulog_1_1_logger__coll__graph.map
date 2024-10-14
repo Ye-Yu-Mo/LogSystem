@@ -1,0 +1,5 @@
+<map id="Xulog::Logger" name="Xulog::Logger">
+<area shape="rect" id="Node000001" title="抽象日志器基类" alt="" coords="9,93,119,119"/>
+<area shape="rect" id="Node000002" href="$struct_xulog_1_1_log_msg.html" title="日志消息结构体" alt="" coords="5,5,123,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,45,67,93,61,93,61,45"/>
+</map>

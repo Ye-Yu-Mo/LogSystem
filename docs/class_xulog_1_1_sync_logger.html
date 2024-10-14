@@ -124,9 +124,11 @@ Xulog::SyncLogger 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xulog_1_1_sync_logger__coll__graph.png" border="0" usemap="#a_xulog_1_1_sync_logger_coll__map" alt="Collaboration graph"/></div>
 <map name="a_xulog_1_1_sync_logger_coll__map" id="a_xulog_1_1_sync_logger_coll__map">
-<area shape="rect" title="同步日志器" alt="" coords="5,79,148,104"/>
-<area shape="rect" href="class_xulog_1_1_logger.html" title="抽象日志器基类" alt="" coords="21,5,132,31"/>
-<area shape="poly" title=" " alt="" coords="79,44,79,79,74,79,74,44"/>
+<area shape="rect" title="同步日志器" alt="" coords="5,168,148,193"/>
+<area shape="rect" href="class_xulog_1_1_logger.html" title="抽象日志器基类" alt="" coords="21,93,132,119"/>
+<area shape="poly" title=" " alt="" coords="79,133,79,168,74,168,74,133"/>
+<area shape="rect" href="struct_xulog_1_1_log_msg.html" title="日志消息结构体" alt="" coords="18,5,135,31"/>
+<area shape="poly" title=" " alt="" coords="79,45,79,93,74,93,74,45"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
 <table class="memberdecls">
@@ -157,6 +159,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a3d9920a1911340c90b7ac55bc52ba5af inherit pub_methods_class_xulog_1_1_logger" id="r_a3d9920a1911340c90b7ac55bc52ba5af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_logger.html#a3d9920a1911340c90b7ac55bc52ba5af">fatal</a> (const std::string &amp;file, size_t line, const std::string &amp;fmt,...)</td></tr>
 <tr class="memdesc:a3d9920a1911340c90b7ac55bc52ba5af inherit pub_methods_class_xulog_1_1_logger"><td class="mdescLeft">&#160;</td><td class="mdescRight">记录致命级别日志  <br /></td></tr>
 <tr class="separator:a3d9920a1911340c90b7ac55bc52ba5af inherit pub_methods_class_xulog_1_1_logger"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a874b751392ef54e8b003488a06756e36 inherit pub_methods_class_xulog_1_1_logger" id="r_a874b751392ef54e8b003488a06756e36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_xulog_1_1_log_msg.html">LogMsg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_logger.html#a874b751392ef54e8b003488a06756e36">getMsg</a> ()</td></tr>
+<tr class="memdesc:a874b751392ef54e8b003488a06756e36 inherit pub_methods_class_xulog_1_1_logger"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取日志消息的结构化数据  <br /></td></tr>
+<tr class="separator:a874b751392ef54e8b003488a06756e36 inherit pub_methods_class_xulog_1_1_logger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected 成员函数</h2></td></tr>
@@ -174,6 +179,9 @@ Protected 成员函数</h2></td></tr>
 <tr class="memitem:abedc00e62ee525316cea9bcbcdcefc47 inherit pub_types_class_xulog_1_1_logger" id="r_abedc00e62ee525316cea9bcbcdcefc47"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_logger.html#abedc00e62ee525316cea9bcbcdcefc47">ptr</a> = std::shared_ptr&lt; <a class="el" href="class_xulog_1_1_logger.html">Logger</a> &gt;</td></tr>
 <tr class="separator:abedc00e62ee525316cea9bcbcdcefc47 inherit pub_types_class_xulog_1_1_logger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_xulog_1_1_logger"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_xulog_1_1_logger')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="class_xulog_1_1_logger.html">Xulog::Logger</a></td></tr>
+<tr class="memitem:ab0868a9bf8c48ed779ed63cebc6ce5c7 inherit pro_attribs_class_xulog_1_1_logger" id="r_ab0868a9bf8c48ed779ed63cebc6ce5c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_xulog_1_1_log_msg.html">LogMsg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_logger.html#ab0868a9bf8c48ed779ed63cebc6ce5c7">_msg</a></td></tr>
+<tr class="memdesc:ab0868a9bf8c48ed779ed63cebc6ce5c7 inherit pro_attribs_class_xulog_1_1_logger"><td class="mdescLeft">&#160;</td><td class="mdescRight">存储临时的消息对象  <br /></td></tr>
+<tr class="separator:ab0868a9bf8c48ed779ed63cebc6ce5c7 inherit pro_attribs_class_xulog_1_1_logger"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42cb9f86ff0e4db914fc1d0a5d003062 inherit pro_attribs_class_xulog_1_1_logger" id="r_a42cb9f86ff0e4db914fc1d0a5d003062"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_logger.html#a42cb9f86ff0e4db914fc1d0a5d003062">_mutex</a></td></tr>
 <tr class="memdesc:a42cb9f86ff0e4db914fc1d0a5d003062 inherit pro_attribs_class_xulog_1_1_logger"><td class="mdescLeft">&#160;</td><td class="mdescRight">互斥锁  <br /></td></tr>
 <tr class="separator:a42cb9f86ff0e4db914fc1d0a5d003062 inherit pro_attribs_class_xulog_1_1_logger"><td class="memSeparator" colspan="2">&#160;</td></tr>

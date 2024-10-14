@@ -1,5 +1,6 @@
 var class_xulog_1_1_logger_builder =
 [
+    [ "ptr", "class_xulog_1_1_logger_builder.html#a9d9fd51dd9f92cbf1b32308d6738dc8c", null ],
     [ "LoggerBuilder", "class_xulog_1_1_logger_builder.html#a4b7dc063c7fd339f7db07f04a7f42699", null ],
     [ "build", "class_xulog_1_1_logger_builder.html#aec249c34de0636e2b77e1e76da3cefd0", null ],
     [ "buildEnableUnsafeAsync", "class_xulog_1_1_logger_builder.html#a0dca2aedaa80d98e3ac9000718d23630", null ],

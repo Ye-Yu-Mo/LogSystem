@@ -29,6 +29,7 @@ namespace Xulog
         std::string _file;      ///< 源文件名称
         std::string _logger;    ///< 日志器
         std::string _payload;   ///< 有效载荷数据
+        LogMsg() {}
 
         /**
          * @brief LogMsg 构造函数

@@ -114,17 +114,19 @@ $(document).ready(function(){initNavTree('class_xulog_1_1_log_sink.html',''); in
 <div class="dyncontent">
 <div class="center"><img src="class_xulog_1_1_log_sink__inherit__graph.png" border="0" usemap="#a_xulog_1_1_log_sink_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_xulog_1_1_log_sink_inherit__map" id="a_xulog_1_1_log_sink_inherit__map">
-<area shape="rect" title="抽象日志落地基类" alt="" coords="271,5,390,31"/>
-<area shape="rect" href="class_roll_sink_by_time.html" title=" " alt="" coords="5,79,131,104"/>
-<area shape="poly" title=" " alt="" coords="276,37,111,81,110,76,275,32"/>
-<area shape="rect" href="class_server_sink.html" title=" " alt="" coords="155,79,247,104"/>
-<area shape="poly" title=" " alt="" coords="299,40,224,81,221,76,296,35"/>
-<area shape="rect" href="class_xulog_1_1_file_sink.html" title="文件日志落地实现" alt="" coords="271,79,390,104"/>
-<area shape="poly" title=" " alt="" coords="333,44,333,79,328,79,328,44"/>
-<area shape="rect" href="class_xulog_1_1_roll_sink_by_size.html" title="基于文件大小的滚动文件日志落地实现" alt="" coords="414,79,578,104"/>
-<area shape="poly" title=" " alt="" coords="371,34,470,76,468,81,369,38"/>
-<area shape="rect" href="class_xulog_1_1_stdout_sink.html" title="标准输出日志落地实现" alt="" coords="602,79,739,104"/>
-<area shape="poly" title=" " alt="" coords="399,31,616,76,615,81,398,36"/>
+<area shape="rect" title="抽象日志落地基类" alt="" coords="5,129,124,155"/>
+<area shape="rect" href="class_data_base_sink.html" title="数据库落地类" alt="" coords="197,5,311,31"/>
+<area shape="poly" title=" " alt="" coords="83,117,121,77,171,40,196,28,199,33,173,44,125,81,87,120"/>
+<area shape="rect" href="class_roll_sink_by_time.html" title=" " alt="" coords="191,55,317,80"/>
+<area shape="poly" title=" " alt="" coords="101,120,171,89,204,78,206,83,173,94,103,125"/>
+<area shape="rect" href="class_u_d_p_server_sink.html" title=" " alt="" coords="194,104,314,129"/>
+<area shape="poly" title=" " alt="" coords="137,130,193,122,194,127,138,135"/>
+<area shape="rect" href="class_xulog_1_1_file_sink.html" title="文件日志落地实现" alt="" coords="195,153,313,179"/>
+<area shape="poly" title=" " alt="" coords="138,149,195,156,194,161,137,154"/>
+<area shape="rect" href="class_xulog_1_1_roll_sink_by_size.html" title="基于文件大小的滚动文件日志落地实现" alt="" coords="172,203,336,228"/>
+<area shape="poly" title=" " alt="" coords="105,158,173,188,210,200,208,205,171,192,103,163"/>
+<area shape="rect" href="class_xulog_1_1_stdout_sink.html" title="标准输出日志落地实现" alt="" coords="185,252,323,277"/>
+<area shape="poly" title=" " alt="" coords="88,164,126,201,173,237,202,250,199,254,171,242,122,205,84,168"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
 <table class="memberdecls">
@@ -260,7 +262,7 @@ Public 成员函数</h2></td></tr>
 </dl>
 <p>纯虚函数，派生类必须实现此方法以完成日志的实际输出。 </p>
 
-<p>在 <a class="el" href="class_roll_sink_by_time.html#acdf48f492f02a6dfb476520d81fa7ac8">RollSinkByTime</a>, <a class="el" href="class_server_sink.html#adf7eb34b00bda51bca75726b94319917">ServerSink</a>, <a class="el" href="class_xulog_1_1_stdout_sink.html#a4aebff3669be6f45a530980f1c875394">Xulog::StdoutSink</a>, <a class="el" href="class_xulog_1_1_file_sink.html#abd604c1e9eae562670956254d1cc4dd1">Xulog::FileSink</a> , 以及 <a class="el" href="class_xulog_1_1_roll_sink_by_size.html#a81aacd59f7f012644573313575d0182d">Xulog::RollSinkBySize</a> 内被实现.</p>
+<p>在 <a class="el" href="class_data_base_sink.html#aa225abc961083998a7e7780d827dfa2b">DataBaseSink</a>, <a class="el" href="class_roll_sink_by_time.html#acdf48f492f02a6dfb476520d81fa7ac8">RollSinkByTime</a>, <a class="el" href="class_u_d_p_server_sink.html#a058c93fb291b757e681dd27868b616da">UDPServerSink</a>, <a class="el" href="class_xulog_1_1_stdout_sink.html#a4aebff3669be6f45a530980f1c875394">Xulog::StdoutSink</a>, <a class="el" href="class_xulog_1_1_file_sink.html#abd604c1e9eae562670956254d1cc4dd1">Xulog::FileSink</a> , 以及 <a class="el" href="class_xulog_1_1_roll_sink_by_size.html#a81aacd59f7f012644573313575d0182d">Xulog::RollSinkBySize</a> 内被实现.</p>
 
 </div>
 </div>

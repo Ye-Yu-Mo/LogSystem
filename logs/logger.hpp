@@ -46,9 +46,7 @@ namespace Xulog
             : _logger_name(loggername),
               _limit_level(level),
               _formatter(formatter),
-              _sinks(sinks.begin(), sinks.end())
-        {
-        }
+              _sinks(sinks.begin(), sinks.end()) {}
         /**
          * @brief 获取日志器名称
          *
@@ -189,7 +187,12 @@ namespace Xulog
             serialize(LogLevel::value::FATAL, file, line, res);
             free(res);
         }
-
+        /// @brief 获取日志消息的结构化数据
+        /// @return 日志消息结构体
+        LogMsg getMsg()
+        {
+            return _msg;
+        }
     protected:
         /**
          * @brief 抽象日志输出接口
@@ -209,13 +212,14 @@ namespace Xulog
         void serialize(LogLevel::value level, const std::string &file, size_t line, char *str)
         {
             // 日志内容格式化
-            LogMsg msg(level, line, file, _logger_name, str);
+            _msg = LogMsg(level, line, file, _logger_name, str);
+
             std::stringstream ss;
-            _formatter->Format(ss, msg);
+            _formatter->Format(ss, _msg);
             // 日志落地
             log(ss.str().c_str(), ss.str().size());
         }
-
+        LogMsg _msg;                               ///< 存储临时的消息对象
         std::mutex _mutex;                         ///< 互斥锁
         std::string _logger_name;                  ///< 日志器名称
         std::atomic<LogLevel::value> _limit_level; ///< 日志级别
@@ -338,6 +342,8 @@ namespace Xulog
      */
     class LoggerBuilder
     {
+        using ptr = std::shared_ptr<LoggerBuilder>;
+
     public:
         /**
          * @brief 构建接收器

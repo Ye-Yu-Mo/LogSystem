@@ -39,6 +39,8 @@ var annotated_dup =
       [ "nocopy", "class_xu_server_1_1nocopy.html", "class_xu_server_1_1nocopy" ],
       [ "UdpServer", "class_xu_server_1_1_udp_server.html", "class_xu_server_1_1_udp_server" ]
     ] ],
+    [ "DataBaseSink", "class_data_base_sink.html", "class_data_base_sink" ],
     [ "RollSinkByTime", "class_roll_sink_by_time.html", "class_roll_sink_by_time" ],
-    [ "ServerSink", "class_server_sink.html", "class_server_sink" ]
+    [ "SqliteHelper", "class_sqlite_helper.html", "class_sqlite_helper" ],
+    [ "UDPServerSink", "class_u_d_p_server_sink.html", "class_u_d_p_server_sink" ]
 ];

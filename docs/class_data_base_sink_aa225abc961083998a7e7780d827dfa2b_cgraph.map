@@ -1,0 +1,13 @@
+<map id="DataBaseSink::log" name="DataBaseSink::log">
+<area shape="rect" id="Node000001" title="发送数据" alt="" coords="5,55,147,80"/>
+<area shape="rect" id="Node000002" href="$class_sqlite_helper.html#a0d531486c0741c0afef5c14b394ca9ec" title="执行 SQL 语句" alt="" coords="217,5,357,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,52,218,31,219,36,132,57"/>
+<area shape="rect" id="Node000003" href="$namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="221,55,353,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,65,207,65,207,70,147,70"/>
+<area shape="rect" id="Node000006" href="$class_xulog_1_1_log_level.html#a6d6fcbb384db801aa1faa908eca98a97" title="将日志等级转换为对应的字符串" alt="" coords="195,104,379,129"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="132,77,219,98,218,103,130,83"/>
+<area shape="rect" id="Node000004" href="$class_xulog_1_1_logger_manager.html#a2275ef98586ea630426491d51be7bc96" title="获取日志器管理器的实例" alt="" coords="427,15,595,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="353,55,413,47,414,52,354,61"/>
+<area shape="rect" id="Node000005" href="$class_xulog_1_1_logger_manager.html#a9482ba1783c7cd77667abef2ee231e6e" title="获取指定名称的日志器" alt="" coords="427,79,595,119"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="354,74,414,83,413,88,353,79"/>
+</map>

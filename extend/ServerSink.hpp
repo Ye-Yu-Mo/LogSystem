@@ -20,13 +20,13 @@
 
 // 设置远程落地方式
 // 后台运行
-class ServerSink : public Xulog::LogSink
+class UDPServerSink : public Xulog::LogSink
 {
 public:
     /// @brief 服务器落地类
     /// @param serverip 服务器ip地址
     /// @param serverport 服务器端口号
-    ServerSink(const std::string &serverip, uint16_t serverport)
+    UDPServerSink(const std::string &serverip, uint16_t serverport)
         : _serverip(serverip), _serverport(serverport)
     {
         _sockfd = socket(AF_INET, SOCK_DGRAM, 0);
@@ -48,7 +48,7 @@ public:
         sendto(_sockfd, data, len, 0, (struct sockaddr *)&_server, sizeof(_server));
     }
 
-    ~ServerSink() {}
+    ~UDPServerSink() {}
 
 private:
     int _sockfd;                ///< UDP 套接字文件描述符

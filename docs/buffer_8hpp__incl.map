@@ -1,15 +1,17 @@
 <map id="logs/buffer.hpp" name="logs/buffer.hpp">
-<area shape="rect" id="Node000001" title="实现异步日志缓冲区" alt="" coords="170,5,289,31"/>
-<area shape="rect" id="Node000002" href="$util_8hpp.html" title="实用工具类的实现" alt="" coords="103,79,174,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,33,166,72,163,68,213,29"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="198,79,261,104"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="232,31,232,65,227,65,227,31"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="285,79,355,104"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="246,29,296,68,293,72,242,33"/>
+<area shape="rect" id="Node000001" title="实现异步日志缓冲区" alt="" coords="218,5,337,31"/>
+<area shape="rect" id="Node000002" href="$util_8hpp.html" title="实用工具类的实现" alt="" coords="151,79,222,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="264,33,214,72,211,68,261,29"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="246,79,309,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="280,31,280,65,275,65,275,31"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="333,79,403,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="294,29,344,68,341,72,290,33"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,152,85,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="125,106,73,146,70,141,122,102"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="165,106,82,148,79,143,163,102"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="109,152,168,177"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="141,104,141,138,136,138,136,104"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="181,106,156,142,152,139,177,103"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="192,152,277,177"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="156,102,209,141,206,146,153,106"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="197,103,222,139,217,142,192,106"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="302,152,375,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="212,102,303,144,301,149,210,106"/>
 </map>

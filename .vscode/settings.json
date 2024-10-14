@@ -77,6 +77,15 @@
         "shared_mutex": "cpp",
         "span": "cpp",
         "stdfloat": "cpp",
-        "*.ipp": "cpp"
-    }
+        "*.ipp": "cpp",
+        "regex": "cpp"
+    },
+    "cSpell.words": [
+        "dbfile",
+        "loggername",
+        "psink",
+        "synclogger",
+        "tparam",
+        "Xulog"
+    ]
 }

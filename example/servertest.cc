@@ -8,7 +8,7 @@ int main()
     builder->buildFormatter("[%d{%y-%m-%d|%H:%M:%S}][%c][%f:%l][%p]%T%m%n");
     builder->buildLoggerType(Xulog::LoggerType::LOGGER_SYNC);
     // builder->buildSink<Xulog::StdoutSink>(Xulog::StdoutSink::Color::Enable);
-    builder->buildSink<ServerSink>("127.0.0.1", 8888);
+    builder->buildSink<UDPServerSink>("127.0.0.1", 8888);
     builder->build();
     Xulog::Logger::ptr logger = Xulog::getLogger("synclogger");
 

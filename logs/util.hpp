@@ -9,6 +9,7 @@
 #include <iostream>
 #include <ctime>
 #include <sys/stat.h>
+#include <fstream>
 
 namespace Xulog
 {
@@ -98,6 +99,23 @@ namespace Xulog
                     mkdir(parent_dir.c_str(), 0777);
                     idx = pos + 1;
                 }
+            }
+            /**
+             * @brief 创建新文件
+             * @param filename 新文件名
+             * @return true 创建成功，false 创建失败
+             *
+             * 在指定路径下创建一个新文件。
+             */
+            static bool createFile(const std::string filename)
+            {
+                std::fstream ofs(filename, std::ios::binary | std::ios::out);
+                if (ofs.is_open() == false)
+                {
+                    return false;
+                }
+                ofs.close();
+                return true;
             }
         };
     }

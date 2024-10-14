@@ -109,18 +109,21 @@ $(document).ready(function(){initNavTree('util_8hpp.html',''); initResizable(); 
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;ctime&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 util.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="util_8hpp__incl.png" border="0" usemap="#alogs_2util_8hpp" alt=""/></div>
 <map name="alogs_2util_8hpp" id="alogs_2util_8hpp">
-<area shape="rect" title="实用工具类的实现" alt="" coords="87,5,190,31"/>
+<area shape="rect" title="实用工具类的实现" alt="" coords="135,5,238,31"/>
 <area shape="rect" title=" " alt="" coords="5,79,85,104"/>
-<area shape="poly" title=" " alt="" coords="125,33,73,72,70,68,122,29"/>
+<area shape="poly" title=" " alt="" coords="165,33,82,75,79,70,163,28"/>
 <area shape="rect" title=" " alt="" coords="109,79,168,104"/>
-<area shape="poly" title=" " alt="" coords="141,31,141,65,136,65,136,31"/>
+<area shape="poly" title=" " alt="" coords="181,33,156,69,152,66,177,30"/>
 <area shape="rect" title=" " alt="" coords="192,79,277,104"/>
-<area shape="poly" title=" " alt="" coords="156,29,209,68,206,72,153,33"/>
+<area shape="poly" title=" " alt="" coords="197,30,222,66,217,69,192,33"/>
+<area shape="rect" title=" " alt="" coords="302,79,375,104"/>
+<area shape="poly" title=" " alt="" coords="212,28,303,70,301,75,210,33"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -128,38 +131,44 @@ util.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="util_8hpp__dep__incl.png" border="0" usemap="#alogs_2util_8hppdep" alt=""/></div>
 <map name="alogs_2util_8hppdep" id="alogs_2util_8hppdep">
-<area shape="rect" title="实用工具类的实现" alt="" coords="343,5,446,31"/>
-<area shape="rect" href="buffer_8hpp.html" title="实现异步日志缓冲区" alt="" coords="185,79,303,104"/>
-<area shape="poly" title=" " alt="" coords="359,39,270,81,268,76,357,34"/>
-<area shape="rect" href="logger_8hpp.html" title="日志器模块的实现" alt="" coords="330,225,451,251"/>
-<area shape="poly" title=" " alt="" coords="384,44,371,79,363,128,369,177,377,203,387,224,382,226,372,204,364,178,358,128,365,78,379,42"/>
-<area shape="rect" href="message_8hpp.html" title="日志消息类的实现" alt="" coords="379,79,519,104"/>
-<area shape="poly" title=" " alt="" coords="414,40,443,77,438,80,410,43"/>
-<area shape="rect" href="sink_8hpp.html" title="日志落地模块的实现" alt="" coords="529,152,637,177"/>
-<area shape="poly" title=" " alt="" coords="453,32,494,50,534,77,550,95,564,115,581,151,576,153,559,118,546,98,530,81,492,55,450,37"/>
-<area shape="rect" href="looper_8hpp.html" title="实现异步工作器" alt="" coords="182,152,303,177"/>
-<area shape="poly" title=" " alt="" coords="246,118,246,152,240,152,241,118"/>
-<area shape="poly" title=" " alt="" coords="280,181,368,223,365,228,277,186"/>
-<area shape="rect" href="_xulog_8h.html" title="全局日志接口和宏定义" alt="" coords="339,299,442,324"/>
-<area shape="poly" title=" " alt="" coords="393,264,393,299,388,299,388,264"/>
-<area shape="rect" href="bench_8cc.html" title=" " alt="" coords="5,372,128,397"/>
-<area shape="poly" title=" " alt="" coords="327,329,119,375,118,369,325,324"/>
-<area shape="rect" href="test_8cc.html" title=" " alt="" coords="153,372,279,397"/>
-<area shape="poly" title=" " alt="" coords="351,332,246,374,244,369,349,327"/>
-<area shape="rect" href="_roll_by_time_8hpp.html" title=" " alt="" coords="303,372,478,397"/>
-<area shape="poly" title=" " alt="" coords="393,338,393,372,388,372,388,338"/>
-<area shape="rect" href="_server_sink_8hpp.html" title="定义了 ServerSink 类，用于将日志信息发送到远程服务器" alt="" coords="502,372,671,397"/>
-<area shape="poly" title=" " alt="" coords="436,326,556,369,554,374,434,331"/>
-<area shape="rect" href="server_8hpp.html" title="定义了 UdpServer 类，用于实现 UDP 服务器功能" alt="" coords="702,372,837,397"/>
-<area shape="poly" title=" " alt="" coords="456,322,709,369,708,375,455,327"/>
-<area shape="rect" href="servertest_8cc.html" title=" " alt="" coords="499,445,666,471"/>
-<area shape="poly" title=" " alt="" coords="588,411,586,445,581,445,583,411"/>
-<area shape="rect" href="server__main_8cc.html" title=" " alt="" coords="690,445,857,471"/>
-<area shape="poly" title=" " alt="" coords="773,411,775,445,770,445,768,411"/>
-<area shape="rect" href="format_8hpp.html" title="日志格式化器类的定义" alt="" coords="379,152,504,177"/>
-<area shape="poly" title=" " alt="" coords="449,118,445,152,440,152,444,117"/>
-<area shape="poly" title=" " alt="" coords="427,190,401,227,397,224,423,187"/>
-<area shape="poly" title=" " alt="" coords="540,185,423,228,421,223,538,180"/>
+<area shape="rect" title="实用工具类的实现" alt="" coords="309,5,412,31"/>
+<area shape="rect" href="_data_base_sink_8hpp.html" title=" " alt="" coords="5,372,196,397"/>
+<area shape="poly" title=" " alt="" coords="297,35,246,53,196,79,176,96,159,116,149,138,145,164,145,239,141,279,131,316,109,373,104,371,126,315,135,278,139,239,139,163,143,136,155,113,172,92,193,75,244,48,295,30"/>
+<area shape="rect" href="buffer_8hpp.html" title="实现异步日志缓冲区" alt="" coords="204,79,323,104"/>
+<area shape="poly" title=" " alt="" coords="335,41,281,81,278,76,332,37"/>
+<area shape="rect" href="logger_8hpp.html" title="日志器模块的实现" alt="" coords="400,225,521,251"/>
+<area shape="poly" title=" " alt="" coords="362,44,366,107,374,143,388,176,412,203,440,223,437,227,409,207,384,179,369,144,361,108,357,45"/>
+<area shape="rect" href="message_8hpp.html" title="日志消息类的实现" alt="" coords="399,79,539,104"/>
+<area shape="poly" title=" " alt="" coords="391,36,452,76,450,81,388,40"/>
+<area shape="rect" href="sink_8hpp.html" title="日志落地模块的实现" alt="" coords="548,152,656,177"/>
+<area shape="poly" title=" " alt="" coords="427,25,491,43,523,57,553,77,570,94,584,114,601,151,596,153,579,117,566,97,550,81,521,62,489,48,425,30"/>
+<area shape="rect" href="_data_base_test_8cc.html" title=" " alt="" coords="72,445,263,471"/>
+<area shape="poly" title=" " alt="" coords="123,406,158,443,155,447,119,410"/>
+<area shape="rect" href="looper_8hpp.html" title="实现异步工作器" alt="" coords="201,152,323,177"/>
+<area shape="poly" title=" " alt="" coords="266,118,265,152,260,152,260,118"/>
+<area shape="poly" title=" " alt="" coords="308,179,429,223,427,228,306,184"/>
+<area shape="rect" href="_xulog_8h.html" title="全局日志接口和宏定义" alt="" coords="420,299,523,324"/>
+<area shape="poly" title=" " alt="" coords="467,264,472,298,467,299,462,265"/>
+<area shape="poly" title=" " alt="" coords="407,328,161,375,160,369,406,322"/>
+<area shape="poly" title=" " alt="" coords="407,325,334,344,297,357,261,374,235,391,213,411,179,447,175,443,209,407,232,387,258,370,294,352,333,338,406,320"/>
+<area shape="rect" href="bench_8cc.html" title=" " alt="" coords="271,372,394,397"/>
+<area shape="poly" title=" " alt="" coords="438,333,357,374,354,369,436,328"/>
+<area shape="rect" href="test_8cc.html" title=" " alt="" coords="419,372,545,397"/>
+<area shape="poly" title=" " alt="" coords="478,337,483,371,478,372,472,338"/>
+<area shape="rect" href="_roll_by_time_8hpp.html" title=" " alt="" coords="569,372,744,397"/>
+<area shape="poly" title=" " alt="" coords="515,326,627,369,625,374,513,331"/>
+<area shape="rect" href="_server_sink_8hpp.html" title="定义了 ServerSink 类，用于将日志信息发送到远程服务器" alt="" coords="768,372,937,397"/>
+<area shape="poly" title=" " alt="" coords="536,322,792,369,791,375,536,327"/>
+<area shape="rect" href="server_8hpp.html" title="定义了 UdpServer 类，用于实现 UDP 服务器功能" alt="" coords="968,372,1103,397"/>
+<area shape="poly" title=" " alt="" coords="537,318,950,369,968,372,967,377,950,375,536,323"/>
+<area shape="rect" href="servertest_8cc.html" title=" " alt="" coords="765,445,932,471"/>
+<area shape="poly" title=" " alt="" coords="854,411,852,445,847,445,849,411"/>
+<area shape="rect" href="server__main_8cc.html" title=" " alt="" coords="956,445,1123,471"/>
+<area shape="poly" title=" " alt="" coords="1039,411,1041,445,1036,445,1034,411"/>
+<area shape="rect" href="format_8hpp.html" title="日志格式化器类的定义" alt="" coords="398,152,523,177"/>
+<area shape="poly" title=" " alt="" coords="468,118,465,152,459,152,463,117"/>
+<area shape="poly" title=" " alt="" coords="463,191,463,225,458,225,458,191"/>
+<area shape="poly" title=" " alt="" coords="569,186,485,227,483,223,566,181"/>
 </map>
 </div>
 </div>
