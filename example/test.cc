@@ -1,10 +1,10 @@
 #include "../logs/Xulog.h"
 #include <cstring>
-void test_log(const std::string& name)
+void test_log(const std::string &name)
 {
     Xulog::Logger::ptr logger = Xulog::getLogger(name);
 
-    DEBUG("%s","测试开始");
+    DEBUG("%s", "测试开始");
     debug(logger, "%s...", "debug");
     info(logger, "%s...", "info");
     warn(logger, "%s...", "warn");
@@ -14,13 +14,11 @@ void test_log(const std::string& name)
     // {
     //     fatal(logger, "%s-%d", "测试", i);
     // }
-    FATAL("%s","测试结束");
+    FATAL("%s", "测试结束");
 
     Xulog::FileSink file("./log/test.log");
     std::string message = "[24-10-10|16:44:21][synclogger][test.cc:8][DEBUG]	debug...";
     file.log(message.c_str(), message.size());
-
-
 }
 int main()
 {
@@ -33,6 +31,7 @@ int main()
     builder->buildSink<Xulog::FileSink>("./log/test.log");
     builder->buildSink<Xulog::RollSinkBySize>("./log/roll-", 1024 * 1024);
     builder->build();
+    
     test_log("synclogger");
     return 0;
 }
