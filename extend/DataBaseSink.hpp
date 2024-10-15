@@ -136,7 +136,7 @@ public:
             abort();
         }
     }
-    /// @brief 发送数据
+    /// @brief 存储到数据库
     /// @param data 数据指针
     /// @param len 数据长度
     void log(const char *data, size_t len)
@@ -164,7 +164,26 @@ public:
             abort();
         }
     }
-
+    /// @brief 存储到数据库
+    /// @param msg 格式化的数据
+    void log(const Xulog::LogMsg &msg)
+    {
+        std::stringstream ss;
+        ss << "INSERT into logs (log_time, line_number, thread_id, log_level, source_file, logger_name, message) ";
+        ss << "VALUES (datetime(" << msg._ctime << ", 'unixepoch', '+8 hours'),";
+        ss << msg._line << ", ";
+        ss << "'" << msg._tid << "', ";
+        ss << "'" << Xulog::LogLevel::toString(msg._level) << "', ";
+        ss << "'" << msg._file << "', ";
+        ss << "'" << msg._logger << "', ";
+        ss << "'" << msg._payload << "');";
+        bool ret = _helper.exec(ss.str().c_str(), nullptr, nullptr);
+        if (ret == false)
+        {
+            ERROR("插入日志数据失败!");
+            abort();
+        }
+    }
     ~DataBaseSink() {}
 
 private:

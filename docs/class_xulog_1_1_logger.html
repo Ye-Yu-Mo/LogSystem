@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
   <td id="projectalign">
-   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.00</span>
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.2</span>
    </div>
    <div id="projectbrief">This is a logging system project</div>
   </td>
@@ -165,6 +165,15 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a874b751392ef54e8b003488a06756e36" id="r_a874b751392ef54e8b003488a06756e36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_xulog_1_1_log_msg.html">LogMsg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_logger.html#a874b751392ef54e8b003488a06756e36">getMsg</a> ()</td></tr>
 <tr class="memdesc:a874b751392ef54e8b003488a06756e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取日志消息的结构化数据  <br /></td></tr>
 <tr class="separator:a874b751392ef54e8b003488a06756e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a297fd14f436a4343b32c941b5ae7a7b5" id="r_a297fd14f436a4343b32c941b5ae7a7b5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_logger.html#a297fd14f436a4343b32c941b5ae7a7b5">getName</a> ()</td></tr>
+<tr class="memdesc:a297fd14f436a4343b32c941b5ae7a7b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取日志器名称  <br /></td></tr>
+<tr class="separator:a297fd14f436a4343b32c941b5ae7a7b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20e7d0029fd937891d5d000216dea187" id="r_a20e7d0029fd937891d5d000216dea187"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xulog_1_1_log_level.html#a6bdea31434e495fc5a19b8e48e3e613b">LogLevel::value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_logger.html#a20e7d0029fd937891d5d000216dea187">getLimitLevel</a> ()</td></tr>
+<tr class="memdesc:a20e7d0029fd937891d5d000216dea187"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取限制等级  <br /></td></tr>
+<tr class="separator:a20e7d0029fd937891d5d000216dea187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e0201f31feb8e38fed494ef5bca09d" id="r_a54e0201f31feb8e38fed494ef5bca09d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xulog_1_1_formatter.html#a622f190c841171d9a513bca8f9705c51">Formatter::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_logger.html#a54e0201f31feb8e38fed494ef5bca09d">getFormatter</a> ()</td></tr>
+<tr class="memdesc:a54e0201f31feb8e38fed494ef5bca09d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取格式化器  <br /></td></tr>
+<tr class="separator:a54e0201f31feb8e38fed494ef5bca09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected 成员函数</h2></td></tr>
@@ -485,6 +494,62 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a54e0201f31feb8e38fed494ef5bca09d" name="a54e0201f31feb8e38fed494ef5bca09d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54e0201f31feb8e38fed494ef5bca09d">&#9670;&#160;</a></span>getFormatter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xulog_1_1_formatter.html#a622f190c841171d9a513bca8f9705c51">Formatter::ptr</a> Xulog::Logger::getFormatter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取格式化器 </p>
+<dl class="section return"><dt>返回</dt><dd>格式化器 </dd></dl>
+
+</div>
+</div>
+<a id="a20e7d0029fd937891d5d000216dea187" name="a20e7d0029fd937891d5d000216dea187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20e7d0029fd937891d5d000216dea187">&#9670;&#160;</a></span>getLimitLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xulog_1_1_log_level.html#a6bdea31434e495fc5a19b8e48e3e613b">LogLevel::value</a> Xulog::Logger::getLimitLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取限制等级 </p>
+<dl class="section return"><dt>返回</dt><dd>限制等级 </dd></dl>
+
+</div>
+</div>
 <a id="a874b751392ef54e8b003488a06756e36" name="a874b751392ef54e8b003488a06756e36"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a874b751392ef54e8b003488a06756e36">&#9670;&#160;</a></span>getMsg()</h2>
 
@@ -510,6 +575,34 @@ Protected 属性</h2></td></tr>
 
 <p>获取日志消息的结构化数据 </p>
 <dl class="section return"><dt>返回</dt><dd>日志消息结构体 </dd></dl>
+
+</div>
+</div>
+<a id="a297fd14f436a4343b32c941b5ae7a7b5" name="a297fd14f436a4343b32c941b5ae7a7b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a297fd14f436a4343b32c941b5ae7a7b5">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Xulog::Logger::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取日志器名称 </p>
+<dl class="section return"><dt>返回</dt><dd>日志器名称 </dd></dl>
 
 </div>
 </div>

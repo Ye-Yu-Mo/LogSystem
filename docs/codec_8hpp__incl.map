@@ -1,0 +1,31 @@
+<map id="server/codec.hpp" name="server/codec.hpp">
+<area shape="rect" id="Node000001" title="对日志信息进行序列化和反序列化" alt="" coords="445,5,579,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,152,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="446,33,162,79,161,74,445,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="164,225,244,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="446,33,379,51,344,64,312,81,270,112,240,153,224,183,213,213,208,211,219,181,235,151,267,108,309,76,342,60,377,46,444,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="480,152,544,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="515,31,515,138,509,138,509,31"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="568,152,627,177"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="521,30,586,139,581,141,517,32"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="601,79,663,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="533,28,602,69,599,74,530,33"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="688,79,755,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="546,28,676,72,674,77,545,33"/>
+<area shape="rect" id="Node000008" href="$message_8hpp.html" title="日志消息类的实现" alt="" coords="323,79,475,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="495,33,430,74,427,69,492,28"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="361,106,314,125,267,154,239,183,219,214,215,211,235,180,264,150,311,121,359,102"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="418,102,484,142,481,147,415,106"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="431,102,555,146,554,151,430,107"/>
+<area shape="rect" id="Node000009" href="$level_8hpp.html" title="日志等级类的定义和实现" alt="" coords="373,152,456,177"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="404,104,412,138,407,139,399,105"/>
+<area shape="rect" id="Node000010" href="$util_8hpp.html" title="实用工具类的实现" alt="" coords="278,152,349,177"/>
+<area shape="poly" id="edge12_Node000008_Node000010" title=" " alt="" coords="387,106,339,145,336,141,383,102"/>
+<area shape="poly" id="edge13_Node000010_Node000003" title=" " alt="" coords="297,180,235,220,232,215,294,175"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="268,225,327,251"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="313,178,305,213,300,212,308,177"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="351,225,436,251"/>
+<area shape="poly" id="edge15_Node000010_Node000012" title=" " alt="" coords="328,175,372,214,368,218,324,179"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="461,225,534,251"/>
+<area shape="poly" id="edge16_Node000010_Node000013" title=" " alt="" coords="344,175,455,218,453,223,342,180"/>
+</map>

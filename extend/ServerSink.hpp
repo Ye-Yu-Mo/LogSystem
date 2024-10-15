@@ -8,6 +8,7 @@
  */
 
 #include "../logs/Xulog.h"
+#include "../server/codec.hpp"
 #include <iostream>
 #include <string>
 #include <ctime>
@@ -26,8 +27,9 @@ public:
     /// @brief 服务器落地类
     /// @param serverip 服务器ip地址
     /// @param serverport 服务器端口号
-    UDPServerSink(const std::string &serverip, uint16_t serverport)
-        : _serverip(serverip), _serverport(serverport)
+    /// @param name 日志器名称
+    UDPServerSink(const std::string &serverip, uint16_t serverport, const std::string &name)
+        : _serverip(serverip), _serverport(serverport), _logger_name(name)
     {
         _sockfd = socket(AF_INET, SOCK_DGRAM, 0);
         if (_sockfd < 0)
@@ -45,14 +47,25 @@ public:
     /// @param len 数据长度
     void log(const char *data, size_t len)
     {
-        sendto(_sockfd, data, len, 0, (struct sockaddr *)&_server, sizeof(_server));
+        if (_logger == nullptr)
+            _logger = Xulog::getLogger(_logger_name);
+        if (_logger == nullptr)
+            std::cout << "未获取到日志器！日志器名称为：" << _logger_name << std::endl;
+        Xulog::LogMsg msg = _logger->getMsg();
+        Json::StreamWriterBuilder writer;
+        std::string jsonString = Json::writeString(writer, Xulog::Codec::toJson(msg, _logger));
+        sendto(_sockfd, jsonString.c_str(), jsonString.size(), 0, (struct sockaddr *)&_server, sizeof(_server));
     }
 
     ~UDPServerSink() {}
 
 private:
-    int _sockfd;                ///< UDP 套接字文件描述符
-    struct sockaddr_in _server; ///< 远程服务器的地址信息
-    std::string _serverip;      ///< 远程服务器的 IP 地址
-    uint16_t _serverport;       ///< 远程服务器的端口号
+    int _sockfd;                       ///< UDP 套接字文件描述符
+    struct sockaddr_in _server;        ///< 远程服务器的地址信息
+    std::string _serverip;             ///< 远程服务器的 IP 地址
+    uint16_t _serverport;              ///< 远程服务器的端口号
+    std::string _logger_name;          ///< 日志器名称
+    Xulog::LogMsg _msg;                ///< 结构化数据
+    static Xulog::Logger::ptr _logger; ///< 日志器句柄
 };
+Xulog::Logger::ptr UDPServerSink::_logger = nullptr;

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inetaddr_0',['InetAddr',['../class_xu_server_1_1_inet_addr.html',1,'XuServer']]]
+  ['globalloggerbuild_0',['GlobalLoggerBuild',['../class_xulog_1_1_global_logger_build.html',1,'Xulog']]]
 ];

@@ -1,3 +1,7 @@
 <map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="Node000000" href="$class_xulog_1_1_log_level.html" title="日志等级类" alt="" coords="5,5,131,31"/>
+<area shape="rect" id="Node000000" href="$class_xulog_1_1_logger_builder.html" title="日志器建造者" alt="" coords="5,31,163,56"/>
+<area shape="rect" id="Node000001" href="$class_xulog_1_1_global_logger_build.html" title="全局日志器建造者" alt="" coords="211,5,397,31"/>
+<area shape="poly" id="edge13_Node000000_Node000001" title=" " alt="" coords="176,30,210,26,211,31,177,35"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_local_logger_build.html" title="局部日志器建造者" alt="" coords="215,55,393,80"/>
+<area shape="poly" id="edge14_Node000000_Node000002" title=" " alt="" coords="177,51,215,55,214,60,176,56"/>
 </map>

@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
   <td id="projectalign">
-   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.00</span>
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.2</span>
    </div>
    <div id="projectbrief">This is a logging system project</div>
   </td>
@@ -122,6 +122,10 @@ $(document).ready(function(){initNavTree('namespace_xulog.html',''); initResizab
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_buffer.html">Buffer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步日志缓冲区类  <a href="class_xulog_1_1_buffer.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_codec.html">Codec</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xulog_1_1_deliver_msg.html">DeliverMsg</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_file_format_item.html">FileFormatItem</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件名格式化子项  <a href="class_xulog_1_1_file_format_item.html#details">更多...</a><br /></td></tr>
@@ -354,23 +358,28 @@ $(document).ready(function(){initNavTree('namespace_xulog.html',''); initResizab
 <div class="dyncontent">
 <div class="center"><img src="namespace_xulog_a41e363ba050c15f3b4e1d157354d59c3_icgraph.png" border="0" usemap="#anamespace_xulog_a41e363ba050c15f3b4e1d157354d59c3_icgraph" alt=""/></div>
 <map name="anamespace_xulog_a41e363ba050c15f3b4e1d157354d59c3_icgraph" id="anamespace_xulog_a41e363ba050c15f3b4e1d157354d59c3_icgraph">
-<area shape="rect" title="获取指定名称的日志器" alt="" coords="452,104,584,129"/>
-<area shape="rect" href="bench_8cc.html#a50e07be47fb2d4bc0ab579d1f67a0d47" title=" " alt="" coords="303,29,364,55"/>
-<area shape="poly" title=" " alt="" coords="476,100,403,68,363,54,365,49,405,64,479,96"/>
-<area shape="rect" href="class_data_base_sink.html#aa225abc961083998a7e7780d827dfa2b" title="发送数据" alt="" coords="263,79,404,104"/>
-<area shape="poly" title=" " alt="" coords="438,108,404,104,404,98,439,103"/>
-<area shape="rect" href="_data_base_test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="306,128,361,153"/>
-<area shape="poly" title=" " alt="" coords="439,130,361,140,360,135,438,124"/>
-<area shape="rect" href="test_8cc.html#ac23db1c84059647b8979ebb5504142ef" title=" " alt="" coords="296,177,371,203"/>
-<area shape="poly" title=" " alt="" coords="478,138,405,168,372,181,370,176,403,164,476,133"/>
-<area shape="rect" href="bench_8cc.html#a48449afe027d0b3050a6fa9b4af0bc91" title=" " alt="" coords="108,5,215,31"/>
-<area shape="poly" title=" " alt="" coords="289,39,214,28,215,23,290,33"/>
-<area shape="rect" href="bench_8cc.html#aed911458da7aa931bc325648b27a2ded" title=" " alt="" coords="112,55,211,80"/>
-<area shape="poly" title=" " alt="" coords="290,51,211,63,211,57,289,46"/>
+<area shape="rect" title="获取指定名称的日志器" alt="" coords="509,169,641,195"/>
+<area shape="rect" href="bench_8cc.html#a50e07be47fb2d4bc0ab579d1f67a0d47" title=" " alt="" coords="357,44,418,69"/>
+<area shape="poly" title=" " alt="" coords="552,161,512,121,460,83,417,66,419,61,463,78,515,117,556,157"/>
+<area shape="rect" href="class_data_base_sink.html#aa225abc961083998a7e7780d827dfa2b" title="存储到数据库" alt="" coords="317,93,458,119"/>
+<area shape="poly" title=" " alt="" coords="530,167,419,121,421,116,532,162"/>
+<area shape="rect" href="class_xu_server_1_1_udp_server.html#a9549d3661f13a7e55a691f50662ee27f" title="启动服务器" alt="" coords="108,126,265,166"/>
+<area shape="poly" title=" " alt="" coords="495,177,265,156,266,151,496,172"/>
+<area shape="rect" href="class_u_d_p_server_sink.html#a058c93fb291b757e681dd27868b616da" title="发送数据" alt="" coords="313,195,461,220"/>
+<area shape="poly" title=" " alt="" coords="496,195,462,200,461,195,496,190"/>
+<area shape="rect" href="_data_base_test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="360,244,415,269"/>
+<area shape="poly" title=" " alt="" coords="535,203,462,234,416,251,414,246,460,229,533,198"/>
+<area shape="rect" href="test_8cc.html#ac23db1c84059647b8979ebb5504142ef" title=" " alt="" coords="350,293,425,319"/>
+<area shape="poly" title=" " alt="" coords="555,207,515,246,463,284,426,300,424,295,460,280,511,242,552,203"/>
+<area shape="rect" href="bench_8cc.html#a48449afe027d0b3050a6fa9b4af0bc91" title=" " alt="" coords="133,5,240,31"/>
+<area shape="poly" title=" " alt="" coords="342,51,240,31,241,26,343,46"/>
+<area shape="rect" href="bench_8cc.html#aed911458da7aa931bc325648b27a2ded" title=" " alt="" coords="137,55,236,80"/>
+<area shape="poly" title=" " alt="" coords="343,62,236,67,236,62,343,56"/>
 <area shape="rect" href="bench_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
-<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
-<area shape="rect" href="test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="134,177,189,203"/>
-<area shape="poly" title=" " alt="" coords="282,193,189,193,189,187,282,187"/>
+<area shape="poly" title=" " alt="" coords="120,21,60,21,60,15,120,15"/>
+<area shape="poly" title=" " alt="" coords="310,124,266,133,265,128,309,119"/>
+<area shape="rect" href="test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="159,293,214,319"/>
+<area shape="poly" title=" " alt="" coords="336,309,215,309,215,303,336,303"/>
 </map>
 </div>
 

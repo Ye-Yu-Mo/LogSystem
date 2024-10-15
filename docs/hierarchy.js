@@ -2,7 +2,9 @@ var hierarchy =
 [
     [ "Xulog::AsyncLooper", "class_xulog_1_1_async_looper.html", null ],
     [ "Xulog::Buffer", "class_xulog_1_1_buffer.html", null ],
+    [ "Xulog::Codec", "class_xulog_1_1_codec.html", null ],
     [ "Xulog::Util::Date", "class_xulog_1_1_util_1_1_date.html", null ],
+    [ "Xulog::DeliverMsg", "struct_xulog_1_1_deliver_msg.html", null ],
     [ "Xulog::Util::File", "class_xulog_1_1_util_1_1_file.html", null ],
     [ "Xulog::FormatItem", "class_xulog_1_1_format_item.html", [
       [ "Xulog::FileFormatItem", "class_xulog_1_1_file_format_item.html", null ],

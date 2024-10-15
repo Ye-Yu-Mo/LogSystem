@@ -285,6 +285,14 @@ namespace Xulog
             3. %%表示原始的%
             4. 如果遇到{则说明这是格式化字符的子格式，遇到}结束
         */
+       
+        /// @brief 获取格式化字符串
+        /// @return 格式化字符串
+        std::string getPattern()
+        {
+            return _pattern;
+        }
+
     private:
         /**
          * @brief 解析格式化规则字符串

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['tabformatitem_0',['TabFormatItem',['../class_xulog_1_1_tab_format_item.html',1,'Xulog']]],
-  ['threadformatitem_1',['ThreadFormatItem',['../class_xulog_1_1_thread_format_item.html',1,'Xulog']]],
-  ['timeformatitem_2',['TimeFormatItem',['../class_xulog_1_1_time_format_item.html',1,'Xulog']]]
+  ['sinkfactory_0',['SinkFactory',['../class_xulog_1_1_sink_factory.html',1,'Xulog']]],
+  ['sqlitehelper_1',['SqliteHelper',['../class_sqlite_helper.html',1,'']]],
+  ['stdoutsink_2',['StdoutSink',['../class_xulog_1_1_stdout_sink.html',1,'Xulog']]],
+  ['synclogger_3',['SyncLogger',['../class_xulog_1_1_sync_logger.html',1,'Xulog']]]
 ];

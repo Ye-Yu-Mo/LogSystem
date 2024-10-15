@@ -73,7 +73,7 @@ var NAVTREE =
       [ "类索引", "classes.html", null ],
       [ "类继承关系", "hierarchy.html", "hierarchy" ],
       [ "类成员", "functions.html", [
-        [ "全部", "functions.html", null ],
+        [ "全部", "functions.html", "functions_dup" ],
         [ "函数", "functions_func.html", null ],
         [ "变量", "functions_vars.html", null ],
         [ "类型定义", "functions_type.html", null ],
@@ -95,8 +95,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_data_base_sink_8hpp.html",
-"class_xulog_1_1_log_level.html#a6bdea31434e495fc5a19b8e48e3e613ba4de97a9981203bdf3d1f9c51b0ba341f",
-"looper_8hpp_source.html"
+"class_xulog_1_1_global_logger_build.html#a25da47faf4e8b739812865970755ef79",
+"codec_8hpp.html"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

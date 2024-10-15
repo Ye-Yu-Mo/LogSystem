@@ -1,9 +1,29 @@
 <map id="XuServer::UdpServer::Start" name="XuServer::UdpServer::Start">
-<area shape="rect" id="Node000001" title="启动服务器" alt="" coords="5,31,163,71"/>
-<area shape="rect" id="Node000002" href="$class_xulog_1_1_stdout_sink.html#a4aebff3669be6f45a530980f1c875394" title="日志写入到标准输出" alt="" coords="211,13,376,38"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,39,197,34,198,40,163,44"/>
-<area shape="rect" id="Node000004" href="$class_xulog_1_1_file_sink.html#abd604c1e9eae562670956254d1cc4dd1" title="日志写入到文件" alt="" coords="220,62,367,87"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="163,57,207,62,206,67,163,62"/>
-<area shape="rect" id="Node000003" href="$class_xulog_1_1_stdout_sink.html#ac4d66e37eba8bd16a52dbd5e10888d08" title="根据日志级别设置颜色" alt="" coords="424,5,616,45"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="376,23,410,23,410,28,376,28"/>
+<area shape="rect" id="Node000001" title="启动服务器" alt="" coords="5,138,163,178"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_codec.html#a31d9e0d48b6beb9ae79540938552d090" title=" " alt="" coords="211,44,384,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,135,210,86,245,72,247,77,212,91,120,140"/>
+<area shape="rect" id="Node000005" href="$namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="467,95,599,120"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="163,138,210,130,338,116,453,108,454,114,339,121,211,135,163,143"/>
+<area shape="rect" id="Node000008" href="$class_data_base_sink.html#aa225abc961083998a7e7780d827dfa2b" title="存储到数据库" alt="" coords="227,145,368,171"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="163,155,213,155,213,161,163,161"/>
+<area shape="rect" id="Node000011" href="$class_xulog_1_1_stdout_sink.html#a4aebff3669be6f45a530980f1c875394" title="日志写入到标准输出" alt="" coords="215,195,380,220"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="164,174,229,189,228,194,163,179"/>
+<area shape="rect" id="Node000013" href="$class_xulog_1_1_file_sink.html#abd604c1e9eae562670956254d1cc4dd1" title="日志写入到文件" alt="" coords="224,244,371,269"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="115,176,160,204,212,230,230,237,228,242,210,235,157,208,113,180"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_log_level.html#a55a58ff5f7755c98ec623037144661fb" title="从字符串转换成日志等级" alt="" coords="683,5,885,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="355,41,432,29,554,19,669,15,669,21,554,24,432,34,356,47"/>
+<area shape="rect" id="Node000004" href="$class_xulog_1_1_codec.html#a6970d0f5d69318c65b15ec7bed3549ce" title=" " alt="" coords="432,44,635,69"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="384,54,418,54,418,59,384,59"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="616,41,687,30,688,35,617,47"/>
+<area shape="rect" id="Node000006" href="$class_xulog_1_1_logger_manager.html#a2275ef98586ea630426491d51be7bc96" title="获取日志器管理器的实例" alt="" coords="700,77,868,117"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="600,102,686,98,686,103,600,107"/>
+<area shape="rect" id="Node000007" href="$class_xulog_1_1_logger_manager.html#a9482ba1783c7cd77667abef2ee231e6e" title="获取指定名称的日志器" alt="" coords="700,141,868,181"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="595,118,687,137,686,143,594,123"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="357,143,460,120,461,126,358,148"/>
+<area shape="rect" id="Node000009" href="$class_sqlite_helper.html#a0d531486c0741c0afef5c14b394ca9ec" title="执行 SQL 语句" alt="" coords="463,144,603,169"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="368,155,450,154,450,160,368,160"/>
+<area shape="rect" id="Node000010" href="$class_xulog_1_1_log_level.html#a6d6fcbb384db801aa1faa908eca98a97" title="将日志等级转换为对应的字符串" alt="" coords="441,193,625,219"/>
+<area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="361,168,457,188,456,193,360,173"/>
+<area shape="rect" id="Node000012" href="$class_xulog_1_1_stdout_sink.html#ac4d66e37eba8bd16a52dbd5e10888d08" title="根据日志级别设置颜色" alt="" coords="437,243,629,283"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="352,217,436,238,435,243,351,223"/>
 </map>

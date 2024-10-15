@@ -8,6 +8,8 @@ var annotated_dup =
       [ "AsyncLogger", "class_xulog_1_1_async_logger.html", "class_xulog_1_1_async_logger" ],
       [ "AsyncLooper", "class_xulog_1_1_async_looper.html", "class_xulog_1_1_async_looper" ],
       [ "Buffer", "class_xulog_1_1_buffer.html", "class_xulog_1_1_buffer" ],
+      [ "Codec", "class_xulog_1_1_codec.html", "class_xulog_1_1_codec" ],
+      [ "DeliverMsg", "struct_xulog_1_1_deliver_msg.html", "struct_xulog_1_1_deliver_msg" ],
       [ "FileFormatItem", "class_xulog_1_1_file_format_item.html", "class_xulog_1_1_file_format_item" ],
       [ "FileSink", "class_xulog_1_1_file_sink.html", "class_xulog_1_1_file_sink" ],
       [ "FormatItem", "class_xulog_1_1_format_item.html", "class_xulog_1_1_format_item" ],

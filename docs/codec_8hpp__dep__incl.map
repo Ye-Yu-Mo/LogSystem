@@ -1,0 +1,11 @@
+<map id="server/codec.hpp" name="server/codec.hpp">
+<area shape="rect" id="Node000001" title="对日志信息进行序列化和反序列化" alt="" coords="123,5,257,31"/>
+<area shape="rect" id="Node000002" href="$_server_sink_8hpp.html" title="定义了 ServerSink 类，用于将日志信息发送到远程服务器" alt="" coords="11,79,180,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,41,112,81,109,76,162,37"/>
+<area shape="rect" id="Node000004" href="$_u_d_pserver_8hpp.html" title="定义了 UdpServer 类，用于实现 UDP 服务器功能" alt="" coords="209,79,371,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="219,36,275,76,272,81,216,41"/>
+<area shape="rect" id="Node000003" href="$servertest_8cc.html" title=" " alt="" coords="5,152,172,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,118,92,152,87,152,90,118"/>
+<area shape="rect" id="Node000005" href="$_u_d_pserver__main_8cc.html" title=" " alt="" coords="197,152,391,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="294,118,296,152,291,152,289,118"/>
+</map>

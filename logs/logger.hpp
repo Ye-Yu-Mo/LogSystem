@@ -193,6 +193,26 @@ namespace Xulog
         {
             return _msg;
         }
+
+        /// @brief 获取日志器名称
+        /// @return 日志器名称
+        std::string getName()
+        {
+            return _logger_name;
+        }
+        /// @brief 获取限制等级
+        /// @return 限制等级
+        LogLevel::value getLimitLevel()
+        {
+            return _limit_level;
+        }
+        /// @brief 获取格式化器
+        /// @return 格式化器
+        Formatter::ptr getFormatter()
+        {
+            return _formatter;
+        }
+
     protected:
         /**
          * @brief 抽象日志输出接口
@@ -373,7 +393,7 @@ namespace Xulog
          * @param type 日志器类型（同步或异步）
          * @note 默认为LOGGER_SYNC同步日志器
          */
-        void buildLoggerType(LoggerType type)
+        void buildLoggerType(LoggerType type = LoggerType::LOGGER_SYNC)
         {
             _logger_type = type;
         }
@@ -435,6 +455,13 @@ namespace Xulog
          * @return 创建的 Logger 对象
          */
         virtual Logger::ptr build() = 0;
+
+        /// @brief 获取格式化器
+        /// @return 获取格式化器
+        Formatter::ptr getFormatter()
+        {
+            return _formatter;
+        }
 
     protected:
         AsyncType _looper_type;           ///< 异步类型
@@ -537,7 +564,10 @@ namespace Xulog
             std::unique_lock<std::mutex> lock(_mutex);
             auto it = _loggers.find(name);
             if (it == _loggers.end())
+            {
+                std::cout << "未找到日志器！日志器名称："<<name<<std::endl;
                 return Logger::ptr();
+            }
             return it->second;
         }
         /**

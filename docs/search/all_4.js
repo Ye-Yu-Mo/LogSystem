@@ -8,5 +8,6 @@ var searchData=
   ['default_5fbuffer_5fsize_5',['DEFAULT_BUFFER_SIZE',['../buffer_8hpp.html#a6e576a3c6530636d68b7a220480bcd32',1,'buffer.hpp']]],
   ['defaultfd_6',['defaultfd',['../namespace_xu_server.html#a2e78034bbe486d31b37f86b8ec10c24a',1,'XuServer']]],
   ['defaultport_7',['defaultport',['../namespace_xu_server.html#a1ec0eb83586aebed917abaa2706c949b',1,'XuServer']]],
-  ['defaultsize_8',['defaultsize',['../namespace_xu_server.html#ae49755197fc97b266f5274265d053c66',1,'XuServer']]]
+  ['defaultsize_8',['defaultsize',['../namespace_xu_server.html#ae49755197fc97b266f5274265d053c66',1,'XuServer']]],
+  ['delivermsg_9',['DeliverMsg',['../struct_xulog_1_1_deliver_msg.html',1,'Xulog']]]
 ];

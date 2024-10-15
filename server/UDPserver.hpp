@@ -1,5 +1,5 @@
 /**
- * @file server.hpp
+ * @file UDPserver.hpp
  * @brief 定义了 UdpServer 类，用于实现 UDP 服务器功能
  *
  * 此文件包含 UdpServer 类的声明，该类实现了一个简单的 UDP 服务器。
@@ -19,6 +19,8 @@
 #include "nocopy.hpp"
 #include "InetAddr.hpp"
 #include "../logs/Xulog.h"
+#include "../extend/DataBaseSink.hpp"
+#include "codec.hpp"
 
 namespace XuServer
 {
@@ -60,20 +62,38 @@ namespace XuServer
         void Start() // 服务器不退出
         {
             char buffer[1024];
+            /// 初始化日志建造者
+            std::unique_ptr<Xulog::LoggerBuilder> builder(new Xulog::GlobalLoggerBuild());
+            builder->buildLoggerName("server");
+            builder->buildFormatter();
+            builder->build();
+            Xulog::Logger::ptr logger = Xulog::getLogger("server");
+
             for (;;)
             {
                 struct sockaddr_in peer; // 远程地址信息，因为需要返回请求
                 socklen_t len = sizeof(peer);
                 ssize_t n = recvfrom(_sockfd, buffer, sizeof(buffer) - 1, 0, (struct sockaddr *)&peer, &len); // 获取从从外部接收的数据
-                // 第一个参数是套接字文件描述符，标识接收数据的套接字
-                // 第二个参数是接收数据的缓冲区
-
-                if (n > 0) // 正确接收
+                                                                                                              // 第一个参数是套接字文件描述符，标识接收数据的套接字
+                                                                                                              // 第二个参数是接收数据的缓冲区
+                if (n > 0)                                                                                    // 正确接收
                 {
-                    Xulog::FileSink file("./log/test.log");
+                    // 接收数据 反序列化
+                    std::string tmp(buffer);
+                    Json::CharReaderBuilder reader;
+                    Json::Value root;
+                    std::istringstream(tmp) >> root;
+                    Xulog::DeliverMsg msg = Xulog::Codec::fromJson(root);
+                    // 格式化日志信息
+                    std::string str = builder->getFormatter()->Format(msg.msg);
+                    std::cout << str << std::endl;
+                    // TODO 构造日志落地器和进行落地
                     Xulog::StdoutSink std(Xulog::StdoutSink::Color::Enable);
-                    file.log(buffer, n);
-                    std.log(buffer, n);
+                    Xulog::FileSink file("./log/test.log");
+                    DataBaseSink db("./data/log", "server");
+                    std.log(str.c_str(), str.size());
+                    file.log(str.c_str(), str.size());
+                    db.log(msg.msg);
                 }
             }
         }
