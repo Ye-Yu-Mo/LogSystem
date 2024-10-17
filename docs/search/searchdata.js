@@ -1,15 +1,15 @@
 var indexSectionsWithContent =
 {
   0: "_abcdefghilmnoprstuvwxy~主使同基开异弃性技日核框概模测缓自运项默",
-  1: "abcdfgilmnorstu",
+  1: "abcdfglmnorstu",
   2: "x",
-  3: "bcdfilmnrstux",
+  3: "bcdflmnrstux",
   4: "abcdefghilmnoprstuw~",
-  5: "_cdlmp",
-  6: "fps",
+  5: "_cdfmu",
+  6: "cfps",
   7: "acltv",
   8: "adefgilouw",
-  9: "defitw",
+  9: "cdefitw",
   10: "c基弃"
 };
 

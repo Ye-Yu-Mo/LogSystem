@@ -2,7 +2,7 @@
 all:DataBaseTest servertest server test
 servertest:servertest.cc
 	g++ -g $^ -o $@ -std=c++14 -ljsoncpp -lpthread -lsqlite3
-server:../server/UDPserver_main.cc
+server:../server/ServerMain.cc
 	g++ -g $^ -o $@ -std=c++14 -ljsoncpp -lpthread -lsqlite3
 test:test.cc
 	g++ $^ -o $@ -std=c++14

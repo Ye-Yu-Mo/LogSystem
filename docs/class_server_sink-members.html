@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
   <td id="projectalign">
-   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.00</span>
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.3</span>
    </div>
    <div id="projectbrief">This is a logging system project</div>
   </td>
@@ -103,14 +103,16 @@ $(document).ready(function(){initNavTree('class_server_sink.html',''); initResiz
 
 <p>成员的完整列表，这些成员属于 <a class="el" href="class_server_sink.html">ServerSink</a>,包括所有继承而来的类成员</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_server_sink.html#a743840ffccbab1ca05bc114b7d072901">_server</a></td><td class="entry"><a class="el" href="class_server_sink.html">ServerSink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_server_sink.html#a51b74d8bbcfbba091f254b73bffc09ea">_serverip</a></td><td class="entry"><a class="el" href="class_server_sink.html">ServerSink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_server_sink.html#a87912e3cf240889d2cdb4eea58d97a84">_serverport</a></td><td class="entry"><a class="el" href="class_server_sink.html">ServerSink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_server_sink.html#a2305ff4bad46b46fa114777c8f3745f4">_sockfd</a></td><td class="entry"><a class="el" href="class_server_sink.html">ServerSink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_server_sink.html#af0a79db9db481b0b2465ab091df0864e">_logger</a></td><td class="entry"><a class="el" href="class_server_sink.html">ServerSink</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_server_sink.html#ade91fa5f2a106e7db3850264d26ca2b5">_logger_name</a></td><td class="entry"><a class="el" href="class_server_sink.html">ServerSink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_server_sink.html#ad1e8a8085586d9b34e01a1484b723668">_msg</a></td><td class="entry"><a class="el" href="class_server_sink.html">ServerSink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_server_sink.html#ae0e11ffd7dc79ad6b24432238b9e604f">_send_socket</a></td><td class="entry"><a class="el" href="class_server_sink.html">ServerSink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_server_sink.html#a38647a132d727a275be60764393ed611">_server_ip</a></td><td class="entry"><a class="el" href="class_server_sink.html">ServerSink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_server_sink.html#a03801ff717539697acc7fc30394f155f">_server_port</a></td><td class="entry"><a class="el" href="class_server_sink.html">ServerSink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_server_sink.html#adf7eb34b00bda51bca75726b94319917">log</a>(const char *data, size_t len)</td><td class="entry"><a class="el" href="class_server_sink.html">ServerSink</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_xulog_1_1_log_sink.html#acae79adeb7ae387b5fc0e61576bd8359">LogSink</a>()</td><td class="entry"><a class="el" href="class_xulog_1_1_log_sink.html">Xulog::LogSink</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_xulog_1_1_log_sink.html#a411346b1e96d35e9f6f4459e27034485">ptr</a> typedef</td><td class="entry"><a class="el" href="class_xulog_1_1_log_sink.html">Xulog::LogSink</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_server_sink.html#a09e36c86ff9250044b6c189ddc509cc3">ServerSink</a>(const std::string &amp;serverip, uint16_t serverport)</td><td class="entry"><a class="el" href="class_server_sink.html">ServerSink</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_server_sink.html#a00fae1a5f937a884a9319fc075197200">ServerSink</a>(const std::string &amp;serverip, uint16_t serverport, const std::string &amp;name)</td><td class="entry"><a class="el" href="class_server_sink.html">ServerSink</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_xulog_1_1_log_sink.html#a08999c41dea391f82bd1efd16c1cbf6c">~LogSink</a>()</td><td class="entry"><a class="el" href="class_xulog_1_1_log_sink.html">Xulog::LogSink</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_server_sink.html#a16a727e49096d1422fdf36ad9d41a974">~ServerSink</a>()</td><td class="entry"><a class="el" href="class_server_sink.html">ServerSink</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->

@@ -1,0 +1,5 @@
+<map id="XuServer::TcpSocket::ConnectServer" name="XuServer::TcpSocket::ConnectServer">
+<area shape="rect" id="Node000001" title="连接到服务器。" alt="" coords="264,5,417,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_server_1_1_tcp_socket.html#af678bec411bf829a31e59de0555af595" title="建立TCP客户端连接。" alt="" coords="5,5,216,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="250,28,216,28,216,23,250,23"/>
+</map>

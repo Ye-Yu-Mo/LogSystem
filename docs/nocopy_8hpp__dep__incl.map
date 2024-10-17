@@ -1,7 +1,10 @@
 <map id="server/nocopy.hpp" name="server/nocopy.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="33,5,173,31"/>
-<area shape="rect" id="Node000002" href="$_u_d_pserver_8hpp.html" title="定义了 UdpServer 类，用于实现 UDP 服务器功能" alt="" coords="21,79,184,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,44,105,79,100,79,100,44"/>
-<area shape="rect" id="Node000003" href="$_u_d_pserver__main_8cc.html" title=" " alt="" coords="5,152,200,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,118,105,152,100,152,100,118"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="15,5,155,31"/>
+<area shape="rect" id="Node000002" href="$server_8hpp.html" title="TCP服务器" alt="" coords="17,79,152,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,44,87,79,82,79,82,44"/>
+<area shape="rect" id="Node000003" href="$_server_main_8cc.html" title=" " alt="" coords="5,225,164,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="71,117,55,153,54,172,60,191,78,224,73,226,55,193,49,173,50,151,66,115"/>
+<area shape="rect" id="Node000004" href="$serverlog_8hpp.html" title="服务器实际执行落地的类" alt="" coords="65,152,221,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="105,113,136,150,132,154,101,116"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="127,190,96,227,92,224,123,186"/>
 </map>

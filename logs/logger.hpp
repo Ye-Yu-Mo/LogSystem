@@ -22,6 +22,17 @@
 namespace Xulog
 {
     /**
+     * @enum LoggerType
+     * @brief 日志器类型
+     *
+     * 定义了同步和异步日志器的类型。
+     */
+    enum class LoggerType
+    {
+        LOGGER_SYNC, ///< 同步日志器
+        LOGGER_ASYNC ///< 异步日志器
+    };
+    /**
      * @class Logger
      * @brief 抽象日志器基类
      *
@@ -212,6 +223,12 @@ namespace Xulog
         {
             return _formatter;
         }
+        /// @brief 获取日志器类型
+        /// @return 日志器类型
+        LoggerType getLoggerType()
+        {
+            return _logger_type;
+        }
 
     protected:
         /**
@@ -245,6 +262,7 @@ namespace Xulog
         std::atomic<LogLevel::value> _limit_level; ///< 日志级别
         Formatter::ptr _formatter;                 ///< 日志格式化器
         std::vector<LogSink::ptr> _sinks;          ///< 日志输出接收器
+        LoggerType _logger_type;
     };
     /**
      * @class SyncLogger
@@ -266,6 +284,7 @@ namespace Xulog
         SyncLogger(const std::string &loggername, LogLevel::value level, Formatter::ptr &formatter, std::vector<LogSink::ptr> sinks)
             : Logger(loggername, level, formatter, sinks)
         {
+            _logger_type = LoggerType::LOGGER_SYNC;
         }
 
     protected:
@@ -313,6 +332,7 @@ namespace Xulog
             : Logger(loggername, level, formatter, sinks),
               _looper(std::make_shared<AsyncLooper>(std::bind(&AsyncLogger::realLog, this, std::placeholders::_1), looper_type))
         {
+            _logger_type = LoggerType::LOGGER_ASYNC;
         }
         /**
          * @brief 将数据写入缓冲区
@@ -343,17 +363,6 @@ namespace Xulog
         AsyncLooper::ptr _looper; ///< 异步事件循环器
     };
 
-    /**
-     * @enum LoggerType
-     * @brief 日志器类型
-     *
-     * 定义了同步和异步日志器的类型。
-     */
-    enum class LoggerType
-    {
-        LOGGER_SYNC, ///< 同步日志器
-        LOGGER_ASYNC ///< 异步日志器
-    };
     /**
      * @class LoggerBuilder
      * @brief 日志器建造者
@@ -565,7 +574,7 @@ namespace Xulog
             auto it = _loggers.find(name);
             if (it == _loggers.end())
             {
-                std::cout << "未找到日志器！日志器名称："<<name<<std::endl;
+                std::cout << "未找到日志器！日志器名称：" << name << std::endl;
                 return Logger::ptr();
             }
             return it->second;

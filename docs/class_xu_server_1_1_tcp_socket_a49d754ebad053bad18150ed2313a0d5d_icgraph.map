@@ -1,0 +1,9 @@
+<map id="XuServer::TcpSocket::CreateSocketOrDie" name="XuServer::TcpSocket::CreateSocketOrDie">
+<area shape="rect" id="Node000001" title="创建TCP Socket，若创建失败则终止程序。" alt="" coords="464,37,617,77"/>
+<area shape="rect" id="Node000002" href="$class_xu_server_1_1_tcp_socket.html#af678bec411bf829a31e59de0555af595" title="建立TCP客户端连接。" alt="" coords="205,5,416,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="450,47,416,43,416,37,451,42"/>
+<area shape="rect" id="Node000003" href="$class_xu_server_1_1_tcp_socket.html#ac0a029cce5f0a8f9ab95e64dbc332d75" title="创建、绑定并监听Socket。" alt="" coords="213,69,408,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="451,73,409,78,408,73,450,67"/>
+<area shape="rect" id="Node000004" href="$class_xu_server_1_1_tcp_server.html#a8aab58b83b187851c686989139f86c6e" title="构造函数" alt="" coords="5,69,157,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="200,92,158,92,158,87,200,87"/>
+</map>

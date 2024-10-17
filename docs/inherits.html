@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
   <td id="projectalign">
-   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.2</span>
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.3</span>
    </div>
    <div id="projectbrief">This is a logging system project</div>
   </td>
@@ -120,12 +120,12 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 </td></tr>
 <tr><td><img src="inherit_graph_3.png" border="0" usemap="#a_xulog_1_1_codec" alt=""/>
 <map name="a_xulog_1_1_codec" id="a_xulog_1_1_codec">
-<area shape="rect" href="class_xulog_1_1_codec.html" title=" " alt="" coords="5,5,112,31"/>
+<area shape="rect" href="class_xulog_1_1_codec.html" title="@classCodec" alt="" coords="5,5,112,31"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_4.png" border="0" usemap="#a_xulog_1_1_deliver_msg" alt=""/>
 <map name="a_xulog_1_1_deliver_msg" id="a_xulog_1_1_deliver_msg">
-<area shape="rect" href="struct_xulog_1_1_deliver_msg.html" title=" " alt="" coords="5,5,147,31"/>
+<area shape="rect" href="struct_xulog_1_1_deliver_msg.html" title="传递的消息" alt="" coords="5,5,147,31"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_5.png" border="0" usemap="#a_xulog_1_1_format_item" alt=""/>
@@ -198,8 +198,8 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <area shape="poly" title=" " alt="" coords="83,117,121,77,171,40,196,28,199,33,173,44,125,81,87,120"/>
 <area shape="rect" href="class_roll_sink_by_time.html" title=" " alt="" coords="191,55,317,80"/>
 <area shape="poly" title=" " alt="" coords="101,120,171,89,204,78,206,83,173,94,103,125"/>
-<area shape="rect" href="class_u_d_p_server_sink.html" title=" " alt="" coords="194,104,314,129"/>
-<area shape="poly" title=" " alt="" coords="137,130,193,122,194,127,138,135"/>
+<area shape="rect" href="class_server_sink.html" title=" " alt="" coords="208,104,300,129"/>
+<area shape="poly" title=" " alt="" coords="137,130,207,120,208,125,138,135"/>
 <area shape="rect" href="class_xulog_1_1_file_sink.html" title="文件日志落地实现" alt="" coords="195,153,313,179"/>
 <area shape="poly" title=" " alt="" coords="138,149,195,156,194,161,137,154"/>
 <area shape="rect" href="class_xulog_1_1_roll_sink_by_size.html" title="基于文件大小的滚动文件日志落地实现" alt="" coords="172,203,336,228"/>
@@ -223,16 +223,35 @@ $(document).ready(function(){initNavTree('hierarchy.html',''); initResizable(); 
 <area shape="rect" href="class_xulog_1_1_util_1_1_file.html" title="文件操作相关的实用工具类" alt="" coords="5,5,127,31"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_16.png" border="0" usemap="#a_xu_server_1_1_inet_addr" alt=""/>
-<map name="a_xu_server_1_1_inet_addr" id="a_xu_server_1_1_inet_addr">
-<area shape="rect" href="class_xu_server_1_1_inet_addr.html" title="将接收到的网络信息格式化" alt="" coords="5,5,149,31"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_17.png" border="0" usemap="#a_xu_server_1_1nocopy" alt=""/>
+<tr><td><img src="inherit_graph_16.png" border="0" usemap="#a_xu_server_1_1nocopy" alt=""/>
 <map name="a_xu_server_1_1nocopy" id="a_xu_server_1_1nocopy">
 <area shape="rect" href="class_xu_server_1_1nocopy.html" title=" " alt="" coords="5,5,141,31"/>
-<area shape="rect" href="class_xu_server_1_1_udp_server.html" title="UDP 服务器类" alt="" coords="189,5,347,31"/>
+<area shape="rect" href="class_xu_server_1_1_tcp_server.html" title="TCP服务器" alt="" coords="189,5,341,31"/>
 <area shape="poly" title=" " alt="" coords="155,15,189,15,189,21,155,21"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_17.png" border="0" usemap="#a_xu_server_1_1_server_log" alt=""/>
+<map name="a_xu_server_1_1_server_log" id="a_xu_server_1_1_server_log">
+<area shape="rect" href="class_xu_server_1_1_server_log.html" title="服务器实际执行落地的类" alt="" coords="5,5,160,31"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_18.png" border="0" usemap="#a_xu_server_1_1_socket" alt=""/>
+<map name="a_xu_server_1_1_socket" id="a_xu_server_1_1_socket">
+<area shape="rect" href="class_xu_server_1_1_socket.html" title="抽象基类，封装基本Socket操作。" alt="" coords="5,31,137,56"/>
+<area shape="rect" href="class_xu_server_1_1_tcp_socket.html" title="TCPSocket类" alt="" coords="188,5,341,31"/>
+<area shape="poly" title=" " alt="" coords="151,30,187,25,188,31,151,36"/>
+<area shape="rect" href="class_xu_server_1_1_udp_socket.html" title="UDPSocket类" alt="" coords="185,55,344,80"/>
+<area shape="poly" title=" " alt="" coords="152,51,185,55,185,60,151,56"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_19.png" border="0" usemap="#a_xu_server_1_1_thread_data" alt=""/>
+<map name="a_xu_server_1_1_thread_data" id="a_xu_server_1_1_thread_data">
+<area shape="rect" href="class_xu_server_1_1_thread_data.html" title="线程信息" alt="" coords="5,5,171,31"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_20.png" border="0" usemap="#a_xu_server_1_1threadpool" alt=""/>
+<map name="a_xu_server_1_1threadpool" id="a_xu_server_1_1threadpool">
+<area shape="rect" href="class_xu_server_1_1threadpool.html" title="线程池类" alt="" coords="5,5,164,31"/>
 </map>
 </td></tr>
 </table>

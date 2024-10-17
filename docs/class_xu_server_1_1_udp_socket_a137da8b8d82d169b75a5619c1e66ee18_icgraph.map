@@ -1,0 +1,5 @@
+<map id="XuServer::UdpSocket::CreateSocketOrDie" name="XuServer::UdpSocket::CreateSocketOrDie">
+<area shape="rect" id="Node000001" title="创建UDP Socket，若创建失败则终止程序。" alt="" coords="252,5,411,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_server_1_1_udp_socket.html#a5dd36572e2db8a6c3469e94d99668923" title="创建并绑定Socket。" alt="" coords="5,5,204,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,28,204,28,204,23,238,23"/>
+</map>

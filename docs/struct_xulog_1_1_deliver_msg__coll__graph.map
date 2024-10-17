@@ -1,5 +1,5 @@
 <map id="Xulog::DeliverMsg" name="Xulog::DeliverMsg">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,93,147,119"/>
+<area shape="rect" id="Node000001" title="传递的消息" alt="" coords="5,93,147,119"/>
 <area shape="rect" id="Node000002" href="$struct_xulog_1_1_log_msg.html" title="日志消息结构体" alt="" coords="17,5,135,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,45,79,93,73,93,73,45"/>
 </map>

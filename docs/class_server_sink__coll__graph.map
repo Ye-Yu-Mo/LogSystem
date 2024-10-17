@@ -1,5 +1,7 @@
 <map id="ServerSink" name="ServerSink">
-<area shape="rect" id="Node000001" title=" " alt="" coords="19,79,111,104"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="89,93,181,119"/>
 <area shape="rect" id="Node000002" href="$class_xulog_1_1_log_sink.html" title="抽象日志落地基类" alt="" coords="5,5,124,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,44,67,79,62,79,62,44"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,39,128,91,123,94,81,43"/>
+<area shape="rect" id="Node000003" href="$struct_xulog_1_1_log_msg.html" title="日志消息结构体" alt="" coords="147,5,265,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,43,147,94,143,91,186,39"/>
 </map>

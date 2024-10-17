@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['defaultfd_0',['defaultfd',['../namespace_xu_server.html#a2e78034bbe486d31b37f86b8ec10c24a',1,'XuServer']]],
-  ['defaultport_1',['defaultport',['../namespace_xu_server.html#a1ec0eb83586aebed917abaa2706c949b',1,'XuServer']]],
-  ['defaultsize_2',['defaultsize',['../namespace_xu_server.html#ae49755197fc97b266f5274265d053c66',1,'XuServer']]]
+  ['default_5fbacklog_0',['DEFAULT_BACKLOG',['../namespace_xu_server.html#afe60c75cca27b1d5071f095ec13be438',1,'XuServer']]],
+  ['default_5fsockfd_1',['DEFAULT_SOCKFD',['../namespace_xu_server.html#a2df1cbd042c6868d9636fe69c4b7c139',1,'XuServer']]]
 ];

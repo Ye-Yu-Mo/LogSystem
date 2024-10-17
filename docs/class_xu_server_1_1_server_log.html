@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LogSystem: XuServer::ServerLog类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.3</span>
+   </div>
+   <div id="projectbrief">This is a logging system project</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_xu_server_1_1_server_log.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_xu_server_1_1_server_log-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">XuServer::ServerLog类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>服务器实际执行落地的类  
+ <a href="class_xu_server_1_1_server_log.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="serverlog_8hpp_source.html">serverlog.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aab36ad16185ab00adcb736f557e81bf0" id="r_aab36ad16185ab00adcb736f557e81bf0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_server_log.html#aab36ad16185ab00adcb736f557e81bf0">ServerLog</a> ()</td></tr>
+<tr class="memdesc:aab36ad16185ab00adcb736f557e81bf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+<tr class="separator:aab36ad16185ab00adcb736f557e81bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2985e18e3b4b3debf7fa8e20bff2281" id="r_ad2985e18e3b4b3debf7fa8e20bff2281"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_server_log.html#ad2985e18e3b4b3debf7fa8e20bff2281">operator()</a> (std::string &amp;msg)</td></tr>
+<tr class="memdesc:ad2985e18e3b4b3debf7fa8e20bff2281"><td class="mdescLeft">&#160;</td><td class="mdescRight">仿函数  <br /></td></tr>
+<tr class="separator:ad2985e18e3b4b3debf7fa8e20bff2281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a94305ee7d0417f871c4f0f7fa4ee3b47" id="r_a94305ee7d0417f871c4f0f7fa4ee3b47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_server_log.html#a94305ee7d0417f871c4f0f7fa4ee3b47">init</a> (std::vector&lt; <a class="el" href="class_xulog_1_1_log_sink.html#a411346b1e96d35e9f6f4459e27034485">Xulog::LogSink::ptr</a> &gt; &amp;sinks)</td></tr>
+<tr class="memdesc:a94305ee7d0417f871c4f0f7fa4ee3b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化落地方式  <br /></td></tr>
+<tr class="separator:a94305ee7d0417f871c4f0f7fa4ee3b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a5b678959fd0c24a90481f3903db257a0" id="r_a5b678959fd0c24a90481f3903db257a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xulog_1_1_logger.html#abedc00e62ee525316cea9bcbcdcefc47">Xulog::Logger::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_server_log.html#a5b678959fd0c24a90481f3903db257a0">_logger</a></td></tr>
+<tr class="memdesc:a5b678959fd0c24a90481f3903db257a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志器句柄  <br /></td></tr>
+<tr class="separator:a5b678959fd0c24a90481f3903db257a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a37980e62722085894a1b33f2ab9b8df6" id="r_a37980e62722085894a1b33f2ab9b8df6"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="class_xulog_1_1_logger_builder.html">Xulog::LoggerBuilder</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_server_log.html#a37980e62722085894a1b33f2ab9b8df6">_builder</a> = nullptr</td></tr>
+<tr class="memdesc:a37980e62722085894a1b33f2ab9b8df6"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志构造器  <br /></td></tr>
+<tr class="separator:a37980e62722085894a1b33f2ab9b8df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>服务器实际执行落地的类 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aab36ad16185ab00adcb736f557e81bf0" name="aab36ad16185ab00adcb736f557e81bf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab36ad16185ab00adcb736f557e81bf0">&#9670;&#160;</a></span>ServerLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuServer::ServerLog::ServerLog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a94305ee7d0417f871c4f0f7fa4ee3b47" name="a94305ee7d0417f871c4f0f7fa4ee3b47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94305ee7d0417f871c4f0f7fa4ee3b47">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuServer::ServerLog::init </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_xulog_1_1_log_sink.html#a411346b1e96d35e9f6f4459e27034485">Xulog::LogSink::ptr</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sinks</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初始化落地方式 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sinks</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_server_1_1_server_log_a94305ee7d0417f871c4f0f7fa4ee3b47_icgraph.png" border="0" usemap="#aclass_xu_server_1_1_server_log_a94305ee7d0417f871c4f0f7fa4ee3b47_icgraph" alt=""/></div>
+<map name="aclass_xu_server_1_1_server_log_a94305ee7d0417f871c4f0f7fa4ee3b47_icgraph" id="aclass_xu_server_1_1_server_log_a94305ee7d0417f871c4f0f7fa4ee3b47_icgraph">
+<area shape="rect" title="初始化落地方式" alt="" coords="208,5,363,45"/>
+<area shape="rect" href="class_xu_server_1_1_server_log.html#ad2985e18e3b4b3debf7fa8e20bff2281" title="仿函数" alt="" coords="5,5,160,45"/>
+<area shape="poly" title=" " alt="" coords="194,28,161,28,161,23,194,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad2985e18e3b4b3debf7fa8e20bff2281" name="ad2985e18e3b4b3debf7fa8e20bff2281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2985e18e3b4b3debf7fa8e20bff2281">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuServer::ServerLog::operator() </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>仿函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>JsonData字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_server_1_1_server_log_ad2985e18e3b4b3debf7fa8e20bff2281_cgraph.png" border="0" usemap="#aclass_xu_server_1_1_server_log_ad2985e18e3b4b3debf7fa8e20bff2281_cgraph" alt=""/></div>
+<map name="aclass_xu_server_1_1_server_log_ad2985e18e3b4b3debf7fa8e20bff2281_cgraph" id="aclass_xu_server_1_1_server_log_ad2985e18e3b4b3debf7fa8e20bff2281_cgraph">
+<area shape="rect" title="仿函数" alt="" coords="5,55,160,95"/>
+<area shape="rect" href="class_xulog_1_1_codec.html#a31d9e0d48b6beb9ae79540938552d090" title="将Json信息反序列化为传递消息" alt="" coords="208,9,381,35"/>
+<area shape="poly" title=" " alt="" coords="160,53,229,36,230,41,161,59"/>
+<area shape="rect" href="namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="229,63,361,88"/>
+<area shape="poly" title=" " alt="" coords="160,73,215,73,215,78,160,78"/>
+<area shape="rect" href="class_xu_server_1_1_server_log.html#a94305ee7d0417f871c4f0f7fa4ee3b47" title="初始化落地方式" alt="" coords="217,113,372,153"/>
+<area shape="poly" title=" " alt="" coords="158,93,208,106,206,112,157,98"/>
+<area shape="rect" href="class_xulog_1_1_codec.html#a6970d0f5d69318c65b15ec7bed3549ce" title="将Json信息反序列化为传递消息" alt="" coords="429,5,632,31"/>
+<area shape="poly" title=" " alt="" coords="382,18,416,17,416,23,382,23"/>
+<area shape="rect" href="class_xulog_1_1_log_level.html#a55a58ff5f7755c98ec623037144661fb" title="从字符串转换成日志等级" alt="" coords="680,5,883,31"/>
+<area shape="poly" title=" " alt="" coords="632,15,666,15,666,21,632,21"/>
+<area shape="rect" href="class_xulog_1_1_logger_manager.html#a2275ef98586ea630426491d51be7bc96" title="获取日志器管理器的实例" alt="" coords="447,55,615,95"/>
+<area shape="poly" title=" " alt="" coords="361,73,433,73,433,78,361,78"/>
+<area shape="rect" href="class_xulog_1_1_logger_manager.html#a9482ba1783c7cd77667abef2ee231e6e" title="获取指定名称的日志器" alt="" coords="447,119,615,159"/>
+<area shape="poly" title=" " alt="" coords="343,86,444,113,442,118,342,91"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a37980e62722085894a1b33f2ab9b8df6" name="a37980e62722085894a1b33f2ab9b8df6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37980e62722085894a1b33f2ab9b8df6">&#9670;&#160;</a></span>_builder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_xulog_1_1_logger_builder.html">Xulog::LoggerBuilder</a> &gt; XuServer::ServerLog::_builder = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>日志构造器 </p>
+<p>日志器初始化 </p>
+
+</div>
+</div>
+<a id="a5b678959fd0c24a90481f3903db257a0" name="a5b678959fd0c24a90481f3903db257a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b678959fd0c24a90481f3903db257a0">&#9670;&#160;</a></span>_logger</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xulog_1_1_logger.html#abedc00e62ee525316cea9bcbcdcefc47">Xulog::Logger::ptr</a> XuServer::ServerLog::_logger</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>日志器句柄 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_xu_server.html">XuServer</a></li><li class="navelem"><a class="el" href="class_xu_server_1_1_server_log.html">ServerLog</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
   <td id="projectalign">
-   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.00</span>
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.3</span>
    </div>
    <div id="projectbrief">This is a logging system project</div>
   </td>
@@ -100,6 +100,7 @@ $(document).ready(function(){initNavTree('class_server_sink.html',''); initResiz
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
 <a href="class_server_sink-members.html">所有成员列表</a>  </div>
   <div class="headertitle"><div class="title">ServerSink类 参考</div></div>
 </div><!--header-->
@@ -121,21 +122,24 @@ ServerSink 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_server_sink__coll__graph.png" border="0" usemap="#a_server_sink_coll__map" alt="Collaboration graph"/></div>
 <map name="a_server_sink_coll__map" id="a_server_sink_coll__map">
-<area shape="rect" title=" " alt="" coords="19,79,111,104"/>
+<area shape="rect" title=" " alt="" coords="89,93,181,119"/>
 <area shape="rect" href="class_xulog_1_1_log_sink.html" title="抽象日志落地基类" alt="" coords="5,5,124,31"/>
-<area shape="poly" title=" " alt="" coords="67,44,67,79,62,79,62,44"/>
+<area shape="poly" title=" " alt="" coords="85,39,128,91,123,94,81,43"/>
+<area shape="rect" href="struct_xulog_1_1_log_msg.html" title="日志消息结构体" alt="" coords="147,5,265,31"/>
+<area shape="poly" title=" " alt="" coords="190,43,147,94,143,91,186,39"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a09e36c86ff9250044b6c189ddc509cc3" id="r_a09e36c86ff9250044b6c189ddc509cc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sink.html#a09e36c86ff9250044b6c189ddc509cc3">ServerSink</a> (const std::string &amp;serverip, uint16_t serverport)</td></tr>
-<tr class="memdesc:a09e36c86ff9250044b6c189ddc509cc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器落地类  <br /></td></tr>
-<tr class="separator:a09e36c86ff9250044b6c189ddc509cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00fae1a5f937a884a9319fc075197200" id="r_a00fae1a5f937a884a9319fc075197200"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sink.html#a00fae1a5f937a884a9319fc075197200">ServerSink</a> (const std::string &amp;serverip, uint16_t serverport, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a00fae1a5f937a884a9319fc075197200"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器落地类  <br /></td></tr>
+<tr class="separator:a00fae1a5f937a884a9319fc075197200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf7eb34b00bda51bca75726b94319917" id="r_adf7eb34b00bda51bca75726b94319917"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sink.html#adf7eb34b00bda51bca75726b94319917">log</a> (const char *data, size_t len)</td></tr>
 <tr class="memdesc:adf7eb34b00bda51bca75726b94319917"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送数据  <br /></td></tr>
 <tr class="separator:adf7eb34b00bda51bca75726b94319917"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16a727e49096d1422fdf36ad9d41a974" id="r_a16a727e49096d1422fdf36ad9d41a974"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sink.html#a16a727e49096d1422fdf36ad9d41a974">~ServerSink</a> ()</td></tr>
+<tr class="memdesc:a16a727e49096d1422fdf36ad9d41a974"><td class="mdescLeft">&#160;</td><td class="mdescRight">析构函数  <br /></td></tr>
 <tr class="separator:a16a727e49096d1422fdf36ad9d41a974"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_xulog_1_1_log_sink"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_xulog_1_1_log_sink')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="class_xulog_1_1_log_sink.html">Xulog::LogSink</a></td></tr>
 <tr class="memitem:acae79adeb7ae387b5fc0e61576bd8359 inherit pub_methods_class_xulog_1_1_log_sink" id="r_acae79adeb7ae387b5fc0e61576bd8359"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_log_sink.html#acae79adeb7ae387b5fc0e61576bd8359">LogSink</a> ()</td></tr>
@@ -145,18 +149,27 @@ Public 成员函数</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private 属性</h2></td></tr>
-<tr class="memitem:a2305ff4bad46b46fa114777c8f3745f4" id="r_a2305ff4bad46b46fa114777c8f3745f4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sink.html#a2305ff4bad46b46fa114777c8f3745f4">_sockfd</a></td></tr>
-<tr class="memdesc:a2305ff4bad46b46fa114777c8f3745f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP 套接字文件描述符  <br /></td></tr>
-<tr class="separator:a2305ff4bad46b46fa114777c8f3745f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a743840ffccbab1ca05bc114b7d072901" id="r_a743840ffccbab1ca05bc114b7d072901"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sink.html#a743840ffccbab1ca05bc114b7d072901">_server</a></td></tr>
-<tr class="memdesc:a743840ffccbab1ca05bc114b7d072901"><td class="mdescLeft">&#160;</td><td class="mdescRight">远程服务器的地址信息  <br /></td></tr>
-<tr class="separator:a743840ffccbab1ca05bc114b7d072901"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51b74d8bbcfbba091f254b73bffc09ea" id="r_a51b74d8bbcfbba091f254b73bffc09ea"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sink.html#a51b74d8bbcfbba091f254b73bffc09ea">_serverip</a></td></tr>
-<tr class="memdesc:a51b74d8bbcfbba091f254b73bffc09ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">远程服务器的 IP 地址  <br /></td></tr>
-<tr class="separator:a51b74d8bbcfbba091f254b73bffc09ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87912e3cf240889d2cdb4eea58d97a84" id="r_a87912e3cf240889d2cdb4eea58d97a84"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sink.html#a87912e3cf240889d2cdb4eea58d97a84">_serverport</a></td></tr>
-<tr class="memdesc:a87912e3cf240889d2cdb4eea58d97a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">远程服务器的端口号  <br /></td></tr>
-<tr class="separator:a87912e3cf240889d2cdb4eea58d97a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0e11ffd7dc79ad6b24432238b9e604f" id="r_ae0e11ffd7dc79ad6b24432238b9e604f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_xu_server_1_1_tcp_socket.html">XuServer::TcpSocket</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sink.html#ae0e11ffd7dc79ad6b24432238b9e604f">_send_socket</a></td></tr>
+<tr class="memdesc:ae0e11ffd7dc79ad6b24432238b9e604f"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP socket  <br /></td></tr>
+<tr class="separator:ae0e11ffd7dc79ad6b24432238b9e604f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade91fa5f2a106e7db3850264d26ca2b5" id="r_ade91fa5f2a106e7db3850264d26ca2b5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sink.html#ade91fa5f2a106e7db3850264d26ca2b5">_logger_name</a></td></tr>
+<tr class="memdesc:ade91fa5f2a106e7db3850264d26ca2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志器名称  <br /></td></tr>
+<tr class="separator:ade91fa5f2a106e7db3850264d26ca2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1e8a8085586d9b34e01a1484b723668" id="r_ad1e8a8085586d9b34e01a1484b723668"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_xulog_1_1_log_msg.html">Xulog::LogMsg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sink.html#ad1e8a8085586d9b34e01a1484b723668">_msg</a></td></tr>
+<tr class="memdesc:ad1e8a8085586d9b34e01a1484b723668"><td class="mdescLeft">&#160;</td><td class="mdescRight">结构化数据  <br /></td></tr>
+<tr class="separator:ad1e8a8085586d9b34e01a1484b723668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38647a132d727a275be60764393ed611" id="r_a38647a132d727a275be60764393ed611"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sink.html#a38647a132d727a275be60764393ed611">_server_ip</a></td></tr>
+<tr class="memdesc:a38647a132d727a275be60764393ed611"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器ip  <br /></td></tr>
+<tr class="separator:a38647a132d727a275be60764393ed611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03801ff717539697acc7fc30394f155f" id="r_a03801ff717539697acc7fc30394f155f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sink.html#a03801ff717539697acc7fc30394f155f">_server_port</a></td></tr>
+<tr class="memdesc:a03801ff717539697acc7fc30394f155f"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器port  <br /></td></tr>
+<tr class="separator:a03801ff717539697acc7fc30394f155f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:af0a79db9db481b0b2465ab091df0864e" id="r_af0a79db9db481b0b2465ab091df0864e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_xulog_1_1_logger.html#abedc00e62ee525316cea9bcbcdcefc47">Xulog::Logger::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_server_sink.html#af0a79db9db481b0b2465ab091df0864e">_logger</a> = nullptr</td></tr>
+<tr class="memdesc:af0a79db9db481b0b2465ab091df0864e"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志器句柄  <br /></td></tr>
+<tr class="separator:af0a79db9db481b0b2465ab091df0864e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
@@ -166,8 +179,8 @@ Private 属性</h2></td></tr>
 <tr class="separator:a411346b1e96d35e9f6f4459e27034485 inherit pub_types_class_xulog_1_1_log_sink"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">构造及析构函数说明</h2>
-<a id="a09e36c86ff9250044b6c189ddc509cc3" name="a09e36c86ff9250044b6c189ddc509cc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09e36c86ff9250044b6c189ddc509cc3">&#9670;&#160;</a></span>ServerSink()</h2>
+<a id="a00fae1a5f937a884a9319fc075197200" name="a00fae1a5f937a884a9319fc075197200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00fae1a5f937a884a9319fc075197200">&#9670;&#160;</a></span>ServerSink()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,7 +198,13 @@ Private 属性</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>serverport</em>&#160;</td>
+          <td class="paramname"><em>serverport</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -205,6 +224,7 @@ Private 属性</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">serverip</td><td>服务器ip地址 </td></tr>
     <tr><td class="paramname">serverport</td><td>服务器端口号 </td></tr>
+    <tr><td class="paramname">name</td><td>日志器名称 </td></tr>
   </table>
   </dd>
 </dl>
@@ -233,6 +253,8 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>析构函数 </p>
 
 </div>
 </div>
@@ -281,12 +303,32 @@ Private 属性</h2></td></tr>
 </dl>
 
 <p>实现了 <a class="el" href="class_xulog_1_1_log_sink.html#ad23d31586c0d3b7d894a6da9e9a3c32a">Xulog::LogSink</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_server_sink_adf7eb34b00bda51bca75726b94319917_cgraph.png" border="0" usemap="#aclass_server_sink_adf7eb34b00bda51bca75726b94319917_cgraph" alt=""/></div>
+<map name="aclass_server_sink_adf7eb34b00bda51bca75726b94319917_cgraph" id="aclass_server_sink_adf7eb34b00bda51bca75726b94319917_cgraph">
+<area shape="rect" title="发送数据" alt="" coords="5,106,125,131"/>
+<area shape="rect" href="namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="185,77,317,102"/>
+<area shape="poly" title=" " alt="" coords="125,107,171,99,171,105,126,112"/>
+<area shape="rect" href="class_xulog_1_1_codec.html#ab47400d3a1320b0970289d9fd4d3e5c8" title="将结构化信息序列化为Json格式" alt="" coords="173,130,328,155"/>
+<area shape="poly" title=" " alt="" coords="126,124,160,128,159,134,125,129"/>
+<area shape="rect" href="class_xulog_1_1_logger_manager.html#a2275ef98586ea630426491d51be7bc96" title="获取日志器管理器的实例" alt="" coords="384,5,552,45"/>
+<area shape="poly" title=" " alt="" coords="294,74,385,47,387,52,296,79"/>
+<area shape="rect" href="class_xulog_1_1_logger_manager.html#a9482ba1783c7cd77667abef2ee231e6e" title="获取指定名称的日志器" alt="" coords="384,69,552,109"/>
+<area shape="poly" title=" " alt="" coords="317,87,370,87,370,92,317,92"/>
+<area shape="rect" href="class_xulog_1_1_codec.html#ac8f0e7d4644e61da7341bc0b06401712" title="将结构化信息序列化为Json格式" alt="" coords="376,134,560,159"/>
+<area shape="poly" title=" " alt="" coords="328,141,363,142,362,147,328,147"/>
+<area shape="rect" href="class_xulog_1_1_log_level.html#a6d6fcbb384db801aa1faa908eca98a97" title="将日志等级转换为对应的字符串" alt="" coords="608,134,792,159"/>
+<area shape="poly" title=" " alt="" coords="561,144,594,144,594,149,561,149"/>
+</map>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">类成员变量说明</h2>
-<a id="a743840ffccbab1ca05bc114b7d072901" name="a743840ffccbab1ca05bc114b7d072901"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a743840ffccbab1ca05bc114b7d072901">&#9670;&#160;</a></span>_server</h2>
+<a id="af0a79db9db481b0b2465ab091df0864e" name="af0a79db9db481b0b2465ab091df0864e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0a79db9db481b0b2465ab091df0864e">&#9670;&#160;</a></span>_logger</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -295,7 +337,31 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">struct sockaddr_in ServerSink::_server</td>
+          <td class="memname"><a class="el" href="class_xulog_1_1_logger.html#abedc00e62ee525316cea9bcbcdcefc47">Xulog::Logger::ptr</a> ServerSink::_logger = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>日志器句柄 </p>
+
+</div>
+</div>
+<a id="ade91fa5f2a106e7db3850264d26ca2b5" name="ade91fa5f2a106e7db3850264d26ca2b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade91fa5f2a106e7db3850264d26ca2b5">&#9670;&#160;</a></span>_logger_name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ServerSink::_logger_name</td>
         </tr>
       </table>
   </td>
@@ -305,12 +371,12 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>远程服务器的地址信息 </p>
+<p>日志器名称 </p>
 
 </div>
 </div>
-<a id="a51b74d8bbcfbba091f254b73bffc09ea" name="a51b74d8bbcfbba091f254b73bffc09ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51b74d8bbcfbba091f254b73bffc09ea">&#9670;&#160;</a></span>_serverip</h2>
+<a id="ad1e8a8085586d9b34e01a1484b723668" name="ad1e8a8085586d9b34e01a1484b723668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1e8a8085586d9b34e01a1484b723668">&#9670;&#160;</a></span>_msg</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,7 +385,7 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string ServerSink::_serverip</td>
+          <td class="memname"><a class="el" href="struct_xulog_1_1_log_msg.html">Xulog::LogMsg</a> ServerSink::_msg</td>
         </tr>
       </table>
   </td>
@@ -329,12 +395,12 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>远程服务器的 IP 地址 </p>
+<p>结构化数据 </p>
 
 </div>
 </div>
-<a id="a87912e3cf240889d2cdb4eea58d97a84" name="a87912e3cf240889d2cdb4eea58d97a84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87912e3cf240889d2cdb4eea58d97a84">&#9670;&#160;</a></span>_serverport</h2>
+<a id="ae0e11ffd7dc79ad6b24432238b9e604f" name="ae0e11ffd7dc79ad6b24432238b9e604f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0e11ffd7dc79ad6b24432238b9e604f">&#9670;&#160;</a></span>_send_socket</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,7 +409,7 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t ServerSink::_serverport</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="class_xu_server_1_1_tcp_socket.html">XuServer::TcpSocket</a>&gt; ServerSink::_send_socket</td>
         </tr>
       </table>
   </td>
@@ -353,12 +419,12 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>远程服务器的端口号 </p>
+<p>TCP socket </p>
 
 </div>
 </div>
-<a id="a2305ff4bad46b46fa114777c8f3745f4" name="a2305ff4bad46b46fa114777c8f3745f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2305ff4bad46b46fa114777c8f3745f4">&#9670;&#160;</a></span>_sockfd</h2>
+<a id="a38647a132d727a275be60764393ed611" name="a38647a132d727a275be60764393ed611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38647a132d727a275be60764393ed611">&#9670;&#160;</a></span>_server_ip</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,7 +433,7 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int ServerSink::_sockfd</td>
+          <td class="memname">std::string ServerSink::_server_ip</td>
         </tr>
       </table>
   </td>
@@ -377,7 +443,31 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>UDP 套接字文件描述符 </p>
+<p>服务器ip </p>
+
+</div>
+</div>
+<a id="a03801ff717539697acc7fc30394f155f" name="a03801ff717539697acc7fc30394f155f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03801ff717539697acc7fc30394f155f">&#9670;&#160;</a></span>_server_port</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t ServerSink::_server_port</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>服务器port </p>
 
 </div>
 </div>

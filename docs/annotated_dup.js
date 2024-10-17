@@ -37,12 +37,17 @@ var annotated_dup =
       [ "TimeFormatItem", "class_xulog_1_1_time_format_item.html", "class_xulog_1_1_time_format_item" ]
     ] ],
     [ "XuServer", "namespace_xu_server.html", [
-      [ "InetAddr", "class_xu_server_1_1_inet_addr.html", "class_xu_server_1_1_inet_addr" ],
       [ "nocopy", "class_xu_server_1_1nocopy.html", "class_xu_server_1_1nocopy" ],
-      [ "UdpServer", "class_xu_server_1_1_udp_server.html", "class_xu_server_1_1_udp_server" ]
+      [ "ServerLog", "class_xu_server_1_1_server_log.html", "class_xu_server_1_1_server_log" ],
+      [ "Socket", "class_xu_server_1_1_socket.html", "class_xu_server_1_1_socket" ],
+      [ "TcpServer", "class_xu_server_1_1_tcp_server.html", "class_xu_server_1_1_tcp_server" ],
+      [ "TcpSocket", "class_xu_server_1_1_tcp_socket.html", "class_xu_server_1_1_tcp_socket" ],
+      [ "ThreadData", "class_xu_server_1_1_thread_data.html", "class_xu_server_1_1_thread_data" ],
+      [ "threadpool", "class_xu_server_1_1threadpool.html", "class_xu_server_1_1threadpool" ],
+      [ "UdpSocket", "class_xu_server_1_1_udp_socket.html", "class_xu_server_1_1_udp_socket" ]
     ] ],
     [ "DataBaseSink", "class_data_base_sink.html", "class_data_base_sink" ],
     [ "RollSinkByTime", "class_roll_sink_by_time.html", "class_roll_sink_by_time" ],
-    [ "SqliteHelper", "class_sqlite_helper.html", "class_sqlite_helper" ],
-    [ "UDPServerSink", "class_u_d_p_server_sink.html", "class_u_d_p_server_sink" ]
+    [ "ServerSink", "class_server_sink.html", "class_server_sink" ],
+    [ "SqliteHelper", "class_sqlite_helper.html", "class_sqlite_helper" ]
 ];

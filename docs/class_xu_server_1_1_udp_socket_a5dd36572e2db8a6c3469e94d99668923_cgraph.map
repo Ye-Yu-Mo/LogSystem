@@ -1,0 +1,7 @@
+<map id="XuServer::UdpSocket::CreateBuildSocketMethod" name="XuServer::UdpSocket::CreateBuildSocketMethod">
+<area shape="rect" id="Node000001" title="创建并绑定Socket。" alt="" coords="5,37,204,77"/>
+<area shape="rect" id="Node000002" href="$class_xu_server_1_1_udp_socket.html#a54bd8bf251f0e196a9d493b2a48402e3" title="绑定UDP Socket到指定端口，若绑定失败则终止程序。" alt="" coords="252,5,411,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,41,238,36,239,41,205,46"/>
+<area shape="rect" id="Node000003" href="$class_xu_server_1_1_udp_socket.html#a137da8b8d82d169b75a5619c1e66ee18" title="创建UDP Socket，若创建失败则终止程序。" alt="" coords="252,69,411,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="205,69,239,74,238,79,204,74"/>
+</map>

@@ -19,7 +19,6 @@ var hierarchy =
       [ "Xulog::TimeFormatItem", "class_xulog_1_1_time_format_item.html", null ]
     ] ],
     [ "Xulog::Formatter", "class_xulog_1_1_formatter.html", null ],
-    [ "XuServer::InetAddr", "class_xu_server_1_1_inet_addr.html", null ],
     [ "Xulog::Logger", "class_xulog_1_1_logger.html", [
       [ "Xulog::AsyncLogger", "class_xulog_1_1_async_logger.html", null ],
       [ "Xulog::SyncLogger", "class_xulog_1_1_sync_logger.html", null ]
@@ -34,14 +33,21 @@ var hierarchy =
     [ "Xulog::LogSink", "class_xulog_1_1_log_sink.html", [
       [ "DataBaseSink", "class_data_base_sink.html", null ],
       [ "RollSinkByTime", "class_roll_sink_by_time.html", null ],
-      [ "UDPServerSink", "class_u_d_p_server_sink.html", null ],
+      [ "ServerSink", "class_server_sink.html", null ],
       [ "Xulog::FileSink", "class_xulog_1_1_file_sink.html", null ],
       [ "Xulog::RollSinkBySize", "class_xulog_1_1_roll_sink_by_size.html", null ],
       [ "Xulog::StdoutSink", "class_xulog_1_1_stdout_sink.html", null ]
     ] ],
     [ "XuServer::nocopy", "class_xu_server_1_1nocopy.html", [
-      [ "XuServer::UdpServer", "class_xu_server_1_1_udp_server.html", null ]
+      [ "XuServer::TcpServer", "class_xu_server_1_1_tcp_server.html", null ]
     ] ],
+    [ "XuServer::ServerLog", "class_xu_server_1_1_server_log.html", null ],
     [ "Xulog::SinkFactory", "class_xulog_1_1_sink_factory.html", null ],
-    [ "SqliteHelper", "class_sqlite_helper.html", null ]
+    [ "XuServer::Socket", "class_xu_server_1_1_socket.html", [
+      [ "XuServer::TcpSocket", "class_xu_server_1_1_tcp_socket.html", null ],
+      [ "XuServer::UdpSocket", "class_xu_server_1_1_udp_socket.html", null ]
+    ] ],
+    [ "SqliteHelper", "class_sqlite_helper.html", null ],
+    [ "XuServer::ThreadData", "class_xu_server_1_1_thread_data.html", null ],
+    [ "XuServer::threadpool", "class_xu_server_1_1threadpool.html", null ]
 ];

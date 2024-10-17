@@ -1,0 +1,9 @@
+<map id="XuServer::TcpSocket::BuildListenSocketMethod" name="XuServer::TcpSocket::BuildListenSocketMethod">
+<area shape="rect" id="Node000001" title="创建、绑定并监听Socket。" alt="" coords="5,69,200,109"/>
+<area shape="rect" id="Node000002" href="$class_xu_server_1_1_tcp_socket.html#ab3ea2de018c56a20ee1ad3d0bd77ab71" title="绑定TCP Socket到指定端口，若绑定失败则终止程序。" alt="" coords="248,5,401,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,67,241,47,242,52,174,72"/>
+<area shape="rect" id="Node000003" href="$class_xu_server_1_1_tcp_socket.html#a49d754ebad053bad18150ed2313a0d5d" title="创建TCP Socket，若创建失败则终止程序。" alt="" coords="248,69,401,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,87,234,87,234,92,200,92"/>
+<area shape="rect" id="Node000004" href="$class_xu_server_1_1_tcp_socket.html#a8a713cc0e3c69f3b53a0ab8f9cbbd4a0" title="监听TCP连接，若监听失败则终止程序。" alt="" coords="248,133,401,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="174,107,242,127,241,132,172,112"/>
+</map>

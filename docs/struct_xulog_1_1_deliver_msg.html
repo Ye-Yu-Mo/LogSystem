@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
   <td id="projectalign">
-   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.2</span>
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.3</span>
    </div>
    <div id="projectbrief">This is a logging system project</div>
   </td>
@@ -104,13 +104,16 @@ $(document).ready(function(){initNavTree('struct_xulog_1_1_deliver_msg.html','')
 </div><!--header-->
 <div class="contents">
 
+<p>传递的消息  
+ <a href="struct_xulog_1_1_deliver_msg.html#details">更多...</a></p>
+
 <p><code>#include &lt;<a class="el" href="codec_8hpp_source.html">codec.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Xulog::DeliverMsg 的协作图:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_xulog_1_1_deliver_msg__coll__graph.png" border="0" usemap="#a_xulog_1_1_deliver_msg_coll__map" alt="Collaboration graph"/></div>
 <map name="a_xulog_1_1_deliver_msg_coll__map" id="a_xulog_1_1_deliver_msg_coll__map">
-<area shape="rect" title=" " alt="" coords="5,93,147,119"/>
+<area shape="rect" title="传递的消息" alt="" coords="5,93,147,119"/>
 <area shape="rect" href="struct_xulog_1_1_log_msg.html" title="日志消息结构体" alt="" coords="17,5,135,31"/>
 <area shape="poly" title=" " alt="" coords="79,45,79,93,73,93,73,45"/>
 </map>
@@ -118,69 +121,64 @@ Xulog::DeliverMsg 的协作图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public 属性</h2></td></tr>
-<tr class="memitem:ab206e6da44d39fe9366b8be9b84943d4" id="r_ab206e6da44d39fe9366b8be9b84943d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_xulog_1_1_log_msg.html">LogMsg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xulog_1_1_deliver_msg.html#ab206e6da44d39fe9366b8be9b84943d4">msg</a></td></tr>
-<tr class="separator:ab206e6da44d39fe9366b8be9b84943d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec8d88502dee42c0ced8cdf6a1c635cc" id="r_aec8d88502dee42c0ced8cdf6a1c635cc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xulog_1_1_deliver_msg.html#aec8d88502dee42c0ced8cdf6a1c635cc">logger_name</a></td></tr>
-<tr class="separator:aec8d88502dee42c0ced8cdf6a1c635cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3d917181a1f21868b0337db272467f6" id="r_af3d917181a1f21868b0337db272467f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xulog_1_1_log_level.html#a6bdea31434e495fc5a19b8e48e3e613b">Xulog::LogLevel::value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xulog_1_1_deliver_msg.html#af3d917181a1f21868b0337db272467f6">limit_level</a></td></tr>
-<tr class="separator:af3d917181a1f21868b0337db272467f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b642190180f67f03a4a69ad2cfd981f" id="r_a4b642190180f67f03a4a69ad2cfd981f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xulog_1_1_deliver_msg.html#a4b642190180f67f03a4a69ad2cfd981f">pattern</a></td></tr>
-<tr class="separator:a4b642190180f67f03a4a69ad2cfd981f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78056cdbb0e230a7a46644262998f2f6" id="r_a78056cdbb0e230a7a46644262998f2f6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xulog_1_1_deliver_msg.html#a78056cdbb0e230a7a46644262998f2f6">msg_mod</a></td></tr>
+<tr class="memdesc:a78056cdbb0e230a7a46644262998f2f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息模式  <br /></td></tr>
+<tr class="separator:a78056cdbb0e230a7a46644262998f2f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402dd219c8be083ab549fef55eee2519" id="r_a402dd219c8be083ab549fef55eee2519"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xulog_1_1_deliver_msg.html#a402dd219c8be083ab549fef55eee2519">unformatted_msg</a></td></tr>
+<tr class="memdesc:a402dd219c8be083ab549fef55eee2519"><td class="mdescLeft">&#160;</td><td class="mdescRight">非结构化消息  <br /></td></tr>
+<tr class="separator:a402dd219c8be083ab549fef55eee2519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb26f87d9dc71e67b3907df8a1922683" id="r_adb26f87d9dc71e67b3907df8a1922683"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_xulog_1_1_log_msg.html">LogMsg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xulog_1_1_deliver_msg.html#adb26f87d9dc71e67b3907df8a1922683">format_msg</a></td></tr>
+<tr class="memdesc:adb26f87d9dc71e67b3907df8a1922683"><td class="mdescLeft">&#160;</td><td class="mdescRight">结构化信息  <br /></td></tr>
+<tr class="separator:adb26f87d9dc71e67b3907df8a1922683"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">类成员变量说明</h2>
-<a id="af3d917181a1f21868b0337db272467f6" name="af3d917181a1f21868b0337db272467f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3d917181a1f21868b0337db272467f6">&#9670;&#160;</a></span>limit_level</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>传递的消息 </p>
+</div><h2 class="groupheader">类成员变量说明</h2>
+<a id="adb26f87d9dc71e67b3907df8a1922683" name="adb26f87d9dc71e67b3907df8a1922683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb26f87d9dc71e67b3907df8a1922683">&#9670;&#160;</a></span>format_msg</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_xulog_1_1_log_level.html#a6bdea31434e495fc5a19b8e48e3e613b">Xulog::LogLevel::value</a> Xulog::DeliverMsg::limit_level</td>
+          <td class="memname"><a class="el" href="struct_xulog_1_1_log_msg.html">LogMsg</a> Xulog::DeliverMsg::format_msg</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>结构化信息 </p>
+
 </div>
 </div>
-<a id="aec8d88502dee42c0ced8cdf6a1c635cc" name="aec8d88502dee42c0ced8cdf6a1c635cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec8d88502dee42c0ced8cdf6a1c635cc">&#9670;&#160;</a></span>logger_name</h2>
+<a id="a78056cdbb0e230a7a46644262998f2f6" name="a78056cdbb0e230a7a46644262998f2f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78056cdbb0e230a7a46644262998f2f6">&#9670;&#160;</a></span>msg_mod</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string Xulog::DeliverMsg::logger_name</td>
+          <td class="memname">std::string Xulog::DeliverMsg::msg_mod</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>消息模式 </p>
+
 </div>
 </div>
-<a id="ab206e6da44d39fe9366b8be9b84943d4" name="ab206e6da44d39fe9366b8be9b84943d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab206e6da44d39fe9366b8be9b84943d4">&#9670;&#160;</a></span>msg</h2>
+<a id="a402dd219c8be083ab549fef55eee2519" name="a402dd219c8be083ab549fef55eee2519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402dd219c8be083ab549fef55eee2519">&#9670;&#160;</a></span>unformatted_msg</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_xulog_1_1_log_msg.html">LogMsg</a> Xulog::DeliverMsg::msg</td>
+          <td class="memname">std::string Xulog::DeliverMsg::unformatted_msg</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a4b642190180f67f03a4a69ad2cfd981f" name="a4b642190180f67f03a4a69ad2cfd981f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b642190180f67f03a4a69ad2cfd981f">&#9670;&#160;</a></span>pattern</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Xulog::DeliverMsg::pattern</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>非结构化消息 </p>
 
 </div>
 </div>

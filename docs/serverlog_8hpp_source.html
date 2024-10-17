@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LogSystem: server/serverlog.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.3</span>
+   </div>
+   <div id="projectbrief">This is a logging system project</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('serverlog_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">serverlog.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="serverlog_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../extend/DataBaseSink.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="codec_8hpp.html">codec.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="server_8hpp.html">server.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_xu_server.html">XuServer</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_server_log.html">   11</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_server_1_1_server_log.html">ServerLog</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_server_log.html#aab36ad16185ab00adcb736f557e81bf0">   15</a></span>        <a class="code hl_function" href="class_xu_server_1_1_server_log.html#aab36ad16185ab00adcb736f557e81bf0">ServerLog</a>()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_xu_server_1_1_server_log.html#a37980e62722085894a1b33f2ab9b8df6">_builder</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                <span class="comment">// 日志器配置</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                <a class="code hl_variable" href="class_xu_server_1_1_server_log.html#a37980e62722085894a1b33f2ab9b8df6">_builder</a> = std::make_shared&lt;Xulog::GlobalLoggerBuild&gt;();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                <a class="code hl_variable" href="class_xu_server_1_1_server_log.html#a37980e62722085894a1b33f2ab9b8df6">_builder</a>-&gt;buildLoggerName(<span class="stringliteral">&quot;server&quot;</span>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                <a class="code hl_variable" href="class_xu_server_1_1_server_log.html#a37980e62722085894a1b33f2ab9b8df6">_builder</a>-&gt;buildFormatter();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                <a class="code hl_variable" href="class_xu_server_1_1_server_log.html#a37980e62722085894a1b33f2ab9b8df6">_builder</a>-&gt;buildLoggerType();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                <a class="code hl_variable" href="class_xu_server_1_1_server_log.html#a37980e62722085894a1b33f2ab9b8df6">_builder</a>-&gt;build();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_server_log.html#ad2985e18e3b4b3debf7fa8e20bff2281">   29</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_server_1_1_server_log.html#ad2985e18e3b4b3debf7fa8e20bff2281">operator()</a>(std::string &amp;msg)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <a class="code hl_variable" href="class_xu_server_1_1_server_log.html#a5b678959fd0c24a90481f3903db257a0">_logger</a> = <a class="code hl_function" href="namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3">Xulog::getLogger</a>(<span class="stringliteral">&quot;server&quot;</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="comment">// std::cout &lt;&lt; _sinks.size() &lt;&lt; std::endl;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            Json::CharReaderBuilder reader;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            Json::Value root;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            std::istringstream(msg) &gt;&gt; root;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_struct" href="struct_xulog_1_1_deliver_msg.html">Xulog::DeliverMsg</a> dmsg = <a class="code hl_function" href="class_xulog_1_1_codec.html#a31d9e0d48b6beb9ae79540938552d090">Xulog::Codec::fromJson</a>(root);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            std::string str;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">if</span> (dmsg.<a class="code hl_variable" href="struct_xulog_1_1_deliver_msg.html#a78056cdbb0e230a7a46644262998f2f6">msg_mod</a> == <span class="stringliteral">&quot;format&quot;</span>)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_xu_server_1_1_server_log.html#a5b678959fd0c24a90481f3903db257a0">_logger</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                    std::cout &lt;&lt; <span class="stringliteral">&quot;_logger 空指针！！&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_xu_server_1_1_server_log.html#a5b678959fd0c24a90481f3903db257a0">_logger</a>-&gt;getFormatter() == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                        std::cout &lt;&lt; <span class="stringliteral">&quot;getFormatter 空指针！！&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                        str = <a class="code hl_variable" href="class_xu_server_1_1_server_log.html#a5b678959fd0c24a90481f3903db257a0">_logger</a>-&gt;getFormatter()-&gt;Format(dmsg.<a class="code hl_variable" href="struct_xulog_1_1_deliver_msg.html#adb26f87d9dc71e67b3907df8a1922683">format_msg</a>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                str = dmsg.<a class="code hl_variable" href="struct_xulog_1_1_deliver_msg.html#a402dd219c8be083ab549fef55eee2519">unformatted_msg</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            std::vector&lt;Xulog::LogSink::ptr&gt; sinks;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <a class="code hl_function" href="class_xu_server_1_1_server_log.html#a94305ee7d0417f871c4f0f7fa4ee3b47">init</a>(sinks);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> sink : sinks)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                sink-&gt;log(str.c_str(), str.size());</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">private</span>:</div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_server_log.html#a94305ee7d0417f871c4f0f7fa4ee3b47">   61</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_server_1_1_server_log.html#a94305ee7d0417f871c4f0f7fa4ee3b47">init</a>(std::vector&lt;Xulog::LogSink::ptr&gt; &amp;sinks)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <a class="code hl_typedef" href="class_xulog_1_1_log_sink.html#a411346b1e96d35e9f6f4459e27034485">Xulog::LogSink::ptr</a> std = std::make_shared&lt;Xulog::StdoutSink&gt;();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <a class="code hl_typedef" href="class_xulog_1_1_log_sink.html#a411346b1e96d35e9f6f4459e27034485">Xulog::FileSink::ptr</a> file = std::make_shared&lt;Xulog::FileSink&gt;(<span class="stringliteral">&quot;./test.log&quot;</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            sinks.push_back(std);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            sinks.push_back(file);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_server_log.html#a37980e62722085894a1b33f2ab9b8df6">   70</a></span>        <span class="keyword">static</span> std::shared_ptr&lt;Xulog::LoggerBuilder&gt; <a class="code hl_variable" href="class_xu_server_1_1_server_log.html#a37980e62722085894a1b33f2ab9b8df6">_builder</a>; </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_server_log.html#a5b678959fd0c24a90481f3903db257a0">   71</a></span>        <a class="code hl_typedef" href="class_xulog_1_1_logger.html#abedc00e62ee525316cea9bcbcdcefc47">Xulog::Logger::ptr</a> <a class="code hl_variable" href="class_xu_server_1_1_server_log.html#a5b678959fd0c24a90481f3903db257a0">_logger</a>;                            </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    };</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    std::shared_ptr&lt;Xulog::LoggerBuilder&gt; <a class="code hl_variable" href="class_xu_server_1_1_server_log.html#a37980e62722085894a1b33f2ab9b8df6">ServerLog::_builder</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+<div class="ttc" id="aclass_xu_server_1_1_server_log_html"><div class="ttname"><a href="class_xu_server_1_1_server_log.html">XuServer::ServerLog</a></div><div class="ttdoc">服务器实际执行落地的类</div><div class="ttdef"><b>Definition</b> serverlog.hpp:12</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_server_log_html_a37980e62722085894a1b33f2ab9b8df6"><div class="ttname"><a href="class_xu_server_1_1_server_log.html#a37980e62722085894a1b33f2ab9b8df6">XuServer::ServerLog::_builder</a></div><div class="ttdeci">static std::shared_ptr&lt; Xulog::LoggerBuilder &gt; _builder</div><div class="ttdoc">日志构造器</div><div class="ttdef"><b>Definition</b> serverlog.hpp:70</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_server_log_html_a5b678959fd0c24a90481f3903db257a0"><div class="ttname"><a href="class_xu_server_1_1_server_log.html#a5b678959fd0c24a90481f3903db257a0">XuServer::ServerLog::_logger</a></div><div class="ttdeci">Xulog::Logger::ptr _logger</div><div class="ttdoc">日志器句柄</div><div class="ttdef"><b>Definition</b> serverlog.hpp:71</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_server_log_html_a94305ee7d0417f871c4f0f7fa4ee3b47"><div class="ttname"><a href="class_xu_server_1_1_server_log.html#a94305ee7d0417f871c4f0f7fa4ee3b47">XuServer::ServerLog::init</a></div><div class="ttdeci">void init(std::vector&lt; Xulog::LogSink::ptr &gt; &amp;sinks)</div><div class="ttdoc">初始化落地方式</div><div class="ttdef"><b>Definition</b> serverlog.hpp:61</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_server_log_html_aab36ad16185ab00adcb736f557e81bf0"><div class="ttname"><a href="class_xu_server_1_1_server_log.html#aab36ad16185ab00adcb736f557e81bf0">XuServer::ServerLog::ServerLog</a></div><div class="ttdeci">ServerLog()</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition</b> serverlog.hpp:15</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_server_log_html_ad2985e18e3b4b3debf7fa8e20bff2281"><div class="ttname"><a href="class_xu_server_1_1_server_log.html#ad2985e18e3b4b3debf7fa8e20bff2281">XuServer::ServerLog::operator()</a></div><div class="ttdeci">void operator()(std::string &amp;msg)</div><div class="ttdoc">仿函数</div><div class="ttdef"><b>Definition</b> serverlog.hpp:29</div></div>
+<div class="ttc" id="aclass_xulog_1_1_codec_html_a31d9e0d48b6beb9ae79540938552d090"><div class="ttname"><a href="class_xulog_1_1_codec.html#a31d9e0d48b6beb9ae79540938552d090">Xulog::Codec::fromJson</a></div><div class="ttdeci">static DeliverMsg fromJson(const Json::Value &amp;json)</div><div class="ttdoc">将Json信息反序列化为传递消息</div><div class="ttdef"><b>Definition</b> codec.hpp:51</div></div>
+<div class="ttc" id="aclass_xulog_1_1_log_sink_html_a411346b1e96d35e9f6f4459e27034485"><div class="ttname"><a href="class_xulog_1_1_log_sink.html#a411346b1e96d35e9f6f4459e27034485">Xulog::LogSink::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; LogSink &gt; ptr</div><div class="ttdoc">智能指针类型</div><div class="ttdef"><b>Definition</b> sink.hpp:29</div></div>
+<div class="ttc" id="aclass_xulog_1_1_logger_html_abedc00e62ee525316cea9bcbcdcefc47"><div class="ttname"><a href="class_xulog_1_1_logger.html#abedc00e62ee525316cea9bcbcdcefc47">Xulog::Logger::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Logger &gt; ptr</div><div class="ttdef"><b>Definition</b> logger.hpp:44</div></div>
+<div class="ttc" id="acodec_8hpp_html"><div class="ttname"><a href="codec_8hpp.html">codec.hpp</a></div><div class="ttdoc">对日志信息进行序列化和反序列化</div></div>
+<div class="ttc" id="anamespace_xu_server_html"><div class="ttname"><a href="namespace_xu_server.html">XuServer</a></div><div class="ttdef"><b>Definition</b> nocopy.hpp:5</div></div>
+<div class="ttc" id="anamespace_xulog_html_a41e363ba050c15f3b4e1d157354d59c3"><div class="ttname"><a href="namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3">Xulog::getLogger</a></div><div class="ttdeci">Logger::ptr getLogger(const std::string &amp;name)</div><div class="ttdoc">获取指定名称的日志器</div><div class="ttdef"><b>Definition</b> Xulog.h:21</div></div>
+<div class="ttc" id="aserver_8hpp_html"><div class="ttname"><a href="server_8hpp.html">server.hpp</a></div><div class="ttdoc">TCP服务器</div></div>
+<div class="ttc" id="astruct_xulog_1_1_deliver_msg_html"><div class="ttname"><a href="struct_xulog_1_1_deliver_msg.html">Xulog::DeliverMsg</a></div><div class="ttdoc">传递的消息</div><div class="ttdef"><b>Definition</b> codec.hpp:18</div></div>
+<div class="ttc" id="astruct_xulog_1_1_deliver_msg_html_a402dd219c8be083ab549fef55eee2519"><div class="ttname"><a href="struct_xulog_1_1_deliver_msg.html#a402dd219c8be083ab549fef55eee2519">Xulog::DeliverMsg::unformatted_msg</a></div><div class="ttdeci">std::string unformatted_msg</div><div class="ttdoc">非结构化消息</div><div class="ttdef"><b>Definition</b> codec.hpp:20</div></div>
+<div class="ttc" id="astruct_xulog_1_1_deliver_msg_html_a78056cdbb0e230a7a46644262998f2f6"><div class="ttname"><a href="struct_xulog_1_1_deliver_msg.html#a78056cdbb0e230a7a46644262998f2f6">Xulog::DeliverMsg::msg_mod</a></div><div class="ttdeci">std::string msg_mod</div><div class="ttdoc">消息模式</div><div class="ttdef"><b>Definition</b> codec.hpp:19</div></div>
+<div class="ttc" id="astruct_xulog_1_1_deliver_msg_html_adb26f87d9dc71e67b3907df8a1922683"><div class="ttname"><a href="struct_xulog_1_1_deliver_msg.html#adb26f87d9dc71e67b3907df8a1922683">Xulog::DeliverMsg::format_msg</a></div><div class="ttdeci">LogMsg format_msg</div><div class="ttdoc">结构化信息</div><div class="ttdef"><b>Definition</b> codec.hpp:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="serverlog_8hpp.html">serverlog.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

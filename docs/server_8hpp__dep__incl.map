@@ -1,5 +1,8 @@
 <map id="server/server.hpp" name="server/server.hpp">
-<area shape="rect" id="Node000001" title="定义了 UdpServer 类，用于实现 UDP 服务器功能" alt="" coords="21,5,156,31"/>
-<area shape="rect" id="Node000002" href="$server__main_8cc.html" title=" " alt="" coords="5,79,172,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,44,91,79,86,79,86,44"/>
+<area shape="rect" id="Node000001" title="TCP服务器" alt="" coords="17,5,152,31"/>
+<area shape="rect" id="Node000002" href="$_server_main_8cc.html" title=" " alt="" coords="5,152,164,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,43,55,79,54,99,60,118,78,150,73,153,55,120,49,99,50,78,66,41"/>
+<area shape="rect" id="Node000003" href="$serverlog_8hpp.html" title="服务器实际执行落地的类" alt="" coords="65,79,221,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,40,136,77,132,80,101,43"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="127,116,96,154,92,150,123,113"/>
 </map>

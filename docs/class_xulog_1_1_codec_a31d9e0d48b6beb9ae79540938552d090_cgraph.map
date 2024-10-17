@@ -1,8 +1,7 @@
 <map id="Xulog::Codec::fromJson" name="Xulog::Codec::fromJson">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,179,31"/>
-<area shape="rect" id="Node000002" href="$class_xulog_1_1_log_level.html#a55a58ff5f7755c98ec623037144661fb" title="从字符串转换成日志等级" alt="" coords="477,5,680,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,15,464,15,464,21,179,21"/>
-<area shape="rect" id="Node000003" href="$class_xulog_1_1_codec.html#a6970d0f5d69318c65b15ec7bed3549ce" title=" " alt="" coords="227,31,429,56"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,25,213,28,213,34,179,30"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="429,30,464,27,464,32,430,36"/>
+<area shape="rect" id="Node000001" title="将Json信息反序列化为传递消息" alt="" coords="5,5,179,31"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_codec.html#a6970d0f5d69318c65b15ec7bed3549ce" title="将Json信息反序列化为传递消息" alt="" coords="227,5,429,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,15,213,15,213,21,179,21"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_log_level.html#a55a58ff5f7755c98ec623037144661fb" title="从字符串转换成日志等级" alt="" coords="477,5,680,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="429,15,464,15,464,21,429,21"/>
 </map>

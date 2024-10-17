@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
   <td id="projectalign">
-   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.2</span>
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.3</span>
    </div>
    <div id="projectbrief">This is a logging system project</div>
   </td>
@@ -99,6 +99,7 @@ $(document).ready(function(){initNavTree('namespace_xu_server.html',''); initRes
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
 <a href="#var-members">变量</a>  </div>
   <div class="headertitle"><div class="title">XuServer 命名空间参考</div></div>
 </div><!--header-->
@@ -106,30 +107,65 @@ $(document).ready(function(){initNavTree('namespace_xu_server.html',''); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_inet_addr.html">InetAddr</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">将接收到的网络信息格式化  <a href="class_xu_server_1_1_inet_addr.html#details">更多...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1nocopy.html">nocopy</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_udp_server.html">UdpServer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDP 服务器类  <a href="class_xu_server_1_1_udp_server.html#details">更多...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_server_log.html">ServerLog</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器实际执行落地的类  <a href="class_xu_server_1_1_server_log.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_socket.html">Socket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">抽象基类，封装基本Socket操作。  <a href="class_xu_server_1_1_socket.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_tcp_server.html">TcpServer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP服务器  <a href="class_xu_server_1_1_tcp_server.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_tcp_socket.html">TcpSocket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCPSocket类  <a href="class_xu_server_1_1_tcp_socket.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_thread_data.html">ThreadData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程信息  <a href="class_xu_server_1_1_thread_data.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1threadpool.html">threadpool</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程池类  <a href="class_xu_server_1_1threadpool.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_udp_socket.html">UdpSocket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UDPSocket类  <a href="class_xu_server_1_1_udp_socket.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:abafa31a78dad58515c9caf4e572ffe70" id="r_abafa31a78dad58515c9caf4e572ffe70"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_server.html#abafa31a78dad58515c9caf4e572ffe70">CallBack</a> = std::function&lt; std::string(std::vector&lt; char &gt; &amp;, bool *error_code)&gt;</td></tr>
+<tr class="memdesc:abafa31a78dad58515c9caf4e572ffe70"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器回调函数  <br /></td></tr>
+<tr class="separator:abafa31a78dad58515c9caf4e572ffe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 变量</h2></td></tr>
-<tr class="memitem:a1ec0eb83586aebed917abaa2706c949b" id="r_a1ec0eb83586aebed917abaa2706c949b"><td class="memItemLeft" align="right" valign="top">static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_server.html#a1ec0eb83586aebed917abaa2706c949b">defaultport</a> = 8888</td></tr>
-<tr class="memdesc:a1ec0eb83586aebed917abaa2706c949b"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认端口号  <br /></td></tr>
-<tr class="separator:a1ec0eb83586aebed917abaa2706c949b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e78034bbe486d31b37f86b8ec10c24a" id="r_a2e78034bbe486d31b37f86b8ec10c24a"><td class="memItemLeft" align="right" valign="top">static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_server.html#a2e78034bbe486d31b37f86b8ec10c24a">defaultfd</a> = -1</td></tr>
-<tr class="memdesc:a2e78034bbe486d31b37f86b8ec10c24a"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认socket  <br /></td></tr>
-<tr class="separator:a2e78034bbe486d31b37f86b8ec10c24a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae49755197fc97b266f5274265d053c66" id="r_ae49755197fc97b266f5274265d053c66"><td class="memItemLeft" align="right" valign="top">static const uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_server.html#ae49755197fc97b266f5274265d053c66">defaultsize</a> = 1024</td></tr>
-<tr class="memdesc:ae49755197fc97b266f5274265d053c66"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认缓冲区大小  <br /></td></tr>
-<tr class="separator:ae49755197fc97b266f5274265d053c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2df1cbd042c6868d9636fe69c4b7c139" id="r_a2df1cbd042c6868d9636fe69c4b7c139"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_server.html#a2df1cbd042c6868d9636fe69c4b7c139">DEFAULT_SOCKFD</a> = -1</td></tr>
+<tr class="memdesc:a2df1cbd042c6868d9636fe69c4b7c139"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认无效sockfd  <br /></td></tr>
+<tr class="separator:a2df1cbd042c6868d9636fe69c4b7c139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe60c75cca27b1d5071f095ec13be438" id="r_afe60c75cca27b1d5071f095ec13be438"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_server.html#afe60c75cca27b1d5071f095ec13be438">DEFAULT_BACKLOG</a> = 128</td></tr>
+<tr class="memdesc:afe60c75cca27b1d5071f095ec13be438"><td class="mdescLeft">&#160;</td><td class="mdescRight">默认监听队列长度  <br /></td></tr>
+<tr class="separator:afe60c75cca27b1d5071f095ec13be438"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="abafa31a78dad58515c9caf4e572ffe70" name="abafa31a78dad58515c9caf4e572ffe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abafa31a78dad58515c9caf4e572ffe70">&#9670;&#160;</a></span>CallBack</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespace_xu_server.html#abafa31a78dad58515c9caf4e572ffe70">XuServer::CallBack</a> = typedef std::function&lt;std::string(std::vector&lt;char&gt; &amp;, bool *error_code)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>服务器回调函数 </p>
+
+</div>
+</div>
 <h2 class="groupheader">变量说明</h2>
-<a id="a2e78034bbe486d31b37f86b8ec10c24a" name="a2e78034bbe486d31b37f86b8ec10c24a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e78034bbe486d31b37f86b8ec10c24a">&#9670;&#160;</a></span>defaultfd</h2>
+<a id="afe60c75cca27b1d5071f095ec13be438" name="afe60c75cca27b1d5071f095ec13be438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe60c75cca27b1d5071f095ec13be438">&#9670;&#160;</a></span>DEFAULT_BACKLOG</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -138,22 +174,22 @@ $(document).ready(function(){initNavTree('namespace_xu_server.html',''); initRes
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const uint16_t XuServer::defaultfd = -1</td>
+          <td class="memname">constexpr int XuServer::DEFAULT_BACKLOG = 128</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>默认socket </p>
+<p>默认监听队列长度 </p>
 
 </div>
 </div>
-<a id="a1ec0eb83586aebed917abaa2706c949b" name="a1ec0eb83586aebed917abaa2706c949b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ec0eb83586aebed917abaa2706c949b">&#9670;&#160;</a></span>defaultport</h2>
+<a id="a2df1cbd042c6868d9636fe69c4b7c139" name="a2df1cbd042c6868d9636fe69c4b7c139"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df1cbd042c6868d9636fe69c4b7c139">&#9670;&#160;</a></span>DEFAULT_SOCKFD</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,41 +198,17 @@ $(document).ready(function(){initNavTree('namespace_xu_server.html',''); initRes
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const uint16_t XuServer::defaultport = 8888</td>
+          <td class="memname">constexpr int XuServer::DEFAULT_SOCKFD = -1</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>默认端口号 </p>
-
-</div>
-</div>
-<a id="ae49755197fc97b266f5274265d053c66" name="ae49755197fc97b266f5274265d053c66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae49755197fc97b266f5274265d053c66">&#9670;&#160;</a></span>defaultsize</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const uint16_t XuServer::defaultsize = 1024</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>默认缓冲区大小 </p>
+<p>默认无效sockfd </p>
 
 </div>
 </div>

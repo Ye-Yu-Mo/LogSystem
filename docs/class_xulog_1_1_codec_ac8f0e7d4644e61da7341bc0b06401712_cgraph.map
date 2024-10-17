@@ -1,5 +1,5 @@
 <map id="Xulog::Codec::msgToJson" name="Xulog::Codec::msgToJson">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,189,31"/>
+<area shape="rect" id="Node000001" title="将结构化信息序列化为Json格式" alt="" coords="5,5,189,31"/>
 <area shape="rect" id="Node000002" href="$class_xulog_1_1_log_level.html#a6d6fcbb384db801aa1faa908eca98a97" title="将日志等级转换为对应的字符串" alt="" coords="237,5,421,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,15,223,15,223,21,190,21"/>
 </map>

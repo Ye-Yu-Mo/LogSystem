@@ -1,0 +1,11 @@
+<map id="XuServer::TcpServer::TcpServer" name="XuServer::TcpServer::TcpServer">
+<area shape="rect" id="Node000001" title="构造函数" alt="" coords="5,69,157,109"/>
+<area shape="rect" id="Node000002" href="$class_xu_server_1_1_tcp_socket.html#ac0a029cce5f0a8f9ab95e64dbc332d75" title="创建、绑定并监听Socket。" alt="" coords="205,69,400,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,87,192,87,192,92,158,92"/>
+<area shape="rect" id="Node000003" href="$class_xu_server_1_1_tcp_socket.html#ab3ea2de018c56a20ee1ad3d0bd77ab71" title="绑定TCP Socket到指定端口，若绑定失败则终止程序。" alt="" coords="448,5,601,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="372,67,441,47,442,52,374,72"/>
+<area shape="rect" id="Node000004" href="$class_xu_server_1_1_tcp_socket.html#a49d754ebad053bad18150ed2313a0d5d" title="创建TCP Socket，若创建失败则终止程序。" alt="" coords="448,69,601,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="400,87,434,87,434,92,400,92"/>
+<area shape="rect" id="Node000005" href="$class_xu_server_1_1_tcp_socket.html#a8a713cc0e3c69f3b53a0ab8f9cbbd4a0" title="监听TCP连接，若监听失败则终止程序。" alt="" coords="448,133,601,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="374,107,442,127,441,132,372,112"/>
+</map>

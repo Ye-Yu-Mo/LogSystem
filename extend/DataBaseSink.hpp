@@ -2,6 +2,7 @@
  * @file DataBasesSink.hpp
  * @brief 定义了 SqliteHelper DataBaseSink类，用于数据库操作和落地到数据库
  */
+#pragma once 
 #include "../logs/util.hpp"
 #include "../logs/Xulog.h"
 #include <iostream>
@@ -192,4 +193,4 @@ private:
     Xulog::LogMsg _msg;                ///< 结构化数据
     static Xulog::Logger::ptr _logger; ///< 日志器句柄
 };
-Xulog::Logger::ptr DataBaseSink::_logger = nullptr;
+Xulog::Logger::ptr DataBaseSink::_logger = nullptr; ///< 初始化日志器句柄

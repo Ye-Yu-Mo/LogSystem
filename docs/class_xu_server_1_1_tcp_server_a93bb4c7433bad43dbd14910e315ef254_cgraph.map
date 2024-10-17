@@ -1,0 +1,9 @@
+<map id="XuServer::TcpServer::ThreadRun" name="XuServer::TcpServer::ThreadRun">
+<area shape="rect" id="Node000001" title="启动线程" alt="" coords="5,69,157,109"/>
+<area shape="rect" id="Node000002" href="$class_xu_server_1_1_tcp_socket.html#ae10d2b61b5d9bcfdbde3c76305c8eefe" title="关闭当前Socket。" alt="" coords="205,5,359,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,67,205,47,207,52,146,72"/>
+<area shape="rect" id="Node000003" href="$class_xu_server_1_1_tcp_socket.html#a4272a2310310c69f0de5a8b9e39be56a" title="接收来自对端的数据。" alt="" coords="205,69,359,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,87,191,87,191,92,158,92"/>
+<area shape="rect" id="Node000004" href="$class_xu_server_1_1_tcp_socket.html#aa89f2e34b9cb60133537c571605d0423" title="向对端发送数据。" alt="" coords="205,133,359,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="146,107,207,127,205,132,144,112"/>
+</map>

@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
   <td id="projectalign">
-   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.2</span>
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.3</span>
    </div>
    <div id="projectbrief">This is a logging system project</div>
   </td>
@@ -109,8 +109,8 @@ $(document).ready(function(){initNavTree('namespaces.html',''); initResizable();
 <tr id="row_0_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xulog_1_1_async_logger.html" target="_self">AsyncLogger</a></td><td class="desc">异步日志器 </td></tr>
 <tr id="row_0_2_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xulog_1_1_async_looper.html" target="_self">AsyncLooper</a></td><td class="desc">异步工作器类 </td></tr>
 <tr id="row_0_3_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xulog_1_1_buffer.html" target="_self">Buffer</a></td><td class="desc">异步日志缓冲区类 </td></tr>
-<tr id="row_0_4_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xulog_1_1_codec.html" target="_self">Codec</a></td><td class="desc"></td></tr>
-<tr id="row_0_5_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_xulog_1_1_deliver_msg.html" target="_self">DeliverMsg</a></td><td class="desc"></td></tr>
+<tr id="row_0_4_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xulog_1_1_codec.html" target="_self">Codec</a></td><td class="desc">@classCodec </td></tr>
+<tr id="row_0_5_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_xulog_1_1_deliver_msg.html" target="_self">DeliverMsg</a></td><td class="desc">传递的消息 </td></tr>
 <tr id="row_0_6_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xulog_1_1_file_format_item.html" target="_self">FileFormatItem</a></td><td class="desc">文件名格式化子项 </td></tr>
 <tr id="row_0_7_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xulog_1_1_file_sink.html" target="_self">FileSink</a></td><td class="desc">文件日志落地实现 </td></tr>
 <tr id="row_0_8_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xulog_1_1_format_item.html" target="_self">FormatItem</a></td><td class="desc">抽象格式化子项的基类 </td></tr>
@@ -137,9 +137,14 @@ $(document).ready(function(){initNavTree('namespaces.html',''); initResizable();
 <tr id="row_0_29_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xulog_1_1_thread_format_item.html" target="_self">ThreadFormatItem</a></td><td class="desc">线程ID格式化子项 </td></tr>
 <tr id="row_0_30_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xulog_1_1_time_format_item.html" target="_self">TimeFormatItem</a></td><td class="desc">时间格式化子项 </td></tr>
 <tr id="row_1_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_1_" class="arrow" onclick="toggleFolder('1_')">&#9660;</span><span class="icona"><span class="icon">N</span></span><a class="el" href="namespace_xu_server.html" target="_self">XuServer</a></td><td class="desc"></td></tr>
-<tr id="row_1_0_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xu_server_1_1_inet_addr.html" target="_self">InetAddr</a></td><td class="desc">将接收到的网络信息格式化 </td></tr>
-<tr id="row_1_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xu_server_1_1nocopy.html" target="_self">nocopy</a></td><td class="desc"></td></tr>
-<tr id="row_1_2_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xu_server_1_1_udp_server.html" target="_self">UdpServer</a></td><td class="desc">UDP 服务器类 </td></tr>
+<tr id="row_1_0_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xu_server_1_1nocopy.html" target="_self">nocopy</a></td><td class="desc"></td></tr>
+<tr id="row_1_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xu_server_1_1_server_log.html" target="_self">ServerLog</a></td><td class="desc">服务器实际执行落地的类 </td></tr>
+<tr id="row_1_2_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xu_server_1_1_socket.html" target="_self">Socket</a></td><td class="desc">抽象基类，封装基本Socket操作。 </td></tr>
+<tr id="row_1_3_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xu_server_1_1_tcp_server.html" target="_self">TcpServer</a></td><td class="desc">TCP服务器 </td></tr>
+<tr id="row_1_4_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xu_server_1_1_tcp_socket.html" target="_self">TcpSocket</a></td><td class="desc">TCPSocket类 </td></tr>
+<tr id="row_1_5_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xu_server_1_1_thread_data.html" target="_self">ThreadData</a></td><td class="desc">线程信息 </td></tr>
+<tr id="row_1_6_" class="odd"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xu_server_1_1threadpool.html" target="_self">threadpool</a></td><td class="desc">线程池类 </td></tr>
+<tr id="row_1_7_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_xu_server_1_1_udp_socket.html" target="_self">UdpSocket</a></td><td class="desc">UDPSocket类 </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->

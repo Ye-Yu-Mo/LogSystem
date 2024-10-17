@@ -1,0 +1,7 @@
+<map id="XuServer::Socket" name="XuServer::Socket">
+<area shape="rect" id="Node000001" title="抽象基类，封装基本Socket操作。" alt="" coords="105,5,237,31"/>
+<area shape="rect" id="Node000002" href="$class_xu_server_1_1_tcp_socket.html" title="TCPSocket类" alt="" coords="5,79,159,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,41,98,81,95,76,145,37"/>
+<area shape="rect" id="Node000003" href="$class_xu_server_1_1_udp_socket.html" title="UDPSocket类" alt="" coords="183,79,341,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,37,249,76,246,81,195,41"/>
+</map>

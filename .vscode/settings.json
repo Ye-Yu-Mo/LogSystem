@@ -78,13 +78,21 @@
         "span": "cpp",
         "stdfloat": "cpp",
         "*.ipp": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "future": "cpp",
+        "*.inc": "cpp"
     },
     "cSpell.words": [
         "dbfile",
+        "inbuffer",
         "loggername",
+        "newsockfd",
+        "peerip",
+        "peerport",
         "psink",
+        "serverport",
         "synclogger",
+        "threadpool",
         "tparam",
         "Xulog"
     ]

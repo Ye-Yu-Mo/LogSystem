@@ -1,26 +1,25 @@
 <map id="Xulog::LoggerManager::getLogger" name="Xulog::LoggerManager::getLogger">
-<area shape="rect" id="Node000001" title="获取指定名称的日志器" alt="" coords="689,162,857,202"/>
-<area shape="rect" id="Node000002" href="$namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="509,169,641,195"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="676,185,642,185,642,179,676,179"/>
-<area shape="rect" id="Node000003" href="$bench_8cc.html#a50e07be47fb2d4bc0ab579d1f67a0d47" title=" " alt="" coords="357,44,418,69"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="552,161,512,121,460,83,417,66,419,61,463,78,515,117,556,157"/>
-<area shape="rect" id="Node000007" href="$class_data_base_sink.html#aa225abc961083998a7e7780d827dfa2b" title="存储到数据库" alt="" coords="317,93,458,119"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="530,167,419,121,421,116,532,162"/>
-<area shape="rect" id="Node000008" href="$class_xu_server_1_1_udp_server.html#a9549d3661f13a7e55a691f50662ee27f" title="启动服务器" alt="" coords="108,126,265,166"/>
-<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="495,177,265,156,266,151,496,172"/>
-<area shape="rect" id="Node000009" href="$class_u_d_p_server_sink.html#a058c93fb291b757e681dd27868b616da" title="发送数据" alt="" coords="313,195,461,220"/>
-<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="496,195,462,200,461,195,496,190"/>
-<area shape="rect" id="Node000010" href="$_data_base_test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="360,244,415,269"/>
-<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="535,203,462,234,416,251,414,246,460,229,533,198"/>
-<area shape="rect" id="Node000011" href="$test_8cc.html#ac23db1c84059647b8979ebb5504142ef" title=" " alt="" coords="350,293,425,319"/>
-<area shape="poly" id="edge11_Node000002_Node000011" title=" " alt="" coords="555,207,515,246,463,284,426,300,424,295,460,280,511,242,552,203"/>
-<area shape="rect" id="Node000004" href="$bench_8cc.html#a48449afe027d0b3050a6fa9b4af0bc91" title=" " alt="" coords="133,5,240,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="342,51,240,31,241,26,343,46"/>
-<area shape="rect" id="Node000006" href="$bench_8cc.html#aed911458da7aa931bc325648b27a2ded" title=" " alt="" coords="137,55,236,80"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="343,62,236,67,236,62,343,56"/>
+<area shape="rect" id="Node000001" title="获取指定名称的日志器" alt="" coords="645,146,813,186"/>
+<area shape="rect" id="Node000002" href="$namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="465,153,597,179"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="632,169,598,169,598,163,632,163"/>
+<area shape="rect" id="Node000003" href="$bench_8cc.html#a50e07be47fb2d4bc0ab579d1f67a0d47" title=" " alt="" coords="309,29,371,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="508,145,468,106,416,68,370,51,372,46,419,64,471,102,512,141"/>
+<area shape="rect" id="Node000007" href="$class_data_base_sink.html#aa225abc961083998a7e7780d827dfa2b" title="存储到数据库" alt="" coords="269,79,411,104"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="490,150,416,118,384,107,386,102,418,113,492,145"/>
+<area shape="rect" id="Node000008" href="$class_server_sink.html#adf7eb34b00bda51bca75726b94319917" title="发送数据" alt="" coords="280,128,400,153"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="451,158,400,151,400,146,452,153"/>
+<area shape="rect" id="Node000009" href="$_data_base_test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="313,177,367,203"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="452,179,368,189,367,184,451,173"/>
+<area shape="rect" id="Node000010" href="$class_xu_server_1_1_server_log.html#ad2985e18e3b4b3debf7fa8e20bff2281" title="仿函数" alt="" coords="263,227,417,267"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="490,187,418,218,390,230,388,225,416,213,488,182"/>
+<area shape="rect" id="Node000011" href="$test_8cc.html#ac23db1c84059647b8979ebb5504142ef" title=" " alt="" coords="303,292,377,317"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="514,191,474,237,447,261,419,282,379,299,377,294,416,277,444,257,470,233,510,188"/>
+<area shape="rect" id="Node000004" href="$bench_8cc.html#a48449afe027d0b3050a6fa9b4af0bc91" title=" " alt="" coords="108,5,215,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="296,39,214,28,215,22,296,34"/>
+<area shape="rect" id="Node000006" href="$bench_8cc.html#aed911458da7aa931bc325648b27a2ded" title=" " alt="" coords="112,55,211,80"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="296,51,211,63,210,58,295,46"/>
 <area shape="rect" id="Node000005" href="$bench_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="120,21,60,21,60,15,120,15"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="310,124,266,133,265,128,309,119"/>
-<area shape="rect" id="Node000012" href="$test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="159,293,214,319"/>
-<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="336,309,215,309,215,303,336,303"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+<area shape="rect" id="Node000012" href="$test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="134,292,189,317"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="289,307,189,307,189,302,289,302"/>
 </map>

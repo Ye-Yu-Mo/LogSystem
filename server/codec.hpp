@@ -1,5 +1,6 @@
 /// @file codec.hpp
 /// @brief 对日志信息进行序列化和反序列化
+#pragma once
 #include <jsoncpp/json/json.h>
 #include <iostream>
 #include <thread>
@@ -11,34 +12,59 @@
 
 namespace Xulog
 {
+    /// @struct DeliverMsg
+    /// @brief 传递的消息
     struct DeliverMsg
     {
-        LogMsg msg;
-        std::string logger_name;
-        Xulog::LogLevel::value limit_level;
-        std::string pattern;
+        std::string msg_mod;         ///< 消息模式
+        std::string unformatted_msg; ///< 非结构化消息
+        LogMsg format_msg;           ///< 结构化信息
     };
+    /// @classCodec
+    /// @brief 序列化与反序列化类
     class Codec
     {
     public:
-        static Json::Value toJson(const LogMsg &msg, Xulog::Logger::ptr logger)
+        /// @brief 将结构化信息序列化为Json格式
+        /// @param msg 结构化信息
+        /// @return Json格式
+        static Json::Value toJson(const LogMsg &msg)
         {
             Json::Value json;
-            json["msg"] = msgToJson(msg);
-            json["logger_name"] = logger->getName();
-            json["limit_level"] = Xulog::LogLevel::toString(logger->getLimitLevel());
-            json["pattern"] = logger->getFormatter()->getPattern();
+            json["format_msg"] = msgToJson(msg);
+            json["msg_mod"] = "format";
             return json;
         }
+        /// @brief 将非结构化信息序列化为Json格式
+        /// @param msg 非结构化信息
+        /// @return Json格式
+        static Json::Value toJson(const std::string &msg)
+        {
+            Json::Value json;
+            json["unformatted_msg"] = msg;
+            json["msg_mod"] = "unformatted";
+            return json;
+        }
+        /// @brief 将Json信息反序列化为传递消息
+        /// @param json Json信息
+        /// @return 传递消息
         static DeliverMsg fromJson(const Json::Value &json)
         {
             DeliverMsg dmsg;
-            dmsg.msg = msgFromJson(json["msg"]);
-            dmsg.logger_name = json["logger_name"].asString();
-            dmsg.limit_level = Xulog::LogLevel::fromString(json["limit_level"].asString());
-            dmsg.pattern = json["pattern"].asString();
+            dmsg.msg_mod = json["msg_mod"].asString();
+            if (dmsg.msg_mod == "format")
+            {
+                dmsg.format_msg = msgFromJson(json["format_msg"]);
+            }
+            else
+                dmsg.unformatted_msg = json["unformatted_msg"].asString();
             return dmsg;
         }
+
+    private:
+        /// @brief 将结构化信息序列化为Json格式
+        /// @param msg 结构化信息
+        /// @return Json格式
         static Json::Value msgToJson(const LogMsg &msg)
         {
             Json::Value json;
@@ -51,6 +77,9 @@ namespace Xulog
             json["payload"] = msg._payload;
             return json;
         }
+        /// @brief 将Json信息反序列化为传递消息
+        /// @param json Json信息
+        /// @return 传递消息
         static LogMsg msgFromJson(const Json::Value &json)
         {
             LogMsg msg;

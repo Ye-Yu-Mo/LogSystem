@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['msg_0',['msg',['../struct_xulog_1_1_deliver_msg.html#ab206e6da44d39fe9366b8be9b84943d4',1,'Xulog::DeliverMsg']]]
+  ['msg_5fmod_0',['msg_mod',['../struct_xulog_1_1_deliver_msg.html#a78056cdbb0e230a7a46644262998f2f6',1,'Xulog::DeliverMsg']]]
 ];

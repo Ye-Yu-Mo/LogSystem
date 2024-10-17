@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LogSystem: server/threadpool.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.3</span>
+   </div>
+   <div id="projectbrief">This is a logging system project</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('threadpool_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">threadpool.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="threadpool_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;future&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;condition_variable&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;../logs/Xulog.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_xu_server.html">XuServer</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_xu_server_1_1threadpool.html">   19</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_server_1_1threadpool.html">threadpool</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_xu_server_1_1threadpool.html#a2413187867fa23e0fc7fb5834a8a9159">   22</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="class_xu_server_1_1threadpool.html#a2413187867fa23e0fc7fb5834a8a9159">ptr</a> = std::unique_ptr&lt;threadpool&gt;;   </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_xu_server_1_1threadpool.html#a7851c1c1fd654297caca6e3da780a627">   23</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="class_xu_server_1_1threadpool.html#a7851c1c1fd654297caca6e3da780a627">Functor</a> = std::function&lt;void(<span class="keywordtype">void</span>)&gt;; </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_xu_server_1_1threadpool.html#a09060effa78c9dae577f53dde853aecb">   27</a></span>        <a class="code hl_function" href="class_xu_server_1_1threadpool.html#a09060effa78c9dae577f53dde853aecb">threadpool</a>(<span class="keywordtype">int</span> thr_count = 1) : <a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a844b48512a56af140aa7fc220a448df5">_stop</a>(false)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; thr_count; i++)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                <a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a04c6cb6c266fda58fdb9f1b9e7e815ee">_threads</a>.emplace_back(&amp;<a class="code hl_function" href="class_xu_server_1_1threadpool.html#a414ef27827329299eee48eea2794a933">threadpool::entry</a>, <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_xu_server_1_1threadpool.html#ac567aab43a229a2f5df74d6c6d64f5c6">   33</a></span>        <a class="code hl_function" href="class_xu_server_1_1threadpool.html#ac567aab43a229a2f5df74d6c6d64f5c6">~threadpool</a>()</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_function" href="class_xu_server_1_1threadpool.html#a8c1f3bf0bf666f8c5b7ca9ffb819a087">stop</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_xu_server_1_1threadpool.html#a8c1f3bf0bf666f8c5b7ca9ffb819a087">   38</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_server_1_1threadpool.html#a8c1f3bf0bf666f8c5b7ca9ffb819a087">stop</a>()</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a844b48512a56af140aa7fc220a448df5">_stop</a> == <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a844b48512a56af140aa7fc220a448df5">_stop</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a7fbeca6a0b0d2aebbf67903ad4242b4a">_cv</a>.notify_all(); <span class="comment">// 唤醒线程</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;thread : <a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a04c6cb6c266fda58fdb9f1b9e7e815ee">_threads</a>)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                thread.join();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_xu_server_1_1threadpool.html#a8c73d042dd48c62e357a2d4905862d24">   55</a></span>        <span class="keyword">auto</span> <a class="code hl_function" href="class_xu_server_1_1threadpool.html#a8c73d042dd48c62e357a2d4905862d24">push</a>(F &amp;&amp;func, Args &amp;&amp;...args) -&gt; std::future&lt;<span class="keyword">decltype</span>(func(args...))&gt;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="comment">// 将传入函数封装成packaged_task任务包</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keyword">using </span>return_type = <span class="keyword">decltype</span>(func(args...));</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keyword">auto</span> tmp_func = std::bind(std::forward&lt;F&gt;(func), std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keyword">auto</span> task = std::make_shared&lt;std::packaged_task&lt;return_type()&gt;&gt;(tmp_func);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            std::future&lt;return_type&gt; fu = task-&gt;get_future();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="comment">// 构造lambda表达式(捕获任务对象,函数内执行任务对象)</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_server_1_1threadpool.html#aff9cb1eda1a6fb2179cd5e137bf2c445">_mutex</a>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="comment">// 将构造出来的匿名对象传入任务池</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a1bd0359a890312f1278904c2bc287d25">_taskpool</a>.push_back([task]()</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                                    { (*task)(); });</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a7fbeca6a0b0d2aebbf67903ad4242b4a">_cv</a>.notify_one();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">return</span> fu;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">private</span>:</div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_xu_server_1_1threadpool.html#a414ef27827329299eee48eea2794a933">   75</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_server_1_1threadpool.html#a414ef27827329299eee48eea2794a933">entry</a>()</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">while</span> (!<a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a844b48512a56af140aa7fc220a448df5">_stop</a>)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <span class="comment">// 临时任务池</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <span class="comment">// 避免频繁加解锁</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                std::vector&lt;Functor&gt; tmp_taskpool;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                    <span class="comment">// 加锁</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_server_1_1threadpool.html#aff9cb1eda1a6fb2179cd5e137bf2c445">_mutex</a>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    <span class="comment">// 等待任务不为空或_stop被置为1</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    <a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a7fbeca6a0b0d2aebbf67903ad4242b4a">_cv</a>.wait(lock, [<span class="keyword">this</span>]()</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                             { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a844b48512a56af140aa7fc220a448df5">_stop</a> || !<a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a1bd0359a890312f1278904c2bc287d25">_taskpool</a>.empty(); });</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                    <span class="comment">// 取出任务进行执行</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                    tmp_taskpool.swap(<a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a1bd0359a890312f1278904c2bc287d25">_taskpool</a>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;task : tmp_taskpool)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    task();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        }</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_xu_server_1_1threadpool.html#a844b48512a56af140aa7fc220a448df5">  100</a></span>        std::atomic&lt;bool&gt; <a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a844b48512a56af140aa7fc220a448df5">_stop</a>;           </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_xu_server_1_1threadpool.html#a1bd0359a890312f1278904c2bc287d25">  101</a></span>        std::vector&lt;Functor&gt; <a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a1bd0359a890312f1278904c2bc287d25">_taskpool</a>;    </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_xu_server_1_1threadpool.html#aff9cb1eda1a6fb2179cd5e137bf2c445">  102</a></span>        std::mutex <a class="code hl_variable" href="class_xu_server_1_1threadpool.html#aff9cb1eda1a6fb2179cd5e137bf2c445">_mutex</a>;                 </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_xu_server_1_1threadpool.html#a7fbeca6a0b0d2aebbf67903ad4242b4a">  103</a></span>        std::condition_variable <a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a7fbeca6a0b0d2aebbf67903ad4242b4a">_cv</a>;       </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_xu_server_1_1threadpool.html#a04c6cb6c266fda58fdb9f1b9e7e815ee">  104</a></span>        std::vector&lt;std::thread&gt; <a class="code hl_variable" href="class_xu_server_1_1threadpool.html#a04c6cb6c266fda58fdb9f1b9e7e815ee">_threads</a>; </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    };</div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
+<div class="ttc" id="aclass_xu_server_1_1threadpool_html"><div class="ttname"><a href="class_xu_server_1_1threadpool.html">XuServer::threadpool</a></div><div class="ttdoc">线程池类</div><div class="ttdef"><b>Definition</b> threadpool.hpp:20</div></div>
+<div class="ttc" id="aclass_xu_server_1_1threadpool_html_a04c6cb6c266fda58fdb9f1b9e7e815ee"><div class="ttname"><a href="class_xu_server_1_1threadpool.html#a04c6cb6c266fda58fdb9f1b9e7e815ee">XuServer::threadpool::_threads</a></div><div class="ttdeci">std::vector&lt; std::thread &gt; _threads</div><div class="ttdoc">管理线程</div><div class="ttdef"><b>Definition</b> threadpool.hpp:104</div></div>
+<div class="ttc" id="aclass_xu_server_1_1threadpool_html_a09060effa78c9dae577f53dde853aecb"><div class="ttname"><a href="class_xu_server_1_1threadpool.html#a09060effa78c9dae577f53dde853aecb">XuServer::threadpool::threadpool</a></div><div class="ttdeci">threadpool(int thr_count=1)</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition</b> threadpool.hpp:27</div></div>
+<div class="ttc" id="aclass_xu_server_1_1threadpool_html_a1bd0359a890312f1278904c2bc287d25"><div class="ttname"><a href="class_xu_server_1_1threadpool.html#a1bd0359a890312f1278904c2bc287d25">XuServer::threadpool::_taskpool</a></div><div class="ttdeci">std::vector&lt; Functor &gt; _taskpool</div><div class="ttdoc">任务池</div><div class="ttdef"><b>Definition</b> threadpool.hpp:101</div></div>
+<div class="ttc" id="aclass_xu_server_1_1threadpool_html_a2413187867fa23e0fc7fb5834a8a9159"><div class="ttname"><a href="class_xu_server_1_1threadpool.html#a2413187867fa23e0fc7fb5834a8a9159">XuServer::threadpool::ptr</a></div><div class="ttdeci">std::unique_ptr&lt; threadpool &gt; ptr</div><div class="ttdoc">线程池操作句柄</div><div class="ttdef"><b>Definition</b> threadpool.hpp:22</div></div>
+<div class="ttc" id="aclass_xu_server_1_1threadpool_html_a414ef27827329299eee48eea2794a933"><div class="ttname"><a href="class_xu_server_1_1threadpool.html#a414ef27827329299eee48eea2794a933">XuServer::threadpool::entry</a></div><div class="ttdeci">void entry()</div><div class="ttdoc">线程入口函数 从任务池中取出任务执行</div><div class="ttdef"><b>Definition</b> threadpool.hpp:75</div></div>
+<div class="ttc" id="aclass_xu_server_1_1threadpool_html_a7851c1c1fd654297caca6e3da780a627"><div class="ttname"><a href="class_xu_server_1_1threadpool.html#a7851c1c1fd654297caca6e3da780a627">XuServer::threadpool::Functor</a></div><div class="ttdeci">std::function&lt; void(void)&gt; Functor</div><div class="ttdoc">线程池回调函数</div><div class="ttdef"><b>Definition</b> threadpool.hpp:23</div></div>
+<div class="ttc" id="aclass_xu_server_1_1threadpool_html_a7fbeca6a0b0d2aebbf67903ad4242b4a"><div class="ttname"><a href="class_xu_server_1_1threadpool.html#a7fbeca6a0b0d2aebbf67903ad4242b4a">XuServer::threadpool::_cv</a></div><div class="ttdeci">std::condition_variable _cv</div><div class="ttdoc">条件变量</div><div class="ttdef"><b>Definition</b> threadpool.hpp:103</div></div>
+<div class="ttc" id="aclass_xu_server_1_1threadpool_html_a844b48512a56af140aa7fc220a448df5"><div class="ttname"><a href="class_xu_server_1_1threadpool.html#a844b48512a56af140aa7fc220a448df5">XuServer::threadpool::_stop</a></div><div class="ttdeci">std::atomic&lt; bool &gt; _stop</div><div class="ttdoc">原子类型的停止标志</div><div class="ttdef"><b>Definition</b> threadpool.hpp:100</div></div>
+<div class="ttc" id="aclass_xu_server_1_1threadpool_html_a8c1f3bf0bf666f8c5b7ca9ffb819a087"><div class="ttname"><a href="class_xu_server_1_1threadpool.html#a8c1f3bf0bf666f8c5b7ca9ffb819a087">XuServer::threadpool::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">停止所有线程</div><div class="ttdef"><b>Definition</b> threadpool.hpp:38</div></div>
+<div class="ttc" id="aclass_xu_server_1_1threadpool_html_a8c73d042dd48c62e357a2d4905862d24"><div class="ttname"><a href="class_xu_server_1_1threadpool.html#a8c73d042dd48c62e357a2d4905862d24">XuServer::threadpool::push</a></div><div class="ttdeci">auto push(F &amp;&amp;func, Args &amp;&amp;...args) -&gt; std::future&lt; decltype(func(args...))&gt;</div><div class="ttdoc">传入任务函数到任务池</div><div class="ttdef"><b>Definition</b> threadpool.hpp:55</div></div>
+<div class="ttc" id="aclass_xu_server_1_1threadpool_html_ac567aab43a229a2f5df74d6c6d64f5c6"><div class="ttname"><a href="class_xu_server_1_1threadpool.html#ac567aab43a229a2f5df74d6c6d64f5c6">XuServer::threadpool::~threadpool</a></div><div class="ttdeci">~threadpool()</div><div class="ttdoc">析构函数</div><div class="ttdef"><b>Definition</b> threadpool.hpp:33</div></div>
+<div class="ttc" id="aclass_xu_server_1_1threadpool_html_aff9cb1eda1a6fb2179cd5e137bf2c445"><div class="ttname"><a href="class_xu_server_1_1threadpool.html#aff9cb1eda1a6fb2179cd5e137bf2c445">XuServer::threadpool::_mutex</a></div><div class="ttdeci">std::mutex _mutex</div><div class="ttdoc">互斥锁</div><div class="ttdef"><b>Definition</b> threadpool.hpp:102</div></div>
+<div class="ttc" id="anamespace_xu_server_html"><div class="ttname"><a href="namespace_xu_server.html">XuServer</a></div><div class="ttdef"><b>Definition</b> nocopy.hpp:5</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="threadpool_8hpp.html">threadpool.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,7 +1,6 @@
 var struct_xulog_1_1_deliver_msg =
 [
-    [ "limit_level", "struct_xulog_1_1_deliver_msg.html#af3d917181a1f21868b0337db272467f6", null ],
-    [ "logger_name", "struct_xulog_1_1_deliver_msg.html#aec8d88502dee42c0ced8cdf6a1c635cc", null ],
-    [ "msg", "struct_xulog_1_1_deliver_msg.html#ab206e6da44d39fe9366b8be9b84943d4", null ],
-    [ "pattern", "struct_xulog_1_1_deliver_msg.html#a4b642190180f67f03a4a69ad2cfd981f", null ]
+    [ "format_msg", "struct_xulog_1_1_deliver_msg.html#adb26f87d9dc71e67b3907df8a1922683", null ],
+    [ "msg_mod", "struct_xulog_1_1_deliver_msg.html#a78056cdbb0e230a7a46644262998f2f6", null ],
+    [ "unformatted_msg", "struct_xulog_1_1_deliver_msg.html#a402dd219c8be083ab549fef55eee2519", null ]
 ];
