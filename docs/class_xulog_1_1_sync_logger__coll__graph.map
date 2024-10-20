@@ -1,7 +1,10 @@
 <map id="Xulog::SyncLogger" name="Xulog::SyncLogger">
-<area shape="rect" id="Node000001" title="同步日志器" alt="" coords="5,168,148,193"/>
-<area shape="rect" id="Node000002" href="$class_xulog_1_1_logger.html" title="抽象日志器基类" alt="" coords="21,93,132,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,133,79,168,74,168,74,133"/>
-<area shape="rect" id="Node000003" href="$struct_xulog_1_1_log_msg.html" title="日志消息结构体" alt="" coords="18,5,135,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="79,45,79,93,74,93,74,45"/>
+<area shape="rect" id="Node000001" title="同步日志器" alt="" coords="5,285,148,311"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_logger.html" title="抽象日志器基类" alt="" coords="21,211,132,236"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,250,79,285,74,285,74,250"/>
+<area shape="rect" id="Node000003" href="$struct_xulog_1_1_log_msg.html" title="日志消息结构体" alt="" coords="142,123,259,148"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="174,158,95,213,92,208,171,154"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="13,5,71,31"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="38,44,31,93,31,120,35,147,51,182,69,209,65,212,46,184,30,149,26,121,25,92,33,44"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="71,37,186,120,183,125,67,41"/>
 </map>

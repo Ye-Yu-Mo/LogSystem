@@ -1,0 +1,700 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LogSystem: INIReader类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.4</span>
+   </div>
+   <div id="projectbrief">This is a logging system project</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_i_n_i_reader.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_i_n_i_reader-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">INIReader类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_i_n_i_reader_8h_source.html">INIReader.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a357e21f6b1bc10b17bd3a7b72452cb57" id="r_a357e21f6b1bc10b17bd3a7b72452cb57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#a357e21f6b1bc10b17bd3a7b72452cb57">INIReader</a> (std::string filename)</td></tr>
+<tr class="separator:a357e21f6b1bc10b17bd3a7b72452cb57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fe34abf3bc5aa0786333d62bc0880dd" id="r_a6fe34abf3bc5aa0786333d62bc0880dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#a6fe34abf3bc5aa0786333d62bc0880dd">~INIReader</a> ()</td></tr>
+<tr class="separator:a6fe34abf3bc5aa0786333d62bc0880dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaecb5fce7bfeac1710b3a7d5f7ec94ab" id="r_aaecb5fce7bfeac1710b3a7d5f7ec94ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#aaecb5fce7bfeac1710b3a7d5f7ec94ab">ParseError</a> ()</td></tr>
+<tr class="separator:aaecb5fce7bfeac1710b3a7d5f7ec94ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1042bfbb483afa305283a6f1a2bf27e9" id="r_a1042bfbb483afa305283a6f1a2bf27e9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9">Get</a> (std::string section, std::string name, std::string default_value)</td></tr>
+<tr class="separator:a1042bfbb483afa305283a6f1a2bf27e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fb288f961b8a43ba4974fbf97f4d1df" id="r_a5fb288f961b8a43ba4974fbf97f4d1df"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#a5fb288f961b8a43ba4974fbf97f4d1df">GetInteger</a> (std::string section, std::string name, long default_value)</td></tr>
+<tr class="separator:a5fb288f961b8a43ba4974fbf97f4d1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add45ae10b48fd12cb98a7b73e67d3a77" id="r_add45ae10b48fd12cb98a7b73e67d3a77"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#add45ae10b48fd12cb98a7b73e67d3a77">GetReal</a> (std::string section, std::string name, double default_value)</td></tr>
+<tr class="separator:add45ae10b48fd12cb98a7b73e67d3a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d70858d357a6797b0d58a9a00d737e" id="r_ac3d70858d357a6797b0d58a9a00d737e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#ac3d70858d357a6797b0d58a9a00d737e">GetBoolean</a> (std::string section, std::string name, bool default_value)</td></tr>
+<tr class="separator:ac3d70858d357a6797b0d58a9a00d737e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35eba1deed4bfc75c61ca7c9ee6f31c9" id="r_a35eba1deed4bfc75c61ca7c9ee6f31c9"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#a35eba1deed4bfc75c61ca7c9ee6f31c9">GetSections</a> () const</td></tr>
+<tr class="separator:a35eba1deed4bfc75c61ca7c9ee6f31c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54c67b3709200b69ab9234a8ce3522e8" id="r_a54c67b3709200b69ab9234a8ce3522e8"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#a54c67b3709200b69ab9234a8ce3522e8">GetFields</a> (std::string section) const</td></tr>
+<tr class="separator:a54c67b3709200b69ab9234a8ce3522e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a1044063236e719cbd52b706b10120f2c" id="r_a1044063236e719cbd52b706b10120f2c"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#a1044063236e719cbd52b706b10120f2c">MakeKey</a> (std::string section, std::string name)</td></tr>
+<tr class="separator:a1044063236e719cbd52b706b10120f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38e5a02b9eab882f23401a4b5a0c42a3" id="r_a38e5a02b9eab882f23401a4b5a0c42a3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#a38e5a02b9eab882f23401a4b5a0c42a3">ValueHandler</a> (void *user, const char *section, const char *name, const char *value)</td></tr>
+<tr class="separator:a38e5a02b9eab882f23401a4b5a0c42a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a964b63d6d630cde92a998cfb4986b223" id="r_a964b63d6d630cde92a998cfb4986b223"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#a964b63d6d630cde92a998cfb4986b223">_error</a></td></tr>
+<tr class="separator:a964b63d6d630cde92a998cfb4986b223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48a98ecb0d35c2ea3066dac63a731bd" id="r_ae48a98ecb0d35c2ea3066dac63a731bd"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#ae48a98ecb0d35c2ea3066dac63a731bd">_values</a></td></tr>
+<tr class="separator:ae48a98ecb0d35c2ea3066dac63a731bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b83cd8f3126bcbb78955083ef50fe34" id="r_a3b83cd8f3126bcbb78955083ef50fe34"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#a3b83cd8f3126bcbb78955083ef50fe34">_sections</a></td></tr>
+<tr class="separator:a3b83cd8f3126bcbb78955083ef50fe34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f65f8d5d1f0f1eeed3566ba007f93b" id="r_a92f65f8d5d1f0f1eeed3566ba007f93b"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::set&lt; std::string &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_n_i_reader.html#a92f65f8d5d1f0f1eeed3566ba007f93b">_fields</a></td></tr>
+<tr class="separator:a92f65f8d5d1f0f1eeed3566ba007f93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a357e21f6b1bc10b17bd3a7b72452cb57" name="a357e21f6b1bc10b17bd3a7b72452cb57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a357e21f6b1bc10b17bd3a7b72452cb57">&#9670;&#160;</a></span>INIReader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INIReader::INIReader </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_n_i_reader_a357e21f6b1bc10b17bd3a7b72452cb57_cgraph.png" border="0" usemap="#aclass_i_n_i_reader_a357e21f6b1bc10b17bd3a7b72452cb57_cgraph" alt=""/></div>
+<map name="aclass_i_n_i_reader_a357e21f6b1bc10b17bd3a7b72452cb57_cgraph" id="aclass_i_n_i_reader_a357e21f6b1bc10b17bd3a7b72452cb57_cgraph">
+<area shape="rect" title=" " alt="" coords="5,105,164,131"/>
+<area shape="rect" href="ini_8c.html#ad285e522c65745f50f01ba650b563dd7" title=" " alt="" coords="262,80,343,105"/>
+<area shape="poly" title=" " alt="" coords="164,106,248,96,248,102,165,111"/>
+<area shape="rect" href="class_i_n_i_reader.html#a38e5a02b9eab882f23401a4b5a0c42a3" title=" " alt="" coords="212,129,393,155"/>
+<area shape="poly" title=" " alt="" coords="165,124,199,128,198,133,164,129"/>
+<area shape="rect" href="ini_8c.html#a919ebf8b15ff98ff05da9a394bf0b7ed" title=" " alt="" coords="464,80,572,105"/>
+<area shape="poly" title=" " alt="" coords="344,90,450,90,450,95,344,95"/>
+<area shape="rect" href="ini_8c.html#a1bd808712def9146b17116b0d4de45fe" title=" " alt="" coords="643,5,813,31"/>
+<area shape="poly" title=" " alt="" coords="547,77,642,39,665,32,666,37,644,45,549,82"/>
+<area shape="rect" href="ini_8c.html#a39ed5098d962eb4aad157b3fa65166ad" title=" " alt="" coords="701,55,755,80"/>
+<area shape="poly" title=" " alt="" coords="572,84,687,69,688,75,573,89"/>
+<area shape="rect" href="ini_8c.html#a8efe5ce34c3407d5350b3f15f9cc521d" title=" " alt="" coords="700,104,756,129"/>
+<area shape="poly" title=" " alt="" coords="572,96,687,109,686,115,572,101"/>
+<area shape="rect" href="ini_8c.html#a70acf8babdb6c2072c2d622a8258d320" title=" " alt="" coords="689,153,767,179"/>
+<area shape="poly" title=" " alt="" coords="564,103,596,114,644,138,676,150,675,155,642,143,594,119,562,108"/>
+<area shape="rect" href="class_i_n_i_reader.html#a1044063236e719cbd52b706b10120f2c" title=" " alt="" coords="441,129,595,155"/>
+<area shape="poly" title=" " alt="" coords="394,139,428,139,428,145,394,145"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6fe34abf3bc5aa0786333d62bc0880dd" name="a6fe34abf3bc5aa0786333d62bc0880dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fe34abf3bc5aa0786333d62bc0880dd">&#9670;&#160;</a></span>~INIReader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INIReader::~INIReader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a1042bfbb483afa305283a6f1a2bf27e9" name="a1042bfbb483afa305283a6f1a2bf27e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1042bfbb483afa305283a6f1a2bf27e9">&#9670;&#160;</a></span>Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string INIReader::Get </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>section</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>default_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_n_i_reader_a1042bfbb483afa305283a6f1a2bf27e9_cgraph.png" border="0" usemap="#aclass_i_n_i_reader_a1042bfbb483afa305283a6f1a2bf27e9_cgraph" alt=""/></div>
+<map name="aclass_i_n_i_reader_a1042bfbb483afa305283a6f1a2bf27e9_cgraph" id="aclass_i_n_i_reader_a1042bfbb483afa305283a6f1a2bf27e9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,123,31"/>
+<area shape="rect" href="class_i_n_i_reader.html#a1044063236e719cbd52b706b10120f2c" title=" " alt="" coords="171,5,324,31"/>
+<area shape="poly" title=" " alt="" coords="123,15,157,15,157,21,123,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_n_i_reader_a1042bfbb483afa305283a6f1a2bf27e9_icgraph.png" border="0" usemap="#aclass_i_n_i_reader_a1042bfbb483afa305283a6f1a2bf27e9_icgraph" alt=""/></div>
+<map name="aclass_i_n_i_reader_a1042bfbb483afa305283a6f1a2bf27e9_icgraph" id="aclass_i_n_i_reader_a1042bfbb483afa305283a6f1a2bf27e9_icgraph">
+<area shape="rect" title=" " alt="" coords="451,80,568,105"/>
+<area shape="rect" href="class_i_n_i_reader.html#ac3d70858d357a6797b0d58a9a00d737e" title=" " alt="" coords="232,5,403,31"/>
+<area shape="poly" title=" " alt="" coords="471,76,402,44,368,33,369,28,404,40,473,71"/>
+<area shape="rect" href="class_i_n_i_reader.html#a5fb288f961b8a43ba4974fbf97f4d1df" title=" " alt="" coords="236,55,399,80"/>
+<area shape="poly" title=" " alt="" coords="437,86,398,81,399,75,437,81"/>
+<area shape="rect" href="class_i_n_i_reader.html#add45ae10b48fd12cb98a7b73e67d3a77" title=" " alt="" coords="244,104,391,129"/>
+<area shape="poly" title=" " alt="" coords="437,104,391,110,391,105,436,99"/>
+<area shape="rect" href="class_xu_server_1_1_config.html#a153509671eaaf98e1056c05d8ebdb4b3" title="读取配置文件并写入到映射表中" alt="" coords="238,153,397,179"/>
+<area shape="poly" title=" " alt="" coords="471,114,404,143,366,156,364,151,402,138,469,109"/>
+<area shape="rect" href="class_xu_server_1_1_config.html#a21f2e889ba021873d278f78b24a042d5" title="构造函数" alt="" coords="5,153,184,179"/>
+<area shape="poly" title=" " alt="" coords="224,169,184,169,184,163,224,163"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac3d70858d357a6797b0d58a9a00d737e" name="ac3d70858d357a6797b0d58a9a00d737e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3d70858d357a6797b0d58a9a00d737e">&#9670;&#160;</a></span>GetBoolean()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool INIReader::GetBoolean </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>section</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>default_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_n_i_reader_ac3d70858d357a6797b0d58a9a00d737e_cgraph.png" border="0" usemap="#aclass_i_n_i_reader_ac3d70858d357a6797b0d58a9a00d737e_cgraph" alt=""/></div>
+<map name="aclass_i_n_i_reader_ac3d70858d357a6797b0d58a9a00d737e_cgraph" id="aclass_i_n_i_reader_ac3d70858d357a6797b0d58a9a00d737e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,176,31"/>
+<area shape="rect" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9" title=" " alt="" coords="224,5,341,31"/>
+<area shape="poly" title=" " alt="" coords="176,15,210,15,210,21,176,21"/>
+<area shape="rect" href="class_i_n_i_reader.html#a1044063236e719cbd52b706b10120f2c" title=" " alt="" coords="389,5,543,31"/>
+<area shape="poly" title=" " alt="" coords="342,15,376,15,376,21,342,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a54c67b3709200b69ab9234a8ce3522e8" name="a54c67b3709200b69ab9234a8ce3522e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54c67b3709200b69ab9234a8ce3522e8">&#9670;&#160;</a></span>GetFields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt; std::string &gt; INIReader::GetFields </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>section</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fb288f961b8a43ba4974fbf97f4d1df" name="a5fb288f961b8a43ba4974fbf97f4d1df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fb288f961b8a43ba4974fbf97f4d1df">&#9670;&#160;</a></span>GetInteger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long INIReader::GetInteger </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>section</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>default_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_n_i_reader_a5fb288f961b8a43ba4974fbf97f4d1df_cgraph.png" border="0" usemap="#aclass_i_n_i_reader_a5fb288f961b8a43ba4974fbf97f4d1df_cgraph" alt=""/></div>
+<map name="aclass_i_n_i_reader_a5fb288f961b8a43ba4974fbf97f4d1df_cgraph" id="aclass_i_n_i_reader_a5fb288f961b8a43ba4974fbf97f4d1df_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,168,31"/>
+<area shape="rect" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9" title=" " alt="" coords="216,5,333,31"/>
+<area shape="poly" title=" " alt="" coords="168,15,202,15,202,21,168,21"/>
+<area shape="rect" href="class_i_n_i_reader.html#a1044063236e719cbd52b706b10120f2c" title=" " alt="" coords="381,5,535,31"/>
+<area shape="poly" title=" " alt="" coords="334,15,368,15,368,21,334,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="add45ae10b48fd12cb98a7b73e67d3a77" name="add45ae10b48fd12cb98a7b73e67d3a77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add45ae10b48fd12cb98a7b73e67d3a77">&#9670;&#160;</a></span>GetReal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double INIReader::GetReal </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>section</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>default_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_n_i_reader_add45ae10b48fd12cb98a7b73e67d3a77_cgraph.png" border="0" usemap="#aclass_i_n_i_reader_add45ae10b48fd12cb98a7b73e67d3a77_cgraph" alt=""/></div>
+<map name="aclass_i_n_i_reader_add45ae10b48fd12cb98a7b73e67d3a77_cgraph" id="aclass_i_n_i_reader_add45ae10b48fd12cb98a7b73e67d3a77_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,152,31"/>
+<area shape="rect" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9" title=" " alt="" coords="200,5,317,31"/>
+<area shape="poly" title=" " alt="" coords="152,15,186,15,186,21,152,21"/>
+<area shape="rect" href="class_i_n_i_reader.html#a1044063236e719cbd52b706b10120f2c" title=" " alt="" coords="365,5,519,31"/>
+<area shape="poly" title=" " alt="" coords="318,15,352,15,352,21,318,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a35eba1deed4bfc75c61ca7c9ee6f31c9" name="a35eba1deed4bfc75c61ca7c9ee6f31c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35eba1deed4bfc75c61ca7c9ee6f31c9">&#9670;&#160;</a></span>GetSections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt; std::string &gt; INIReader::GetSections </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1044063236e719cbd52b706b10120f2c" name="a1044063236e719cbd52b706b10120f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1044063236e719cbd52b706b10120f2c">&#9670;&#160;</a></span>MakeKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string INIReader::MakeKey </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>section</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_n_i_reader_a1044063236e719cbd52b706b10120f2c_icgraph.png" border="0" usemap="#aclass_i_n_i_reader_a1044063236e719cbd52b706b10120f2c_icgraph" alt=""/></div>
+<map name="aclass_i_n_i_reader_a1044063236e719cbd52b706b10120f2c_icgraph" id="aclass_i_n_i_reader_a1044063236e719cbd52b706b10120f2c_icgraph">
+<area shape="rect" title=" " alt="" coords="680,153,833,179"/>
+<area shape="rect" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9" title=" " alt="" coords="483,104,600,129"/>
+<area shape="poly" title=" " alt="" coords="687,153,597,132,598,127,688,148"/>
+<area shape="rect" href="class_i_n_i_reader.html#a38e5a02b9eab882f23401a4b5a0c42a3" title=" " alt="" coords="451,177,632,203"/>
+<area shape="poly" title=" " alt="" coords="666,179,632,183,632,177,666,173"/>
+<area shape="rect" href="class_i_n_i_reader.html#ac3d70858d357a6797b0d58a9a00d737e" title=" " alt="" coords="232,5,403,31"/>
+<area shape="poly" title=" " alt="" coords="507,99,458,71,402,44,369,33,371,28,404,40,461,67,510,94"/>
+<area shape="rect" href="class_i_n_i_reader.html#a5fb288f961b8a43ba4974fbf97f4d1df" title=" " alt="" coords="236,55,399,80"/>
+<area shape="poly" title=" " alt="" coords="469,104,375,83,376,77,470,98"/>
+<area shape="rect" href="class_i_n_i_reader.html#add45ae10b48fd12cb98a7b73e67d3a77" title=" " alt="" coords="244,104,391,129"/>
+<area shape="poly" title=" " alt="" coords="469,119,391,119,391,114,469,114"/>
+<area shape="rect" href="class_xu_server_1_1_config.html#a153509671eaaf98e1056c05d8ebdb4b3" title="读取配置文件并写入到映射表中" alt="" coords="238,153,397,179"/>
+<area shape="poly" title=" " alt="" coords="470,135,376,156,375,151,469,130"/>
+<area shape="rect" href="class_xu_server_1_1_config.html#a21f2e889ba021873d278f78b24a042d5" title="构造函数" alt="" coords="5,153,184,179"/>
+<area shape="poly" title=" " alt="" coords="224,169,184,169,184,163,224,163"/>
+<area shape="rect" href="class_i_n_i_reader.html#a357e21f6b1bc10b17bd3a7b72452cb57" title=" " alt="" coords="238,203,397,228"/>
+<area shape="poly" title=" " alt="" coords="437,204,397,209,397,204,437,199"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaecb5fce7bfeac1710b3a7d5f7ec94ab" name="aaecb5fce7bfeac1710b3a7d5f7ec94ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaecb5fce7bfeac1710b3a7d5f7ec94ab">&#9670;&#160;</a></span>ParseError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int INIReader::ParseError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_n_i_reader_aaecb5fce7bfeac1710b3a7d5f7ec94ab_icgraph.png" border="0" usemap="#aclass_i_n_i_reader_aaecb5fce7bfeac1710b3a7d5f7ec94ab_icgraph" alt=""/></div>
+<map name="aclass_i_n_i_reader_aaecb5fce7bfeac1710b3a7d5f7ec94ab_icgraph" id="aclass_i_n_i_reader_aaecb5fce7bfeac1710b3a7d5f7ec94ab_icgraph">
+<area shape="rect" title=" " alt="" coords="232,5,392,31"/>
+<area shape="rect" href="class_xu_server_1_1_config.html#a21f2e889ba021873d278f78b24a042d5" title="构造函数" alt="" coords="5,5,184,31"/>
+<area shape="poly" title=" " alt="" coords="218,21,184,21,184,15,218,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a38e5a02b9eab882f23401a4b5a0c42a3" name="a38e5a02b9eab882f23401a4b5a0c42a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e5a02b9eab882f23401a4b5a0c42a3">&#9670;&#160;</a></span>ValueHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int INIReader::ValueHandler </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>section</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_n_i_reader_a38e5a02b9eab882f23401a4b5a0c42a3_cgraph.png" border="0" usemap="#aclass_i_n_i_reader_a38e5a02b9eab882f23401a4b5a0c42a3_cgraph" alt=""/></div>
+<map name="aclass_i_n_i_reader_a38e5a02b9eab882f23401a4b5a0c42a3_cgraph" id="aclass_i_n_i_reader_a38e5a02b9eab882f23401a4b5a0c42a3_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,187,31"/>
+<area shape="rect" href="class_i_n_i_reader.html#a1044063236e719cbd52b706b10120f2c" title=" " alt="" coords="235,5,388,31"/>
+<area shape="poly" title=" " alt="" coords="187,15,221,15,221,21,187,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_n_i_reader_a38e5a02b9eab882f23401a4b5a0c42a3_icgraph.png" border="0" usemap="#aclass_i_n_i_reader_a38e5a02b9eab882f23401a4b5a0c42a3_icgraph" alt=""/></div>
+<map name="aclass_i_n_i_reader_a38e5a02b9eab882f23401a4b5a0c42a3_icgraph" id="aclass_i_n_i_reader_a38e5a02b9eab882f23401a4b5a0c42a3_icgraph">
+<area shape="rect" title=" " alt="" coords="212,5,393,31"/>
+<area shape="rect" href="class_i_n_i_reader.html#a357e21f6b1bc10b17bd3a7b72452cb57" title=" " alt="" coords="5,5,164,31"/>
+<area shape="poly" title=" " alt="" coords="198,21,164,21,164,15,198,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a964b63d6d630cde92a998cfb4986b223" name="a964b63d6d630cde92a998cfb4986b223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a964b63d6d630cde92a998cfb4986b223">&#9670;&#160;</a></span>_error</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int INIReader::_error</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92f65f8d5d1f0f1eeed3566ba007f93b" name="a92f65f8d5d1f0f1eeed3566ba007f93b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92f65f8d5d1f0f1eeed3566ba007f93b">&#9670;&#160;</a></span>_fields</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, std::set&lt;std::string&gt;*&gt; INIReader::_fields</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b83cd8f3126bcbb78955083ef50fe34" name="a3b83cd8f3126bcbb78955083ef50fe34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b83cd8f3126bcbb78955083ef50fe34">&#9670;&#160;</a></span>_sections</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;std::string&gt; INIReader::_sections</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae48a98ecb0d35c2ea3066dac63a731bd" name="ae48a98ecb0d35c2ea3066dac63a731bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48a98ecb0d35c2ea3066dac63a731bd">&#9670;&#160;</a></span>_values</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, std::string&gt; INIReader::_values</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_i_n_i_reader.html">INIReader</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

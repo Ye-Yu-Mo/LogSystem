@@ -1,5 +1,7 @@
 <map id="Xulog::GlobalLoggerBuild" name="Xulog::GlobalLoggerBuild">
-<area shape="rect" id="Node000001" title="全局日志器建造者" alt="" coords="5,79,192,104"/>
-<area shape="rect" id="Node000002" href="$class_xulog_1_1_logger_builder.html" title="日志器建造者" alt="" coords="20,5,177,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,44,101,79,96,79,96,44"/>
+<area shape="rect" id="Node000001" title="全局日志器建造者" alt="" coords="5,168,192,193"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_logger_builder.html" title="日志器建造者" alt="" coords="20,93,177,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,133,101,168,96,168,96,133"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="69,5,128,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="101,45,101,93,96,93,96,45"/>
 </map>

@@ -84,16 +84,19 @@
     },
     "cSpell.words": [
         "dbfile",
+        "dbptr",
         "inbuffer",
         "loggername",
         "newsockfd",
         "peerip",
         "peerport",
         "psink",
+        "serverlog",
         "serverport",
         "synclogger",
         "threadpool",
         "tparam",
+        "Unenable",
         "Xulog"
     ]
 }

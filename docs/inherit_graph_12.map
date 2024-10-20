@@ -1,15 +1,3 @@
 <map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="Node000000" href="$class_xulog_1_1_log_sink.html" title="抽象日志落地基类" alt="" coords="5,129,124,155"/>
-<area shape="rect" id="Node000001" href="$class_data_base_sink.html" title="数据库落地类" alt="" coords="197,5,311,31"/>
-<area shape="poly" id="edge15_Node000000_Node000001" title=" " alt="" coords="83,117,121,77,171,40,196,28,199,33,173,44,125,81,87,120"/>
-<area shape="rect" id="Node000002" href="$class_roll_sink_by_time.html" title=" " alt="" coords="191,55,317,80"/>
-<area shape="poly" id="edge16_Node000000_Node000002" title=" " alt="" coords="101,120,171,89,204,78,206,83,173,94,103,125"/>
-<area shape="rect" id="Node000003" href="$class_server_sink.html" title=" " alt="" coords="208,104,300,129"/>
-<area shape="poly" id="edge17_Node000000_Node000003" title=" " alt="" coords="137,130,207,120,208,125,138,135"/>
-<area shape="rect" id="Node000004" href="$class_xulog_1_1_file_sink.html" title="文件日志落地实现" alt="" coords="195,153,313,179"/>
-<area shape="poly" id="edge18_Node000000_Node000004" title=" " alt="" coords="138,149,195,156,194,161,137,154"/>
-<area shape="rect" id="Node000005" href="$class_xulog_1_1_roll_sink_by_size.html" title="基于文件大小的滚动文件日志落地实现" alt="" coords="172,203,336,228"/>
-<area shape="poly" id="edge19_Node000000_Node000005" title=" " alt="" coords="105,158,173,188,210,200,208,205,171,192,103,163"/>
-<area shape="rect" id="Node000006" href="$class_xulog_1_1_stdout_sink.html" title="标准输出日志落地实现" alt="" coords="185,252,323,277"/>
-<area shape="poly" id="edge20_Node000000_Node000006" title=" " alt="" coords="88,164,126,201,173,237,202,250,199,254,171,242,122,205,84,168"/>
+<area shape="rect" id="Node000000" href="$struct_xulog_1_1_log_msg.html" title="日志消息结构体" alt="" coords="5,5,123,31"/>
 </map>

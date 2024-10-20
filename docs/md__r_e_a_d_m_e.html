@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
   <td id="projectalign">
-   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.3</span>
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.4</span>
    </div>
    <div id="projectbrief">This is a logging system project</div>
   </td>
@@ -113,6 +113,8 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>支持多线程并发写入日志</li>
 <li>支持扩展不同的日志落地目标地</li>
 <li>支持落地到日志服务器</li>
+<li>支持同步日志落地到数据库sqlite</li>
+<li>支持使用ini文件配置服务器落地方式和信息</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
 运行环境</h1>
@@ -262,6 +264,49 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <td class="markdownTableBodyNone"><code>n</code>   </td><td class="markdownTableBodyNone">换行   </td></tr>
 </table>
 <h1><a class="anchor" id="autotoc_md7"></a>
+服务端使用说明</h1>
+<p>服务端启动时需要指定配置文件路径 默认配置文件在<code>config</code>文件夹中的<code>config.ini</code>文件里</p>
+<div class="fragment"><div class="line"># 注释section 为关闭功能 当前设置为默认设置 恢复默认可用default替代</div>
+<div class="line"> </div>
+<div class="line"># 服务器端口 默认为8888</div>
+<div class="line">[Server]</div>
+<div class="line">port=8888</div>
+<div class="line"> </div>
+<div class="line"># 标准落地配置 </div>
+<div class="line"># 标准落地是否打开颜色 true 表示打开 false 表示关闭</div>
+<div class="line">[StdoutSink] </div>
+<div class="line">color=true</div>
+<div class="line"> </div>
+<div class="line"># 文件落地配置</div>
+<div class="line"># 文件位置和路径配置 支持相对和绝对地址 注意需要写出文件名</div>
+<div class="line">[FileSink] </div>
+<div class="line">path=./log/test.log</div>
+<div class="line"> </div>
+<div class="line"># 滚动文件（大小）配置</div>
+<div class="line"># 滚动文件路径名称 后面会自动生成后缀名区分不同文件</div>
+<div class="line"># 滚动文件大小 单位是KB 请勿输入表达式</div>
+<div class="line">[RollBySize] </div>
+<div class="line">path=./log/roll- </div>
+<div class="line">size=1024 </div>
+<div class="line"> </div>
+<div class="line"># 滚动文件（时间）配置</div>
+<div class="line"># 滚动文件路径名称 后面会自动生成后缀名区分不同文件</div>
+<div class="line"># 滚动类型 支持 GAP_SECOND GAP_MINUTE GAP_HOUR GAP_DAY</div>
+<div class="line">[RollByTime] </div>
+<div class="line">path=./log/roll- </div>
+<div class="line">type=GAP_SECOND</div>
+<div class="line"> </div>
+<div class="line"># 数据库落地配置</div>
+<div class="line"># 数据库文件位置和路径配置 支持相对和绝对地址 注意需要写出文件名</div>
+<div class="line">[DataBaseSink] </div>
+<div class="line">path=./log/log.db</div>
+</div><!-- fragment --><p><b>注意</b></p><ol type="1">
+<li>所有的路径需要包含文件名</li>
+<li>需要去掉某种落地方式直接注释即可</li>
+<li>数据库落地仅支持同步日志器</li>
+<li>默认值可以使用default（尚未完整测试）</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md8"></a>
 开发环境</h1>
 <ul>
 <li>WSL(Ubuntu 22.04)</li>
@@ -269,7 +314,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>g++/gdb</li>
 <li>Makefile</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 核心技术点</h1>
 <ul>
 <li>类的继承和多态</li>
@@ -279,13 +324,13 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>多线程</li>
 <li>设计模式（单例模式、工厂模式、代理模式、建造者模式）</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md10"></a>
 日志系统介绍</h1>
 <p>在生产环境中，有时候是不允许我们程序员利用调试器排查问题，不允许服务暂停</p>
 <p>在高频操作中，少量调试次数并不一定能够复现出对应的bug，可能需要重复操作非常多次的情况，导致效率低下</p>
 <p>在分布式、多线程代码中，bug更难以定位</p>
 <p>因此就需要日志系统进行开发问题的排查</p>
-<h1><a class="anchor" id="autotoc_md10"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 技术实现</h1>
 <p>日志系统的技术实现主要分为两大类</p>
 <ol type="1">
@@ -293,16 +338,16 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>输出日志到文件或数据库系统</li>
 </ol>
 <p>这里分为同步和异步写日志</p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 同步日志</h2>
 <p>同步日志是指当输出日志时，程序必须等待日志输出语句执行完毕后才能执行后面的逻辑语句，日志输出语句和业务逻辑处于同一个线程</p>
 <p>同步日志系统在高并发场景下容易出现系统瓶颈，主要是由于write系统调用和频繁IO导致的</p>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 异步日志</h2>
 <p>异步日志指的是在输出日志时，输出日志的语句和业务逻辑语句处于不同的线程，使用单独的线程去完成</p>
 <p>业务逻辑语句是生产者，而日志线程是消费者，这是一共典型的生产者消费者模型</p>
 <p>异步的好处就是日志没有完成输出也不会影响业务逻辑的运行，可以提高程序的效率</p>
-<h1><a class="anchor" id="autotoc_md13"></a>
+<h1><a class="anchor" id="autotoc_md14"></a>
 框架模块</h1>
 <ul>
 <li>日志等级模块：对不同日志进行等级划分、对日志的输出进行控制，提供按照等级枚举字符串的功能<ul>
@@ -337,12 +382,12 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>异步线程模块：负责异步日志落地</li>
 <li>单例日志器管理模块：对日志全局管理，在项目任何位置，获取日志器执行输出</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="autotoc_md15"></a>
 模块关系图</h2>
 <p><img src="https://s2.loli.net/2024/09/06/OJXmjhyqEwPRsbY.png" alt="image.png" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md15"></a>
+<h1><a class="anchor" id="autotoc_md16"></a>
 异步缓冲区模块</h1>
-<h2><a class="anchor" id="autotoc_md16"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 模块设计</h2>
 <p>异步日志器的思想是为了避免业务线程因为写日志的过程时间较长而长时间阻塞</p>
 <p>异步日志器的工作就是把业务输出的日志内容放入内存缓冲区中，使用专门的线程进行日志写入</p>
@@ -351,7 +396,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>实现一个线程安全缓冲区</li>
 <li>创建一个异步工作线程，专门负责缓冲区日志消息的落地操作</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md17"></a>
+<h2><a class="anchor" id="autotoc_md18"></a>
 缓冲区设计</h2>
 <ol type="1">
 <li>使用队列缓存日志消息，进行逐条处理，要求不涉及到空间的频繁申请和释放，否则会降低效率</li>
@@ -362,9 +407,9 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 </ol>
 <p><img src="https://s2.loli.net/2024/09/12/AS6YXdRypnCPxIg.png" alt="image.png" class="inline"/></p>
 <p>双缓冲区的好处是，降低了生产者和消费者之间的冲突，只有在交换的适合需要冲突一次</p>
-<h1><a class="anchor" id="autotoc_md18"></a>
+<h1><a class="anchor" id="autotoc_md19"></a>
 性能测试</h1>
-<h2><a class="anchor" id="autotoc_md19"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 测试环境</h2>
 <ul>
 <li>CPU : AMD Ryzen 7 6800H with Radeon Graphics 3.20 GHz</li>
@@ -376,7 +421,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md20"></a>
+<h2><a class="anchor" id="autotoc_md21"></a>
 测试方法</h2>
 <p>主要测试内容：单线程 | 多线程 &amp; 同步 | 异步</p>
 <ul>
@@ -384,9 +429,9 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>每秒输出日志数</li>
 <li>每秒输出日志所占存储空间</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md21"></a>
+<h2><a class="anchor" id="autotoc_md22"></a>
 测试结果</h2>
-<h3><a class="anchor" id="autotoc_md22"></a>
+<h3><a class="anchor" id="autotoc_md23"></a>
 同步</h3>
 <ul>
 <li>单线程</li>
@@ -396,7 +441,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>多线程</li>
 </ul>
 <p><img src="https://s2.loli.net/2024/09/20/TPDJBNcVKR5zXCU.png" alt="image.png" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md23"></a>
+<h3><a class="anchor" id="autotoc_md24"></a>
 异步</h3>
 <ul>
 <li>单线程</li>
@@ -406,15 +451,15 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>多线程</li>
 </ul>
 <p><img src="https://s2.loli.net/2024/09/20/AJeUbpSPjDFRofr.png" alt="image.png" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md24"></a>
+<h1><a class="anchor" id="autotoc_md25"></a>
 TODO</h1>
 <ul>
-<li><strike>支持配置服务端地址，网络传输到日志服务器(DUP)</strike> DONE 仅支持同步日志</li>
-<li>TCP网络传输</li>
-<li>支持使用配置文件操控服务端设置</li>
+<li><strike>支持配置服务端地址，网络传输到日志服务器(TCP)</strike> DONE</li>
+<li><strike>支持使用配置文件操控服务端设置</strike> DONE</li>
 <li><strike>支持在控制台通过日志等级渲染不同颜色方便定位</strike> DONE</li>
 <li><strike>支持落地到数据库</strike> DONE 仅支持同步日志</li>
-<li>实现日志器客户端，提供检索、分析、展示等功能(仅数据库) </li>
+<li>实现日志器客户端，提供检索、分析、展示等功能(仅数据库)</li>
+<li>支持客户端连接服务端 进行检索、分析、展示等功能(仅数据库) </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

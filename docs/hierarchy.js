@@ -3,6 +3,7 @@ var hierarchy =
     [ "Xulog::AsyncLooper", "class_xulog_1_1_async_looper.html", null ],
     [ "Xulog::Buffer", "class_xulog_1_1_buffer.html", null ],
     [ "Xulog::Codec", "class_xulog_1_1_codec.html", null ],
+    [ "XuServer::Config", "class_xu_server_1_1_config.html", null ],
     [ "Xulog::Util::Date", "class_xulog_1_1_util_1_1_date.html", null ],
     [ "Xulog::DeliverMsg", "struct_xulog_1_1_deliver_msg.html", null ],
     [ "Xulog::Util::File", "class_xulog_1_1_util_1_1_file.html", null ],
@@ -19,6 +20,7 @@ var hierarchy =
       [ "Xulog::TimeFormatItem", "class_xulog_1_1_time_format_item.html", null ]
     ] ],
     [ "Xulog::Formatter", "class_xulog_1_1_formatter.html", null ],
+    [ "INIReader", "class_i_n_i_reader.html", null ],
     [ "Xulog::Logger", "class_xulog_1_1_logger.html", [
       [ "Xulog::AsyncLogger", "class_xulog_1_1_async_logger.html", null ],
       [ "Xulog::SyncLogger", "class_xulog_1_1_sync_logger.html", null ]

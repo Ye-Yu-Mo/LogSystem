@@ -14,7 +14,7 @@ var searchData=
   ['threshold_5fbuffer_5fsize_11',['THRESHOLD_BUFFER_SIZE',['../buffer_8hpp.html#a74a57ad1abcbb2900facea1c7b9d2150',1,'buffer.hpp']]],
   ['timeformatitem_12',['timeformatitem',['../class_xulog_1_1_time_format_item.html',1,'Xulog::TimeFormatItem'],['../class_xulog_1_1_time_format_item.html#af73569adc2b80cdee211715bff224bc8',1,'Xulog::TimeFormatItem::TimeFormatItem()']]],
   ['timegap_13',['TimeGap',['../_roll_by_time_8hpp.html#a1f48fe664ed21e80a696fcd53cb4575d',1,'RollByTime.hpp']]],
-  ['todo_14',['TODO',['../md__r_e_a_d_m_e.html#autotoc_md24',1,'']]],
+  ['todo_14',['TODO',['../md__r_e_a_d_m_e.html#autotoc_md25',1,'']]],
   ['tojson_15',['tojson',['../class_xulog_1_1_codec.html#ab47400d3a1320b0970289d9fd4d3e5c8',1,'Xulog::Codec::toJson(const LogMsg &amp;msg)'],['../class_xulog_1_1_codec.html#a4b20dfc97cd7d384ab0bfa7f362d438f',1,'Xulog::Codec::toJson(const std::string &amp;msg)']]],
   ['tostring_16',['toString',['../class_xulog_1_1_log_level.html#a6d6fcbb384db801aa1faa908eca98a97',1,'Xulog::LogLevel']]]
 ];

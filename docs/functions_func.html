@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
   <td id="projectalign">
-   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.3</span>
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.4</span>
    </div>
    <div id="projectbrief">This is a logging system project</div>
   </td>
@@ -127,6 +127,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>close()&#160;:&#160;<a class="el" href="class_sqlite_helper.html#a365b6f3900da63c126269d469e8dbfdc">SqliteHelper</a></li>
 <li>CloseSockFd()&#160;:&#160;<a class="el" href="class_xu_server_1_1_tcp_socket.html#ae10d2b61b5d9bcfdbde3c76305c8eefe">XuServer::TcpSocket</a></li>
+<li>Config()&#160;:&#160;<a class="el" href="class_xu_server_1_1_config.html#a21f2e889ba021873d278f78b24a042d5">XuServer::Config</a></li>
 <li>ConnectServer()&#160;:&#160;<a class="el" href="class_xu_server_1_1_tcp_socket.html#a0ee1f89a92a64feb1003708b8cae63b8">XuServer::TcpSocket</a></li>
 <li>create()&#160;:&#160;<a class="el" href="class_xulog_1_1_sink_factory.html#ad1590da4477db87f0e67cb7be939cb84">Xulog::SinkFactory</a></li>
 <li>CreateBuildSocketMethod()&#160;:&#160;<a class="el" href="class_xu_server_1_1_udp_socket.html#a5dd36572e2db8a6c3469e94d99668923">XuServer::UdpSocket</a></li>
@@ -160,7 +161,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>fatal()&#160;:&#160;<a class="el" href="class_xulog_1_1_logger.html#a3d9920a1911340c90b7ac55bc52ba5af">Xulog::Logger</a></li>
 <li>FileSink()&#160;:&#160;<a class="el" href="class_xulog_1_1_file_sink.html#a089bc3708abdab8fc5663b5859d7df1b">Xulog::FileSink</a></li>
 <li>format()&#160;:&#160;<a class="el" href="class_xulog_1_1_file_format_item.html#a473718c667e24628f52ee058ba2ba417">Xulog::FileFormatItem</a>, <a class="el" href="class_xulog_1_1_format_item.html#ab3b90eaadf9b0bafff8b2e3c251c9684">Xulog::FormatItem</a></li>
-<li>Format()&#160;:&#160;<a class="el" href="class_xulog_1_1_formatter.html#afd8002bc8b676d44b815d23975e925bb">Xulog::Formatter</a></li>
+<li>Format()&#160;:&#160;<a class="el" href="class_xulog_1_1_formatter.html#ac78705cd3ceeb97ce1fbafc6e856f7e3">Xulog::Formatter</a></li>
 <li>format()&#160;:&#160;<a class="el" href="class_xulog_1_1_level_format_item.html#a275dbc854439cfbc65b640ccc50341a8">Xulog::LevelFormatItem</a>, <a class="el" href="class_xulog_1_1_line_format_item.html#a700f0b281b1e58fbaadc2a0ea5094eee">Xulog::LineFormatItem</a>, <a class="el" href="class_xulog_1_1_logger_format_item.html#a8dea43e04535b02e1b96bea2c17a8a98">Xulog::LoggerFormatItem</a>, <a class="el" href="class_xulog_1_1_msg_format_item.html#a04fecb70b5b4742a116aa4b5e73d2025">Xulog::MsgFormatItem</a>, <a class="el" href="class_xulog_1_1_n_line_format_item.html#aacaca42b5810ac45092e2bebc73147f0">Xulog::NLineFormatItem</a>, <a class="el" href="class_xulog_1_1_other_format_item.html#af87ffc9230659d98cec1ae4576601383">Xulog::OtherFormatItem</a>, <a class="el" href="class_xulog_1_1_tab_format_item.html#a5fffbc59c5fdad5e0747a8ab5bb2027a">Xulog::TabFormatItem</a>, <a class="el" href="class_xulog_1_1_thread_format_item.html#a1659e6567790ec26ce440168c69b17f6">Xulog::ThreadFormatItem</a>, <a class="el" href="class_xulog_1_1_time_format_item.html#aa4ce297f61442ad68424f7132b4739e3">Xulog::TimeFormatItem</a></li>
 <li>Formatter()&#160;:&#160;<a class="el" href="class_xulog_1_1_formatter.html#a26b0e505317a53ce08b02450191a4187">Xulog::Formatter</a></li>
 <li>fromJson()&#160;:&#160;<a class="el" href="class_xulog_1_1_codec.html#a31d9e0d48b6beb9ae79540938552d090">Xulog::Codec</a></li>
@@ -169,14 +170,21 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
+<li>Get()&#160;:&#160;<a class="el" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9">INIReader</a></li>
+<li>get()&#160;:&#160;<a class="el" href="class_xu_server_1_1_config.html#a5c12ed8dbf1a6a1982fd7ece4d5ba18d">XuServer::Config</a></li>
+<li>GetBoolean()&#160;:&#160;<a class="el" href="class_i_n_i_reader.html#ac3d70858d357a6797b0d58a9a00d737e">INIReader</a></li>
+<li>GetFields()&#160;:&#160;<a class="el" href="class_i_n_i_reader.html#a54c67b3709200b69ab9234a8ce3522e8">INIReader</a></li>
 <li>getFormatter()&#160;:&#160;<a class="el" href="class_xulog_1_1_logger.html#a54e0201f31feb8e38fed494ef5bca09d">Xulog::Logger</a>, <a class="el" href="class_xulog_1_1_logger_builder.html#a87ccc07843b0b80890eb8b8ecb72bd69">Xulog::LoggerBuilder</a></li>
-<li>getInstance()&#160;:&#160;<a class="el" href="class_xulog_1_1_logger_manager.html#a2275ef98586ea630426491d51be7bc96">Xulog::LoggerManager</a></li>
+<li>getInstance()&#160;:&#160;<a class="el" href="class_xulog_1_1_logger_manager.html#a2275ef98586ea630426491d51be7bc96">Xulog::LoggerManager</a>, <a class="el" href="class_xu_server_1_1_config.html#ad651f52e95a31fc9a87330b0d6c968ef">XuServer::Config</a>, <a class="el" href="class_xu_server_1_1_server_log.html#a87e2f8a2ab8f9a3ce6dce7e781c29a11">XuServer::ServerLog</a></li>
+<li>GetInteger()&#160;:&#160;<a class="el" href="class_i_n_i_reader.html#a5fb288f961b8a43ba4974fbf97f4d1df">INIReader</a></li>
 <li>getLimitLevel()&#160;:&#160;<a class="el" href="class_xulog_1_1_logger.html#a20e7d0029fd937891d5d000216dea187">Xulog::Logger</a></li>
 <li>getLogger()&#160;:&#160;<a class="el" href="class_xulog_1_1_logger_manager.html#a9482ba1783c7cd77667abef2ee231e6e">Xulog::LoggerManager</a></li>
 <li>getLoggerType()&#160;:&#160;<a class="el" href="class_xulog_1_1_logger.html#aea6847bb8d9128259a249af197d5a5a0">Xulog::Logger</a></li>
 <li>getMsg()&#160;:&#160;<a class="el" href="class_xulog_1_1_logger.html#a874b751392ef54e8b003488a06756e36">Xulog::Logger</a></li>
 <li>getName()&#160;:&#160;<a class="el" href="class_xulog_1_1_logger.html#a297fd14f436a4343b32c941b5ae7a7b5">Xulog::Logger</a></li>
 <li>getPattern()&#160;:&#160;<a class="el" href="class_xulog_1_1_formatter.html#a16871ac5b26cf3c431f57921e63d6f43">Xulog::Formatter</a></li>
+<li>GetReal()&#160;:&#160;<a class="el" href="class_i_n_i_reader.html#add45ae10b48fd12cb98a7b73e67d3a77">INIReader</a></li>
+<li>GetSections()&#160;:&#160;<a class="el" href="class_i_n_i_reader.html#a35eba1deed4bfc75c61ca7c9ee6f31c9">INIReader</a></li>
 <li>GetSockFd()&#160;:&#160;<a class="el" href="class_xu_server_1_1_tcp_socket.html#ad1027fc5c372fb042e92491e48e82eaf">XuServer::TcpSocket</a></li>
 <li>getTime()&#160;:&#160;<a class="el" href="class_xulog_1_1_util_1_1_date.html#a32d8c9efdcaf981547fcd8f3381da363">Xulog::Util::Date</a></li>
 </ul>
@@ -189,7 +197,8 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 
 <h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
 <li>info()&#160;:&#160;<a class="el" href="class_xulog_1_1_logger.html#a623ef0c5d8030674000c98561896a3f4">Xulog::Logger</a></li>
-<li>init()&#160;:&#160;<a class="el" href="class_xu_server_1_1_server_log.html#a94305ee7d0417f871c4f0f7fa4ee3b47">XuServer::ServerLog</a></li>
+<li>INIReader()&#160;:&#160;<a class="el" href="class_i_n_i_reader.html#a357e21f6b1bc10b17bd3a7b72452cb57">INIReader</a></li>
+<li>init()&#160;:&#160;<a class="el" href="class_xu_server_1_1_config.html#a153509671eaaf98e1056c05d8ebdb4b3">XuServer::Config</a>, <a class="el" href="class_xu_server_1_1_server_log.html#a94305ee7d0417f871c4f0f7fa4ee3b47">XuServer::ServerLog</a></li>
 </ul>
 
 
@@ -200,12 +209,14 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>LoggerBuilder()&#160;:&#160;<a class="el" href="class_xulog_1_1_logger_builder.html#a4b7dc063c7fd339f7db07f04a7f42699">Xulog::LoggerBuilder</a></li>
 <li>LoggerManager()&#160;:&#160;<a class="el" href="class_xulog_1_1_logger_manager.html#af066d515929d3e39763c03a57d06a5f5">Xulog::LoggerManager</a></li>
 <li>LogMsg()&#160;:&#160;<a class="el" href="struct_xulog_1_1_log_msg.html#aeee4e4fa9215ce2883d81a03d9e787a1">Xulog::LogMsg</a></li>
+<li>logMsg()&#160;:&#160;<a class="el" href="class_xu_server_1_1_server_log.html#aa78e8cdb6a360acc13246ec86aedd6d9">XuServer::ServerLog</a></li>
 <li>LogSink()&#160;:&#160;<a class="el" href="class_xulog_1_1_log_sink.html#acae79adeb7ae387b5fc0e61576bd8359">Xulog::LogSink</a></li>
 <li>Loop()&#160;:&#160;<a class="el" href="class_xu_server_1_1_tcp_server.html#a7bcc7a5e75576b2e29c999911a2510fc">XuServer::TcpServer</a></li>
 </ul>
 
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
+<li>MakeKey()&#160;:&#160;<a class="el" href="class_i_n_i_reader.html#a1044063236e719cbd52b706b10120f2c">INIReader</a></li>
 <li>moveReader()&#160;:&#160;<a class="el" href="class_xulog_1_1_buffer.html#a2d6f644575fd9dab2d31cb972fde28fd">Xulog::Buffer</a></li>
 <li>moveWriter()&#160;:&#160;<a class="el" href="class_xulog_1_1_buffer.html#aeca9ee3e99353c7a719af2f57fb2a386">Xulog::Buffer</a></li>
 <li>msgFromJson()&#160;:&#160;<a class="el" href="class_xulog_1_1_codec.html#a6970d0f5d69318c65b15ec7bed3549ce">Xulog::Codec</a></li>
@@ -228,6 +239,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 
 
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
+<li>ParseError()&#160;:&#160;<a class="el" href="class_i_n_i_reader.html#aaecb5fce7bfeac1710b3a7d5f7ec94ab">INIReader</a></li>
 <li>parsePattern()&#160;:&#160;<a class="el" href="class_xulog_1_1_formatter.html#a743ac67767ed63a7385330d804513e12">Xulog::Formatter</a></li>
 <li>path()&#160;:&#160;<a class="el" href="class_xulog_1_1_util_1_1_file.html#a578792da7768a3c985cbf0acb87f495b">Xulog::Util::File</a></li>
 <li>push()&#160;:&#160;<a class="el" href="class_xulog_1_1_async_looper.html#a48333a47b34bc600f6bff6bb152ff0b8">Xulog::AsyncLooper</a>, <a class="el" href="class_xulog_1_1_buffer.html#a148e4bc1220cbef2b4619bae366d70d8">Xulog::Buffer</a>, <a class="el" href="class_xu_server_1_1threadpool.html#a8c73d042dd48c62e357a2d4905862d24">XuServer::threadpool</a></li>
@@ -280,6 +292,11 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 </ul>
 
 
+<h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
+<li>ValueHandler()&#160;:&#160;<a class="el" href="class_i_n_i_reader.html#a38e5a02b9eab882f23401a4b5a0c42a3">INIReader</a></li>
+</ul>
+
+
 <h3><a id="index_w" name="index_w"></a>- w -</h3><ul>
 <li>warn()&#160;:&#160;<a class="el" href="class_xulog_1_1_logger.html#aa32b52c0de872bf78debea1139af1afc">Xulog::Logger</a></li>
 <li>writeAbleSize()&#160;:&#160;<a class="el" href="class_xulog_1_1_buffer.html#a7653408465471cc568659dfd5ed91244">Xulog::Buffer</a></li>
@@ -289,6 +306,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <h3><a id="index__7E" name="index__7E"></a>- ~ -</h3><ul>
 <li>~AsyncLooper()&#160;:&#160;<a class="el" href="class_xulog_1_1_async_looper.html#aa803f65ae60533381e8d6cc669517dd2">Xulog::AsyncLooper</a></li>
 <li>~DataBaseSink()&#160;:&#160;<a class="el" href="class_data_base_sink.html#afa9f8c697a32288afee92b559a4bb840">DataBaseSink</a></li>
+<li>~INIReader()&#160;:&#160;<a class="el" href="class_i_n_i_reader.html#a6fe34abf3bc5aa0786333d62bc0880dd">INIReader</a></li>
 <li>~LoggerManager()&#160;:&#160;<a class="el" href="class_xulog_1_1_logger_manager.html#afa564a988ba304c0dd66d2152af33c9e">Xulog::LoggerManager</a></li>
 <li>~LogSink()&#160;:&#160;<a class="el" href="class_xulog_1_1_log_sink.html#a08999c41dea391f82bd1efd16c1cbf6c">Xulog::LogSink</a></li>
 <li>~nocopy()&#160;:&#160;<a class="el" href="class_xu_server_1_1nocopy.html#a09fcdca8e758cb10a45ea4364f8914e5">XuServer::nocopy</a></li>

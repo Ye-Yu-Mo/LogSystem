@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
   <td id="projectalign">
-   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.3</span>
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.4</span>
    </div>
    <div id="projectbrief">This is a logging system project</div>
   </td>
@@ -98,7 +98,9 @@ $(document).ready(function(){initNavTree('class_xu_server_1_1_server_log.html','
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
 <a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
 <a href="#pri-methods">Private 成员函数</a> &#124;
 <a href="#pri-attribs">Private 属性</a> &#124;
 <a href="#pri-static-attribs">静态 Private 属性</a> &#124;
@@ -112,6 +114,12 @@ $(document).ready(function(){initNavTree('class_xu_server_1_1_server_log.html','
 
 <p><code>#include &lt;<a class="el" href="serverlog_8hpp_source.html">serverlog.hpp</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a403e790da46f0bf19f05f583abc9fd14" id="r_a403e790da46f0bf19f05f583abc9fd14"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_server_log.html#a403e790da46f0bf19f05f583abc9fd14">ptr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_server_1_1_server_log.html">ServerLog</a> &gt;</td></tr>
+<tr class="memdesc:a403e790da46f0bf19f05f583abc9fd14"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器实际落地操作句柄  <br /></td></tr>
+<tr class="separator:a403e790da46f0bf19f05f583abc9fd14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:aab36ad16185ab00adcb736f557e81bf0" id="r_aab36ad16185ab00adcb736f557e81bf0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_server_log.html#aab36ad16185ab00adcb736f557e81bf0">ServerLog</a> ()</td></tr>
@@ -120,6 +128,15 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:ad2985e18e3b4b3debf7fa8e20bff2281" id="r_ad2985e18e3b4b3debf7fa8e20bff2281"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_server_log.html#ad2985e18e3b4b3debf7fa8e20bff2281">operator()</a> (std::string &amp;msg)</td></tr>
 <tr class="memdesc:ad2985e18e3b4b3debf7fa8e20bff2281"><td class="mdescLeft">&#160;</td><td class="mdescRight">仿函数  <br /></td></tr>
 <tr class="separator:ad2985e18e3b4b3debf7fa8e20bff2281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a87e2f8a2ab8f9a3ce6dce7e781c29a11" id="r_a87e2f8a2ab8f9a3ce6dce7e781c29a11"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_xu_server_1_1_server_log.html#a403e790da46f0bf19f05f583abc9fd14">ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_server_log.html#a87e2f8a2ab8f9a3ce6dce7e781c29a11">getInstance</a> ()</td></tr>
+<tr class="memdesc:a87e2f8a2ab8f9a3ce6dce7e781c29a11"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取服务器落地操作句柄  <br /></td></tr>
+<tr class="separator:a87e2f8a2ab8f9a3ce6dce7e781c29a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78e8cdb6a360acc13246ec86aedd6d9" id="r_aa78e8cdb6a360acc13246ec86aedd6d9"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_server_log.html#aa78e8cdb6a360acc13246ec86aedd6d9">logMsg</a> (std::vector&lt; char &gt; &amp;msg, bool *error_code)</td></tr>
+<tr class="memdesc:aa78e8cdb6a360acc13246ec86aedd6d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器收到消息的处理回调函数  <br /></td></tr>
+<tr class="separator:aa78e8cdb6a360acc13246ec86aedd6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private 成员函数</h2></td></tr>
@@ -138,10 +155,30 @@ Private 属性</h2></td></tr>
 <tr class="memitem:a37980e62722085894a1b33f2ab9b8df6" id="r_a37980e62722085894a1b33f2ab9b8df6"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="class_xulog_1_1_logger_builder.html">Xulog::LoggerBuilder</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_server_log.html#a37980e62722085894a1b33f2ab9b8df6">_builder</a> = nullptr</td></tr>
 <tr class="memdesc:a37980e62722085894a1b33f2ab9b8df6"><td class="mdescLeft">&#160;</td><td class="mdescRight">日志构造器  <br /></td></tr>
 <tr class="separator:a37980e62722085894a1b33f2ab9b8df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e598afafbf6c2eefe4b8a294543483f" id="r_a4e598afafbf6c2eefe4b8a294543483f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_xu_server_1_1_server_log.html#a403e790da46f0bf19f05f583abc9fd14">ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_server_log.html#a4e598afafbf6c2eefe4b8a294543483f">_log</a> = nullptr</td></tr>
+<tr class="memdesc:a4e598afafbf6c2eefe4b8a294543483f"><td class="mdescLeft">&#160;</td><td class="mdescRight">服务器实际落地操作句柄  <br /></td></tr>
+<tr class="separator:a4e598afafbf6c2eefe4b8a294543483f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>服务器实际执行落地的类 </p>
-</div><h2 class="groupheader">构造及析构函数说明</h2>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a403e790da46f0bf19f05f583abc9fd14" name="a403e790da46f0bf19f05f583abc9fd14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a403e790da46f0bf19f05f583abc9fd14">&#9670;&#160;</a></span>ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_xu_server_1_1_server_log.html#a403e790da46f0bf19f05f583abc9fd14">XuServer::ServerLog::ptr</a> =  std::shared_ptr&lt;<a class="el" href="class_xu_server_1_1_server_log.html">ServerLog</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>服务器实际落地操作句柄 </p>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
 <a id="aab36ad16185ab00adcb736f557e81bf0" name="aab36ad16185ab00adcb736f557e81bf0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aab36ad16185ab00adcb736f557e81bf0">&#9670;&#160;</a></span>ServerLog()</h2>
 
@@ -170,6 +207,46 @@ Private 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
+<a id="a87e2f8a2ab8f9a3ce6dce7e781c29a11" name="a87e2f8a2ab8f9a3ce6dce7e781c29a11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87e2f8a2ab8f9a3ce6dce7e781c29a11">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_xu_server_1_1_server_log.html#a403e790da46f0bf19f05f583abc9fd14">ptr</a> XuServer::ServerLog::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取服务器落地操作句柄 </p>
+<dl class="section return"><dt>返回</dt><dd>服务器落地操作句柄 </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_server_1_1_server_log_a87e2f8a2ab8f9a3ce6dce7e781c29a11_icgraph.png" border="0" usemap="#aclass_xu_server_1_1_server_log_a87e2f8a2ab8f9a3ce6dce7e781c29a11_icgraph" alt=""/></div>
+<map name="aclass_xu_server_1_1_server_log_a87e2f8a2ab8f9a3ce6dce7e781c29a11_icgraph" id="aclass_xu_server_1_1_server_log_a87e2f8a2ab8f9a3ce6dce7e781c29a11_icgraph">
+<area shape="rect" title="获取服务器落地操作句柄" alt="" coords="311,5,465,45"/>
+<area shape="rect" href="class_xu_server_1_1_server_log.html#aa78e8cdb6a360acc13246ec86aedd6d9" title="服务器收到消息的处理回调函数" alt="" coords="108,5,263,45"/>
+<area shape="poly" title=" " alt="" coords="297,28,263,28,263,23,297,23"/>
+<area shape="rect" href="_server_main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="94,28,60,28,60,23,94,23"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a94305ee7d0417f871c4f0f7fa4ee3b47" name="a94305ee7d0417f871c4f0f7fa4ee3b47"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a94305ee7d0417f871c4f0f7fa4ee3b47">&#9670;&#160;</a></span>init()</h2>
 
@@ -202,6 +279,16 @@ Private 属性</h2></td></tr>
   </dd>
 </dl>
 <div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_server_1_1_server_log_a94305ee7d0417f871c4f0f7fa4ee3b47_cgraph.png" border="0" usemap="#aclass_xu_server_1_1_server_log_a94305ee7d0417f871c4f0f7fa4ee3b47_cgraph" alt=""/></div>
+<map name="aclass_xu_server_1_1_server_log_a94305ee7d0417f871c4f0f7fa4ee3b47_cgraph" id="aclass_xu_server_1_1_server_log_a94305ee7d0417f871c4f0f7fa4ee3b47_cgraph">
+<area shape="rect" title="初始化落地方式" alt="" coords="5,5,160,45"/>
+<area shape="rect" href="class_xu_server_1_1_config.html#aa7a278e8e3eb8430166313b4b1f16aaa" title="获取配置文件操作句柄" alt="" coords="208,13,423,38"/>
+<area shape="poly" title=" " alt="" coords="161,23,194,23,194,28,161,28"/>
+</map>
+</div>
+<div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_server_1_1_server_log_a94305ee7d0417f871c4f0f7fa4ee3b47_icgraph.png" border="0" usemap="#aclass_xu_server_1_1_server_log_a94305ee7d0417f871c4f0f7fa4ee3b47_icgraph" alt=""/></div>
@@ -209,6 +296,72 @@ Private 属性</h2></td></tr>
 <area shape="rect" title="初始化落地方式" alt="" coords="208,5,363,45"/>
 <area shape="rect" href="class_xu_server_1_1_server_log.html#ad2985e18e3b4b3debf7fa8e20bff2281" title="仿函数" alt="" coords="5,5,160,45"/>
 <area shape="poly" title=" " alt="" coords="194,28,161,28,161,23,194,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa78e8cdb6a360acc13246ec86aedd6d9" name="aa78e8cdb6a360acc13246ec86aedd6d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa78e8cdb6a360acc13246ec86aedd6d9">&#9670;&#160;</a></span>logMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string XuServer::ServerLog::logMsg </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>error_code</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>服务器收到消息的处理回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>服务器接收的信息 </td></tr>
+    <tr><td class="paramname">error_code</td><td>错误码 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>需要返回给客户端的信息 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_server_1_1_server_log_aa78e8cdb6a360acc13246ec86aedd6d9_cgraph.png" border="0" usemap="#aclass_xu_server_1_1_server_log_aa78e8cdb6a360acc13246ec86aedd6d9_cgraph" alt=""/></div>
+<map name="aclass_xu_server_1_1_server_log_aa78e8cdb6a360acc13246ec86aedd6d9_cgraph" id="aclass_xu_server_1_1_server_log_aa78e8cdb6a360acc13246ec86aedd6d9_cgraph">
+<area shape="rect" title="服务器收到消息的处理回调函数" alt="" coords="5,5,160,45"/>
+<area shape="rect" href="class_xu_server_1_1_server_log.html#a87e2f8a2ab8f9a3ce6dce7e781c29a11" title="获取服务器落地操作句柄" alt="" coords="208,5,363,45"/>
+<area shape="poly" title=" " alt="" coords="160,23,194,23,194,28,160,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_server_1_1_server_log_aa78e8cdb6a360acc13246ec86aedd6d9_icgraph.png" border="0" usemap="#aclass_xu_server_1_1_server_log_aa78e8cdb6a360acc13246ec86aedd6d9_icgraph" alt=""/></div>
+<map name="aclass_xu_server_1_1_server_log_aa78e8cdb6a360acc13246ec86aedd6d9_icgraph" id="aclass_xu_server_1_1_server_log_aa78e8cdb6a360acc13246ec86aedd6d9_icgraph">
+<area shape="rect" title="服务器收到消息的处理回调函数" alt="" coords="108,5,263,45"/>
+<area shape="rect" href="_server_main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" title=" " alt="" coords="94,28,60,28,60,23,94,23"/>
 </map>
 </div>
 
@@ -250,21 +403,23 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_server_1_1_server_log_ad2985e18e3b4b3debf7fa8e20bff2281_cgraph.png" border="0" usemap="#aclass_xu_server_1_1_server_log_ad2985e18e3b4b3debf7fa8e20bff2281_cgraph" alt=""/></div>
 <map name="aclass_xu_server_1_1_server_log_ad2985e18e3b4b3debf7fa8e20bff2281_cgraph" id="aclass_xu_server_1_1_server_log_ad2985e18e3b4b3debf7fa8e20bff2281_cgraph">
-<area shape="rect" title="仿函数" alt="" coords="5,55,160,95"/>
-<area shape="rect" href="class_xulog_1_1_codec.html#a31d9e0d48b6beb9ae79540938552d090" title="将Json信息反序列化为传递消息" alt="" coords="208,9,381,35"/>
-<area shape="poly" title=" " alt="" coords="160,53,229,36,230,41,161,59"/>
-<area shape="rect" href="namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="229,63,361,88"/>
-<area shape="poly" title=" " alt="" coords="160,73,215,73,215,78,160,78"/>
-<area shape="rect" href="class_xu_server_1_1_server_log.html#a94305ee7d0417f871c4f0f7fa4ee3b47" title="初始化落地方式" alt="" coords="217,113,372,153"/>
-<area shape="poly" title=" " alt="" coords="158,93,208,106,206,112,157,98"/>
-<area shape="rect" href="class_xulog_1_1_codec.html#a6970d0f5d69318c65b15ec7bed3549ce" title="将Json信息反序列化为传递消息" alt="" coords="429,5,632,31"/>
-<area shape="poly" title=" " alt="" coords="382,18,416,17,416,23,382,23"/>
-<area shape="rect" href="class_xulog_1_1_log_level.html#a55a58ff5f7755c98ec623037144661fb" title="从字符串转换成日志等级" alt="" coords="680,5,883,31"/>
-<area shape="poly" title=" " alt="" coords="632,15,666,15,666,21,632,21"/>
-<area shape="rect" href="class_xulog_1_1_logger_manager.html#a2275ef98586ea630426491d51be7bc96" title="获取日志器管理器的实例" alt="" coords="447,55,615,95"/>
-<area shape="poly" title=" " alt="" coords="361,73,433,73,433,78,361,78"/>
-<area shape="rect" href="class_xulog_1_1_logger_manager.html#a9482ba1783c7cd77667abef2ee231e6e" title="获取指定名称的日志器" alt="" coords="447,119,615,159"/>
-<area shape="poly" title=" " alt="" coords="343,86,444,113,442,118,342,91"/>
+<area shape="rect" title="仿函数" alt="" coords="5,71,160,111"/>
+<area shape="rect" href="class_xulog_1_1_codec.html#a31d9e0d48b6beb9ae79540938552d090" title="将Json信息反序列化为传递消息" alt="" coords="208,17,381,43"/>
+<area shape="poly" title=" " alt="" coords="152,69,236,44,237,49,153,74"/>
+<area shape="rect" href="namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="229,79,361,104"/>
+<area shape="poly" title=" " alt="" coords="160,89,215,89,215,94,160,94"/>
+<area shape="rect" href="class_xu_server_1_1_server_log.html#a94305ee7d0417f871c4f0f7fa4ee3b47" title="初始化落地方式" alt="" coords="217,145,372,185"/>
+<area shape="poly" title=" " alt="" coords="142,109,224,138,223,143,140,114"/>
+<area shape="rect" href="class_xulog_1_1_codec.html#a6970d0f5d69318c65b15ec7bed3549ce" title="将Json信息反序列化为传递消息" alt="" coords="435,5,638,31"/>
+<area shape="poly" title=" " alt="" coords="381,23,422,21,422,26,382,28"/>
+<area shape="rect" href="class_xulog_1_1_log_level.html#a55a58ff5f7755c98ec623037144661fb" title="从字符串转换成日志等级" alt="" coords="692,5,895,31"/>
+<area shape="poly" title=" " alt="" coords="638,15,678,15,678,21,638,21"/>
+<area shape="rect" href="class_xulog_1_1_logger_manager.html#a2275ef98586ea630426491d51be7bc96" title="获取日志器管理器的实例" alt="" coords="453,55,621,95"/>
+<area shape="poly" title=" " alt="" coords="361,84,439,79,439,84,361,90"/>
+<area shape="rect" href="class_xulog_1_1_logger_manager.html#a9482ba1783c7cd77667abef2ee231e6e" title="获取指定名称的日志器" alt="" coords="453,119,621,159"/>
+<area shape="poly" title=" " alt="" coords="360,101,440,117,439,123,359,107"/>
+<area shape="rect" href="class_xu_server_1_1_config.html#aa7a278e8e3eb8430166313b4b1f16aaa" title="获取配置文件操作句柄" alt="" coords="429,184,644,209"/>
+<area shape="poly" title=" " alt="" coords="373,172,427,180,427,185,372,178"/>
 </map>
 </div>
 
@@ -293,6 +448,30 @@ Private 属性</h2></td></tr>
 
 <p>日志构造器 </p>
 <p>日志器初始化 </p>
+
+</div>
+</div>
+<a id="a4e598afafbf6c2eefe4b8a294543483f" name="a4e598afafbf6c2eefe4b8a294543483f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e598afafbf6c2eefe4b8a294543483f">&#9670;&#160;</a></span>_log</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_server_1_1_server_log.html#a403e790da46f0bf19f05f583abc9fd14">ServerLog::ptr</a> XuServer::ServerLog::_log = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>服务器实际落地操作句柄 </p>
 
 </div>
 </div>

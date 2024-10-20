@@ -1,0 +1,19 @@
+<map id="INIReader::INIReader" name="INIReader::INIReader">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,105,164,131"/>
+<area shape="rect" id="Node000002" href="$ini_8c.html#ad285e522c65745f50f01ba650b563dd7" title=" " alt="" coords="262,80,343,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,106,248,96,248,102,165,111"/>
+<area shape="rect" id="Node000008" href="$class_i_n_i_reader.html#a38e5a02b9eab882f23401a4b5a0c42a3" title=" " alt="" coords="212,129,393,155"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="165,124,199,128,198,133,164,129"/>
+<area shape="rect" id="Node000003" href="$ini_8c.html#a919ebf8b15ff98ff05da9a394bf0b7ed" title=" " alt="" coords="464,80,572,105"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="344,90,450,90,450,95,344,95"/>
+<area shape="rect" id="Node000004" href="$ini_8c.html#a1bd808712def9146b17116b0d4de45fe" title=" " alt="" coords="643,5,813,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="547,77,642,39,665,32,666,37,644,45,549,82"/>
+<area shape="rect" id="Node000005" href="$ini_8c.html#a39ed5098d962eb4aad157b3fa65166ad" title=" " alt="" coords="701,55,755,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="572,84,687,69,688,75,573,89"/>
+<area shape="rect" id="Node000006" href="$ini_8c.html#a8efe5ce34c3407d5350b3f15f9cc521d" title=" " alt="" coords="700,104,756,129"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="572,96,687,109,686,115,572,101"/>
+<area shape="rect" id="Node000007" href="$ini_8c.html#a70acf8babdb6c2072c2d622a8258d320" title=" " alt="" coords="689,153,767,179"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="564,103,596,114,644,138,676,150,675,155,642,143,594,119,562,108"/>
+<area shape="rect" id="Node000009" href="$class_i_n_i_reader.html#a1044063236e719cbd52b706b10120f2c" title=" " alt="" coords="441,129,595,155"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="394,139,428,139,428,145,394,145"/>
+</map>

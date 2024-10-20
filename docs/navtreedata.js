@@ -33,29 +33,30 @@ var NAVTREE =
         [ "默认日志器", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
         [ "自定义日志器", "md__r_e_a_d_m_e.html#autotoc_md6", null ]
       ] ],
-      [ "开发环境", "md__r_e_a_d_m_e.html#autotoc_md7", null ],
-      [ "核心技术点", "md__r_e_a_d_m_e.html#autotoc_md8", null ],
-      [ "日志系统介绍", "md__r_e_a_d_m_e.html#autotoc_md9", null ],
-      [ "技术实现", "md__r_e_a_d_m_e.html#autotoc_md10", [
-        [ "同步日志", "md__r_e_a_d_m_e.html#autotoc_md11", null ],
-        [ "异步日志", "md__r_e_a_d_m_e.html#autotoc_md12", null ]
+      [ "服务端使用说明", "md__r_e_a_d_m_e.html#autotoc_md7", null ],
+      [ "开发环境", "md__r_e_a_d_m_e.html#autotoc_md8", null ],
+      [ "核心技术点", "md__r_e_a_d_m_e.html#autotoc_md9", null ],
+      [ "日志系统介绍", "md__r_e_a_d_m_e.html#autotoc_md10", null ],
+      [ "技术实现", "md__r_e_a_d_m_e.html#autotoc_md11", [
+        [ "同步日志", "md__r_e_a_d_m_e.html#autotoc_md12", null ],
+        [ "异步日志", "md__r_e_a_d_m_e.html#autotoc_md13", null ]
       ] ],
-      [ "框架模块", "md__r_e_a_d_m_e.html#autotoc_md13", [
-        [ "模块关系图", "md__r_e_a_d_m_e.html#autotoc_md14", null ]
+      [ "框架模块", "md__r_e_a_d_m_e.html#autotoc_md14", [
+        [ "模块关系图", "md__r_e_a_d_m_e.html#autotoc_md15", null ]
       ] ],
-      [ "异步缓冲区模块", "md__r_e_a_d_m_e.html#autotoc_md15", [
-        [ "模块设计", "md__r_e_a_d_m_e.html#autotoc_md16", null ],
-        [ "缓冲区设计", "md__r_e_a_d_m_e.html#autotoc_md17", null ]
+      [ "异步缓冲区模块", "md__r_e_a_d_m_e.html#autotoc_md16", [
+        [ "模块设计", "md__r_e_a_d_m_e.html#autotoc_md17", null ],
+        [ "缓冲区设计", "md__r_e_a_d_m_e.html#autotoc_md18", null ]
       ] ],
-      [ "性能测试", "md__r_e_a_d_m_e.html#autotoc_md18", [
-        [ "测试环境", "md__r_e_a_d_m_e.html#autotoc_md19", null ],
-        [ "测试方法", "md__r_e_a_d_m_e.html#autotoc_md20", null ],
-        [ "测试结果", "md__r_e_a_d_m_e.html#autotoc_md21", [
-          [ "同步", "md__r_e_a_d_m_e.html#autotoc_md22", null ],
-          [ "异步", "md__r_e_a_d_m_e.html#autotoc_md23", null ]
+      [ "性能测试", "md__r_e_a_d_m_e.html#autotoc_md19", [
+        [ "测试环境", "md__r_e_a_d_m_e.html#autotoc_md20", null ],
+        [ "测试方法", "md__r_e_a_d_m_e.html#autotoc_md21", null ],
+        [ "测试结果", "md__r_e_a_d_m_e.html#autotoc_md22", [
+          [ "同步", "md__r_e_a_d_m_e.html#autotoc_md23", null ],
+          [ "异步", "md__r_e_a_d_m_e.html#autotoc_md24", null ]
         ] ]
       ] ],
-      [ "TODO", "md__r_e_a_d_m_e.html#autotoc_md24", null ]
+      [ "TODO", "md__r_e_a_d_m_e.html#autotoc_md25", null ]
     ] ],
     [ "弃用列表", "deprecated.html", null ],
     [ "命名空间", "namespaces.html", [
@@ -95,8 +96,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_data_base_sink_8hpp.html",
-"class_xulog_1_1_async_looper.html#ace5db12d601e4027cc78b3844a798e7c",
-"class_xulog_1_1_other_format_item.html"
+"class_xu_server_1_1threadpool.html#a7fbeca6a0b0d2aebbf67903ad4242b4a",
+"class_xulog_1_1_logger_builder.html#a87ccc07843b0b80890eb8b8ecb72bd69",
+"namespace_xu_server.html#abafa31a78dad58515c9caf4e572ffe70"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

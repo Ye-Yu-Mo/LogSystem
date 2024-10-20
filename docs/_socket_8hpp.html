@@ -31,7 +31,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
   <td id="projectalign">
-   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.3</span>
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.4</span>
    </div>
    <div id="projectbrief">This is a logging system project</div>
   </td>
@@ -117,30 +117,99 @@ $(document).ready(function(){initNavTree('_socket_8hpp.html',''); initResizable(
 <code>#include &lt;netinet/in.h&gt;</code><br />
 <code>#include &lt;arpa/inet.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_xulog_8h_source.html">../logs/Xulog.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Socket.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="_socket_8hpp__incl.png" border="0" usemap="#aserver_2_socket_8hpp" alt=""/></div>
 <map name="aserver_2_socket_8hpp" id="aserver_2_socket_8hpp">
-<area shape="rect" title="封装TCP和UDPSocket" alt="" coords="349,5,488,31"/>
-<area shape="rect" title=" " alt="" coords="5,79,85,104"/>
-<area shape="poly" title=" " alt="" coords="354,33,100,81,99,76,353,28"/>
-<area shape="rect" title=" " alt="" coords="109,79,168,104"/>
-<area shape="poly" title=" " alt="" coords="372,33,182,81,181,76,371,28"/>
-<area shape="rect" title=" " alt="" coords="192,79,259,104"/>
-<area shape="poly" title=" " alt="" coords="389,33,270,76,269,71,387,28"/>
-<area shape="rect" title=" " alt="" coords="283,79,346,104"/>
-<area shape="poly" title=" " alt="" coords="403,33,345,73,342,68,400,28"/>
-<area shape="rect" title=" " alt="" coords="371,79,467,104"/>
-<area shape="poly" title=" " alt="" coords="421,31,421,65,416,65,416,31"/>
-<area shape="rect" title=" " alt="" coords="491,79,594,104"/>
-<area shape="poly" title=" " alt="" coords="440,28,512,69,509,74,437,33"/>
-<area shape="rect" title=" " alt="" coords="619,79,715,104"/>
-<area shape="poly" title=" " alt="" coords="459,28,614,72,613,77,458,33"/>
-<area shape="rect" title=" " alt="" coords="739,79,831,104"/>
-<area shape="poly" title=" " alt="" coords="478,28,726,76,725,81,477,33"/>
-<area shape="rect" title=" " alt="" coords="856,79,931,104"/>
-<area shape="poly" title=" " alt="" coords="489,25,647,45,843,76,842,81,646,50,488,30"/>
+<area shape="rect" title="封装TCP和UDPSocket" alt="" coords="323,5,461,31"/>
+<area shape="rect" title=" " alt="" coords="667,445,747,471"/>
+<area shape="poly" title=" " alt="" coords="323,28,177,47,109,62,63,81,38,98,21,115,11,135,8,163,8,312,13,335,28,355,52,373,84,388,168,414,268,432,376,443,483,450,653,454,653,460,482,456,376,449,267,437,166,419,82,393,50,377,25,359,8,337,3,313,3,163,6,134,17,112,35,94,60,76,107,57,176,42,322,23"/>
+<area shape="rect" title=" " alt="" coords="272,372,331,397"/>
+<area shape="poly" title=" " alt="" coords="323,28,189,46,129,62,106,71,90,81,72,99,63,117,59,137,59,163,59,239,59,265,63,286,73,303,90,322,129,348,174,366,219,375,258,380,258,385,218,381,172,371,127,353,86,326,68,307,58,287,54,266,53,239,53,163,54,137,58,115,68,96,86,77,104,66,127,56,188,41,322,22"/>
+<area shape="rect" title=" " alt="" coords="1689,299,1756,324"/>
+<area shape="poly" title=" " alt="" coords="462,23,648,45,911,85,1060,111,1213,143,1367,180,1517,223,1610,257,1687,290,1685,295,1608,262,1515,228,1366,185,1212,148,1059,116,910,90,647,51,462,29"/>
+<area shape="rect" title=" " alt="" coords="858,372,921,397"/>
+<area shape="poly" title=" " alt="" coords="323,30,213,49,165,64,134,81,118,99,111,117,109,163,109,239,110,287,117,305,134,322,149,330,175,337,251,347,464,359,689,364,844,370,844,375,689,369,464,364,251,353,174,342,148,335,130,326,113,307,105,288,104,239,104,163,106,116,114,96,130,77,163,59,212,44,322,25"/>
+<area shape="rect" title=" " alt="" coords="283,79,379,104"/>
+<area shape="poly" title=" " alt="" coords="384,33,352,70,348,66,380,29"/>
+<area shape="rect" title=" " alt="" coords="403,79,506,104"/>
+<area shape="poly" title=" " alt="" coords="404,29,437,66,433,70,400,33"/>
+<area shape="rect" title=" " alt="" coords="531,79,627,104"/>
+<area shape="poly" title=" " alt="" coords="423,28,536,71,535,76,421,33"/>
+<area shape="rect" title=" " alt="" coords="651,79,743,104"/>
+<area shape="poly" title=" " alt="" coords="442,28,638,74,637,79,440,33"/>
+<area shape="rect" title=" " alt="" coords="768,79,843,104"/>
+<area shape="poly" title=" " alt="" coords="462,27,594,47,755,76,754,81,593,52,461,32"/>
+<area shape="rect" href="_xulog_8h.html" title="全局日志接口和宏定义" alt="" coords="144,79,259,104"/>
+<area shape="poly" title=" " alt="" coords="362,33,246,76,244,71,360,28"/>
+<area shape="rect" href="logger_8hpp.html" title="日志器模块的实现" alt="" coords="691,152,781,177"/>
+<area shape="poly" title=" " alt="" coords="259,100,271,101,677,154,677,159,270,107,258,105"/>
+<area shape="rect" href="util_8hpp.html" title="实用工具类的实现" alt="" coords="1142,372,1213,397"/>
+<area shape="poly" title=" " alt="" coords="782,168,895,182,1036,207,1104,224,1165,245,1212,269,1230,282,1242,297,1247,317,1240,335,1226,352,1210,366,1206,362,1223,348,1236,332,1242,316,1238,300,1226,286,1209,273,1163,250,1103,229,1035,212,894,187,781,173"/>
+<area shape="rect" href="level_8hpp.html" title="日志等级类的定义和实现" alt="" coords="751,372,833,397"/>
+<area shape="poly" title=" " alt="" coords="734,178,725,212,724,231,728,250,738,264,750,273,763,282,776,297,787,328,793,358,788,359,782,329,771,300,760,286,747,277,734,268,723,252,718,231,719,211,728,177"/>
+<area shape="rect" href="format_8hpp.html" title="日志格式化器类的定义" alt="" coords="979,225,1074,251"/>
+<area shape="poly" title=" " alt="" coords="782,174,967,219,966,225,781,180"/>
+<area shape="rect" href="sink_8hpp.html" title="日志落地模块的实现" alt="" coords="1427,225,1504,251"/>
+<area shape="poly" title=" " alt="" coords="782,168,1413,229,1413,234,781,173"/>
+<area shape="rect" href="looper_8hpp.html" title="实现异步工作器" alt="" coords="531,225,621,251"/>
+<area shape="poly" title=" " alt="" coords="711,180,616,222,614,217,709,175"/>
+<area shape="rect" title=" " alt="" coords="144,299,208,324"/>
+<area shape="poly" title=" " alt="" coords="691,176,576,197,438,228,320,263,221,297,219,291,318,258,437,223,575,192,690,171"/>
+<area shape="rect" title=" " alt="" coords="232,299,299,324"/>
+<area shape="poly" title=" " alt="" coords="692,180,519,228,311,297,309,292,518,223,691,175"/>
+<area shape="rect" title=" " alt="" coords="737,225,807,251"/>
+<area shape="poly" title=" " alt="" coords="744,176,762,212,758,214,740,179"/>
+<area shape="rect" title=" " alt="" coords="831,225,955,251"/>
+<area shape="poly" title=" " alt="" coords="762,175,856,217,854,222,760,180"/>
+<area shape="poly" title=" " alt="" coords="1142,394,761,451,760,446,1142,389"/>
+<area shape="rect" title=" " alt="" coords="987,445,1045,471"/>
+<area shape="poly" title=" " alt="" coords="1152,400,1056,442,1054,437,1150,395"/>
+<area shape="rect" title=" " alt="" coords="1135,445,1220,471"/>
+<area shape="poly" title=" " alt="" coords="1180,398,1180,432,1175,432,1175,398"/>
+<area shape="rect" title=" " alt="" coords="1433,445,1506,471"/>
+<area shape="poly" title=" " alt="" coords="1214,392,1420,442,1419,447,1213,397"/>
+<area shape="poly" title=" " alt="" coords="1002,253,967,273,934,300,914,330,900,360,895,358,909,327,930,297,964,268,999,248"/>
+<area shape="poly" title=" " alt="" coords="1014,253,994,273,979,300,973,335,978,371,990,405,1004,432,999,435,985,407,973,373,968,335,973,298,990,270,1010,249"/>
+<area shape="poly" title=" " alt="" coords="1002,253,909,301,860,334,819,365,815,361,857,330,907,296,999,248"/>
+<area shape="rect" href="message_8hpp.html" title="日志消息类的实现" alt="" coords="652,299,761,324"/>
+<area shape="poly" title=" " alt="" coords="980,252,772,298,771,293,979,247"/>
+<area shape="rect" title=" " alt="" coords="1237,372,1307,397"/>
+<area shape="poly" title=" " alt="" coords="1074,238,1114,243,1159,253,1203,270,1242,297,1262,326,1271,357,1266,359,1257,328,1238,301,1200,275,1157,258,1113,248,1074,243"/>
+<area shape="rect" title=" " alt="" coords="1353,299,1428,324"/>
+<area shape="poly" title=" " alt="" coords="1075,246,1340,297,1339,303,1074,251"/>
+<area shape="rect" title=" " alt="" coords="988,299,1065,324"/>
+<area shape="poly" title=" " alt="" coords="1029,251,1029,285,1024,285,1024,251"/>
+<area shape="poly" title=" " alt="" coords="709,324,709,432,704,432,704,324"/>
+<area shape="poly" title=" " alt="" coords="652,325,345,378,344,373,651,320"/>
+<area shape="poly" title=" " alt="" coords="762,318,1129,373,1128,379,761,324"/>
+<area shape="poly" title=" " alt="" coords="722,322,769,361,766,365,719,326"/>
+<area shape="rect" title=" " alt="" coords="595,372,659,397"/>
+<area shape="poly" title=" " alt="" coords="696,326,652,365,648,361,692,322"/>
+<area shape="poly" title=" " alt="" coords="1505,247,1677,295,1675,300,1504,253"/>
+<area shape="poly" title=" " alt="" coords="1427,245,1293,263,1211,279,1130,301,1104,313,1078,326,1003,353,935,374,933,369,1001,348,1076,322,1102,308,1128,296,1210,274,1293,258,1426,240"/>
+<area shape="poly" title=" " alt="" coords="1468,251,1463,288,1455,308,1442,326,1417,346,1393,358,1369,365,1345,368,1292,368,1227,375,1226,369,1292,363,1344,362,1368,360,1391,353,1414,341,1438,322,1450,306,1458,287,1463,251"/>
+<area shape="poly" title=" " alt="" coords="1505,243,1556,260,1580,276,1600,297,1608,319,1607,340,1598,361,1584,380,1545,415,1505,441,1502,436,1542,410,1580,377,1594,358,1602,339,1603,320,1595,300,1577,280,1554,265,1504,248"/>
+<area shape="poly" title=" " alt="" coords="1504,248,1537,261,1566,279,1577,289,1584,300,1585,313,1578,326,1560,340,1534,351,1466,368,1389,378,1321,384,1321,378,1389,373,1465,363,1533,346,1558,335,1574,322,1579,312,1579,302,1573,292,1563,283,1534,266,1502,253"/>
+<area shape="poly" title=" " alt="" coords="1455,253,1415,291,1411,287,1452,249"/>
+<area shape="poly" title=" " alt="" coords="1427,248,1084,301,1079,302,1078,297,1084,296,1426,242"/>
+<area shape="rect" title=" " alt="" coords="1503,299,1563,324"/>
+<area shape="poly" title=" " alt="" coords="1478,249,1515,287,1511,290,1475,253"/>
+<area shape="poly" title=" " alt="" coords="583,250,621,358,616,360,578,252"/>
+<area shape="poly" title=" " alt="" coords="622,244,975,299,974,304,621,249"/>
+<area shape="rect" href="buffer_8hpp.html" title="实现异步日志缓冲区" alt="" coords="1141,299,1227,324"/>
+<area shape="poly" title=" " alt="" coords="622,242,1127,301,1127,306,621,247"/>
+<area shape="poly" title=" " alt="" coords="531,248,396,269,222,301,221,296,395,264,530,243"/>
+<area shape="rect" title=" " alt="" coords="323,299,466,324"/>
+<area shape="poly" title=" " alt="" coords="548,253,438,296,436,291,546,248"/>
+<area shape="rect" title=" " alt="" coords="490,299,577,324"/>
+<area shape="poly" title=" " alt="" coords="571,252,549,288,545,286,567,250"/>
+<area shape="poly" title=" " alt="" coords="531,252,313,301,311,296,530,247"/>
+<area shape="poly" title=" " alt="" coords="1141,326,934,375,933,370,1140,321"/>
+<area shape="poly" title=" " alt="" coords="1186,325,1182,359,1177,358,1180,324"/>
+<area shape="poly" title=" " alt="" coords="1200,322,1249,361,1245,365,1196,326"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">

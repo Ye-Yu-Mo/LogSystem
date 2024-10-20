@@ -1,0 +1,5 @@
+<map id="XuServer::ServerLog::init" name="XuServer::ServerLog::init">
+<area shape="rect" id="Node000001" title="初始化落地方式" alt="" coords="5,5,160,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_server_1_1_config.html#aa7a278e8e3eb8430166313b4b1f16aaa" title="获取配置文件操作句柄" alt="" coords="208,13,423,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,23,194,23,194,28,161,28"/>
+</map>

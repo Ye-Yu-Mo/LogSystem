@@ -10,7 +10,8 @@ var searchData=
   ['sqlitehelper_7',['SqliteHelper',['../class_sqlite_helper.html#a43577e1174f810a86dc4df53987b7d8f',1,'SqliteHelper']]],
   ['stdoutsink_8',['StdoutSink',['../class_xulog_1_1_stdout_sink.html#a670e503f2c3ac4783d2f1b213a6ce941',1,'Xulog::StdoutSink']]],
   ['stop_9',['stop',['../class_xulog_1_1_async_looper.html#ab9dbe072052f318858576d6a29bc6f9a',1,'Xulog::AsyncLooper::stop()'],['../class_xu_server_1_1threadpool.html#a8c1f3bf0bf666f8c5b7ca9ffb819a087',1,'XuServer::threadpool::stop()']]],
-  ['swap_10',['swap',['../class_xulog_1_1_buffer.html#add54dc7f4d771e228091f3937a61f354',1,'Xulog::Buffer']]],
-  ['sync_5fbench_11',['sync_bench',['../bench_8cc.html#aed911458da7aa931bc325648b27a2ded',1,'bench.cc']]],
-  ['synclogger_12',['SyncLogger',['../class_xulog_1_1_sync_logger.html#aa5eca87a8168a7472310b7f39ac86569',1,'Xulog::SyncLogger']]]
+  ['strncpy0_10',['strncpy0',['../ini_8c.html#a70acf8babdb6c2072c2d622a8258d320',1,'ini.c']]],
+  ['swap_11',['swap',['../class_xulog_1_1_buffer.html#add54dc7f4d771e228091f3937a61f354',1,'Xulog::Buffer']]],
+  ['sync_5fbench_12',['sync_bench',['../bench_8cc.html#aed911458da7aa931bc325648b27a2ded',1,'bench.cc']]],
+  ['synclogger_13',['SyncLogger',['../class_xulog_1_1_sync_logger.html#aa5eca87a8168a7472310b7f39ac86569',1,'Xulog::SyncLogger']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['默认日志器_0',['默认日志器',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]]
+  ['项目文档_20a_0',['&lt;a href=&quot;https://ye-yu-mo.github.io/LogSystem/&quot; &gt;项目文档&lt;/a&gt;',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]]
 ];

@@ -1,5 +1,6 @@
 var namespace_xu_server =
 [
+    [ "Config", "class_xu_server_1_1_config.html", "class_xu_server_1_1_config" ],
     [ "nocopy", "class_xu_server_1_1nocopy.html", "class_xu_server_1_1nocopy" ],
     [ "ServerLog", "class_xu_server_1_1_server_log.html", "class_xu_server_1_1_server_log" ],
     [ "Socket", "class_xu_server_1_1_socket.html", "class_xu_server_1_1_socket" ],

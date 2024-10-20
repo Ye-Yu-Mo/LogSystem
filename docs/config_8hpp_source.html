@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LogSystem: server/config.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.4</span>
+   </div>
+   <div id="projectbrief">This is a logging system project</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('config_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">config.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="config_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../config/INIReader.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../logs/Xulog.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="}">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="namespace_xu_server.html">    8</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_xu_server.html">XuServer</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_config.html">   12</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_server_1_1_config.html">Config</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_config.html#a21f2e889ba021873d278f78b24a042d5">   17</a></span>        <a class="code hl_function" href="class_xu_server_1_1_config.html#a21f2e889ba021873d278f78b24a042d5">Config</a>(<span class="keyword">const</span> std::string &amp;filename)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <a class="code hl_class" href="class_i_n_i_reader.html">INIReader</a> reader(filename);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <span class="keywordflow">if</span> (reader.<a class="code hl_function" href="class_i_n_i_reader.html#aaecb5fce7bfeac1710b3a7d5f7ec94ab">ParseError</a>() &lt; 0)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                <a class="code hl_define" href="_xulog_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot;配置解析失败！&quot;</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <a class="code hl_function" href="class_xu_server_1_1_config.html#a153509671eaaf98e1056c05d8ebdb4b3">init</a>(reader);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        }</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">   26</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">ptr</a> = std::shared_ptr&lt;Config&gt;;                                                              </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_config.html#a50901ee8f0ecfa3fed50032a50d78c39">   27</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="class_xu_server_1_1_config.html#a50901ee8f0ecfa3fed50032a50d78c39">config_map</a> = std::unordered_map&lt;std::string, std::unordered_map&lt;std::string, std::string&gt;&gt;; </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_config.html#ad651f52e95a31fc9a87330b0d6c968ef">   32</a></span>        <span class="keyword">static</span> <a class="code hl_typedef" href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">Config::ptr</a> <a class="code hl_function" href="class_xu_server_1_1_config.html#ad651f52e95a31fc9a87330b0d6c968ef">getInstance</a>(<span class="keyword">const</span> std::string &amp;filename)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_xu_server_1_1_config.html#a060d6e6a81173be31a0066c522c6046d">_instance</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <a class="code hl_variable" href="class_xu_server_1_1_config.html#a060d6e6a81173be31a0066c522c6046d">_instance</a> = std::make_shared&lt;Config&gt;(filename);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_xu_server_1_1_config.html#a060d6e6a81173be31a0066c522c6046d">_instance</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_config.html#aa7a278e8e3eb8430166313b4b1f16aaa">   40</a></span>        <span class="keyword">static</span> <a class="code hl_typedef" href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">Config::ptr</a> <a class="code hl_function" href="class_xu_server_1_1_config.html#aa7a278e8e3eb8430166313b4b1f16aaa">getInstance</a>()</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_xu_server_1_1_config.html#a060d6e6a81173be31a0066c522c6046d">_instance</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <a class="code hl_define" href="_xulog_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a>(<span class="stringliteral">&quot; 请传入配置文件路径！&quot;</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_xu_server_1_1_config.html#a060d6e6a81173be31a0066c522c6046d">_instance</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_config.html#a5c12ed8dbf1a6a1982fd7ece4d5ba18d">   50</a></span>        std::string <a class="code hl_function" href="class_xu_server_1_1_config.html#a5c12ed8dbf1a6a1982fd7ece4d5ba18d">get</a>(<span class="keyword">const</span> std::string &amp;section, <span class="keyword">const</span> std::string &amp;name)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keyword">auto</span> sec_it = <a class="code hl_variable" href="class_xu_server_1_1_config.html#aac0abf82ab79ad32fe807097f915fd2a">_config_data</a>.find(section);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">if</span> (sec_it != <a class="code hl_variable" href="class_xu_server_1_1_config.html#aac0abf82ab79ad32fe807097f915fd2a">_config_data</a>.end())</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <span class="keyword">auto</span> name_it = sec_it-&gt;second.find(name);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordflow">if</span> (name_it != sec_it-&gt;second.end())</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                    <span class="keywordflow">return</span> name_it-&gt;second;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">private</span>:</div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_config.html#a153509671eaaf98e1056c05d8ebdb4b3">   67</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_server_1_1_config.html#a153509671eaaf98e1056c05d8ebdb4b3">init</a>(<a class="code hl_class" href="class_i_n_i_reader.html">INIReader</a> &amp;reader)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            std::string ret = reader.<a class="code hl_function" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9">Get</a>(<span class="stringliteral">&quot;Server&quot;</span>, <span class="stringliteral">&quot;port&quot;</span>, <span class="stringliteral">&quot;8888&quot;</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <a class="code hl_variable" href="class_xu_server_1_1_config.html#aac0abf82ab79ad32fe807097f915fd2a">_config_data</a>[<span class="stringliteral">&quot;Server&quot;</span>][<span class="stringliteral">&quot;port&quot;</span>] = ret;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            ret = reader.<a class="code hl_function" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9">Get</a>(<span class="stringliteral">&quot;StdoutSink&quot;</span>, <span class="stringliteral">&quot;color&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">if</span> (!ret.empty())</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                <a class="code hl_variable" href="class_xu_server_1_1_config.html#aac0abf82ab79ad32fe807097f915fd2a">_config_data</a>[<span class="stringliteral">&quot;StdoutSink&quot;</span>][<span class="stringliteral">&quot;color&quot;</span>] = ret;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            ret = reader.<a class="code hl_function" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9">Get</a>(<span class="stringliteral">&quot;FileSink&quot;</span>, <span class="stringliteral">&quot;path&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">if</span> (!ret.empty())</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <a class="code hl_variable" href="class_xu_server_1_1_config.html#aac0abf82ab79ad32fe807097f915fd2a">_config_data</a>[<span class="stringliteral">&quot;FileSink&quot;</span>][<span class="stringliteral">&quot;path&quot;</span>] = ret;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            ret = reader.<a class="code hl_function" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9">Get</a>(<span class="stringliteral">&quot;RollBySize&quot;</span>, <span class="stringliteral">&quot;path&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">if</span> (!ret.empty())</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                std::string r = reader.<a class="code hl_function" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9">Get</a>(<span class="stringliteral">&quot;RollBySize&quot;</span>, <span class="stringliteral">&quot;size&quot;</span>, <span class="stringliteral">&quot;1024&quot;</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                <a class="code hl_variable" href="class_xu_server_1_1_config.html#aac0abf82ab79ad32fe807097f915fd2a">_config_data</a>[<span class="stringliteral">&quot;RollBySize&quot;</span>][<span class="stringliteral">&quot;path&quot;</span>] = ret;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                <a class="code hl_variable" href="class_xu_server_1_1_config.html#aac0abf82ab79ad32fe807097f915fd2a">_config_data</a>[<span class="stringliteral">&quot;RollBySize&quot;</span>][<span class="stringliteral">&quot;size&quot;</span>] = r;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            ret = reader.<a class="code hl_function" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9">Get</a>(<span class="stringliteral">&quot;RollByTime&quot;</span>, <span class="stringliteral">&quot;path&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">if</span> (!ret.empty())</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                std::string r = reader.<a class="code hl_function" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9">Get</a>(<span class="stringliteral">&quot;RollByTime&quot;</span>, <span class="stringliteral">&quot;type&quot;</span>, <span class="stringliteral">&quot;GAP_SECOND&quot;</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                <a class="code hl_variable" href="class_xu_server_1_1_config.html#aac0abf82ab79ad32fe807097f915fd2a">_config_data</a>[<span class="stringliteral">&quot;RollByTime&quot;</span>][<span class="stringliteral">&quot;path&quot;</span>] = ret;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                <a class="code hl_variable" href="class_xu_server_1_1_config.html#aac0abf82ab79ad32fe807097f915fd2a">_config_data</a>[<span class="stringliteral">&quot;RollByTime&quot;</span>][<span class="stringliteral">&quot;type&quot;</span>] = r;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            ret = reader.<a class="code hl_function" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9">Get</a>(<span class="stringliteral">&quot;DataBaseSink&quot;</span>, <span class="stringliteral">&quot;path&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keywordflow">if</span> (!ret.empty())</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                <a class="code hl_variable" href="class_xu_server_1_1_config.html#aac0abf82ab79ad32fe807097f915fd2a">_config_data</a>[<span class="stringliteral">&quot;DataBaseSink&quot;</span>][<span class="stringliteral">&quot;path&quot;</span>] = ret;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_config.html#aac0abf82ab79ad32fe807097f915fd2a">  107</a></span>        <a class="code hl_typedef" href="class_xu_server_1_1_config.html#a50901ee8f0ecfa3fed50032a50d78c39">config_map</a> <a class="code hl_variable" href="class_xu_server_1_1_config.html#aac0abf82ab79ad32fe807097f915fd2a">_config_data</a>; </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_xu_server_1_1_config.html#a060d6e6a81173be31a0066c522c6046d">  108</a></span>        <span class="keyword">static</span> <a class="code hl_typedef" href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">ptr</a> <a class="code hl_variable" href="class_xu_server_1_1_config.html#a060d6e6a81173be31a0066c522c6046d">_instance</a>;    </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    };</div>
+</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_typedef" href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">Config::ptr</a> <a class="code hl_variable" href="class_xu_server_1_1_config.html#a060d6e6a81173be31a0066c522c6046d">Config::_instance</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
+</div>
+<div class="ttc" id="a_xulog_8h_html_a15378cd15bafb3a79061424b452497aa"><div class="ttname"><a href="_xulog_8h.html#a15378cd15bafb3a79061424b452497aa">ERROR</a></div><div class="ttdeci">#define ERROR(fmt,...)</div><div class="ttdoc">使用默认日志器打印错误信息</div><div class="ttdef"><b>Definition</b> Xulog.h:104</div></div>
+<div class="ttc" id="aclass_i_n_i_reader_html"><div class="ttname"><a href="class_i_n_i_reader.html">INIReader</a></div><div class="ttdef"><b>Definition</b> INIReader.h:18</div></div>
+<div class="ttc" id="aclass_i_n_i_reader_html_a1042bfbb483afa305283a6f1a2bf27e9"><div class="ttname"><a href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9">INIReader::Get</a></div><div class="ttdeci">std::string Get(std::string section, std::string name, std::string default_value)</div><div class="ttdef"><b>Definition</b> INIReader.cpp:28</div></div>
+<div class="ttc" id="aclass_i_n_i_reader_html_aaecb5fce7bfeac1710b3a7d5f7ec94ab"><div class="ttname"><a href="class_i_n_i_reader.html#aaecb5fce7bfeac1710b3a7d5f7ec94ab">INIReader::ParseError</a></div><div class="ttdeci">int ParseError()</div><div class="ttdef"><b>Definition</b> INIReader.cpp:23</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_config_html"><div class="ttname"><a href="class_xu_server_1_1_config.html">XuServer::Config</a></div><div class="ttdoc">用于读取和存储配置文件的类</div><div class="ttdef"><b>Definition</b> config.hpp:13</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_config_html_a060d6e6a81173be31a0066c522c6046d"><div class="ttname"><a href="class_xu_server_1_1_config.html#a060d6e6a81173be31a0066c522c6046d">XuServer::Config::_instance</a></div><div class="ttdeci">static ptr _instance</div><div class="ttdoc">配置文件操作句柄</div><div class="ttdef"><b>Definition</b> config.hpp:108</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_config_html_a153509671eaaf98e1056c05d8ebdb4b3"><div class="ttname"><a href="class_xu_server_1_1_config.html#a153509671eaaf98e1056c05d8ebdb4b3">XuServer::Config::init</a></div><div class="ttdeci">void init(INIReader &amp;reader)</div><div class="ttdoc">读取配置文件并写入到映射表中</div><div class="ttdef"><b>Definition</b> config.hpp:67</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_config_html_a21f2e889ba021873d278f78b24a042d5"><div class="ttname"><a href="class_xu_server_1_1_config.html#a21f2e889ba021873d278f78b24a042d5">XuServer::Config::Config</a></div><div class="ttdeci">Config(const std::string &amp;filename)</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition</b> config.hpp:17</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_config_html_a50901ee8f0ecfa3fed50032a50d78c39"><div class="ttname"><a href="class_xu_server_1_1_config.html#a50901ee8f0ecfa3fed50032a50d78c39">XuServer::Config::config_map</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::unordered_map&lt; std::string, std::string &gt; &gt; config_map</div><div class="ttdoc">从section和name获取value的映射表</div><div class="ttdef"><b>Definition</b> config.hpp:27</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_config_html_a5c12ed8dbf1a6a1982fd7ece4d5ba18d"><div class="ttname"><a href="class_xu_server_1_1_config.html#a5c12ed8dbf1a6a1982fd7ece4d5ba18d">XuServer::Config::get</a></div><div class="ttdeci">std::string get(const std::string &amp;section, const std::string &amp;name)</div><div class="ttdoc">获取配置文件的值</div><div class="ttdef"><b>Definition</b> config.hpp:50</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_config_html_a8a3c865ae69106ee0e82fbc162efb934"><div class="ttname"><a href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">XuServer::Config::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Config &gt; ptr</div><div class="ttdoc">配置管理句柄</div><div class="ttdef"><b>Definition</b> config.hpp:26</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_config_html_aa7a278e8e3eb8430166313b4b1f16aaa"><div class="ttname"><a href="class_xu_server_1_1_config.html#aa7a278e8e3eb8430166313b4b1f16aaa">XuServer::Config::getInstance</a></div><div class="ttdeci">static Config::ptr getInstance()</div><div class="ttdoc">获取配置文件操作句柄</div><div class="ttdef"><b>Definition</b> config.hpp:40</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_config_html_aac0abf82ab79ad32fe807097f915fd2a"><div class="ttname"><a href="class_xu_server_1_1_config.html#aac0abf82ab79ad32fe807097f915fd2a">XuServer::Config::_config_data</a></div><div class="ttdeci">config_map _config_data</div><div class="ttdoc">从section和name获取value的映射表</div><div class="ttdef"><b>Definition</b> config.hpp:107</div></div>
+<div class="ttc" id="aclass_xu_server_1_1_config_html_ad651f52e95a31fc9a87330b0d6c968ef"><div class="ttname"><a href="class_xu_server_1_1_config.html#ad651f52e95a31fc9a87330b0d6c968ef">XuServer::Config::getInstance</a></div><div class="ttdeci">static Config::ptr getInstance(const std::string &amp;filename)</div><div class="ttdoc">获取配置文件操作句柄</div><div class="ttdef"><b>Definition</b> config.hpp:32</div></div>
+<div class="ttc" id="anamespace_xu_server_html"><div class="ttname"><a href="namespace_xu_server.html">XuServer</a></div><div class="ttdef"><b>Definition</b> config.hpp:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="config_8hpp.html">config.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

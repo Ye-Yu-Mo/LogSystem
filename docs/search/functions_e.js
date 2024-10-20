@@ -7,5 +7,6 @@ var searchData=
   ['reset_4',['reset',['../class_xulog_1_1_buffer.html#af7643af16288871e9cfb58dafbbf304c',1,'Xulog::Buffer']]],
   ['rollsinkbysize_5',['RollSinkBySize',['../class_xulog_1_1_roll_sink_by_size.html#aa55e0780ab91807ea6b1695f56c71fb3',1,'Xulog::RollSinkBySize']]],
   ['rollsinkbytime_6',['RollSinkByTime',['../class_roll_sink_by_time.html#aac57b67131f346bc4a50c548cba62f5f',1,'RollSinkByTime']]],
-  ['rootlogger_7',['rootlogger',['../class_xulog_1_1_logger_manager.html#a1a3f85bf3db0d656edc18e08310f9d52',1,'Xulog::LoggerManager::rootLogger()'],['../namespace_xulog.html#a4021d741c10f89db517006134fcffa63',1,'Xulog::rootLogger()']]]
+  ['rootlogger_7',['rootlogger',['../class_xulog_1_1_logger_manager.html#a1a3f85bf3db0d656edc18e08310f9d52',1,'Xulog::LoggerManager::rootLogger()'],['../namespace_xulog.html#a4021d741c10f89db517006134fcffa63',1,'Xulog::rootLogger()']]],
+  ['rstrip_8',['rstrip',['../ini_8c.html#a8efe5ce34c3407d5350b3f15f9cc521d',1,'ini.c']]]
 ];

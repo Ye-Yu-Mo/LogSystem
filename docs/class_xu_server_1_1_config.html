@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>LogSystem: XuServer::Config类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="Log.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">LogSystem<span id="projectnumber">&#160;beta 1.4</span>
+   </div>
+   <div id="projectbrief">This is a logging system project</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_xu_server_1_1_config.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="class_xu_server_1_1_config-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">XuServer::Config类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>用于读取和存储配置文件的类  
+ <a href="class_xu_server_1_1_config.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="config_8hpp_source.html">config.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a8a3c865ae69106ee0e82fbc162efb934" id="r_a8a3c865ae69106ee0e82fbc162efb934"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">ptr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_server_1_1_config.html">Config</a> &gt;</td></tr>
+<tr class="memdesc:a8a3c865ae69106ee0e82fbc162efb934"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置管理句柄  <br /></td></tr>
+<tr class="separator:a8a3c865ae69106ee0e82fbc162efb934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50901ee8f0ecfa3fed50032a50d78c39" id="r_a50901ee8f0ecfa3fed50032a50d78c39"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_config.html#a50901ee8f0ecfa3fed50032a50d78c39">config_map</a> = std::unordered_map&lt; std::string, std::unordered_map&lt; std::string, std::string &gt; &gt;</td></tr>
+<tr class="memdesc:a50901ee8f0ecfa3fed50032a50d78c39"><td class="mdescLeft">&#160;</td><td class="mdescRight">从section和name获取value的映射表  <br /></td></tr>
+<tr class="separator:a50901ee8f0ecfa3fed50032a50d78c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a21f2e889ba021873d278f78b24a042d5" id="r_a21f2e889ba021873d278f78b24a042d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_config.html#a21f2e889ba021873d278f78b24a042d5">Config</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:a21f2e889ba021873d278f78b24a042d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+<tr class="separator:a21f2e889ba021873d278f78b24a042d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c12ed8dbf1a6a1982fd7ece4d5ba18d" id="r_a5c12ed8dbf1a6a1982fd7ece4d5ba18d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_config.html#a5c12ed8dbf1a6a1982fd7ece4d5ba18d">get</a> (const std::string &amp;section, const std::string &amp;name)</td></tr>
+<tr class="memdesc:a5c12ed8dbf1a6a1982fd7ece4d5ba18d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取配置文件的值  <br /></td></tr>
+<tr class="separator:a5c12ed8dbf1a6a1982fd7ece4d5ba18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ad651f52e95a31fc9a87330b0d6c968ef" id="r_ad651f52e95a31fc9a87330b0d6c968ef"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">Config::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_config.html#ad651f52e95a31fc9a87330b0d6c968ef">getInstance</a> (const std::string &amp;filename)</td></tr>
+<tr class="memdesc:ad651f52e95a31fc9a87330b0d6c968ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取配置文件操作句柄  <br /></td></tr>
+<tr class="separator:ad651f52e95a31fc9a87330b0d6c968ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a278e8e3eb8430166313b4b1f16aaa" id="r_aa7a278e8e3eb8430166313b4b1f16aaa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">Config::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_config.html#aa7a278e8e3eb8430166313b4b1f16aaa">getInstance</a> ()</td></tr>
+<tr class="memdesc:aa7a278e8e3eb8430166313b4b1f16aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取配置文件操作句柄  <br /></td></tr>
+<tr class="separator:aa7a278e8e3eb8430166313b4b1f16aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a153509671eaaf98e1056c05d8ebdb4b3" id="r_a153509671eaaf98e1056c05d8ebdb4b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_config.html#a153509671eaaf98e1056c05d8ebdb4b3">init</a> (<a class="el" href="class_i_n_i_reader.html">INIReader</a> &amp;reader)</td></tr>
+<tr class="memdesc:a153509671eaaf98e1056c05d8ebdb4b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取配置文件并写入到映射表中  <br /></td></tr>
+<tr class="separator:a153509671eaaf98e1056c05d8ebdb4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aac0abf82ab79ad32fe807097f915fd2a" id="r_aac0abf82ab79ad32fe807097f915fd2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_server_1_1_config.html#a50901ee8f0ecfa3fed50032a50d78c39">config_map</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_config.html#aac0abf82ab79ad32fe807097f915fd2a">_config_data</a></td></tr>
+<tr class="memdesc:aac0abf82ab79ad32fe807097f915fd2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">从section和name获取value的映射表  <br /></td></tr>
+<tr class="separator:aac0abf82ab79ad32fe807097f915fd2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a060d6e6a81173be31a0066c522c6046d" id="r_a060d6e6a81173be31a0066c522c6046d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_server_1_1_config.html#a060d6e6a81173be31a0066c522c6046d">_instance</a> = nullptr</td></tr>
+<tr class="memdesc:a060d6e6a81173be31a0066c522c6046d"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置文件操作句柄  <br /></td></tr>
+<tr class="separator:a060d6e6a81173be31a0066c522c6046d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>用于读取和存储配置文件的类 </p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a50901ee8f0ecfa3fed50032a50d78c39" name="a50901ee8f0ecfa3fed50032a50d78c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50901ee8f0ecfa3fed50032a50d78c39">&#9670;&#160;</a></span>config_map</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_xu_server_1_1_config.html#a50901ee8f0ecfa3fed50032a50d78c39">XuServer::Config::config_map</a> =  std::unordered_map&lt;std::string, std::unordered_map&lt;std::string, std::string&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从section和name获取value的映射表 </p>
+
+</div>
+</div>
+<a id="a8a3c865ae69106ee0e82fbc162efb934" name="a8a3c865ae69106ee0e82fbc162efb934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a3c865ae69106ee0e82fbc162efb934">&#9670;&#160;</a></span>ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">XuServer::Config::ptr</a> =  std::shared_ptr&lt;<a class="el" href="class_xu_server_1_1_config.html">Config</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>配置管理句柄 </p>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a21f2e889ba021873d278f78b24a042d5" name="a21f2e889ba021873d278f78b24a042d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21f2e889ba021873d278f78b24a042d5">&#9670;&#160;</a></span>Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuServer::Config::Config </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>配置文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_server_1_1_config_a21f2e889ba021873d278f78b24a042d5_cgraph.png" border="0" usemap="#aclass_xu_server_1_1_config_a21f2e889ba021873d278f78b24a042d5_cgraph" alt=""/></div>
+<map name="aclass_xu_server_1_1_config_a21f2e889ba021873d278f78b24a042d5_cgraph" id="aclass_xu_server_1_1_config_a21f2e889ba021873d278f78b24a042d5_cgraph">
+<area shape="rect" title="构造函数" alt="" coords="5,31,184,56"/>
+<area shape="rect" href="class_xu_server_1_1_config.html#a153509671eaaf98e1056c05d8ebdb4b3" title="读取配置文件并写入到映射表中" alt="" coords="233,5,391,31"/>
+<area shape="poly" title=" " alt="" coords="184,30,219,26,220,31,185,36"/>
+<area shape="rect" href="class_i_n_i_reader.html#aaecb5fce7bfeac1710b3a7d5f7ec94ab" title=" " alt="" coords="232,55,392,80"/>
+<area shape="poly" title=" " alt="" coords="185,51,219,54,218,60,184,56"/>
+<area shape="rect" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9" title=" " alt="" coords="440,5,557,31"/>
+<area shape="poly" title=" " alt="" coords="391,15,426,15,426,21,391,21"/>
+<area shape="rect" href="class_i_n_i_reader.html#a1044063236e719cbd52b706b10120f2c" title=" " alt="" coords="605,5,759,31"/>
+<area shape="poly" title=" " alt="" coords="558,15,592,15,592,21,558,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a5c12ed8dbf1a6a1982fd7ece4d5ba18d" name="a5c12ed8dbf1a6a1982fd7ece4d5ba18d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c12ed8dbf1a6a1982fd7ece4d5ba18d">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string XuServer::Config::get </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>section</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取配置文件的值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">section</td><td>section 方括号中的值 </td></tr>
+    <tr><td class="paramname">name</td><td>字段名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>字段值 </dd></dl>
+
+</div>
+</div>
+<a id="aa7a278e8e3eb8430166313b4b1f16aaa" name="aa7a278e8e3eb8430166313b4b1f16aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7a278e8e3eb8430166313b4b1f16aaa">&#9670;&#160;</a></span>getInstance() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">Config::ptr</a> XuServer::Config::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取配置文件操作句柄 </p>
+<dl class="section return"><dt>返回</dt><dd>配置文件操作句柄 </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_server_1_1_config_aa7a278e8e3eb8430166313b4b1f16aaa_icgraph.png" border="0" usemap="#aclass_xu_server_1_1_config_aa7a278e8e3eb8430166313b4b1f16aaa_icgraph" alt=""/></div>
+<map name="aclass_xu_server_1_1_config_aa7a278e8e3eb8430166313b4b1f16aaa_icgraph" id="aclass_xu_server_1_1_config_aa7a278e8e3eb8430166313b4b1f16aaa_icgraph">
+<area shape="rect" title="获取配置文件操作句柄" alt="" coords="411,42,625,67"/>
+<area shape="rect" href="class_xu_server_1_1_server_log.html#a94305ee7d0417f871c4f0f7fa4ee3b47" title="初始化落地方式" alt="" coords="208,5,363,45"/>
+<area shape="poly" title=" " alt="" coords="403,43,362,38,363,32,404,38"/>
+<area shape="rect" href="_server_main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="258,70,313,95"/>
+<area shape="poly" title=" " alt="" coords="399,72,313,82,312,77,399,66"/>
+<area shape="rect" href="class_xu_server_1_1_server_log.html#ad2985e18e3b4b3debf7fa8e20bff2281" title="仿函数" alt="" coords="5,5,160,45"/>
+<area shape="poly" title=" " alt="" coords="194,28,161,28,161,23,194,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad651f52e95a31fc9a87330b0d6c968ef" name="ad651f52e95a31fc9a87330b0d6c968ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad651f52e95a31fc9a87330b0d6c968ef">&#9670;&#160;</a></span>getInstance() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">Config::ptr</a> XuServer::Config::getInstance </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取配置文件操作句柄 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>配置文件路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>配置文件操作句柄 </dd></dl>
+
+</div>
+</div>
+<a id="a153509671eaaf98e1056c05d8ebdb4b3" name="a153509671eaaf98e1056c05d8ebdb4b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a153509671eaaf98e1056c05d8ebdb4b3">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuServer::Config::init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_n_i_reader.html">INIReader</a> &amp;&#160;</td>
+          <td class="paramname"><em>reader</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>读取配置文件并写入到映射表中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reader</td><td>ini读取器 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_server_1_1_config_a153509671eaaf98e1056c05d8ebdb4b3_cgraph.png" border="0" usemap="#aclass_xu_server_1_1_config_a153509671eaaf98e1056c05d8ebdb4b3_cgraph" alt=""/></div>
+<map name="aclass_xu_server_1_1_config_a153509671eaaf98e1056c05d8ebdb4b3_cgraph" id="aclass_xu_server_1_1_config_a153509671eaaf98e1056c05d8ebdb4b3_cgraph">
+<area shape="rect" title="读取配置文件并写入到映射表中" alt="" coords="5,5,164,31"/>
+<area shape="rect" href="class_i_n_i_reader.html#a1042bfbb483afa305283a6f1a2bf27e9" title=" " alt="" coords="212,5,329,31"/>
+<area shape="poly" title=" " alt="" coords="164,15,198,15,198,21,164,21"/>
+<area shape="rect" href="class_i_n_i_reader.html#a1044063236e719cbd52b706b10120f2c" title=" " alt="" coords="377,5,531,31"/>
+<area shape="poly" title=" " alt="" coords="330,15,364,15,364,21,330,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_server_1_1_config_a153509671eaaf98e1056c05d8ebdb4b3_icgraph.png" border="0" usemap="#aclass_xu_server_1_1_config_a153509671eaaf98e1056c05d8ebdb4b3_icgraph" alt=""/></div>
+<map name="aclass_xu_server_1_1_config_a153509671eaaf98e1056c05d8ebdb4b3_icgraph" id="aclass_xu_server_1_1_config_a153509671eaaf98e1056c05d8ebdb4b3_icgraph">
+<area shape="rect" title="读取配置文件并写入到映射表中" alt="" coords="232,5,391,31"/>
+<area shape="rect" href="class_xu_server_1_1_config.html#a21f2e889ba021873d278f78b24a042d5" title="构造函数" alt="" coords="5,5,184,31"/>
+<area shape="poly" title=" " alt="" coords="218,21,184,21,184,15,218,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="aac0abf82ab79ad32fe807097f915fd2a" name="aac0abf82ab79ad32fe807097f915fd2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac0abf82ab79ad32fe807097f915fd2a">&#9670;&#160;</a></span>_config_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_server_1_1_config.html#a50901ee8f0ecfa3fed50032a50d78c39">config_map</a> XuServer::Config::_config_data</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>从section和name获取value的映射表 </p>
+
+</div>
+</div>
+<a id="a060d6e6a81173be31a0066c522c6046d" name="a060d6e6a81173be31a0066c522c6046d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a060d6e6a81173be31a0066c522c6046d">&#9670;&#160;</a></span>_instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_server_1_1_config.html#a8a3c865ae69106ee0e82fbc162efb934">Config::ptr</a> XuServer::Config::_instance = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>配置文件操作句柄 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_xu_server.html">XuServer</a></li><li class="navelem"><a class="el" href="class_xu_server_1_1_config.html">Config</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

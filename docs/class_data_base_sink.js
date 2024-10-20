@@ -1,5 +1,6 @@
 var class_data_base_sink =
 [
+    [ "DBptr", "class_data_base_sink.html#a624a66edcfa630eca8fb89032cecaf20", null ],
     [ "DataBaseSink", "class_data_base_sink.html#a1161c651f49db642085b8775d12ab623", null ],
     [ "~DataBaseSink", "class_data_base_sink.html#afa9f8c697a32288afee92b559a4bb840", null ],
     [ "createTable", "class_data_base_sink.html#a9d522f3022d4a05a8e37d394c6df40f6", null ],

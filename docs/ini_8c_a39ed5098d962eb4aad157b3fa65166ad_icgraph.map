@@ -1,0 +1,9 @@
+<map id="lskip" name="lskip">
+<area shape="rect" id="Node000001" title=" " alt="" coords="497,5,551,31"/>
+<area shape="rect" id="Node000002" href="$ini_8c.html#a919ebf8b15ff98ff05da9a394bf0b7ed" title=" " alt="" coords="341,5,449,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="484,21,450,21,450,15,484,15"/>
+<area shape="rect" id="Node000003" href="$ini_8c.html#ad285e522c65745f50f01ba650b563dd7" title=" " alt="" coords="212,5,293,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="328,21,293,21,293,15,328,15"/>
+<area shape="rect" id="Node000004" href="$class_i_n_i_reader.html#a357e21f6b1bc10b17bd3a7b72452cb57" title=" " alt="" coords="5,5,164,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="198,21,164,21,164,15,198,15"/>
+</map>

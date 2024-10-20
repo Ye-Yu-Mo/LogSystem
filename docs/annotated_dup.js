@@ -37,6 +37,7 @@ var annotated_dup =
       [ "TimeFormatItem", "class_xulog_1_1_time_format_item.html", "class_xulog_1_1_time_format_item" ]
     ] ],
     [ "XuServer", "namespace_xu_server.html", [
+      [ "Config", "class_xu_server_1_1_config.html", "class_xu_server_1_1_config" ],
       [ "nocopy", "class_xu_server_1_1nocopy.html", "class_xu_server_1_1nocopy" ],
       [ "ServerLog", "class_xu_server_1_1_server_log.html", "class_xu_server_1_1_server_log" ],
       [ "Socket", "class_xu_server_1_1_socket.html", "class_xu_server_1_1_socket" ],
@@ -47,6 +48,7 @@ var annotated_dup =
       [ "UdpSocket", "class_xu_server_1_1_udp_socket.html", "class_xu_server_1_1_udp_socket" ]
     ] ],
     [ "DataBaseSink", "class_data_base_sink.html", "class_data_base_sink" ],
+    [ "INIReader", "class_i_n_i_reader.html", "class_i_n_i_reader" ],
     [ "RollSinkByTime", "class_roll_sink_by_time.html", "class_roll_sink_by_time" ],
     [ "ServerSink", "class_server_sink.html", "class_server_sink" ],
     [ "SqliteHelper", "class_sqlite_helper.html", "class_sqlite_helper" ]

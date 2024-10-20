@@ -2,7 +2,7 @@
  * @file DataBasesSink.hpp
  * @brief 定义了 SqliteHelper DataBaseSink类，用于数据库操作和落地到数据库
  */
-#pragma once 
+#pragma once
 #include "../logs/util.hpp"
 #include "../logs/Xulog.h"
 #include <iostream>
@@ -109,6 +109,7 @@ private:
 class DataBaseSink : public Xulog::LogSink
 {
 public:
+    using DBptr = std::shared_ptr<DataBaseSink>; ///< 数据库落地操作句柄
     /// @brief 数据库落地类构造函数
     /// @param dbfile 数据库文件路径
     /// @param name 日志器名称

@@ -1,9 +1,13 @@
 <map id="DataBaseSink" name="DataBaseSink">
-<area shape="rect" id="Node000001" title="数据库落地类" alt="" coords="143,93,256,119"/>
-<area shape="rect" id="Node000002" href="$class_xulog_1_1_log_sink.html" title="抽象日志落地基类" alt="" coords="5,5,124,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,36,182,91,180,95,93,40"/>
-<area shape="rect" id="Node000003" href="$class_sqlite_helper.html" title="SQLite 数据库操作助手类" alt="" coords="148,5,251,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,45,202,93,197,93,197,45"/>
-<area shape="rect" id="Node000004" href="$struct_xulog_1_1_log_msg.html" title="日志消息结构体" alt="" coords="275,5,393,31"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="307,41,259,72,220,95,218,91,257,67,304,36"/>
+<area shape="rect" id="Node000001" title="数据库落地类" alt="" coords="169,211,283,236"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_log_sink.html" title="抽象日志落地基类" alt="" coords="5,123,124,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,153,155,184,203,208,201,213,153,189,95,157"/>
+<area shape="rect" id="Node000003" href="$class_sqlite_helper.html" title="SQLite 数据库操作助手类" alt="" coords="295,123,397,148"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="320,158,244,213,241,208,317,154"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="317,5,375,31"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="304,36,273,50,240,69,210,93,187,124,183,147,189,170,203,192,217,209,213,212,198,195,184,172,177,147,182,122,206,90,237,64,271,45,302,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="349,44,349,123,343,123,343,44"/>
+<area shape="rect" id="Node000005" href="$struct_xulog_1_1_log_msg.html" title="日志消息结构体" alt="" coords="422,123,539,148"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="378,36,401,53,441,89,472,121,468,124,438,93,398,57,375,40"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="442,156,354,189,272,213,270,208,352,184,440,151"/>
 </map>

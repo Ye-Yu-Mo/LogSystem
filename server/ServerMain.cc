@@ -1,39 +1,17 @@
 #include "../extend/DataBaseSink.hpp"
+#include "../extend/RollByTime.hpp"
+#include "config.hpp"
 #include "codec.hpp"
 #include "server.hpp"
 #include "serverlog.hpp"
-std::string logMsg(std::vector<char> &msg, bool *error_code)
+
+int main(int argc, char *argv[])
 {
-    XuServer::ServerLog log;
-    size_t offset = 0;
-    while (offset < msg.size())
-    {
-
-        if (msg.size() < sizeof(uint32_t))
-        {
-            break; // 检查消息大小
-        }
-
-        uint32_t sz_net;
-        ::memcpy(&sz_net, msg.data() + offset, sizeof(uint32_t)); // 从正确的位置复制
-        uint32_t sz = ntohl(sz_net);
-
-        if (offset + sizeof(uint32_t) + sz > msg.size())
-        {
-            break;
-        }
-
-        std::string jsonData(msg.begin() + offset + sizeof(uint32_t), msg.begin() + offset + sizeof(uint32_t) + sz);
-        log(jsonData);
-        offset += (sizeof(uint32_t) + sz);
-    }
-    msg.clear();
-    return std::string();
-}
-
-int main()
-{
-    std::shared_ptr<XuServer::TcpServer> tps = std::make_shared<XuServer::TcpServer>(8888, logMsg);
+    if (argc == 1)
+        std::cout << "Usage :\n\t" << argv[0] << " config_file_path\n";
+    XuServer::Config::ptr config = XuServer::Config::getInstance(argv[1]);
+    int port = std::stoi("8888");
+    std::shared_ptr<XuServer::TcpServer> tps = std::make_shared<XuServer::TcpServer>(port, XuServer::ServerLog::logMsg, 1);
     tps->Loop();
     return 0;
 }

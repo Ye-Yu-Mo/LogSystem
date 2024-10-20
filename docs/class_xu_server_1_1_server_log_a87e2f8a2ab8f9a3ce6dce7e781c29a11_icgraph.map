@@ -1,0 +1,7 @@
+<map id="XuServer::ServerLog::getInstance" name="XuServer::ServerLog::getInstance">
+<area shape="rect" id="Node000001" title="获取服务器落地操作句柄" alt="" coords="311,5,465,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_server_1_1_server_log.html#aa78e8cdb6a360acc13246ec86aedd6d9" title="服务器收到消息的处理回调函数" alt="" coords="108,5,263,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,28,263,28,263,23,297,23"/>
+<area shape="rect" id="Node000003" href="$_server_main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,13,60,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="94,28,60,28,60,23,94,23"/>
+</map>

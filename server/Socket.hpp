@@ -11,6 +11,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <unistd.h>
+#include "../logs/Xulog.h"
 
 #define Convert(addr_ptr) ((struct sockaddr *)addr_ptr)
 
@@ -174,12 +175,12 @@ namespace XuServer
             std::string str(inbuffer.begin(), inbuffer.end());
             if (n == 0)
             {
-                std::cout << "客户端连接已断开！" << std::endl;
+                INFO("客户端连接已断开！");
                 return false;
             }
-            else
+            else if (n < 0)
             {
-                std::cout << "revc失败 ！" << std::endl;
+                ERROR("revc失败！");
                 return false;
             }
             if (n > 0)

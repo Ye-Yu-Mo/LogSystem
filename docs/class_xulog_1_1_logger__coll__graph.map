@@ -1,5 +1,8 @@
 <map id="Xulog::Logger" name="Xulog::Logger">
-<area shape="rect" id="Node000001" title="抽象日志器基类" alt="" coords="9,93,119,119"/>
-<area shape="rect" id="Node000002" href="$struct_xulog_1_1_log_msg.html" title="日志消息结构体" alt="" coords="5,5,123,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,45,67,93,61,93,61,45"/>
+<area shape="rect" id="Node000001" title="抽象日志器基类" alt="" coords="14,211,125,236"/>
+<area shape="rect" id="Node000002" href="$struct_xulog_1_1_log_msg.html" title="日志消息结构体" alt="" coords="135,123,252,148"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,158,88,213,85,208,164,154"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,64,31"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="31,44,23,93,23,120,28,147,43,182,62,209,57,212,39,184,23,149,18,121,18,92,25,44"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="63,37,179,120,176,125,60,41"/>
 </map>
