@@ -27,7 +27,7 @@ void bench(const std::string &logger_name, size_t thr_count, size_t msg_count, s
                                 // 循环写日志
                                 for (int j = 0; j < msg_per_thr; j++)
                                 {
-                                    fatal(logger, "%s", msg);
+                                    fatal(logger, "%s", msg.c_str());
                                 }
                                 // 结束计时
                                 auto end = std::chrono::high_resolution_clock::now();

@@ -7,7 +7,6 @@
 #include <string>
 #include <vector>
 #include <cstring>
-#include <jsoncpp/json/json.h>
 #include "../logs/message.hpp"
 
 namespace Xulog
@@ -69,8 +68,10 @@ namespace Xulog
         {
             Json::Value json;
             json["ctime"] = static_cast<Json::Int64>(msg._ctime);
-            json["line"] = msg._line;
-            json["tid"] = std::to_string(*(unsigned long int *)(&msg._tid));
+            json["line"] = (Json::UInt64)msg._line;
+            std::ostringstream tid_ss;
+            tid_ss << msg._tid;
+            json["tid"] = tid_ss.str();
             json["level"] = LogLevel::toString(msg._level);
             json["file"] = msg._file;
             json["logger"] = msg._logger;
@@ -85,7 +86,8 @@ namespace Xulog
             LogMsg msg;
             msg._ctime = json["ctime"].asInt64();
             msg._line = json["line"].asUInt();
-            msg._tid = std::thread::id(std::stoul(json["tid"].asString()));
+            // thread::id 无法从外部值构造，保留字符串形式存于 _file 临时字段或扩展 LogMsg
+            // 此处反序列化只用于服务端落地，_tid 字段保留默认值（空 id）即可
             msg._level = LogLevel::fromString(json["level"].asString());
             msg._file = json["file"].asString();
             msg._logger = json["logger"].asString();

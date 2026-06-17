@@ -74,136 +74,11 @@ namespace Xulog
          * @param line 行号
          * @param fmt 格式化字符串
          */
-        void debug(const std::string &file, size_t line, const std::string &fmt, ...)
-        {
-            // 是否达到输出等级
-            if (LogLevel::value::DEBUG < _limit_level)
-                return;
-            // 将不定参进行格式化，将其转为字符串
-            va_list ap;
-            va_start(ap, fmt);
-            char *res;
-            int ret = vasprintf(&res, fmt.c_str(), ap);
-            if (ret == -1)
-            {
-                std::cout << "vasprintf fail\n";
-                return;
-            }
-            va_end(ap);
-            serialize(LogLevel::value::DEBUG, file, line, res);
-            free(res);
-        }
-        /**
-         * @brief 记录信息级别日志
-         *
-         * @param file 文件名
-         * @param line 行号
-         * @param fmt 格式化字符串
-         */
-        void info(const std::string &file, size_t line, const std::string &fmt, ...)
-        {
-            // 是否达到输出等级
-            if (LogLevel::value::INFO < _limit_level)
-                return;
-            // 将不定参进行格式化，将其转为字符串
-            va_list ap;
-            va_start(ap, fmt);
-            char *res;
-            int ret = vasprintf(&res, fmt.c_str(), ap);
-            if (ret == -1)
-            {
-                std::cout << "vasprintf fail\n";
-                return;
-            }
-            va_end(ap);
-            serialize(LogLevel::value::INFO, file, line, res);
-            free(res);
-        }
-        /**
-         * @brief 记录警告级别日志
-         *
-         * @param file 文件名
-         * @param line 行号
-         * @param fmt 格式化字符串
-         */
-        void warn(const std::string &file, size_t line, const std::string &fmt, ...)
-        {
-            // 是否达到输出等级
-            if (LogLevel::value::WARN < _limit_level)
-                return;
-            // 将不定参进行格式化，将其转为字符串
-            va_list ap;
-            va_start(ap, fmt);
-            char *res;
-            int ret = vasprintf(&res, fmt.c_str(), ap);
-            if (ret == -1)
-            {
-                std::cout << "vasprintf fail\n";
-                return;
-            }
-            va_end(ap);
-            serialize(LogLevel::value::WARN, file, line, res);
-            free(res);
-        }
-        /**
-         * @brief 记录错误级别日志
-         *
-         * @param file 文件名
-         * @param line 行号
-         * @param fmt 格式化字符串
-         */
-
-        void error(const std::string &file, size_t line, const std::string &fmt, ...)
-        {
-            // 是否达到输出等级
-            if (LogLevel::value::ERROR < _limit_level)
-                return;
-            // 将不定参进行格式化，将其转为字符串
-            va_list ap;
-            va_start(ap, fmt);
-            char *res;
-            int ret = vasprintf(&res, fmt.c_str(), ap);
-            if (ret == -1)
-            {
-                std::cout << "vasprintf fail\n";
-                return;
-            }
-            va_end(ap);
-            serialize(LogLevel::value::ERROR, file, line, res);
-            free(res);
-        }
-        /**
-         * @brief 记录致命级别日志
-         *
-         * @param file 文件名
-         * @param line 行号
-         * @param fmt 格式化字符串
-         */
-        void fatal(const std::string &file, size_t line, const std::string &fmt, ...)
-        {
-            // 是否达到输出等级
-            if (LogLevel::value::FATAL < _limit_level)
-                return;
-            // 将不定参进行格式化，将其转为字符串
-            va_list ap;
-            va_start(ap, fmt);
-            char *res;
-            int ret = vasprintf(&res, fmt.c_str(), ap);
-            if (ret == -1)
-            {
-                std::cout << "vasprintf fail\n";
-                return;
-            }
-            va_end(ap);
-            serialize(LogLevel::value::FATAL, file, line, res);
-            free(res);
-        }
-        /// @brief 获取日志消息的结构化数据
-        /// @return 日志消息结构体
-        LogMsg getMsg()
-        {
-            return _msg;
-        }
+        void debug(const std::string &file, size_t line, const char *fmt, ...) { va_list ap; va_start(ap, fmt); vlog(LogLevel::value::DEBUG, file, line, fmt, ap); va_end(ap); }
+        void info (const std::string &file, size_t line, const char *fmt, ...) { va_list ap; va_start(ap, fmt); vlog(LogLevel::value::INFO,  file, line, fmt, ap); va_end(ap); }
+        void warn (const std::string &file, size_t line, const char *fmt, ...) { va_list ap; va_start(ap, fmt); vlog(LogLevel::value::WARN,  file, line, fmt, ap); va_end(ap); }
+        void error(const std::string &file, size_t line, const char *fmt, ...) { va_list ap; va_start(ap, fmt); vlog(LogLevel::value::ERROR, file, line, fmt, ap); va_end(ap); }
+        void fatal(const std::string &file, size_t line, const char *fmt, ...) { va_list ap; va_start(ap, fmt); vlog(LogLevel::value::FATAL, file, line, fmt, ap); va_end(ap); }
 
         /// @brief 获取日志器名称
         /// @return 日志器名称
@@ -231,38 +106,44 @@ namespace Xulog
         }
 
     protected:
-        /**
-         * @brief 抽象日志输出接口
-         *
-         * @param data 日志数据
-         * @param len 数据长度
-         */
+        /// @brief 纯虚：派生类实现原始字节落地
         virtual void log(const char *data, size_t len) = 0;
-        /**
-         * @brief 序列化日志消息
-         *
-         * @param level 日志级别
-         * @param file 文件名
-         * @param line 行号
-         * @param str 格式化后的日志字符串
-         */
+        /// @brief 纯虚重载：结构化 sink 可覆盖此版本获取 LogMsg；默认转发到字节版本
+        virtual void log(const char *data, size_t len, const LogMsg &) { log(data, len); }
+
+        /// @brief 格式化并落地，LogMsg 为栈上局部变量，不共享
         void serialize(LogLevel::value level, const std::string &file, size_t line, char *str)
         {
-            // 日志内容格式化
-            _msg = LogMsg(level, line, file, _logger_name, str);
-
+            LogMsg msg(level, line, file, _logger_name, str);
             std::stringstream ss;
-            _formatter->Format(ss, _msg);
-            // 日志落地
-            log(ss.str().c_str(), ss.str().size());
+            _formatter->Format(ss, msg);
+            const std::string &out = ss.str();
+            log(out.c_str(), out.size(), msg);
         }
-        LogMsg _msg;                               ///< 存储临时的消息对象
+
         std::mutex _mutex;                         ///< 互斥锁
         std::string _logger_name;                  ///< 日志器名称
         std::atomic<LogLevel::value> _limit_level; ///< 日志级别
         Formatter::ptr _formatter;                 ///< 日志格式化器
         std::vector<LogSink::ptr> _sinks;          ///< 日志输出接收器
         LoggerType _logger_type;
+
+    private:
+        /// @brief 五个等级接口的统一实现：等级过滤 → vasprintf → serialize
+        void vlog(LogLevel::value level, const std::string &file, size_t line, const char *fmt, va_list ap)
+        {
+            if (level < _limit_level)
+                return;
+            char *res = nullptr;
+            int ret = vasprintf(&res, fmt, ap);
+            if (ret == -1)
+            {
+                std::cout << "vasprintf fail\n";
+                return;
+            }
+            serialize(level, file, line, res);
+            free(res);
+        }
     };
     /**
      * @class SyncLogger
@@ -288,22 +169,19 @@ namespace Xulog
         }
 
     protected:
-        /**
-         * @brief 直接通过落地模块句柄进行日志输出
-         *
-         * @param data 日志数据
-         * @param len 数据长度
-         */
+        /// @brief 同步落地：把字节流和结构化 LogMsg 一并交给各 sink
+        void log(const char *data, size_t len, const LogMsg &msg) override
+        {
+            std::unique_lock<std::mutex> lock(_mutex);
+            for (auto &sink : _sinks)
+                sink->log(data, len, msg);
+        }
+        /// @brief 纯虚基类要求的字节版本：转发到结构化版本（构造空 msg 兜底，正常不会走到）
         void log(const char *data, size_t len) override
         {
             std::unique_lock<std::mutex> lock(_mutex);
-            if (_sinks.empty())
-                return;
-            else
-                for (auto &sink : _sinks)
-                {
-                    sink->log(data, len);
-                }
+            for (auto &sink : _sinks)
+                sink->log(data, len);
         }
     };
     /**
@@ -387,6 +265,8 @@ namespace Xulog
 
         {
         }
+        /// @brief 虚析构：基类指针 delete 派生类对象需要，否则为 UB
+        virtual ~LoggerBuilder() {}
         /**
          * @brief @deprecated 启用不安全的异步日志记录
          *

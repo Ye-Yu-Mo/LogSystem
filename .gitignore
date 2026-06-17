@@ -2,3 +2,13 @@
 log/
 test
 bench_test
+*.md
+*.db
+DataBaseTest.dSYM
+DataBaseTest
+example/server
+example/servertest
+example/server.dSYM/Contents/Resources/DWARF/server
+example/servertest.dSYM/Contents/Resources/DWARF/servertest
+server.dSYM
+servertest.dSYM

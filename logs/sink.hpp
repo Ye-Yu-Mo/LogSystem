@@ -7,6 +7,7 @@
  */
 #pragma once
 #include "util.hpp"
+#include "message.hpp"
 #include <memory>
 #include <fstream>
 #include <cassert>
@@ -38,6 +39,8 @@ namespace Xulog
          * 纯虚函数，派生类必须实现此方法以完成日志的实际输出。
          */
         virtual void log(const char *data, size_t len) = 0;
+        /// @brief 结构化落地重载，默认转发到字节版本；结构化 sink 可覆盖以获取 LogMsg
+        virtual void log(const char *data, size_t len, const LogMsg &msg) { log(data, len); }
     };
     /**
      * @class StdoutSink

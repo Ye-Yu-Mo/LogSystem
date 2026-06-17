@@ -14,6 +14,7 @@
 #include <cassert>
 #include <sstream>
 #include <memory>
+#include <stdexcept>
 namespace Xulog
 {
     /**
@@ -253,7 +254,9 @@ namespace Xulog
         Formatter(const std::string &pattern = "[%d{%y-%m-%d|%H:%M:%S}][%t][%c][%f:%l][%p]%T%m%n")
             : _pattern(pattern)
         {
-            assert(parsePattern());
+            // 注意：不能用 assert(parsePattern())，否则在 NDEBUG(release) 下整个解析被消除
+            if (!parsePattern())
+                throw std::invalid_argument("非法的日志格式串: " + _pattern);
         }
         /**
          * @brief 对日志消息进行格式化
@@ -387,9 +390,7 @@ namespace Xulog
                 return std::make_shared<NLineFormatItem>();
             if (key.empty())
                 return std::make_shared<OtherFormatItem>(value);
-            std::cout << "没有对应的格式化字符:'%" << key << "'\n";
-            exit(1);
-            return FormatItem::ptr();
+            throw std::invalid_argument("未知的格式字符: '%" + key + "' in pattern: " + _pattern);
         }
 
     private:

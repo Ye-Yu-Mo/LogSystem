@@ -99,6 +99,34 @@ public:
     {
         sqlite3_close_v2(_handler);
     }
+    /**
+     * @brief 以参数绑定方式插入一条日志，避免 SQL 注入与单引号崩溃
+     * @return 成功返回 true，失败返回 false
+     */
+    bool insertLog(const std::string &sql,
+                   long long ctime, long long line, const std::string &tid,
+                   const std::string &level, const std::string &file,
+                   const std::string &logger, const std::string &payload)
+    {
+        sqlite3_stmt *stmt = nullptr;
+        if (sqlite3_prepare_v2(_handler, sql.c_str(), -1, &stmt, nullptr) != SQLITE_OK)
+        {
+            std::cout << "prepare 失败: " << sqlite3_errmsg(_handler) << std::endl;
+            return false;
+        }
+        sqlite3_bind_int64(stmt, 1, ctime);
+        sqlite3_bind_int64(stmt, 2, line);
+        sqlite3_bind_text(stmt, 3, tid.c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, 4, level.c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, 5, file.c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, 6, logger.c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, 7, payload.c_str(), -1, SQLITE_TRANSIENT);
+        bool ok = (sqlite3_step(stmt) == SQLITE_DONE);
+        if (!ok)
+            std::cout << "step 失败: " << sqlite3_errmsg(_handler) << std::endl;
+        sqlite3_finalize(stmt);
+        return ok;
+    }
 
 private:
     std::string _dbfile; ///< 数据库文件路径
@@ -138,60 +166,43 @@ public:
             abort();
         }
     }
-    /// @brief 存储到数据库
-    /// @param data 数据指针
-    /// @param len 数据长度
-    void log(const char *data, size_t len)
+    /// @brief 结构化落地：接收调用链传入的 LogMsg，用参数绑定避免 SQL 注入
+    void log(const char *data, size_t len, const Xulog::LogMsg &msg) override
     {
-        if (_logger == nullptr)
-            _logger = Xulog::getLogger(_logger_name);
-        if (_logger == nullptr)
-        {
-            std::cout << "未获取到日志器！日志器名称为：" << _logger_name << std::endl;
-        }
-        Xulog::LogMsg msg = _logger->getMsg();
-        std::stringstream ss;
-        ss << "INSERT into logs (log_time, line_number, thread_id, log_level, source_file, logger_name, message) ";
-        ss << "VALUES (datetime(" << msg._ctime << ", 'unixepoch', '+8 hours'),";
-        ss << msg._line << ", ";
-        ss << "'" << msg._tid << "', ";
-        ss << "'" << Xulog::LogLevel::toString(msg._level) << "', ";
-        ss << "'" << msg._file << "', ";
-        ss << "'" << msg._logger << "', ";
-        ss << "'" << msg._payload << "');";
-        bool ret = _helper.exec(ss.str().c_str(), nullptr, nullptr);
-        if (ret == false)
-        {
-            ERROR("插入日志数据失败!");
-            abort();
-        }
+        insertLog(msg);
     }
-    /// @brief 存储到数据库
-    /// @param msg 格式化的数据
+    /// @brief 字节落地兜底（异步路径调用，无结构化数据，跳过落库）
+    void log(const char *data, size_t len) override
+    {
+        // 异步路径无法提供逐条 LogMsg，暂不落库；同步路径走上面的结构化重载
+    }
+    /// @brief 服务端直接传入 LogMsg 落库（保留给 serverlog.hpp 使用）
     void log(const Xulog::LogMsg &msg)
     {
-        std::stringstream ss;
-        ss << "INSERT into logs (log_time, line_number, thread_id, log_level, source_file, logger_name, message) ";
-        ss << "VALUES (datetime(" << msg._ctime << ", 'unixepoch', '+8 hours'),";
-        ss << msg._line << ", ";
-        ss << "'" << msg._tid << "', ";
-        ss << "'" << Xulog::LogLevel::toString(msg._level) << "', ";
-        ss << "'" << msg._file << "', ";
-        ss << "'" << msg._logger << "', ";
-        ss << "'" << msg._payload << "');";
-        bool ret = _helper.exec(ss.str().c_str(), nullptr, nullptr);
-        if (ret == false)
-        {
-            ERROR("插入日志数据失败!");
-            abort();
-        }
+        insertLog(msg);
     }
     ~DataBaseSink() {}
 
 private:
-    SqliteHelper _helper;              ///< 数据库帮助类句柄
-    std::string _logger_name;          ///< 日志器名称
-    Xulog::LogMsg _msg;                ///< 结构化数据
-    static Xulog::Logger::ptr _logger; ///< 日志器句柄
+    void insertLog(const Xulog::LogMsg &msg)
+    {
+        static const char *SQL =
+            "INSERT INTO logs (log_time, line_number, thread_id, log_level, source_file, logger_name, message) "
+            "VALUES (datetime(?1, 'unixepoch', '+8 hours'), ?2, ?3, ?4, ?5, ?6, ?7);";
+        std::ostringstream tid_ss;
+        tid_ss << msg._tid;
+        bool ok = _helper.insertLog(SQL,
+                                    (long long)msg._ctime, (long long)msg._line,
+                                    tid_ss.str(),
+                                    Xulog::LogLevel::toString(msg._level),
+                                    msg._file, msg._logger, msg._payload);
+        if (!ok)
+        {
+            ERROR("插入日志数据失败!");
+            abort();
+        }
+    }
+
+    SqliteHelper _helper;         ///< 数据库帮助类句柄
+    std::string _logger_name;     ///< 日志器名称
 };
-Xulog::Logger::ptr DataBaseSink::_logger = nullptr; ///< 初始化日志器句柄

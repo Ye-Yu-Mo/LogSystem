@@ -28,40 +28,42 @@ public:
     /// @brief 服务器落地类
     /// @param serverip 服务器ip地址
     /// @param serverport 服务器端口号
-    /// @param name 日志器名称
+    /// @param name 日志器名称（保留以兼容旧调用，内部不再使用）
     ServerSink(const std::string &serverip, uint16_t serverport, const std::string &name)
-        : _send_socket(std::make_shared<XuServer::TcpSocket>()), _logger_name(name), _server_ip(serverip), _server_port(serverport)
+        : _send_socket(std::make_shared<XuServer::TcpSocket>()), _server_ip(serverip), _server_port(serverport)
     {
+        (void)name;
     }
-    /// @brief 发送数据
+    /// @brief 发送数据（结构化重载，优先使用调用链传入的 LogMsg）
     /// @param data 数据指针
     /// @param len 数据长度
-    void log(const char *data, size_t len)
+    /// @param msg 结构化日志消息
+    void log(const char *data, size_t len, const Xulog::LogMsg &msg) override
     {
-        // std::cout << "data: " << std::string(data) <<std::endl;
-        if (_logger == nullptr)
-            _logger = Xulog::getLogger(_logger_name);
-        if (_logger == nullptr)
-            FATAL("日志器获取失败 请检查日志器名称");
         Json::StreamWriterBuilder writer;
-        std::string jsonString;
-        if (_logger->getLoggerType() == Xulog::LoggerType::LOGGER_ASYNC)
-        {
-            std::cout << "匹配到异步日志器\n";
-            jsonString = Json::writeString(writer, Xulog::Codec::toJson(data));
-        }
-        else
-        {
-            std::cout << "匹配到同步日志器\n";
-            jsonString = Json::writeString(writer, Xulog::Codec::toJson(_logger->getMsg()));
-        }
+        std::string jsonString = Json::writeString(writer, Xulog::Codec::toJson(msg));
+        sendJson(jsonString);
+    }
+    /// @brief 发送数据（字节兜底：异步路径无结构化数据，按非结构化消息发送）
+    /// @param data 数据指针
+    /// @param len 数据长度
+    void log(const char *data, size_t len) override
+    {
+        Json::StreamWriterBuilder writer;
+        std::string jsonString = Json::writeString(writer, Xulog::Codec::toJson(std::string(data, len)));
+        sendJson(jsonString);
+    }
 
-        uint32_t sz = ::htonl(jsonString.size());
-        size_t buffer_len = jsonString.size() + sizeof(uint32_t);
-        std::cout << "发送的数据是：" << jsonString.size() << ":" << jsonString << std::endl;
-        // char buffer[buffer_len];
+    ~ServerSink()
+    {
+        _send_socket->CloseSockFd();
+    }
+
+private:
+    void sendJson(const std::string &jsonString)
+    {
+        uint32_t sz = htonl(static_cast<uint32_t>(jsonString.size()));
         std::vector<char> buffer(sizeof(uint32_t) + jsonString.size());
-
         ::memcpy(buffer.data(), &sz, sizeof(uint32_t));
         ::memcpy(buffer.data() + sizeof(uint32_t), jsonString.data(), jsonString.size());
         std::string ip = _server_ip;
@@ -70,18 +72,7 @@ public:
         _send_socket->CloseSockFd();
     }
 
-    /// @brief 析构函数
-    ~ServerSink()
-    {
-        _send_socket->CloseSockFd();
-    }
-
-private:
     std::shared_ptr<XuServer::TcpSocket> _send_socket; ///< TCP socket
-    std::string _logger_name;                          ///< 日志器名称
-    Xulog::LogMsg _msg;                                ///< 结构化数据
-    static Xulog::Logger::ptr _logger;                 ///< 日志器句柄
     std::string _server_ip;                            ///< 服务器ip
     uint16_t _server_port;                             ///< 服务器port
 };
-Xulog::Logger::ptr ServerSink::_logger = nullptr; ///< 日志器句柄
