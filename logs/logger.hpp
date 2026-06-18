@@ -186,59 +186,55 @@ namespace Xulog
     };
     /**
      * @class AsyncLogger
-     * @brief 异步日志器
+     * @brief 异步日志器（M2：无锁 MPSC 队列 + 结构化异步落地）
      *
-     * AsyncLogger 实现了异步的日志记录功能，使用缓冲区和事件循环。
+     * 生产者线程：serialize 格式化 → log(data,len,msg) → 构造 AsyncEntry 入队
+     * 消费者线程：realLog 批量取出 → 逐条分发到 sink（结构化 + 字节双形态）
      */
     class AsyncLogger : public Logger
     {
     public:
-        /**
-         * @brief 构造函数
-         *
-         * @param loggername 日志器名称
-         * @param level 日志级别
-         * @param formatter 日志格式化器
-         * @param sinks 日志输出接收器
-         * @param looper_type 异步类型
-         */
         AsyncLogger(const std::string &loggername,
                     LogLevel::value level,
                     Formatter::ptr &formatter,
                     std::vector<LogSink::ptr> sinks,
                     AsyncType looper_type)
             : Logger(loggername, level, formatter, sinks),
-              _looper(std::make_shared<AsyncLooper>(std::bind(&AsyncLogger::realLog, this, std::placeholders::_1), looper_type))
+              _looper(std::make_shared<AsyncLooper>(
+                  std::bind(&AsyncLogger::realLog, this, std::placeholders::_1),
+                  looper_type))
         {
             _logger_type = LoggerType::LOGGER_ASYNC;
         }
-        /**
-         * @brief 将数据写入缓冲区
-         *
-         * @param data 日志数据
-         * @param len 数据长度
-         */
-        void log(const char *data, size_t len) // 将数据写入缓冲区
+
+        /// @brief 结构化入队：生产者线程调用，构造 AsyncEntry 并推入无锁队列
+        void log(const char *data, size_t len, const LogMsg &msg) override
         {
-            _looper->push(data, len);
+            _looper->push(AsyncEntry{msg, std::string(data, len)});
         }
-        /**
-         * @brief 实际落地函数，将缓冲区中的日志写入接收器
-         *
-         * @param buf 日志缓冲区
-         */
-        void realLog(Buffer &buf)
+
+        /// @brief 字节版本兜底（不应被调用，serialize 已统一走结构化版本）
+        void log(const char *data, size_t len) override
+        {
+            _looper->push(AsyncEntry{LogMsg(), std::string(data, len)});
+        }
+
+        /// @brief 消费者回调：批量取出 AsyncEntry，逐条分发给各 sink
+        void realLog(std::vector<AsyncEntry> &entries)
         {
             if (_sinks.empty())
                 return;
-            for (auto &sink : _sinks)
+            for (auto &entry : entries)
             {
-                sink->log(buf.begin(), buf.readAbleSize());
+                for (auto &sink : _sinks)
+                {
+                    sink->log(entry.formatted.c_str(), entry.formatted.size(), entry.msg);
+                }
             }
         }
 
     private:
-        AsyncLooper::ptr _looper; ///< 异步事件循环器
+        AsyncLooper::ptr _looper; ///< 无锁 MPSC 异步工作器
     };
 
     /**

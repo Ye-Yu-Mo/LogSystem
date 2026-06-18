@@ -355,6 +355,14 @@ namespace Xulog
                 val.clear();
             }
 
+            // 循环结束后，flush 末尾残留的字面量（如 "%%" 或以普通字符结尾的格式串）
+            // 否则以字面量结尾的内容会被静默丢弃
+            if (!val.empty())
+            {
+                fmt_order.push_back(std::make_pair("", val));
+                val.clear();
+            }
+
             // 初始化成员
             for (auto &it : fmt_order)
             {

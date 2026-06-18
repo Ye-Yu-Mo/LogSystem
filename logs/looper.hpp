@@ -1,149 +1,123 @@
 /**
  * @file looper.hpp
- * @brief 实现异步工作器
+ * @brief 异步实体 + 无锁异步工作器
  *
- * 本文件定义了异步工作器类，用于处理异步数据生产与消费的逻辑。
+ * M2 重构：Buffer 只存字节流 → MPSC 无锁队列存 AsyncEntry（结构化 + 格式化双形态）
  */
 #pragma once
-#include "buffer.hpp"
+
+#include "mpsc_queue.hpp"
+#include "message.hpp"
 #include <mutex>
 #include <condition_variable>
 #include <thread>
 #include <functional>
 #include <memory>
 #include <atomic>
+#include <vector>
 
 namespace Xulog
 {
-    /**
-     * @typedef Functor
-     * @brief 回调函数类型
-     *
-     * 定义了一个回调函数类型，用于处理消费缓冲区的数据。
-     */
-    using Functor = std::function<void(Buffer &)>;
-    /**
-     * @enum AsyncType
-     * @brief 异步工作器类型
-     *
-     * 定义了异步工作器的两种类型：
-     * - ASYNC_SAFE: 当缓冲区满时，阻塞生产者
-     * - ASYNC_UNSAFE: 不考虑资源，无限制扩容，适用于性能测试
-     */
+    /// @brief 异步队列元素：携带结构化 LogMsg + 预格式化字符串
+    struct AsyncEntry
+    {
+        LogMsg msg;             ///< 结构化字段（DataBaseSink 用）
+        std::string formatted;  ///< 预格式化字符串（Stdout/File 用，生产者线程完成格式化）
+    };
+
+    /// @brief 消费者回调类型：一次处理一批 AsyncEntry
+    using BatchCallback = std::function<void(std::vector<AsyncEntry> &)>;
+
+    /// @brief 异步工作器类型
     enum class AsyncType
     {
-        ASYNC_SAFE,  ///< 缓冲区满则阻塞
-        ASYNC_UNSAFE ///< 不考虑资源，无限扩容，性能测试
+        ASYNC_SAFE,   ///< 安全模式：队列有硬上限，满时生产者背压阻塞
+        ASYNC_UNSAFE  ///< 非安全模式：不设上限，仅性能测试用
     };
+
+    /// @brief 默认 SAFE 模式队列最大容量
+    constexpr size_t DEFAULT_MAX_QUEUE_SIZE = 1024 * 256; // 26w 条，约 25MB
+
     /**
      * @class AsyncLooper
-     * @brief 异步工作器类
+     * @brief 无锁 MPSC 异步工作器
      *
-     * 该类实现了一个异步工作器，通过生产者-消费者模式处理数据。
+     * 生产者（业务线程）：CAS 入队 AsyncEntry，无锁
+     * 消费者（单一线程）：批量取出，调用回调逐条落地
+     * SAFE 模式：队列有硬上限，生产快于消费时自动背压（yield 等待）
      */
     class AsyncLooper
     {
     public:
         using ptr = std::shared_ptr<AsyncLooper>;
-        /**
-         * @brief 构造函数
-         *
-         * @param func 回调函数，用于处理消费缓冲区的数据
-         * @param asynctype 异步类型，默认为 ASYNC_SAFE
-         *
-         * 构造 AsyncLooper 对象，并启动异步工作线程。
-         */
-        AsyncLooper(const Functor &func, AsyncType asynctype = AsyncType::ASYNC_SAFE)
-            : _stop(false), _thread(std::thread(&AsyncLooper::threadEntry, this)), _looper_type(asynctype), _callBack(func)
+
+        AsyncLooper(const BatchCallback &func,
+                    AsyncType asynctype = AsyncType::ASYNC_SAFE,
+                    size_t max_queue = DEFAULT_MAX_QUEUE_SIZE)
+            : _queue(max_queue, asynctype == AsyncType::ASYNC_SAFE),
+              _looper_type(asynctype),
+              _callBack(func),
+              _stop(false),
+              _thread(std::thread(&AsyncLooper::threadEntry, this))
         {
         }
-        /**
-         * @brief 析构函数
-         *
-         * 停止异步工作器，唤醒所有工作线程并等待线程结束。
-         */
+
         ~AsyncLooper()
         {
             stop();
-            _cond_con.notify_all(); // 唤醒所有工作线程
-            _thread.join();         // 等待线程
-        }
-        /**
-         * @brief 停止异步工作器
-         *
-         * 设置停止标志，并唤醒所有工作线程。
-         */
-        void stop()
-        {
-            _stop = true;
-            _cond_con.notify_all(); // 唤醒所有的工作线程
-        }
-        /**
-         * @brief 向生产缓冲区推送数据
-         *
-         * @param data 要推送的数据
-         * @param len 数据的长度
-         *
-         * 根据异步类型控制缓冲区的写入，唤醒消费者处理数据。
-         */
-        void push(const char *data, size_t len)
-        {
-            std::unique_lock<std::mutex> lock(_mutex);
-            // 条件变量控制，若缓冲区剩余大于等于数据长度，则返回真
-            if (_looper_type == AsyncType::ASYNC_SAFE)
+            // 最后唤醒一次确保 _thread 退出
             {
-                _cond_pro.wait(lock, [&]()
-                               { return _pro_buf.writeAbleSize() >= len; });
+                std::lock_guard<std::mutex> lk(_sleep_mutex);
             }
-            // 满足条件，添加数据
-            _pro_buf.push(data, len);
-            // 唤醒消费者对缓冲区的数据进行处理
-            _cond_con.notify_one();
+            _sleep_cv.notify_one();
+            if (_thread.joinable())
+                _thread.join();
         }
 
+        void stop()
+        {
+            _stop.store(true, std::memory_order_release);
+            {
+                std::lock_guard<std::mutex> lk(_sleep_mutex);
+            }
+            _sleep_cv.notify_one();
+        }
+
+        /// @brief 生产者入队（无锁 CAS，SAFE 模式下满则 yield 等待）
+        void push(AsyncEntry &&entry)
+        {
+            _queue.push(std::move(entry));
+        }
+
+        /// @brief 获取当前队列长度（用于监控）
+        size_t queueSize() const { return _queue.count(); }
+
     private:
-        /**
-         * @brief 线程入口函数
-         *
-         * 持续监测生产缓冲区的数据，并处理消费缓冲区的数据。
-         *
-         * 当停止标志被设置且缓冲区为空时，线程结束。
-         */
-        void threadEntry() // 线程入口函数
+        void threadEntry()
         {
             while (true)
             {
-                // 判断生产缓冲区是否有数据，有则交换，无则阻塞
+                auto batch = _queue.popAll();
+                if (!batch.empty())
                 {
-                    std::unique_lock<std::mutex> lock(_mutex);
-                    if (_stop && _pro_buf.empty())
-                        break;
-                    _cond_con.wait(lock, [&]()
-                                   { return _stop || !_pro_buf.empty(); });
-
-                    _con_buf.swap(_pro_buf);
+                    _callBack(batch);
+                    continue;
                 }
-                // 处理消费缓冲区
-                _callBack(_con_buf);
-                // 初始化消费缓冲区
-                _con_buf.reset();
-                // 唤醒生产者
-                if (_looper_type == AsyncType::ASYNC_SAFE)
-                {
-                    _cond_pro.notify_all();
-                }
+                // 队列空：检查退出，否则短休眠避免空转
+                if (_stop.load(std::memory_order_acquire))
+                    break;
+                std::unique_lock<std::mutex> lk(_sleep_mutex);
+                _sleep_cv.wait_for(lk, std::chrono::milliseconds(1));
             }
         }
 
-    private:
-        std::atomic<bool> _stop;           ///< 停止标志
-        Buffer _pro_buf;                   ///< 生产缓冲区
-        Buffer _con_buf;                   ///< 消费缓冲区
-        std::mutex _mutex;                 ///< 互斥锁
-        std::condition_variable _cond_pro; ///< 生产者条件变量
-        std::condition_variable _cond_con; ///< 消费者条件变量
-        std::thread _thread;               ///< 异步工作器的线程
-        AsyncType _looper_type;            ///< 异步类型
-        Functor _callBack;                 ///< 回调函数
+        MpscQueue<AsyncEntry> _queue;    ///< 无锁 MPSC 队列
+        AsyncType _looper_type;          ///< 异步类型
+        BatchCallback _callBack;         ///< 消费者回调
+        std::atomic<bool> _stop;         ///< 停止标志
+        std::thread _thread;             ///< 消费者线程
+        std::mutex _sleep_mutex;         ///< 休眠锁（仅消费者侧）
+        std::condition_variable _sleep_cv; ///< 休眠条件变量（仅消费者侧）
     };
-}
+
+} // namespace Xulog

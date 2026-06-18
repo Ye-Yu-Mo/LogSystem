@@ -171,11 +171,8 @@ public:
     {
         insertLog(msg);
     }
-    /// @brief 字节落地兜底（异步路径调用，无结构化数据，跳过落库）
-    void log(const char *data, size_t len) override
-    {
-        // 异步路径无法提供逐条 LogMsg，暂不落库；同步路径走上面的结构化重载
-    }
+    /// @brief 字节落地兜底：无 LogMsg 时跳过落库（正常路径不走这里）
+    void log(const char *data, size_t len) override {}
     /// @brief 服务端直接传入 LogMsg 落库（保留给 serverlog.hpp 使用）
     void log(const Xulog::LogMsg &msg)
     {

@@ -1,6 +1,5 @@
 .vscode/
 log/
-test
 bench_test
 *.md
 *.db
@@ -12,3 +11,5 @@ example/server.dSYM/Contents/Resources/DWARF/server
 example/servertest.dSYM/Contents/Resources/DWARF/servertest
 server.dSYM
 servertest.dSYM
+test_*
+example/test
