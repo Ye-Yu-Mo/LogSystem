@@ -16,7 +16,7 @@ CXXFLAGS := -g -std=c++17 $(PLATFORM_FLAGS) -I.. -MMD -MP
 GTEST_LIBS := -lgtest -lgtest_main -lpthread
 
 # 每个 test_*.cc 编译成一个独立可执行文件
-TESTS := test_level test_format test_buffer test_logger test_mpsc_queue
+TESTS := test_level test_format test_logger test_mpsc_queue
 
 all: $(TESTS)
 
@@ -24,9 +24,6 @@ test_level: test_level.cc
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(GTEST_LIBS)
 
 test_format: test_format.cc
-	$(CXX) $(CXXFLAGS) $^ -o $@ $(GTEST_LIBS)
-
-test_buffer: test_buffer.cc
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(GTEST_LIBS)
 
 test_logger: test_logger.cc

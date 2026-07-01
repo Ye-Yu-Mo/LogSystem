@@ -1,15 +1,34 @@
-.vscode/
-log/
-bench_test
-*.md
-*.db
-DataBaseTest.dSYM
-DataBaseTest
-example/server
-example/servertest
-example/server.dSYM/Contents/Resources/DWARF/server
-example/servertest.dSYM/Contents/Resources/DWARF/servertest
-server.dSYM
-servertest.dSYM
-test_*
+# 编译产物
+*.o
+*.out
+*.d
+*.dSYM/
+
+# 测试 / 示例 / bench 二进制
 example/test
+example/DataBaseTest
+example/servertest
+example/server
+bench/bench_test
+test/test_level
+test/test_format
+test/test_logger
+test/test_mpsc_queue
+
+# 运行时产物
+log/
+data/
+*.log
+*.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+test/test_buffer
+*.md

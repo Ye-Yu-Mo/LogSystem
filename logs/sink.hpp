@@ -218,7 +218,7 @@ namespace Xulog
                 _ofs.open(pathname, std::ios::binary | std::ios::app);
                 assert(_ofs.is_open());
                 _current_fsize = 0;
-                // _cnt = 0;
+                _cnt = 0;
             }
             _ofs.write(data, len);
             assert(_ofs.good());

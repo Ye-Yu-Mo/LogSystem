@@ -2,7 +2,7 @@
  * @file looper.hpp
  * @brief 异步实体 + 无锁异步工作器
  *
- * M2 重构：Buffer 只存字节流 → MPSC 无锁队列存 AsyncEntry（结构化 + 格式化双形态）
+ * 无锁 MPSC 队列存 AsyncEntry（结构化 + 格式化双形态）
  */
 #pragma once
 

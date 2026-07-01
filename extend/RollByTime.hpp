@@ -43,6 +43,7 @@ public:
         time_t current = Xulog::Util::Date::getTime();
         if (current % _gap_size != _current_gap)
         {
+            _current_gap = _gap_size == 1 ? current : (current % _gap_size);
             std::string filename = createNewFile();
             _ofs.close();
             _ofs.open(filename, std::ios::binary | std::ios::app);
