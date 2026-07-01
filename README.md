@@ -17,6 +17,32 @@
 * 无锁 MPSC 异步队列，高并发下吞吐提升 2.6x
 * SAFE 模式硬上限背压，防止消费滞后导致 OOM
 
+## 项目亮点
+
+**1. 真正的结构化异步**
+
+异步链路从头到尾携带结构化 `LogMsg`，不是把日志格式化成字符串就丢进队列。`AsyncEntry` 同时保留格式化字符串和字段级数据，Stdout 和数据库 sink 各取所需。同类竞品（spdlog、glog）的异步模式通常只能传字节流，落库靠拼字符串。
+
+**2. 无锁 MPSC 队列 + 背压**
+
+异步队列从互斥锁双缓冲升级为无锁 CAS 入队，吞吐 271 万条/秒（3 线程，100 字节/条），是旧版的 2.6 倍。SAFE 模式有硬上限背压——队列满时生产者 yield 等待，杜绝消费滞后导致的无限扩容 OOM。
+
+**3. 数据库是一等公民**
+
+`DataBaseSink` 用 `sqlite3_prepare_v2` 参数绑定按字段落表，不是拼字符串。单引号、特殊字符不崩溃。落库后的日志可以 `SELECT * FROM logs WHERE log_level='ERROR'` —— 文件日志只能 `grep`。
+
+**4. TCP 日志服务端**
+
+内置 TCP 服务器 + 线程池，支持多客户端日志汇聚。通过 `ServerSink` 透明推送，客户端无需关心网络传输细节。服务端落地策略由 ini 配置文件控制。
+
+**5. 可扩展 Sink 架构**
+
+自定义落地目标只需继承 `LogSink` 实现 `log()` 方法。`StdoutSink`、`FileSink`、`RollSinkBySize`、`RollSinkByTime`、`DataBaseSink`、`ServerSink` 六种内置落地方式开箱即用。
+
+**6. 全链路 gtest 回归防线**
+
+33 条单元测试覆盖等级、格式化、无锁队列、多线程并发正确性。改一行代码，`make run` 一秒钟告诉你有没有破坏现有行为。
+
 ## 运行环境
 
 * -lpthread
