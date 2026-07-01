@@ -15,30 +15,31 @@ CXX := g++
 CXXFLAGS := -g -std=c++17 $(PLATFORM_FLAGS) -I.. -MMD -MP
 GTEST_LIBS := -lgtest -lgtest_main -lpthread
 
-# 每个 test_*.cc 编译成一个独立可执行文件
-TESTS := test_level test_format test_logger test_mpsc_queue
+TESTS := test_level test_format test_logger test_mpsc_queue test_logquery
 
 all: $(TESTS)
 
 test_level: test_level.cc
-	$(CXX) $(CXXFLAGS) $^ -o $@ $(GTEST_LIBS)
+	$(CXX) $(CXXFLAGS) $< -o $@ $(GTEST_LIBS)
 
 test_format: test_format.cc
-	$(CXX) $(CXXFLAGS) $^ -o $@ $(GTEST_LIBS)
+	$(CXX) $(CXXFLAGS) $< -o $@ $(GTEST_LIBS)
 
 test_logger: test_logger.cc
 	$(JSONCPP_SETUP)
-	$(CXX) $(CXXFLAGS) $^ -o $@ $(GTEST_LIBS) -lsqlite3
+	$(CXX) $(CXXFLAGS) $< -o $@ $(GTEST_LIBS) -lsqlite3
 
 test_mpsc_queue: test_mpsc_queue.cc
-	$(CXX) $(CXXFLAGS) $^ -o $@ $(GTEST_LIBS)
+	$(CXX) $(CXXFLAGS) $< -o $@ $(GTEST_LIBS)
 
-# 跑全部测试
+test_logquery: test_logquery.cc
+	$(JSONCPP_SETUP)
+	$(CXX) $(CXXFLAGS) $< -o $@ $(GTEST_LIBS) -lsqlite3 -ljsoncpp
+
 run: all
 	@for t in $(TESTS); do echo "=== $$t ==="; ./$$t || exit 1; done
 
 clean:
 	rm -rf $(TESTS) *.d *.dSYM ./test_log ./test_data
 
-# 自动包含 -MMD 生成的头文件依赖，改 .hpp 会触发重编
 -include $(wildcard *.d)

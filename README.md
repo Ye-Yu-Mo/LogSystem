@@ -16,6 +16,8 @@
 * 支持使用 ini 文件配置服务器落地方式和信息
 * 无锁 MPSC 异步队列，高并发下吞吐提升 2.6x
 * SAFE 模式硬上限背压，防止消费滞后导致 OOM
+* CLI 日志查询工具（按时间/等级/关键词过滤 + 聚合统计 + JSON/CSV 导出）
+* MCP 工具支持 AI 助手直接查询日志数据库
 
 ## 项目亮点
 
@@ -41,7 +43,11 @@
 
 **6. 全链路 gtest 回归防线**
 
-33 条单元测试覆盖等级、格式化、无锁队列、多线程并发正确性。改一行代码，`make run` 一秒钟告诉你有没有破坏现有行为。
+47 条单元测试覆盖等级、格式化、无锁队列、多线程并发正确性、日志查询引擎。改一行代码，`make run` 一秒钟告诉你有没有破坏现有行为。
+
+**7. 日志可查询 —— CLI + MCP 双入口**
+
+日志落库后不只是存储，还能查。`logcli` 命令行工具支持按时间/等级/关键词/日志器过滤，聚合统计，JSON/CSV 导出。`logmcp` MCP 服务端让 AI 助手（Claude Code 等）直接查询日志数据库——"最近有什么 ERROR？"AI 自己调 `query_logs` 获取结果。
 
 ## 运行环境
 
@@ -190,6 +196,55 @@ path=./log/log.db
 2. 需要去掉某种落地方式直接注释即可
 3. 数据库落地现已同时支持同步和异步日志器
 4. 默认值可以使用default（尚未完整测试）
+
+
+## 日志查询工具
+
+### CLI 查询工具 `logcli`
+
+对落库的 SQLite 日志做结构化查询，不需要装额外数据库：
+
+```bash
+cd tools/logcli && make
+
+# 全量查询
+./logcli --db ../../example/data/log.db
+
+# 按等级过滤
+./logcli --db ../../example/data/log.db --level ERROR,FATAL
+
+# 按关键词搜索
+./logcli --db ../../example/data/log.db --grep timeout
+
+# 按时间范围
+./logcli --db ../../example/data/log.db --from "2026-07-01 10:00" --to "2026-07-01 12:00"
+
+# 聚合统计
+./logcli --db ../../example/data/log.db --stats --group-by level
+
+# 导出 JSON/CSV
+./logcli --db ../../example/data/log.db --format json
+./logcli --db ../../example/data/log.db --format csv
+```
+
+### MCP 工具 `logmcp`
+
+让 AI 助手（Claude Code 等）直接查询日志数据库。通过 stdio JSON-RPC 协议暴露三个工具：
+
+| Tool | 功能 |
+|------|------|
+| `query_logs` | 按条件检索日志 |
+| `log_stats` | 聚合统计 |
+| `list_loggers` | 列出所有日志器名称 |
+
+```bash
+cd tools/logmcp && make
+
+# 在 Claude Code 中配置为 MCP server（.claude/mcp.json）：
+# { "mcpServers": { "logmcp": { "command": "./tools/logmcp/logmcp" } } }
+```
+
+之后 AI 可以理解并执行"查一下最近一小时的 ERROR"——自动调用 `query_logs` 返回结果。
 
 
 ## 开发环境
