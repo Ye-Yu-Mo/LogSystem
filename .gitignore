@@ -19,6 +19,7 @@ test/test_logquery
 # 工具二进制
 tools/logcli/logcli
 tools/logmcp/logmcp
+tools/logweb/logweb
 
 # 运行时产物
 log/
